@@ -28,9 +28,9 @@ Required test data
 ## Test Steps
 
 | Step | Description | Expected Result |
-|---|---|---|
-| 1. | What a tester should do | What a tester should see when they do that |
-| 2. | What a tester should do | What a tester should see when they do that |
+|:---:|---|---|
+| 1 | What a tester should do | What a tester should see when they do that |
+| 2 | What a tester should do | What a tester should see when they do that |
 
 ## Expected Result
 
