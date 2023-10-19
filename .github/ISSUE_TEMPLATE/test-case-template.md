@@ -2,42 +2,39 @@
 name: Test Case Template
 about: Create test cases with this template
 title: ''
-labels: ''
+labels: 'test case'
 assignees: ''
-
 ---
 
-# [TC-ID] : Title of the test
+# Description
 
-## Description
+The description should tell the tester what they’re going to test and include any other pertinent information such as the test environment, test data, and preconditions/assumptions
 
-The description should tell the tester what they’re going to test and include any other pertinent information such as the test environment, test data, and preconditions/assumptions.
+## Precondition
 
-### Precondition
+Any preconditions that must be met prior to the test being executed
 
-Any preconditions that must be met prior to the test being executed.
-
-### Priority
+## Priority
 
 Priority label
 
-### Input data
+## Input data
 
 Required test data
 
-## Test Steps
+# Test Steps
 
 | Step | Description | Expected Result |
 |:---:|---|---|
 | 1 | What a tester should do | What a tester should see when they do that |
 | 2 | What a tester should do | What a tester should see when they do that |
 
-## Expected Result
+# Expected Result
 
-The expected result tells the tester what they should experience as a result of the test steps.
+The expected result tells the tester what they should experience as a result of the test steps
 
-This is how the tester determines if the test case is a “pass” or “fail”.
+This is how the tester determines if the test case is a “pass” or “fail”
 
-## Requirement
+# Requirement
 
-Link for corresponding requirements
+Link to the corresponding requirements
