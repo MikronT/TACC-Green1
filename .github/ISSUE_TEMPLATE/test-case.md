@@ -3,8 +3,6 @@ name: "\U0001F9EA Test Case"
 about: Create test cases with this template
 labels:
 - "bug"
-projects:
-- "MikronT/1"
 ---
 
 # Description
