@@ -21,7 +21,7 @@ body:
 
   - type: dropdown
     attributes:
-      label: Operating System
+      label: 💿 Operating System
       description: What OS types are you experiencing the bug on?
       multiple: true
       options:
@@ -36,7 +36,7 @@ body:
 
   - type: dropdown
     attributes:
-      label: Browser
+      label: 🌎 Browser
       description: What browsers do you see the problem on?
       multiple: true
       options:
@@ -52,7 +52,7 @@ body:
 
   - type: input
     attributes:
-      label: Version
+      label: 💾 Version
       description: |
         What version of the software you're running?
         Please, make sure you are running the [latest](https://github.com/MikronT/TACC-Green1/releases/latest) version of our software
@@ -68,7 +68,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Preconditions
+      label: 🧪 Preconditions
       description: Actions to be done before the start of the bug reproducing
       placeholder: "Create an item in the DB: `INSERT INTO table1 (column1, column2) VALUES (value1, value2);`"
     validations:
@@ -91,7 +91,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Postconditions
+      label: 🧹 Postconditions
       description: Actions to be done after the bug reproduction
       placeholder: "Delete created item from the DB: `DELETE FROM table1 WHERE id=<item1_id>;`"
     validations:
@@ -121,15 +121,16 @@ body:
 
   - type: textarea
     attributes:
-      label: Log Output
+      label: 📜 Log Output
       description: If available, paste the browser console log output here
+      placeholder: Nerdy stuff...
       render: shell
     validations:
       required: false
 
   - type: textarea
     attributes:
-      label: 🔗 Links to Requirements
+      label: 🔗 Requirements
       description: Link appropriate issues with the '#' symbol
       placeholder: |
         User Story: #1
