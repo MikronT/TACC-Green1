@@ -15,8 +15,9 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Environment"
-      description: Tell us about the test environment the bug happens in
+      value: |
+        "# Environment"
+        Tell us about the test environment the bug happens in
 
   - type: dropdown
     attributes:
@@ -58,7 +59,9 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Reproduction"
+      value: |
+        "# Reproduction"
+        Tell us how can we reproduce the bug
 
   - type: textarea
     attributes:
@@ -87,8 +90,9 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Behavior"
-      description: Tell us about the behavior of the software and your expectations
+      value: |
+        "# Behavior"
+        Tell us about the behavior of the software and your expectations
 
   - type: textarea
     attributes:
@@ -114,8 +118,9 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Links to Requirements"
-      description: Link appropriate issues with the '#' symbol
+      value:
+        "# Links to Requirements"
+        Link appropriate issues with the '#' symbol
 
   - type: textarea
     attributes:
