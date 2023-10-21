@@ -91,14 +91,15 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: markdown
     attributes:
-      label: |
+      value: |
         # ✅ Behavior
-
         Tell us about the behavior of the software and your expectations
 
-        ### Expected Behavior
+  - type: textarea
+    attributes:
+      label: Expected Behavior
       description: What were you expecting?
     validations:
       required: false
