@@ -50,6 +50,14 @@ body:
     validations:
       required: true
 
+  - type: input
+    attributes:
+      label: Version
+      description: What version of the software you're running?
+      placeholder: 0.74.1
+    validations:
+      required: true
+
   - type: checkboxes
     attributes:
       label: Version
@@ -76,6 +84,10 @@ body:
     attributes:
       label: 📝 Steps to Reproduce
       description: Detailed steps to help us reproduce the bug
+      placeholder: |
+        1. Click something
+        2. Click something 99 times more
+        3. Watch your computer melt
       value: |
         1. 
         2. 
@@ -101,6 +113,7 @@ body:
     attributes:
       label: ✔️ Expected Behavior
       description: What were you expecting?
+      placeholder: It's working! :D
     validations:
       required: false
 
@@ -108,6 +121,7 @@ body:
     attributes:
       label: ❌ Actual Behavior
       description: What happened instead?
+      placeholder: It's not working! :(
     validations:
       required: false
 
@@ -123,6 +137,9 @@ body:
     attributes:
       label: 🔗 Links to Requirements
       description: Link appropriate issues with the '#' symbol
+      placeholder: |
+        User Story: #1
+        Test Case: #2
       value: |
         User Story: 
         Test Case: 
