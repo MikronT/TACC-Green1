@@ -15,10 +15,6 @@ The description should tell the tester what they’re going to test and include 
 
 Any preconditions that must be met prior to the test being executed
 
-## Priority
-
-Priority label
-
 ## Input data
 
 Required test data
