@@ -19,33 +19,34 @@ body:
         # Environment
         Tell us about the test environment the bug happens in
 
-  - type: dropdown
+  - type: checkboxes
     attributes:
       label: 💽 Operating System
       description: What OS types are you experiencing the bug on?
       multiple: true
       options:
-        - Android
-        - iOS
-        - Windows
-        - Mac
-        - Some Linux distro
-        - Other OS
+        - label: Android
+        - label: iOS
+        - label: Windows
+        - label: Mac
+        - label: Some Linux distro
+        - label: Other OS
     validations:
       required: true
 
-  - type: dropdown
+  - type: checkboxes
     attributes:
       label: 🌎 Browser
       description: What browsers do you see the problem on?
       multiple: true
       options:
-        - Google Chrome
-        - Mozilla Firefox
-        - Safari
-        - Vivaldi
-        - Microsoft Edge
-        - Opera
+        - label: Google Chrome
+        - label: Mozilla Firefox
+        - label: Safari
+        - label: Vivaldi
+        - label: Microsoft Edge
+        - label: Opera
+        - label: Other browser
     validations:
       required: true
 
@@ -66,9 +67,8 @@ body:
   - type: textarea
     attributes:
       label: ℹ Preconditions
-      description: |
-        Actions to be done before the start of the bug reproducing
-        Example: "Create an item in the DB: INSERT INTO table1 (column1, column2) VALUES (value1, value2);"
+      description: Actions to be done before the start of the bug reproducing
+      placeholder: Create an item in the DB: `INSERT INTO table1 (column1, column2) VALUES (value1, value2);`
     validations:
       required: false
 
@@ -76,15 +76,18 @@ body:
     attributes:
       label: 📝 Steps to Reproduce
       description: Detailed steps to help us reproduce the bug
+      value: |
+        1. 
+        2. 
+        3. 
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: ℹ Postconditions
-      description: |
-        Actions to be done after the bug reproduction
-        Example: "Delete created item from the DB: DELETE FROM table1 WHERE id=<item1_id>;"
+      description: Actions to be done after the bug reproduction
+      placeholder: Delete created item from the DB: `DELETE FROM table1 WHERE id=<item1_id>;`
     validations:
       required: false
 
