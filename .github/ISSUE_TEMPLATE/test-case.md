@@ -1,11 +1,10 @@
 ---
 name: "\U0001F9EA Test Case"
 about: Create test cases with this template
-title: ''
-labels: test case
-projects: MikronT/1
-assignees: ''
-
+labels:
+- "bug"
+projects:
+- "MikronT/1"
 ---
 
 # Description
