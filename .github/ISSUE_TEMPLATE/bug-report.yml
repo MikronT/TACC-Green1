@@ -68,7 +68,7 @@ body:
     attributes:
       label: ℹ Preconditions
       description: Actions to be done before the start of the bug reproducing
-      placeholder: Create an item in the DB: `INSERT INTO table1 (column1, column2) VALUES (value1, value2);`
+      placeholder: "Create an item in the DB: `INSERT INTO table1 (column1, column2) VALUES (value1, value2);`"
     validations:
       required: false
 
@@ -87,7 +87,7 @@ body:
     attributes:
       label: ℹ Postconditions
       description: Actions to be done after the bug reproduction
-      placeholder: Delete created item from the DB: `DELETE FROM table1 WHERE id=<item1_id>;`
+      placeholder: "Delete created item from the DB: `DELETE FROM table1 WHERE id=<item1_id>;`"
     validations:
       required: false
 
