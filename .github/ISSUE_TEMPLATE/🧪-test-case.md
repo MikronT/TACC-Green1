@@ -1,9 +1,10 @@
 ---
-name: Test Case Template
+name: "\U0001F9EA Test Case"
 about: Create test cases with this template
 title: ''
-labels: 'test case'
+labels: test case
 assignees: ''
+
 ---
 
 # Description
