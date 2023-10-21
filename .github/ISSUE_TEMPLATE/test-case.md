@@ -1,8 +1,7 @@
 ---
 name: "\U0001F9EA Test Case"
 about: Create test cases with this template
-labels:
-- "bug"
+labels: "test case"
 ---
 
 # Description
