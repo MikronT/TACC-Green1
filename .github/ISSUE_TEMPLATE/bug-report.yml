@@ -19,32 +19,34 @@ body:
         # Environment
         Tell us about the test environment the bug happens in
 
-  - type: checkboxes
+  - type: dropdown
     attributes:
       label: 💽 Operating System
       description: What OS types are you experiencing the bug on?
+      multiple: true
       options:
-        - label: Android
-        - label: iOS
-        - label: Windows
-        - label: Mac
-        - label: Some Linux distro
-        - label: Other OS
+        - Android
+        - iOS
+        - Windows
+        - Mac
+        - Some Linux distro
+        - Other OS
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     attributes:
       label: 🌎 Browser
       description: What browsers do you see the problem on?
+      multiple: true
       options:
-        - label: Google Chrome
-        - label: Mozilla Firefox
-        - label: Safari
-        - label: Vivaldi
-        - label: Microsoft Edge
-        - label: Opera
-        - label: Other browser
+        - Google Chrome
+        - Mozilla Firefox
+        - Safari
+        - Vivaldi
+        - Microsoft Edge
+        - Opera
+        - Other browser
     validations:
       required: true
 
