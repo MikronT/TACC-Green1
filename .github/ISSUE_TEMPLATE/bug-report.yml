@@ -16,6 +16,7 @@ body:
   - type: markdown
     attributes:
       value: "# Environment"
+      description: Tell us about the test environment the bug happens in
 
   - type: dropdown
     attributes:
@@ -87,6 +88,7 @@ body:
   - type: markdown
     attributes:
       value: "# Behavior"
+      description: Tell us about the behavior of the software and your expectations
 
   - type: textarea
     attributes:
@@ -113,17 +115,18 @@ body:
   - type: markdown
     attributes:
       value: "# Links to Requirements"
+      description: Link appropriate issues with the '#' symbol
 
-  - type: input
+  - type: textarea
     attributes:
       label: 🔗 User Story
-      description: Link the appropriate issue with '#' symbol
+      description: What user story describes the expected behavior
     validations:
       required: true
 
-  - type: input
+  - type: textarea
     attributes:
       label: 🔗 Test Case
-      description: Link the appropriate issue with '#' symbol
+      description: What test case is related to the bug
     validations:
       required: true
