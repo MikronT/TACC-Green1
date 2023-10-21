@@ -53,18 +53,12 @@ body:
   - type: input
     attributes:
       label: Version
-      description: What version of the software you're running?
-      placeholder: 0.74.1
+      description: |
+        What version of the software you're running?
+        Please, make sure you are running the [latest](https://github.com/MikronT/TACC-Green1/releases/latest) version of our software
+      placeholder: 4.41.7
     validations:
       required: true
-
-  - type: checkboxes
-    attributes:
-      label: Version
-      description: Confirm are running the [latest](https://github.com/MikronT/TACC-Green1/releases/latest) version of our software
-      options:
-        - label: I am sure I am experiencing the bug on the latest version
-          required: true
 
   - type: markdown
     attributes:
