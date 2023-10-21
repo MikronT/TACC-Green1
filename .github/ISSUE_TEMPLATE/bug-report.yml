@@ -114,18 +114,16 @@ body:
     attributes:
       value: "# Links to Requirements"
 
-  - type: textarea
+  - type: input
     attributes:
       label: 🔗 User Story
-      description: Link the appropriate issue with the hash symbol
-      value: '#'
+      description: Link the appropriate issue with '#' symbol
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     attributes:
       label: 🔗 Test Case
-      description: Link the appropriate issue with the hash symbol
-      value: '#'
+      description: Link the appropriate issue with '#' symbol
     validations:
       required: true
