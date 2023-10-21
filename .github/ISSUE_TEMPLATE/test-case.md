@@ -3,6 +3,7 @@ name: "\U0001F9EA Test Case"
 about: Create test cases with this template
 title: ''
 labels: test case
+projects: MikronT/1
 assignees: ''
 
 ---
@@ -32,6 +33,6 @@ The expected result tells the tester what they should experience as a result of 
 
 This is how the tester determines if the test case is a “pass” or “fail”
 
-# Requirement
+# Requirements
 
-Link to the corresponding requirements
+[Link to the corresponding requirements]
