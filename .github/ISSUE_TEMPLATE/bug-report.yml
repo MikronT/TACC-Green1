@@ -31,8 +31,9 @@ body:
         - Mac
         - Some Linux distro
         - Other OS
+        - Doesn't matter
     validations:
-      required: false
+      required: true
 
   - type: dropdown
     attributes:
@@ -47,8 +48,9 @@ body:
         - Microsoft Edge
         - Opera
         - Other browser
+        - Doesn't matter
     validations:
-      required: false
+      required: true
 
   - type: input
     attributes:
@@ -71,8 +73,9 @@ body:
       label: 🧪 Preconditions
       description: Actions to be done before the start of the bug reproducing
       placeholder: "Create an item in the DB: `INSERT INTO table1 (column1, column2) VALUES (value1, value2);`"
+      value: None
     validations:
-      required: false
+      required: true
 
   - type: textarea
     attributes:
@@ -94,8 +97,9 @@ body:
       label: 🧹 Postconditions
       description: Actions to be done after the bug reproduction
       placeholder: "Delete created item from the DB: `DELETE FROM table1 WHERE id=<item1_id>;`"
+      value: None
     validations:
-      required: false
+      required: true
 
   - type: markdown
     attributes:
@@ -109,7 +113,7 @@ body:
       description: What were you expecting?
       placeholder: It's working! :D
     validations:
-      required: false
+      required: true
 
   - type: textarea
     attributes:
@@ -117,16 +121,17 @@ body:
       description: What happened instead?
       placeholder: It's not working! :(
     validations:
-      required: false
+      required: true
 
   - type: textarea
     attributes:
       label: 📜 Log Output
       description: If available, paste the browser console log output here
       placeholder: Nerdy stuff...
+      value: None
       render: shell
     validations:
-      required: false
+      required: true
 
   - type: textarea
     attributes:
