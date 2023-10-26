@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println(person2.getName());
         System.out.println(person2.getBirthYear());
-        System.out.println(person2.age() + '\n');
+        System.out.println(person2.calculateAge() + '\n');
 
         person3.changeName("Marcus Aurelius");
         person4.input();
