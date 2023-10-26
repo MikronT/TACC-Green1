@@ -7,34 +7,38 @@ public class Person {
     private String name;
     private int birthYear;
 
-    public Person () {};
+
+    public Person() {
+    }
+
     public Person(String name, int birthYear) {
         this.name = name;
         this.birthYear = birthYear;
     }
 
-    String getName() {
+    // Геттери і сеттери
+    public String getName() {
         return name;
     }
 
-    int getBirthYear() {
-        return birthYear;
-    }
-
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    void setBirthYear(int birthYear) {
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
     }
 
-    public int age() {
-        int date = Year.now().getValue();
-        return  date - this.birthYear;
+    public int calculateAge() {
+        int currentYear = Year.now().getValue();
+        return currentYear - this.birthYear;
     }
 
-    public void changeName (String newName) {
+    public void changeName(String newName) {
         this.name = newName;
     }
 
@@ -47,8 +51,8 @@ public class Person {
     }
 
     public void output() {
-        System.out.println("age: " + this.age() );
-        System.out.println("name: " + this.name);
-        System.out.println("birthYear: " + this.birthYear + '\n');
+        System.out.println("Name: " + this.name);
+        System.out.println("Birth Year: " + this.birthYear);
+        System.out.println("Age: " + this.calculateAge() + "\n");
     }
 }
