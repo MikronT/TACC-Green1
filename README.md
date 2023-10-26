@@ -28,3 +28,6 @@
 - The calculateAge() method can be used to get the person's age based on the current year and the stored birth year.
 - The output() method can be used to display the person's information, including their name, birth year, and age.
 - This class provides a convenient way to create and manage person objects, input their information, calculate their age, and display their details. It follows encapsulation principles by keeping the fields private and providing public methods to access and modify the data.
+
+![image](https://github.com/MikronT/TACC-Green1/assets/146861887/83a5dd6f-ea14-47a9-8f6d-02ad68d672df)
+![image](https://github.com/MikronT/TACC-Green1/assets/146861887/45684753-9624-40c1-a537-89a0d8d4d8ad)
