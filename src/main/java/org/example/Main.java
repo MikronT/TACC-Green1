@@ -1,23 +1,38 @@
 package org.example;
 
+import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
-        SalariedEmployee salariedEmployee = new SalariedEmployee();
-        salariedEmployee.setEmployeeId("E001");
-        salariedEmployee.setSocialSecurityNumber("SSN123");
-        salariedEmployee.setFixedMonthlyPayment(3000.0);
+        var employees = new ArrayList<Employee>();
+        for (int i = 0; i < 5; i++) {
+            var e = new SalariedEmployee();
+            e.setEmployeeId("salaried-" + i);
+            e.setSocialSecurityNumber(Util.randomSocialSecurityNumber());
+            e.setFixedMonthlyPayment(Util.randomMonthlyPayment());
 
-        ContractEmployee contractEmployee = new ContractEmployee();
-        contractEmployee.setEmployeeId("E002");
-        contractEmployee.setFederalTaxIdNumber("FTIN456");
-        contractEmployee.setHourlyRate(15.0);
-        contractEmployee.setNumberOfHoursWorked(160);
+            employees.add(e);
+        }
 
-        System.out.println("Salaried Employee ID: " + salariedEmployee.getEmployeeId());
-        System.out.println("Monthly Pay: " + salariedEmployee.calculatePay());
-        System.out.println("-------------------------");
-        System.out.println("Contract Employee ID: " + contractEmployee.getEmployeeId());
-        System.out.println("Monthly Pay: " + contractEmployee.calculatePay());
+        for (int i = 0; i < 7; i++) {
+            var e = new ContractEmployee();
+            e.setEmployeeId("contract-" + i);
+            e.setFederalTaxIdNumber(Util.randomFederalTaxIdNumber());
+            e.setHourlyRate(Util.randomHourlyRate());
+            e.setNumberOfHoursWorked(Util.randomNumberOfHoursWorked());
+
+            employees.add(e);
+        }
+
+        //Sort by descending the monthly wage
+        employees.sort((o1, o2) -> Double.compare(o2.calculatePay(), o1.calculatePay()));
+
+        System.out.println("| Employee Id | Monthly Payment |");
+        System.out.println("| ----------- | --------------- |");
+        for (var e : employees)
+            System.out.printf("| %s  | %15.2f |" + System.lineSeparator(),
+                    e.getEmployeeId(),
+                    e.calculatePay());
     }
 }
