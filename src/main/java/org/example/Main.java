@@ -1,11 +1,8 @@
 package org.example;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.*;
 
-class Student implements Comparable<Student> {
+class Student  {
     private String name;
     private int course;
 
@@ -22,6 +19,14 @@ class Student implements Comparable<Student> {
         return course;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCourse(int course) {
+        this.course = course;
+    }
+
     public static void printStudents(List<Student> students, int targetCourse) {
         Iterator<Student> iterator = students.iterator();
         while (iterator.hasNext()) {
@@ -32,9 +37,12 @@ class Student implements Comparable<Student> {
         }
     }
 
-    @Override
-    public int compareTo(Student otherStudent) {
-        return this.name.compareTo(otherStudent.name);
+    public static Comparator<Student> compareByName() {
+        return Comparator.comparing(Student::getName);
+    }
+
+    public static Comparator<Student> compareByCourse() {
+        return Comparator.comparing(Student::getCourse);
     }
 }
 
@@ -47,20 +55,18 @@ public class Main {
         students.add(new Student("Dasha", 3));
         students.add(new Student("Anna", 2));
 
-        System.out.println("Students ordered by name:");
-        Collections.sort(students);
+        System.out.println("List of students ordered by name:");
+        Collections.sort(students, Student.compareByName());
         for (Student student : students) {
-            System.out.println(student.getName() + " - Course: " + student.getCourse());
+            System.out.println(student.getName() + " (Course " + student.getCourse() + ")");
         }
 
-        System.out.println("\nStudents ordered by course:");
-        students.sort((s1, s2) -> Integer.compare(s1.getCourse(), s2.getCourse()));
+        System.out.println("\nList of students ordered by course:");
+        Collections.sort(students, Student.compareByCourse());
         for (Student student : students) {
-            System.out.println(student.getName() + " - Course: " + student.getCourse());
+            System.out.println(student.getName() + " (Course " + student.getCourse() + ")");
         }
 
-        int targetCourse = 2;
-        System.out.println("\nStudents in course " + targetCourse + ":");
-        Student.printStudents(students, targetCourse);
+        Student.printStudents(students, 2);
     }
 }
