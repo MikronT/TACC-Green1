@@ -3,6 +3,7 @@ package task1;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 
 public class Main {
@@ -24,14 +25,20 @@ public class Main {
 
         Set<Integer> unionResult = Union.union(set1, set2, set3);
         System.out.println("Union of set1, set2, and set3: " + unionResult);
+        System.out.println();
 
         Set<Integer> intersectResult = Union.intersect(set1, set2, set3);
         System.out.println("Intersection of set1, set2, and set3: " + intersectResult);
+        System.out.println();
+        System.out.println();
 
         Set<Integer> unionUResult = UnionUniversal.union(HashSet.class, set1, set2, set3);
         System.out.println("Union of set1, set2, and set3: " + unionUResult);
+        System.out.println("Class: " + unionResult.getClass());
+        System.out.println();
 
-        Set<Integer> intersectUResult = UnionUniversal.intersect(HashSet.class, set1, set2, set3);
+        Set<Integer> intersectUResult = UnionUniversal.intersect(TreeSet.class, set1, set2, set3);
         System.out.println("Intersection of set1, set2, and set3: " + intersectUResult);
+        System.out.println("Class: " + intersectUResult.getClass());
     }
 }
