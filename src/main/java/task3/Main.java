@@ -1,4 +1,4 @@
-package org.example;
+package task3;
 
 import java.util.*;
 
