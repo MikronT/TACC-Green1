@@ -37,14 +37,6 @@ public class Student {
         this.course = course;
     }
 
-    public static void printStudents(List<Student> students, int targetCourse) {
-        for (Student student : students) {
-            if (student.getCourse() == targetCourse) {
-                System.out.println(student.getName());
-            }
-        }
-    }
-
     public static Comparator<Student> compareByName() {
         return Comparator.comparing(Student::getName);
     }

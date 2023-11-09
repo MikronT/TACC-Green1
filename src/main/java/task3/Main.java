@@ -25,6 +25,14 @@ public class Main {
             System.out.println(student.getName() + " (Course " + student.getCourse() + ")");
         }
 
-        Student.printStudents(students, 2);
+        printStudents(students, 2);
+    }
+
+    public static void printStudents(List<Student> students, int targetCourse) {
+        for (Student student : students) {
+            if (student.getCourse() == targetCourse) {
+                System.out.println(student.getName());
+            }
+        }
     }
 }
