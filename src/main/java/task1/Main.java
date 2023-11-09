@@ -3,9 +3,8 @@ package task1;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         Set<Integer> set1 = new HashSet<>();
         set1.add(1);
         set1.add(2);
@@ -27,5 +26,10 @@ public class Main {
         Set<Integer> intersectResult = Union.intersect(set1, set2, set3);
         System.out.println("Intersection of set1, set2, and set3: " + intersectResult);
 
+        Set<Integer> unionUResult = UnionUniversal.union(HashSet.class,set1, set2, set3);
+        System.out.println("Union of set1, set2, and set3: " + unionUResult);
+
+        Set<Integer> intersectUResult = UnionUniversal.intersect(HashSet.class, set1, set2, set3);
+        System.out.println("Intersection of set1, set2, and set3: " + intersectUResult);
     }
 }
