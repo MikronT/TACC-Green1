@@ -1,11 +1,9 @@
-package example;
+package org.example;
 
-import org.example.Student;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -44,7 +42,7 @@ public class FirstTest {
                 new Student("Dasha", 3),
                 new Student("Maria", 1),
                 new Student("Vova", 1)
-                ));
+        ));
     }
 
     @Test
@@ -65,14 +63,13 @@ public class FirstTest {
     public void setName() {
         Student student = new Student("Vlad", 2);
 
-        Assertions.assertThrows(IllegalArgumentException.class,() -> student.setName(""));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> student.setName(""));
     }
 
     @Test
     public void setCourse() {
         Student student = new Student("Vlad", 3);
 
-        Assertions.assertThrows(IllegalArgumentException.class,() -> student.setCourse(0));
-
+        Assertions.assertThrows(IllegalArgumentException.class, () -> student.setCourse(0));
     }
 }
