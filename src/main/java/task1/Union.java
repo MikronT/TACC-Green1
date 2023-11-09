@@ -20,10 +20,16 @@ class Union {
         return unionSet;
     }
 
-    public static <T> Set<T> intersect(Set<T>... args) {
-        Set<T> intersectSet = new HashSet<T>(args[0]);
+    public static<T> Set<T> intersect(Set <T> ... args) {
+        Set<T> intersectSet = new HashSet<T>();
 
-        for (Set<T> sets : args) {
+        if(args.length == 0) {
+            return intersectSet;
+        }
+
+        intersectSet.addAll(args[0]);
+
+        for (Set<T> sets: args){
             intersectSet.retainAll(sets);
         }
 
