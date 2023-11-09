@@ -1,11 +1,11 @@
 package task1;
 
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Set;
 
 
 public class UnionUniversal {
+    @SafeVarargs
     public static <T, U extends Set<T>> U union(Class<U> classSet, Set<T>... args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         U unionSet = classSet.getDeclaredConstructor().newInstance();
 
@@ -16,6 +16,7 @@ public class UnionUniversal {
         return unionSet;
     }
 
+    @SafeVarargs
     public static <T, U extends Set<T>> U intersect(Class<U> classSet, Set<T>... args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         U intersectSet = classSet.getDeclaredConstructor().newInstance();
 
