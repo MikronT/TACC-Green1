@@ -5,7 +5,6 @@ import org.example.object.Group;
 import org.example.object.Student;
 import org.example.object.Subject;
 
-import java.time.LocalDate;
 import java.util.List;
 
 
@@ -23,20 +22,20 @@ public class Main {
                 .addSubject(subject_dev)
                 .addSubject(subject_philosophy)
                 //Add some grades
-                .addGrade(new Grade(subject_math, LocalDate.now(), 54))
-                .addGrade(new Grade(subject_dev, LocalDate.now(), 62))
-                .addGrade(new Grade(subject_philosophy, LocalDate.now(), 100));
+                .addGrade(new Grade(subject_math, 54))
+                .addGrade(new Grade(subject_dev, 62))
+                .addGrade(new Grade(subject_philosophy, 100));
         var student_vlad = new Student("Влад", "Пупкін")
                 .addSubject(subject_philosophy)
-                .addGrade(new Grade(subject_philosophy, LocalDate.now(), 96));
+                .addGrade(new Grade(subject_philosophy, 96));
         var student_volodia = new Student("Володя", "Пупкін")
                 .addSubject(subject_dev)
                 .addSubject(subject_philosophy)
-                .addGrade(new Grade(subject_philosophy, LocalDate.now(), 94));
+                .addGrade(new Grade(subject_philosophy, 94));
         var student_vadym = new Student("Вадим", "Пупкін")
                 .addSubject(subject_math)
                 .addSubject(subject_philosophy)
-                .addGrade(new Grade(subject_philosophy, LocalDate.now(), 89));
+                .addGrade(new Grade(subject_philosophy, 89));
 
         //Create groups and add students
         var group1 = new Group("ІП-20", 2020)

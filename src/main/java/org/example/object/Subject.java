@@ -26,11 +26,14 @@ public class Subject {
 
         Subject subject = (Subject) o;
 
+        if (hasFinalExam != subject.hasFinalExam) return false;
         return getName().equals(subject.getName());
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        int result = getName().hashCode();
+        result = 31 * result + (hasFinalExam ? 1 : 0);
+        return result;
     }
 }

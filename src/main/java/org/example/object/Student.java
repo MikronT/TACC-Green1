@@ -46,6 +46,29 @@ public class Student {
     public List<Grade> getGrades(Subject forSubject) {
         return grades.stream()
                 .filter(grade -> grade.getSubject().equals(forSubject))
+                .sorted((o1, o2) -> o2.getGrade() - o1.getGrade())
                 .toList();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Student student = (Student) o;
+
+        if (!firstName.equals(student.firstName)) return false;
+        if (!lastName.equals(student.lastName)) return false;
+        if (!getSubjects().equals(student.getSubjects())) return false;
+        return getGrades().equals(student.getGrades());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = firstName.hashCode();
+        result = 31 * result + lastName.hashCode();
+        result = 31 * result + getSubjects().hashCode();
+        result = 31 * result + getGrades().hashCode();
+        return result;
     }
 }
