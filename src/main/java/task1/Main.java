@@ -1,6 +1,4 @@
-package org.example;
-
-import task1.Union;
+package task1;
 
 import java.util.HashSet;
 import java.util.Set;
