@@ -8,14 +8,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import static com.parasoft.parabank.utils.PropertiesInitializer.getPath;
 import static com.parasoft.parabank.utils.PropertiesInitializer.initialize;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UpdateUserInfoTest {
     static ChromeDriver driver = new ChromeDriver();
@@ -36,7 +33,6 @@ public class UpdateUserInfoTest {
 
         driver.findElement(By.xpath(parabankProps.getProperty("login-button-xpath"))).click();
         wait.until(d -> ExpectedConditions.visibilityOfAllElements());
-        driver.findElement(By.xpath(parabankProps.getProperty("update-info-button-xpath"))).click();
     }
 
     @BeforeEach
@@ -48,33 +44,41 @@ public class UpdateUserInfoTest {
     @AfterAll
     public static void logout() {
         driver.findElement(By.xpath(parabankProps.getProperty("update-info-button-xpath"))).click();
-
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("update-form-xpath"))));
         updateUserProps.forEach((key, value) -> driver.findElement(By.name(value.toString())).sendKeys(testAccountProps.getProperty(key.toString())));
         driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).click();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("profile-updated-xpath"))));
         driver.findElement(By.xpath(parabankProps.getProperty("logout-button-xpath"))).click();
         driver.quit();
     }
 
     @Test
     @Order(1)
-    public void changeCurrentData() {
-        List<WebElement> formFields = new ArrayList<>();
+    public void updateCurrentData() {
+        updateUserProps.forEach((key, value) -> {
+            WebElement element = driver.findElement(By.name(value.toString()));
+            assertTrue(element.isDisplayed());
+            element.sendKeys(element.getText().toLowerCase() + " updated");
 
-        updateUserProps.forEach((key, value) -> formFields.add(driver.findElement(By.name(value.toString()))));
-        formFields.forEach(element -> assertTrue(element.isDisplayed()));
-        formFields.forEach(element -> element.sendKeys(element.getAttribute("value").toLowerCase() + "updated"));
-        formFields.getFirst().submit();
-
-        driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).click();
+        });
+        driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).submit();
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("profile-updated-xpath"))));
         assertTrue(driver.findElement(By.xpath(parabankProps.getProperty("profile-updated-xpath"))).isDisplayed());
     }
 
     @Test
     @Order(2)
-    public void verifyChanges() {
+    public void changesSavedSuccessfully() {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("welcome-text-xpath"))));
-        assertEquals(" updated", driver.findElement(By.xpath(parabankProps.getProperty("welcome-text-xpath"))).getAttribute("value"));
+        System.out.println();
+        assertEquals("Welcome updated updated", driver.findElement(By.xpath(parabankProps.getProperty("welcome-text-xpath"))).getText());
+    }
+
+    @Test
+    @Order(2)
+    public void changesSavedUnsuccessfully() {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("welcome-text-xpath"))));
+        assertNotEquals("Welcome updated updated", driver.findElement(By.xpath(parabankProps.getProperty("welcome-text-xpath"))).getText());
     }
 }
 
