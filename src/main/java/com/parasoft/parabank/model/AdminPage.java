@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 public class AdminPage extends Page {
     private static final String PAGE_URL = "admin.htm";
-    private static final By BUTTON_DB_INIT = By.cssSelector("[value=INIT]");
-    private static final By BUTTON_DB_CLEAN = By.cssSelector("[value=CLEAN]");
-    private static final By BUTTON_JMS_SHUTDOWN = By.cssSelector("[value=Shutdown]");
-    private static final By BUTTON_JMS_STARTUP = By.cssSelector("[value=Startup]");
-    private static final By LABEL_RESULT = By.xpath("//*[@id=rightPanel]/p/b");
+    private static final By BUTTON_DB_INIT = By.cssSelector("[value=\"INIT\"]");
+    private static final By BUTTON_DB_CLEAN = By.cssSelector("[value=\"CLEAN\"]");
+    private static final By BUTTON_JMS_SHUTDOWN = By.cssSelector("[value=\"Shutdown\"]");
+    private static final By BUTTON_JMS_STARTUP = By.cssSelector("[value=\"Startup\"]");
+    private static final By LABEL_RESULT = By.xpath("//*[@id=\"rightPanel\"]/p/b");
 
 
     public AdminPage(WebDriver driver) {
@@ -45,6 +45,14 @@ public class AdminPage extends Page {
 
     public String getDatabaseControlRequestResult() {
         return driver.findElement(LABEL_RESULT).getText();
+    }
+
+    public String getJMSServiceControlButtonText() {
+        return driver.findElement(
+                isJMSServiceRunning() ?
+                        BUTTON_JMS_SHUTDOWN :
+                        BUTTON_JMS_STARTUP
+        ).getAttribute("value");
     }
 
     @Override
