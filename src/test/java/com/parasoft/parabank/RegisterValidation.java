@@ -1,5 +1,6 @@
 package com.parasoft.parabank;
 
+import com.parasoft.parabank.utils.CleanDatabase;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -59,7 +60,7 @@ public class RegisterValidation {
 
     @AfterAll
     static void logout() {
-
+        CleanDatabase.cleanDB(driver);
         driver.quit();
     }
 
