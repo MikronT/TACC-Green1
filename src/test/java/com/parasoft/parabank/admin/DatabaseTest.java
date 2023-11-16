@@ -1,16 +1,14 @@
 package com.parasoft.parabank.admin;
 
 import com.parasoft.parabank.model.AdminPage;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DatabaseTest {
     private static final WebDriver driver = new ChromeDriver();
     private static final AdminPage page = new AdminPage(driver);
