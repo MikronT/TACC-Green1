@@ -15,7 +15,7 @@ public class DatabaseTest {
 
 
     @BeforeEach
-    public void openAdminPage() {
+    public void openPage() {
         page.open();
     }
 
@@ -25,7 +25,7 @@ public class DatabaseTest {
     public void cleanDatabaseTest() {
         page.cleanDatabase();
 
-        var actualResult = page.getDatabaseControlRequestResult();
+        var actualResult = page.getResultLabelText();
         assertEquals("Database Cleaned", actualResult);
     }
 
@@ -34,7 +34,7 @@ public class DatabaseTest {
     public void initDatabaseTest() {
         page.initDatabase();
 
-        var actualResult = page.getDatabaseControlRequestResult();
+        var actualResult = page.getResultLabelText();
         assertEquals("Database Initialized", actualResult);
     }
 

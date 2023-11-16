@@ -15,7 +15,7 @@ public class JMSServiceTest {
 
 
     @BeforeAll
-    public static void openAdminPage() {
+    public static void openPage() {
         page.open();
 
         boolean isServiceRunning = page.isJMSServiceRunning();

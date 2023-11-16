@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
+@SuppressWarnings("UnusedReturnValue")
 public class AdminPage extends Page<AdminPage> {
     private static final String PAGE_URL = "admin.htm";
     private static final By BUTTON_DB_INIT = By.cssSelector("[value=\"INIT\"]");
@@ -29,11 +30,6 @@ public class AdminPage extends Page<AdminPage> {
         return this;
     }
 
-    public boolean isJMSServiceRunning() {
-        //If there's no startup button, the service is running
-        return driver.findElements(BUTTON_JMS_STARTUP).isEmpty();
-    }
-
     public AdminPage shutdownJMSService() {
         System.out.println("[JMS Service] Shutting down");
         driver.findElement(BUTTON_JMS_SHUTDOWN).click();
@@ -47,8 +43,13 @@ public class AdminPage extends Page<AdminPage> {
     }
 
 
-    public String getDatabaseControlRequestResult() {
+    public String getResultLabelText() {
         return driver.findElement(LABEL_RESULT).getText();
+    }
+
+    public boolean isJMSServiceRunning() {
+        //If there's no startup button, the service is running
+        return driver.findElements(BUTTON_JMS_STARTUP).isEmpty();
     }
 
     public String getJMSServiceControlButtonText() {
