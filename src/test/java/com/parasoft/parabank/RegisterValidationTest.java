@@ -1,31 +1,26 @@
 package com.parasoft.parabank;
 
-import com.parasoft.parabank.utils.CleanDatabase;
+import com.parasoft.parabank.model.AdminPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
 
-import static com.parasoft.parabank.utils.PropertiesInitializer.getPath;
-import static com.parasoft.parabank.utils.PropertiesInitializer.initialize;
 
-public class RegisterValidation {
-    private static WebDriver driver = new ChromeDriver();
-    static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class RegisterValidationTest {
+    private static final WebDriver driver = new ChromeDriver();
+    static final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-    static HashMap<String, String> registrationFormFields = new HashMap<>();
-    static HashMap<String, String> validUserProps  = new HashMap<>();
+    static final HashMap<String, String> registrationFormFields = new HashMap<>();
+    static final HashMap<String, String> validUserProps = new HashMap<>();
 
-    public RegisterValidation () {
+    public RegisterValidationTest() {
         registrationFormFields.put("firstName", "customer.firstName");
         registrationFormFields.put("lastName", "customer.lastName");
         registrationFormFields.put("address", "customer.address.street");
@@ -52,15 +47,16 @@ public class RegisterValidation {
     }
 
     @BeforeAll
-    public static void openPage () {
+    public static void openPage() {
         driver.get("https://parabank.parasoft.com/parabank/register.htm");
         wait.until(d -> ExpectedConditions.visibilityOfElementLocated(By.id("mainPanel")));
-
     }
 
     @AfterAll
     static void logout() {
-        CleanDatabase.cleanDB(driver);
+        new AdminPage(driver)
+                .open()
+                .cleanDatabase();
         driver.quit();
     }
 
@@ -120,7 +116,5 @@ public class RegisterValidation {
         WebElement successLogin = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/h2"));
 
         Assertions.assertEquals("Account Services", successLogin.getText());
-
     }
-
 }

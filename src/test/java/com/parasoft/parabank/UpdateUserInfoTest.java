@@ -14,12 +14,13 @@ import static com.parasoft.parabank.utils.PropertiesInitializer.getPath;
 import static com.parasoft.parabank.utils.PropertiesInitializer.initialize;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class UpdateUserInfoTest {
-    static ChromeDriver driver = new ChromeDriver();
-    static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    static Properties parabankProps = initialize(getPath("parabank.properties"));
-    static Properties testAccountProps = initialize(getPath("testAccountInfo.properties"));
-    static Properties updateUserProps = initialize(getPath("updateUserFieldNames.properties"));
+    static final ChromeDriver driver = new ChromeDriver();
+    static final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    static final Properties parabankProps = initialize(getPath("parabank.properties"));
+    static final Properties testAccountProps = initialize(getPath("testAccountInfo.properties"));
+    static final Properties updateUserProps = initialize(getPath("updateUserFieldNames.properties"));
 
     @BeforeAll
     public static void login() {
@@ -59,7 +60,6 @@ public class UpdateUserInfoTest {
             WebElement element = driver.findElement(By.name(value.toString()));
             assertTrue(element.isDisplayed());
             element.sendKeys(element.getText().toLowerCase() + " updated");
-
         });
         driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).submit();
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("profile-updated-xpath"))));
@@ -81,4 +81,3 @@ public class UpdateUserInfoTest {
         assertNotEquals("Welcome updated updated", driver.findElement(By.xpath(parabankProps.getProperty("welcome-text-xpath"))).getText());
     }
 }
-

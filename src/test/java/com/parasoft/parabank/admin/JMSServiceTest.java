@@ -5,6 +5,8 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class JMSServiceTest {
@@ -28,11 +30,23 @@ public class JMSServiceTest {
     @Order(1)
     public void shutdownServiceTest() {
         page.shutdownJMSService();
+
+        var actualResult = page.getJMSServiceControlButtonText();
+        assertEquals("Startup", actualResult);
     }
 
     @Test
     @Order(2)
     public void runServiceTest() {
         page.startupJMSService();
+
+        var actualResult = page.getJMSServiceControlButtonText();
+        assertEquals("Shutdown", actualResult);
+    }
+
+
+    @AfterAll
+    public static void quit() {
+        driver.quit();
     }
 }

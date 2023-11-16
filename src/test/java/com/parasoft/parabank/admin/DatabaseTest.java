@@ -22,20 +22,20 @@ public class DatabaseTest {
 
     @Test
     @Order(1)
-    public void initDatabaseTest() {
-        page.initDatabase();
+    public void cleanDatabaseTest() {
+        page.cleanDatabase();
 
-        var actualResult = page.getDatabaseControlRequestResult();
-        assertEquals("Database Initialized", actualResult);
+        var actualResult = page.getResultLabelText();
+        assertEquals("Database Cleaned", actualResult);
     }
 
     @Test
     @Order(2)
-    public void cleanDatabaseTest() {
-        page.cleanDatabase();
+    public void initDatabaseTest() {
+        page.initDatabase();
 
-        var actualResult = page.getDatabaseControlRequestResult();
-        assertEquals("Database Cleaned", actualResult);
+        var actualResult = page.getResultLabelText();
+        assertEquals("Database Initialized", actualResult);
     }
 
 
