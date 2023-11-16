@@ -1,4 +1,4 @@
-package com.parasoft.parabank;
+package com.parasoft.parabank.admin;
 
 import com.parasoft.parabank.model.AdminPage;
 import org.junit.jupiter.api.AfterAll;
@@ -21,6 +21,7 @@ public class DatabaseTest {
         page.open();
     }
 
+
     @Test
     @Order(1)
     public void initDatabaseTest() {
@@ -38,6 +39,7 @@ public class DatabaseTest {
         var actualResult = page.getDatabaseControlRequestResult();
         assertEquals("Database Cleaned", actualResult);
     }
+
 
     @AfterAll
     public static void quit() {
