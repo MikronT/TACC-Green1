@@ -15,7 +15,7 @@ public class DatabaseTest {
 
 
     @BeforeEach
-    public void openPage() {
+    public void openAdminPage() {
         page.open();
     }
 

@@ -4,9 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
 public final class PropertiesInitializer {
-    private PropertiesInitializer() {
-    }
+    private PropertiesInitializer() {}
 
     public static Properties initialize(String propertyPath) {
         Properties returnProps = new Properties();
