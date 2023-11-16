@@ -11,6 +11,7 @@ public class AdminPage extends Page<AdminPage> {
     private static final By BUTTON_DB_CLEAN = By.cssSelector("[value=\"CLEAN\"]");
     private static final By BUTTON_JMS_SHUTDOWN = By.cssSelector("[value=\"Shutdown\"]");
     private static final By BUTTON_JMS_STARTUP = By.cssSelector("[value=\"Startup\"]");
+    private static final By BUTTON_SUBMIT = By.xpath("//*[@id=\"adminForm\"]/input");
     private static final By LABEL_RESULT = By.xpath("//*[@id=\"rightPanel\"]/p/b");
 
 
@@ -39,6 +40,37 @@ public class AdminPage extends Page<AdminPage> {
     public AdminPage startupJMSService() {
         System.out.println("[JMS Service] Starting up");
         driver.findElement(BUTTON_JMS_STARTUP).click();
+        return this;
+    }
+
+    public AdminPage setDataAccessMode(DataAccessMode mode) {
+        driver.findElement(mode.getLocator()).click();
+        return this;
+    }
+
+    public enum DataAccessMode {
+        SOAP {
+            @Override
+            public By getLocator() {return By.id("accessMode1");}
+        },
+        REST_XML {
+            @Override
+            public By getLocator() {return By.id("accessMode2");}
+        },
+        REST_JSON {
+            @Override
+            public By getLocator() {return By.id("accessMode3");}
+        },
+        JDBC {
+            @Override
+            public By getLocator() {return By.id("accessMode4");}
+        };
+
+        public abstract By getLocator();
+    }
+
+    public AdminPage submit() {
+        driver.findElement(BUTTON_SUBMIT).click();
         return this;
     }
 
