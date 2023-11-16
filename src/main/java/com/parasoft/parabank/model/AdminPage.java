@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class AdminPage extends Page {
+public class AdminPage extends Page<AdminPage> {
     private static final String PAGE_URL = "admin.htm";
     private static final By BUTTON_DB_INIT = By.cssSelector("[value=\"INIT\"]");
     private static final By BUTTON_DB_CLEAN = By.cssSelector("[value=\"CLEAN\"]");
@@ -17,14 +17,16 @@ public class AdminPage extends Page {
         super(driver);
     }
 
-    public void initDatabase() {
+    public AdminPage initDatabase() {
         System.out.println("[Database] Initializing");
         driver.findElement(BUTTON_DB_INIT).click();
+        return this;
     }
 
-    public void cleanDatabase() {
+    public AdminPage cleanDatabase() {
         System.out.println("[Database] Cleaning up");
         driver.findElement(BUTTON_DB_CLEAN).click();
+        return this;
     }
 
     public boolean isJMSServiceRunning() {
@@ -32,14 +34,16 @@ public class AdminPage extends Page {
         return driver.findElements(BUTTON_JMS_STARTUP).isEmpty();
     }
 
-    public void shutdownJMSService() {
+    public AdminPage shutdownJMSService() {
         System.out.println("[JMS Service] Shutting down");
         driver.findElement(BUTTON_JMS_SHUTDOWN).click();
+        return this;
     }
 
-    public void startupJMSService() {
+    public AdminPage startupJMSService() {
         System.out.println("[JMS Service] Starting up");
         driver.findElement(BUTTON_JMS_STARTUP).click();
+        return this;
     }
 
 
