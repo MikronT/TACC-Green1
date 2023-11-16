@@ -60,7 +60,9 @@ public class RegisterValidation {
 
     @AfterAll
     static void logout() {
-        CleanDatabase.cleanDB(driver);
+        new AdminPage(driver)
+                .open()
+                .cleanDatabase();
         driver.quit();
     }
 
