@@ -1,9 +1,9 @@
-package com.parasoft.parabank.utils.pages;
+package com.parasoft.parabank.model;
 
-import com.parasoft.parabank.utils.Page;
-import com.parasoft.parabank.utils.XPath;
+import com.parasoft.parabank.model.utils.XPath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.HashMap;
 
@@ -29,7 +29,7 @@ public class RegistrationPage extends Page<RegistrationPage> {
     }
 
 
-    public String getLocalUrlPath() {
+    public String getLocalUrlPath () {
         return PAGE_URL;
     }
 
@@ -52,10 +52,4 @@ public class RegistrationPage extends Page<RegistrationPage> {
         driver.findElement(submitButton).click();
         return this;
     }
-
-    public String getSuccessRegisterText() {
-        return driver.findElement(successRegisterText).getText();
-    }
-
-
 }
