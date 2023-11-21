@@ -1,10 +1,10 @@
-package org.example;
+package org.tacc.green1;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class MainTest {
+public class SampleTest {
     @Test
     public void test() {
         var driver = new ChromeDriver();
