@@ -1,5 +1,6 @@
 package com.parasoft.parabank.utils.pages;
 
+import com.parasoft.parabank.utils.Page;
 import com.parasoft.parabank.utils.XPath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
