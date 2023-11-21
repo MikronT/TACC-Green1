@@ -1,4 +1,4 @@
-package com.parasoft.parabank.utils;
+package com.parasoft.parabank.model.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

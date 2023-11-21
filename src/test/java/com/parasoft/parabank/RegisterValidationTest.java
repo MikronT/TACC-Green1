@@ -1,7 +1,8 @@
 package com.parasoft.parabank;
 
 import com.parasoft.parabank.model.AdminPage;
-import com.parasoft.parabank.utils.XPath;
+import com.parasoft.parabank.model.RegistrationPage;
+import com.parasoft.parabank.model.utils.XPath;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -64,35 +65,7 @@ public class RegisterValidationTest {
     @Test
     @Order(2)
     void register() {
-        WebElement firstName = driver.findElement(By.id(registrationFormFields.get("firstName")));
-        WebElement lastName = driver.findElement(By.id(registrationFormFields.get("lastName")));
-        WebElement address = driver.findElement(By.id(registrationFormFields.get("address")));
-        WebElement city = driver.findElement(By.id(registrationFormFields.get("city")));
-        WebElement state = driver.findElement(By.id(registrationFormFields.get("state")));
-        WebElement zipCode = driver.findElement(By.id(registrationFormFields.get("zipCode")));
-        WebElement phone = driver.findElement(By.id(registrationFormFields.get("phone")));
-        WebElement ssn = driver.findElement(By.id(registrationFormFields.get("ssn")));
-        WebElement username = driver.findElement(By.id(registrationFormFields.get("username")));
-        WebElement password = driver.findElement(By.id(registrationFormFields.get("password")));
-        WebElement confirmPassword = driver.findElement(By.id(registrationFormFields.get("repeatedPassword")));
-
-        WebElement submit = driver.findElement(By.xpath(XPath.RegisterPage.submitButton));
-
-        /*=======================================================================*/
-
-        firstName.sendKeys(validUserProps.get("firstName"));
-        lastName.sendKeys(validUserProps.get("lastName"));
-        address.sendKeys(validUserProps.get("address"));
-        city.sendKeys(validUserProps.get("city"));
-        state.sendKeys(validUserProps.get("state"));
-        zipCode.sendKeys(validUserProps.get("zipCode"));
-        phone.sendKeys(validUserProps.get("phone"));
-        ssn.sendKeys(validUserProps.get("ssn"));
-        username.sendKeys(validUserProps.get("username"));
-        password.sendKeys(validUserProps.get("password"));
-        confirmPassword.sendKeys(validUserProps.get("repeatedPassword"));
-
-        submit.click();
+        new RegistrationPage(driver).fillRegistrationForm(validUserProps).submitRegistrationForm();
 
         WebElement successRegister = driver.findElement(By.xpath(XPath.RegisterPage.successRegisterText));
 

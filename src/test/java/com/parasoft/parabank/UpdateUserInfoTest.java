@@ -1,6 +1,6 @@
 package com.parasoft.parabank;
 
-import com.parasoft.parabank.utils.XPath;
+import com.parasoft.parabank.model.utils.XPath;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Properties;
 
-import static com.parasoft.parabank.utils.PropertiesInitializer.getPath;
-import static com.parasoft.parabank.utils.PropertiesInitializer.initialize;
+import static com.parasoft.parabank.model.utils.PropertiesInitializer.getPath;
+import static com.parasoft.parabank.model.utils.PropertiesInitializer.initialize;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -49,8 +49,8 @@ public class UpdateUserInfoTest {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.updateForm)));
         updateUserProps.forEach((key, value) -> driver.findElement(By.name(value.toString())).sendKeys(testAccountProps.getProperty(key.toString())));
         driver.findElement(By.xpath(XPath.UpdatePage.updateButton)).click();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("profile-updated-xpath"))));
-        driver.findElement(By.xpath(parabankProps.getProperty("logout-button-xpath"))).click();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.profileUpdated)));
+        driver.findElement(By.xpath(XPath.Logout.logoutButton)).click();
         driver.quit();
     }
 
@@ -62,7 +62,7 @@ public class UpdateUserInfoTest {
             assertTrue(element.isDisplayed());
             element.sendKeys(element.getText().toLowerCase() + " updated");
         });
-        driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).submit();
+        driver.findElement(By.xpath(XPath.UpdatePage.updateButton)).submit();
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.profileUpdated)));
         assertTrue(driver.findElement(By.xpath(XPath.UpdatePage.profileUpdated)).isDisplayed());
     }
