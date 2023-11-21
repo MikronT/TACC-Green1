@@ -1,5 +1,6 @@
 package com.parasoft.parabank;
 
+import com.parasoft.parabank.utils.XPath;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,7 +25,7 @@ public class UpdateUserInfoTest {
 
     @BeforeAll
     public static void login() {
-        driver.get(parabankProps.getProperty("main-page-link"));
+        driver.get("https://parabank.parasoft.com/parabank/index.htm");
         wait.until(d -> ExpectedConditions.visibilityOfElementLocated(By.name("username")));
         WebElement username = driver.findElement(By.name("username"));
         WebElement password = driver.findElement(By.name("password"));
@@ -32,22 +33,22 @@ public class UpdateUserInfoTest {
         username.sendKeys(testAccountProps.getProperty("username"));
         password.sendKeys(testAccountProps.getProperty("password"));
 
-        driver.findElement(By.xpath(parabankProps.getProperty("login-button-xpath"))).click();
+        driver.findElement(By.xpath(XPath.Login.loginButton)).click();
         wait.until(d -> ExpectedConditions.visibilityOfAllElements());
     }
 
     @BeforeEach
     public void navigateToUpdatePage() {
-        wait.until(d -> ExpectedConditions.visibilityOfElementLocated(By.xpath(parabankProps.getProperty("update-info-button-xpath"))));
-        driver.findElement(By.xpath(parabankProps.getProperty("update-info-button-xpath"))).click();
+        wait.until(d -> ExpectedConditions.visibilityOfElementLocated(By.xpath(XPath.UpdatePage.updateInfoButton)));
+        driver.findElement(By.xpath(XPath.UpdatePage.updateInfoButton)).click();
     }
 
     @AfterAll
     public static void logout() {
-        driver.findElement(By.xpath(parabankProps.getProperty("update-info-button-xpath"))).click();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("update-form-xpath"))));
+        driver.findElement(By.xpath(XPath.UpdatePage.updateInfoButton)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.updateForm)));
         updateUserProps.forEach((key, value) -> driver.findElement(By.name(value.toString())).sendKeys(testAccountProps.getProperty(key.toString())));
-        driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).click();
+        driver.findElement(By.xpath(XPath.UpdatePage.updateButton)).click();
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("profile-updated-xpath"))));
         driver.findElement(By.xpath(parabankProps.getProperty("logout-button-xpath"))).click();
         driver.quit();
@@ -62,22 +63,22 @@ public class UpdateUserInfoTest {
             element.sendKeys(element.getText().toLowerCase() + " updated");
         });
         driver.findElement(By.xpath(parabankProps.getProperty("update-button-xpath"))).submit();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("profile-updated-xpath"))));
-        assertTrue(driver.findElement(By.xpath(parabankProps.getProperty("profile-updated-xpath"))).isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.profileUpdated)));
+        assertTrue(driver.findElement(By.xpath(XPath.UpdatePage.profileUpdated)).isDisplayed());
     }
 
     @Test
     @Order(2)
     public void changesSavedSuccessfully() {
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("welcome-text-xpath"))));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.welcomeText)));
         System.out.println();
-        assertEquals("Welcome updated updated", driver.findElement(By.xpath(parabankProps.getProperty("welcome-text-xpath"))).getText());
+        assertEquals("Welcome updated updated", driver.findElement(By.xpath(XPath.UpdatePage.welcomeText)).getText());
     }
 
     @Test
     @Order(2)
     public void changesSavedUnsuccessfully() {
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(parabankProps.getProperty("welcome-text-xpath"))));
-        assertNotEquals("Welcome updated updated", driver.findElement(By.xpath(parabankProps.getProperty("welcome-text-xpath"))).getText());
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(XPath.UpdatePage.welcomeText)));
+        assertNotEquals("Welcome updated updated", driver.findElement(By.xpath(XPath.UpdatePage.welcomeText)).getText());
     }
 }

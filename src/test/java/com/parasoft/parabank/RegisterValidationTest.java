@@ -1,6 +1,7 @@
 package com.parasoft.parabank;
 
 import com.parasoft.parabank.model.AdminPage;
+import com.parasoft.parabank.utils.XPath;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -75,7 +76,7 @@ public class RegisterValidationTest {
         WebElement password = driver.findElement(By.id(registrationFormFields.get("password")));
         WebElement confirmPassword = driver.findElement(By.id(registrationFormFields.get("repeatedPassword")));
 
-        WebElement submit = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/form/table/tbody/tr[13]/td[2]/input"));
+        WebElement submit = driver.findElement(By.xpath(XPath.RegisterPage.submitButton));
 
         /*=======================================================================*/
 
@@ -93,27 +94,27 @@ public class RegisterValidationTest {
 
         submit.click();
 
-        WebElement successRegister = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/p"));
+        WebElement successRegister = driver.findElement(By.xpath(XPath.RegisterPage.successRegisterText));
 
         Assertions.assertEquals("Your account was created successfully. You are now logged in.", successRegister.getText());
 
-        WebElement logout = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/ul/li[8]/a"));
+        WebElement logout = driver.findElement(By.xpath(XPath.Logout.logoutButton));
         logout.click();
     }
 
     @Test
     @Order(3)
     void login() {
-        WebElement username = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/form/div[1]/input"));
-        WebElement password = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/form/div[2]/input"));
-        WebElement loginButton = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/form/div[3]/input"));
+        WebElement username = driver.findElement(By.xpath(XPath.Login.usernameInput));
+        WebElement password = driver.findElement(By.xpath(XPath.Login.passwordInput));
+        WebElement loginButton = driver.findElement(By.xpath(XPath.Login.loginButton));
 
         username.sendKeys(validUserProps.get("username"));
         password.sendKeys(validUserProps.get("password"));
 
         loginButton.click();
 
-        WebElement successLogin = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/h2"));
+        WebElement successLogin = driver.findElement(By.xpath(XPath.Login.successLogin));
 
         Assertions.assertEquals("Account Services", successLogin.getText());
     }
