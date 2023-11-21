@@ -1,6 +1,6 @@
-package com.parasoft.parabank;
+package com.parasoft.parabank.user;
 
-import com.parasoft.parabank.model.utils.XPath;
+import com.parasoft.parabank.utils.XPath;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Properties;
 
-import static com.parasoft.parabank.model.utils.PropertiesInitializer.getPath;
-import static com.parasoft.parabank.model.utils.PropertiesInitializer.initialize;
+import static com.parasoft.parabank.utils.PropertiesInitializer.getPath;
+import static com.parasoft.parabank.utils.PropertiesInitializer.initialize;
 import static org.junit.jupiter.api.Assertions.*;
 
 

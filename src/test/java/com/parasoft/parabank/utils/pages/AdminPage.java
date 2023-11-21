@@ -1,4 +1,4 @@
-package com.parasoft.parabank.model;
+package com.parasoft.parabank.utils.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,19 +51,27 @@ public class AdminPage extends Page<AdminPage> {
     public enum DataAccessMode {
         SOAP {
             @Override
-            public By getLocator() {return By.id("accessMode1");}
+            public By getLocator() {
+                return By.id("accessMode1");
+            }
         },
         REST_XML {
             @Override
-            public By getLocator() {return By.id("accessMode2");}
+            public By getLocator() {
+                return By.id("accessMode2");
+            }
         },
         REST_JSON {
             @Override
-            public By getLocator() {return By.id("accessMode3");}
+            public By getLocator() {
+                return By.id("accessMode3");
+            }
         },
         JDBC {
             @Override
-            public By getLocator() {return By.id("accessMode4");}
+            public By getLocator() {
+                return By.id("accessMode4");
+            }
         };
 
         public abstract By getLocator();

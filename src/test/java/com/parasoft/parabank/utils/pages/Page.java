@@ -1,4 +1,4 @@
-package com.parasoft.parabank.model;
+package com.parasoft.parabank.utils.pages;
 
 import org.openqa.selenium.WebDriver;
 

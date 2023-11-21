@@ -1,6 +1,6 @@
 package com.parasoft.parabank.admin;
 
-import com.parasoft.parabank.model.AdminPage;
+import com.parasoft.parabank.utils.pages.AdminPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

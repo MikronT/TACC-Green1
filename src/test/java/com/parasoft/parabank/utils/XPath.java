@@ -1,4 +1,4 @@
-package com.parasoft.parabank.model.utils;
+package com.parasoft.parabank.utils;
 
 public class XPath {
     public interface RegisterPage {

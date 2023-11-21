@@ -1,8 +1,8 @@
-package com.parasoft.parabank;
+package com.parasoft.parabank.user;
 
-import com.parasoft.parabank.model.AdminPage;
-import com.parasoft.parabank.model.RegistrationPage;
-import com.parasoft.parabank.model.utils.XPath;
+import com.parasoft.parabank.utils.pages.AdminPage;
+import com.parasoft.parabank.utils.pages.RegistrationPage;
+import com.parasoft.parabank.utils.XPath;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
