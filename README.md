@@ -10,8 +10,8 @@ Name: **green1**
 
 Members of the team
 
-| | | |
-|---|---|---|
+| | |
+|---|---|
 | [@VolodymyrNakonechnyi](https://github.com/VolodymyrNakonechnyi) | [@Buzzuzz](https://github.com/Buzzuzz) |
 | [@MikronT](https://github.com/MikronT) | [@bogdanrymar](https://github.com/bogdanrymar) |
-| | | |
+| | |
