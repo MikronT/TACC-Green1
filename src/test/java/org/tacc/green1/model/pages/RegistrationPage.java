@@ -1,7 +1,8 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.tacc.green1.model.Modal;
 import org.tacc.green1.util.XPath;
 
 public class RegistrationPage extends Modal implements XPath.Registration {
@@ -12,36 +13,42 @@ public class RegistrationPage extends Modal implements XPath.Registration {
     private static final By CONFIRM_PASSWORD = By.xpath(INPUT_CONFIRM_PASSWORD);
     private static final By SUBMIT = By.xpath(INPUT_SUBMIT_BUTTON);
 
-
-    public RegistrationPage(WebDriver driver) {
+    protected RegistrationPage(WebDriver driver) {
         super(driver);
     }
 
     public RegistrationPage fillFirstName(String firstName) {
-        driver.findElement(FIRST_NAME).sendKeys(firstName);
+        modalDriver.findElement(FIRST_NAME).sendKeys(firstName);
         return this;
     }
+
     public RegistrationPage fillLastName(String lastName) {
-        driver.findElement(LAST_NAME).sendKeys(lastName);
+        modalDriver.findElement(LAST_NAME).sendKeys(lastName);
         return this;
     }
+
     public RegistrationPage fillEmail(String email) {
-        driver.findElement(EMAIL).sendKeys(email);
+        modalDriver.findElement(EMAIL).sendKeys(email);
         return this;
     }
 
     public RegistrationPage fillPassword(String password) {
-        driver.findElement(PASSWORD).sendKeys(password);
+        modalDriver.findElement(PASSWORD).sendKeys(password);
         return this;
     }
 
     public RegistrationPage fillConfirmPassword(String password) {
-        driver.findElement(CONFIRM_PASSWORD).sendKeys(password);
+        modalDriver.findElement(CONFIRM_PASSWORD).sendKeys(password);
         return this;
     }
 
     public MainPage submit() {
-        driver.findElement(SUBMIT).click();
-        return new MainPage(driver);
+        modalDriver.findElement(SUBMIT).click();
+        return new MainPage(modalDriver);
+    }
+
+    @Override
+    protected void quit() {
+        modalDriver.quit();
     }
 }
