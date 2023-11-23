@@ -4,10 +4,10 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.tacc.green1.model.pages.AccountPage;
-import org.tacc.green1.model.pages.LoginPage;
-import org.tacc.green1.model.pages.MainPage;
-import org.tacc.green1.model.pages.RegistrationPage;
+import org.tacc.green1.pages.AccountPage;
+import org.tacc.green1.pages.LoginPage;
+import org.tacc.green1.pages.MainPage;
+import org.tacc.green1.pages.RegistrationPage;
 
 import java.util.stream.Stream;
 
@@ -33,7 +33,7 @@ public class RegistrationTest {
 
     @BeforeAll
     static void prepare() {
-        registrationPage = MainPage.open("chrome").gotoRegistrationPage();
+        registrationPage = MainPage.initPage().open().gotoRegistrationPage();
     }
 
     @ParameterizedTest
@@ -57,8 +57,7 @@ public class RegistrationTest {
     @MethodSource("provideLoginValues")
     @Order(2)
     void login(String email, String password) {
-        loginPage = MainPage.open("chrome").gotoLoginPage();
-
+        loginPage = MainPage.initPage().open().gotoLoginPage();
         loginPage
                 .fillEmail(email)
                 .fillPassword(password)
