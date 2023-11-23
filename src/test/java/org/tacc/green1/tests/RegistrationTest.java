@@ -1,28 +1,50 @@
 package org.tacc.green1.tests;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.tacc.green1.pages.AccountPage;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.tacc.green1.pages.MainPage;
 import org.tacc.green1.pages.RegistrationPage;
+import org.tacc.green1.util.RegistrationDataWriter;
+
+import java.util.stream.Stream;
+
+import static org.apache.commons.lang3.RandomStringUtils.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class RegistrationTest {
     private static RegistrationPage registrationPage;
-    private static AccountPage accountPage;
 
-    @BeforeEach
-    public void prepare() {
+
+    @BeforeAll
+    public static void prepare() {
+        //TODO 23.11.2023: Provide better logic for automatic data cleanup
+        //RegistrationDataWriter.clear();
+
         registrationPage = MainPage.initPage().open().gotoRegistrationPage();
     }
 
+
+    private static Stream<Arguments> provideRegistrationValues() {
+        String firstName = randomAlphanumeric(5, 10).toLowerCase();
+        String lastName = randomAlphanumeric(5, 10).toLowerCase();
+        String email = (randomAlphanumeric(5, 10) + "@"
+                + randomAlphanumeric(5, 10) + "."
+                + randomAlphabetic(2, 3)).toLowerCase();
+        String password = randomAscii(8, 16);
+
+        return Stream.of(
+                Arguments.of(firstName, lastName, email, password, password)
+        );
+    }
+
     @ParameterizedTest
-    @CsvFileSource(resources = "/registrationData.csv")
-    void registration(String firstName, String lastName, String email, String password, String confirmPassword) {
-        accountPage = registrationPage
+    @MethodSource("provideRegistrationValues")
+    public void registration(String firstName, String lastName, String email, String password, String confirmPassword) {
+        var accountPage = registrationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
                 .fillEmail(email)
@@ -30,16 +52,15 @@ public class RegistrationTest {
                 .fillConfirmPassword(confirmPassword)
                 .submit();
 
-        Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
+        assertEquals("My Account", accountPage.getAccountPageWelcomeText());
+
+        //Save registration data for future
+        RegistrationDataWriter.append(firstName, lastName, email, password, confirmPassword);
     }
 
-    @AfterEach
-    public void finish() {
-        accountPage.logout();
-    }
 
     @AfterAll
-    public static void cleanup() {
-        accountPage.quit();
+    public static void finish() {
+        registrationPage.quit();
     }
 }
