@@ -18,7 +18,8 @@ public class XPath {
     }
 
     public interface AccountProfile {
-        String MY_ACCOUNT_WELCOME_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[1]/h1";
+        String MY_ACCOUNT_WELCOME_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[1]/h1",
+                CONTACT_INFORMATION_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[1]/p";
     }
 
     public interface MainPage {
