@@ -1,8 +1,10 @@
-package org.tacc.green1.model.pages;
+package org.tacc.green1.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.tacc.green1.model.Modal;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
 
 import java.util.Properties;
@@ -12,28 +14,36 @@ import static org.tacc.green1.util.PropertiesInitializer.initializeLocalProperti
 
 public class MainPage extends Modal implements XPath.MainPage {
     private static final Properties PROPS = initializeLocalProperties("website.properties");
-    private static final By LINK_LOGIN = By.className("authorization-link");
+
+    @FindBy(className = "authorization-link")
+    WebElement LINK_LOGIN;
+    //    private static final By LINK_LOGIN = By.className("authorization-link");
     private static final By REGISTRATION = By.xpath(LINK_REGISTRATION);
     private static final By WELCOME_MESSAGE = By.xpath(WELCOME_MESSAGE_MAIN_PAGE);
 
-    protected MainPage(WebDriver driver) {
-        super(driver);
-        driver.get(PROPS.getProperty("url"));
+    public MainPage() {
+        super();
     }
 
-    public static MainPage open(String browser) {
-        return new MainPage(initialize(browser));
+    public static MainPage initPage() {
+        modalDriver = Utils.initDriver();
+        return PageFactory.initElements(modalDriver, MainPage.class);
+    }
+
+    public MainPage open() {
+        modalDriver.get(PROPS.getProperty("url"));
+        return this;
     }
 
 
     public LoginPage gotoLoginPage() {
-        modalDriver.findElement(LINK_LOGIN).click();
-        return new LoginPage(modalDriver);
+        LINK_LOGIN.click();
+        return new LoginPage();
     }
 
     public RegistrationPage gotoRegistrationPage() {
         modalDriver.findElement(REGISTRATION).click();
-        return new RegistrationPage(modalDriver);
+        return new RegistrationPage();
     }
 
     public boolean isLoggedIn() {
@@ -45,10 +55,5 @@ public class MainPage extends Modal implements XPath.MainPage {
             //Element not found, not logged in
             return false;
         }
-    }
-
-    @Override
-    protected void quit() {
-        modalDriver.quit();
     }
 }

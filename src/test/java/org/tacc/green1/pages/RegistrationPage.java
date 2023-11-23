@@ -1,8 +1,6 @@
-package org.tacc.green1.model.pages;
+package org.tacc.green1.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.tacc.green1.model.Modal;
 import org.tacc.green1.util.XPath;
 
 public class RegistrationPage extends Modal implements XPath.Registration {
@@ -12,10 +10,6 @@ public class RegistrationPage extends Modal implements XPath.Registration {
     private static final By PASSWORD = By.xpath(INPUT_PASSWORD);
     private static final By CONFIRM_PASSWORD = By.xpath(INPUT_CONFIRM_PASSWORD);
     private static final By SUBMIT = By.xpath(INPUT_SUBMIT_BUTTON);
-
-    protected RegistrationPage(WebDriver driver) {
-        super(driver);
-    }
 
     public RegistrationPage fillFirstName(String firstName) {
         modalDriver.findElement(FIRST_NAME).sendKeys(firstName);
@@ -44,11 +38,6 @@ public class RegistrationPage extends Modal implements XPath.Registration {
 
     public MainPage submit() {
         modalDriver.findElement(SUBMIT).click();
-        return new MainPage(modalDriver);
-    }
-
-    @Override
-    protected void quit() {
-        modalDriver.quit();
+        return new MainPage();
     }
 }
