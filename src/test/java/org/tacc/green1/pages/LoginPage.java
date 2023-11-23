@@ -1,26 +1,32 @@
 package org.tacc.green1.pages;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
 public class LoginPage extends Modal {
-    private static final By INPUT_EMAIL = By.cssSelector("[name=\"login\\[username\\]\"]");
-    private static final By INPUT_PASSWORD = By.cssSelector("[name=\"login\\[password\\]\"]");
-    private static final By BUTTON_SUBMIT = By.id("send2");
+    @FindBy(id = "email")
+    private WebElement emailInput;
+
+    @FindBy(id = "pass")
+    private WebElement passwordInput;
+
+    @FindBy(css = "button.action.login.primary")
+    private WebElement submitButton;
 
     public LoginPage fillEmail(String email) {
-        modalDriver.findElement(INPUT_EMAIL).sendKeys(email);
+        emailInput.sendKeys(email);
         return this;
     }
 
     public LoginPage fillPassword(String password) {
-        modalDriver.findElement(INPUT_PASSWORD).sendKeys(password);
+        passwordInput.sendKeys(password);
         return this;
     }
 
     public MainPage submit() {
-        modalDriver.findElement(BUTTON_SUBMIT).click();
+        submitButton.click();
         return PageFactory.initElements(modalDriver, MainPage.class);
     }
 }
