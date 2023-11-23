@@ -1,5 +1,7 @@
-package org.tacc.green1;
+package org.tacc.green1.tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,6 +15,7 @@ import static org.tacc.green1.util.Utils.sleep;
 
 
 public class LoginTest {
+    private static final Logger logger = LogManager.getLogger(LoginTest.class);
     private static WebDriver driver;
     private static LoginPage loginPage;
 
@@ -21,6 +24,7 @@ public class LoginTest {
     public static void prepare() {
         driver = new ChromeDriver();
         loginPage = MainPage.open(driver).gotoLoginPage();
+        logger.info("Preparation successful!");
     }
 
 
