@@ -30,11 +30,10 @@ public class MainPage extends Modal {
         return new LoginPage(driver);
     }
 
-    public LoginPage gotoRegistrationPage() {
+    public RegistrationPage gotoRegistrationPage() {
         driver.findElement(LINK_REGISTRATION).click();
-        return new LoginPage(driver);
+        return new RegistrationPage(driver);
     }
-
 
     public boolean isLoggedIn() {
         try {
