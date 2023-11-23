@@ -2,17 +2,18 @@ package org.tacc.green1.model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.tacc.green1.util.XPath;
 
 import java.util.Properties;
 
 import static org.tacc.green1.util.PropertiesInitializer.initializeLocalProperties;
 
 
-public class MainPage extends Modal {
+public class MainPage extends Modal implements XPath.MainPage {
     private static final Properties PROPS = initializeLocalProperties("website.properties");
     private static final By LINK_LOGIN = By.className("authorization-link");
-    private static final By LINK_REGISTRATION = By.xpath("[class=\"header links\"]/li[3]");
-    private static final By WELCOME_MESSAGE = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[1]/span");
+    private static final By REGISTRATION = By.xpath(LINK_REGISTRATION);
+    private static final By WELCOME_MESSAGE = By.xpath(WELCOME_MESSAGE_MAIN_PAGE);
 
 
     protected MainPage(WebDriver driver) {
@@ -31,7 +32,7 @@ public class MainPage extends Modal {
     }
 
     public RegistrationPage gotoRegistrationPage() {
-        driver.findElement(LINK_REGISTRATION).click();
+        driver.findElement(REGISTRATION).click();
         return new RegistrationPage(driver);
     }
 

@@ -20,4 +20,9 @@ public class XPath {
     public interface AccountProfile {
         String MY_ACCOUNT_WELCOME_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[1]/h1";
     }
+
+    public interface MainPage {
+        String WELCOME_MESSAGE_MAIN_PAGE = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span",
+                LINK_REGISTRATION = "[class=\"header links\"]/li[3]";
+    }
 }
