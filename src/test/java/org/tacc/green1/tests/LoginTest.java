@@ -1,47 +1,46 @@
 package org.tacc.green1.tests;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.tacc.green1.util.TestData.RegisteredTestUser.email;
-import static org.tacc.green1.util.TestData.RegisteredTestUser.password;
 import static org.tacc.green1.util.Utils.sleep;
 
 
 public class LoginTest {
-    private static final Logger LOG = LogManager.getLogger(LoginTest.class);
     private static LoginPage loginPage;
 
 
-    @BeforeAll
-    public static void prepare() {
-        var page = MainPage.initPage().open();
-        loginPage = page.gotoLoginPage();
-        LOG.info("Preparation successful!");
+    @BeforeEach
+    public void openLoginPage() {
+        loginPage = MainPage.initPage().open().gotoLoginPage();
     }
 
 
-    @Test
-    public void loginTest() {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/registrationData.csv")
+    public void loginTest(String ignoredFirstName,
+                          String ignoredLastName,
+                          String email,
+                          String password,
+                          String ignoredConfirmPassword) {
         var mainPage = loginPage
                 .fillEmail(email)
                 .fillPassword(password)
                 .submit();
 
-        sleep(3);
+        sleep(2);
 
         assertTrue(mainPage.isLoggedIn());
     }
 
-    @AfterAll
-    public static void finish() {
-        LOG.info("Test finished");
+
+    @AfterEach
+    public void logout() {
         loginPage.quit();
     }
 }
