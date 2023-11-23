@@ -28,14 +28,14 @@ public class LoginTest {
 
     @Test
     public void loginTest() {
-        MainPage finalPage = loginPage
+        MainPage mainPage = loginPage
                 .fillEmail(email)
                 .fillPassword(password)
                 .submit();
 
         sleep(3);
 
-        assertTrue(finalPage.isLoggedIn());
+        assertTrue(mainPage.isLoggedIn());
     }
 
     @AfterAll

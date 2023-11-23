@@ -21,7 +21,7 @@ public class AccountPage extends Modal implements XPath.AccountSelect, XPath.Acc
         modalDriver.findElement(SING_OUT).click();
     }
 
-    public static String AccountPageWelcomeText() {
+    public static String getAccountPageWelcomeText() {
         return modalDriver.findElement(MY_ACCOUNT_TEXT).getText();
     }
 

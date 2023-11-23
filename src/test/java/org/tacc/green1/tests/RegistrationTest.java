@@ -13,7 +13,8 @@ import java.util.stream.Stream;
 
 import static org.tacc.green1.util.TestData.NewTestUser.*;
 
-@TestMethodOrder(MethodOrderer.Alphanumeric.class)
+
+@TestMethodOrder(MethodOrderer.MethodName.class)
 public class RegistrationTest {
     private static RegistrationPage registrationPage;
     private static LoginPage loginPage;
@@ -47,7 +48,7 @@ public class RegistrationTest {
                 .fillConfirmPassword(confirmPassword)
                 .submit();
 
-        Assertions.assertEquals("My Account", AccountPage.AccountPageWelcomeText());
+        Assertions.assertEquals("My Account", AccountPage.getAccountPageWelcomeText());
 
         AccountPage.logout();
     }
@@ -63,7 +64,7 @@ public class RegistrationTest {
                 .fillPassword(password)
                 .submit();
 
-        Assertions.assertEquals("My Account", AccountPage.AccountPageWelcomeText());
+        Assertions.assertEquals("My Account", AccountPage.getAccountPageWelcomeText());
     }
 
     @AfterAll
