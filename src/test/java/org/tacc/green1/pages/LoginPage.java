@@ -1,6 +1,7 @@
 package org.tacc.green1.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class LoginPage extends Modal {
@@ -20,6 +21,6 @@ public class LoginPage extends Modal {
 
     public MainPage submit() {
         modalDriver.findElement(BUTTON_SUBMIT).click();
-        return new MainPage();
+        return PageFactory.initElements(modalDriver, MainPage.class);
     }
 }

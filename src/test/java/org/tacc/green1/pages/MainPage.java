@@ -16,7 +16,7 @@ public class MainPage extends Modal implements XPath.MainPage {
     private static final Properties PROPS = initializeLocalProperties("website.properties");
 
     @FindBy(className = "authorization-link")
-    WebElement LINK_LOGIN;
+    WebElement loginButton;
     //    private static final By LINK_LOGIN = By.className("authorization-link");
     private static final By REGISTRATION = By.xpath(LINK_REGISTRATION);
     private static final By WELCOME_MESSAGE = By.xpath(WELCOME_MESSAGE_MAIN_PAGE);
@@ -37,13 +37,13 @@ public class MainPage extends Modal implements XPath.MainPage {
 
 
     public LoginPage gotoLoginPage() {
-        LINK_LOGIN.click();
-        return new LoginPage();
+        loginButton.click();
+        return PageFactory.initElements(modalDriver, LoginPage.class);
     }
 
     public RegistrationPage gotoRegistrationPage() {
         modalDriver.findElement(REGISTRATION).click();
-        return new RegistrationPage();
+        return PageFactory.initElements(modalDriver, RegistrationPage.class);
     }
 
     public boolean isLoggedIn() {
