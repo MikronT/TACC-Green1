@@ -9,6 +9,7 @@ import org.tacc.green1.model.AccountPage;
 import org.tacc.green1.model.LoginPage;
 import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.RegistrationPage;
+import org.tacc.green1.util.XPath;
 
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
 
@@ -38,9 +39,9 @@ public class RegistrationTest {
                 .fillConfirmPassword(confirmPassword)
                 .submit();
 
-        AccountPage.logout(driver);
+        Assertions.assertEquals("My Account", AccountPage.AccountPageWelcomeText(driver));
 
-        Assertions.assertEquals("", "");
+        AccountPage.logout(driver);
     }
 
     @Test
@@ -53,7 +54,7 @@ public class RegistrationTest {
                 .fillPassword(password)
                 .submit();
 
-        Assertions.assertEquals("", "");
+        Assertions.assertEquals("My Account", AccountPage.AccountPageWelcomeText(driver));
     }
 
     @AfterAll

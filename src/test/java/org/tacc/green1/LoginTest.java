@@ -3,6 +3,8 @@ package org.tacc.green1;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.tacc.green1.model.LoginPage;
@@ -24,11 +26,14 @@ public class LoginTest {
     }
 
 
-    @Test
-    public void loginTest() {
+    @ParameterizedTest
+    @CsvSource({
+            "teeest@eeeeeemail.com, a@nMttMMD9dzDx9",
+    })
+    public void loginTest(String email, String password) {
         MainPage finalPage = loginPage
-                .fillEmail("teeest@eeeeeemail.com")
-                .fillPassword("a@nMttMMD9dzDx9")
+                .fillEmail(email)
+                .fillPassword(password)
                 .submit();
 
         sleep(3);

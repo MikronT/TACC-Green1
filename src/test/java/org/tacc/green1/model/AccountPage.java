@@ -19,7 +19,7 @@ public class AccountPage extends Modal implements XPath.AccountSelect, XPath.Acc
         driver.findElement(SING_OUT).click();
     }
 
-    public static String isAccountPageWelcomeText(WebDriver driver) {
+    public static String AccountPageWelcomeText(WebDriver driver) {
         return driver.findElement(MY_ACCOUNT_TEXT).getText();
     }
 }
