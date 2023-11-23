@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.tacc.green1.pages.AccountPage;
 import org.tacc.green1.pages.MainPage;
 import org.tacc.green1.pages.RegistrationPage;
 import org.tacc.green1.util.RegistrationDataWriter;
@@ -22,7 +21,8 @@ public class RegistrationTest {
 
     @BeforeAll
     public static void prepare() {
-        RegistrationDataWriter.clear();
+        //TODO 23.11.2023: Provide better logic for automatic data cleanup
+        //RegistrationDataWriter.clear();
 
         registrationPage = MainPage.initPage().open().gotoRegistrationPage();
     }
@@ -44,7 +44,7 @@ public class RegistrationTest {
     @ParameterizedTest
     @MethodSource("provideRegistrationValues")
     public void registration(String firstName, String lastName, String email, String password, String confirmPassword) {
-        registrationPage
+        var accountPage = registrationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
                 .fillEmail(email)
@@ -52,7 +52,7 @@ public class RegistrationTest {
                 .fillConfirmPassword(confirmPassword)
                 .submit();
 
-        assertEquals("My Account", AccountPage.getAccountPageWelcomeText());
+        assertEquals("My Account", accountPage.getAccountPageWelcomeText());
 
         //Save registration data for future
         RegistrationDataWriter.append(firstName, lastName, email, password, confirmPassword);
