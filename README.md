@@ -4,6 +4,8 @@ SoftServe Test Automation Crash Course 2023
 
 Link to [GitHub Project](https://github.com/users/MikronT/projects/1)
 
+Application for testing: https://magento.softwaretestingboard.com
+
 ## Team
 
 Name: **green1**
