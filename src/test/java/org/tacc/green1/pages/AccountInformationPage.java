@@ -1,73 +1,93 @@
 package org.tacc.green1.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class AccountInformationPage extends Modal {
-    private final By firstNameInput = By.id("firstname");
-    private final By lastNameInput = By.id("lastname");
-    private final By emailInputLocator = By.id("email");
-    private final By currentPasswordInput = By.id("current-password");
-    private final By newPasswordInput = By.id("password");
-    private final By confirmPasswordInput = By.id("password-confirmation");
-    private final By changeEmailCheckBox = By.id("change-email");
-    private final By changePasswordCheckBox = By.id("change-password");
-    private final By saveButton = By.cssSelector("#form-validate > div > div.primary > button");
+    private Boolean isEmailToggled = false;
 
-    private static final By accountInformationOption = By.xpath("//*[@id=\"block-collapsible-nav\"]/ul/li[7]/a");
+    @FindBy(css = "#form-validate > div > div.primary > button")
+    private WebElement saveButton;
+
+    @FindBy(id = "password-confirmation")
+    private WebElement confirmPasswordInput;
+
+    @FindBy(id = "email")
+    private WebElement emailInput;
+
+    @FindBy(id = "current-password")
+    private WebElement currentPasswordInput;
+
+    @FindBy(id = "lastname")
+    private WebElement lastNameInput;
+
+    @FindBy(id = "firstname")
+    private WebElement firstNameInput;
+
+    @FindBy(id = "change-password")
+    private WebElement changePasswordCheckBox;
+
+    @FindBy(id = "change-email")
+    private WebElement changeEmailCheckbox;
+
+    public AccountPage gotoAccountPage() {
+        return PageFactory.initElements(modalDriver, AccountPage.class);
+    }
 
     public AccountInformationPage toggleEmailCheckBox() {
-        modalDriver.findElement(changeEmailCheckBox).click();
+        changeEmailCheckbox.click();
+        isEmailToggled = true;
         return this;
     }
 
     public AccountInformationPage togglePasswordCheckBox() {
-        modalDriver.findElement(changePasswordCheckBox).click();
+        changePasswordCheckBox.click();
         return this;
     }
 
-    public AccountInformationPage inputFirstName(String newFirstName) {
-        WebElement firstName = modalDriver.findElement(firstNameInput);
-        firstName.clear();
-        firstName.sendKeys(newFirstName);
+    public AccountInformationPage fillFirstName(String newFirstName) {
+        firstNameInput.clear();
+        firstNameInput.sendKeys(newFirstName);
         return this;
     }
 
-    public AccountInformationPage inputLastName(String newLastName) {
-        WebElement lastName = modalDriver.findElement(lastNameInput);
-        lastName.clear();
-        lastName.sendKeys(newLastName);
+    public AccountInformationPage fillLastName(String newLastName) {
+        lastNameInput.clear();
+        lastNameInput.sendKeys(newLastName);
         return this;
     }
 
-    public AccountInformationPage inputEmail(String email) {
-        WebElement emailInput = modalDriver.findElement(emailInputLocator);
+    public AccountInformationPage fillEmail(String email) {
         emailInput.clear();
         emailInput.sendKeys(email);
         return this;
     }
 
-    public AccountInformationPage inputPassword(String password) {
-        WebElement currentPassword = modalDriver.findElement(currentPasswordInput);
-        currentPassword.clear();
-        currentPassword.sendKeys(password);
+    public AccountInformationPage fillPassword(String password) {
+        currentPasswordInput.clear();
+        currentPasswordInput.sendKeys(password);
         return this;
     }
 
-    public AccountInformationPage inputConfirmationPassword(String confirmationPassword) {
-        WebElement confirmPassword = modalDriver.findElement(confirmPasswordInput);
-        confirmPassword.clear();
-        confirmPassword.sendKeys(confirmationPassword);
+    public AccountInformationPage fillConfirmPassword(String confirmationPassword) {
+        confirmPasswordInput.clear();
+        confirmPasswordInput.sendKeys(confirmationPassword);
         return this;
     }
 
-    public AccountInformationPage submitNewUserInfo() {
-        modalDriver.findElement(saveButton).click();
-        return this;
+    // TODO: refactor this method
+    public <T extends Modal> T submit() {
+        saveButton.click();
+        if (isEmailToggled) {
+            logout();
+            return (T)PageFactory.initElements(modalDriver, LoginPage.class);
+        }
+        return (T)this;
     }
 
-    public static void gotoAccountInformationPage() {
-        modalDriver.findElement(accountInformationOption).click();
+    public LoginPage logout() {
+        return PageFactory.initElements(modalDriver, LoginPage.class);
     }
 }

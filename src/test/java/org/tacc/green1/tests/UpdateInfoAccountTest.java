@@ -18,37 +18,57 @@ public class UpdateInfoAccountTest {
 
     @BeforeAll
     static void prepare() {
-        accountInformationPage = MainPage.initPage().open()
-                .gotoAccountInformationPage("volodymyr.nakonechnyi@gmail.com", "Fw35tgvAXypdEgfX6YuyUW");
+        MainPage mainPage = MainPage
+                .initPage()
+                .open()
+                .gotoLoginPage()
+                .fillEmail("volodymyr.nakonechnyi@gmail.com")
+                .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
+                .submit();
+
+        sleep(3);
+
+        accountInformationPage = mainPage
+                .gotoAccountPage("volodymyr.nakonechnyi@gmail.com")
+                .gotoAccountInformationPage();
+
+        sleep(3);
     }
 
     @ParameterizedTest
     @CsvSource({
             "Dodo,Uran,volodymyr.nakonechnyi@gmail.com,Fw35tgvAXypdEgfX6YuyUW",
     })
-    void updateAllPublicInfo(String firstName, String lastName, String email, String password) {
+    void updatePublicInfoWithEmail(String firstName, String lastName, String email, String password) {
+        String expectedResult = firstName + " " + lastName + '\n' + email;
         accountInformationPage
-                .inputFirstName(firstName)
-                .inputLastName(lastName)
+                .fillFirstName(firstName)
+                .fillLastName(lastName)
                 .toggleEmailCheckBox()
-                .inputEmail(email)
-                .inputPassword(password)
-                .submitNewUserInfo();
+                .fillEmail(email)
+                .fillPassword(password)
+                .submit();
 
         sleep(2);
+        // After this action, we've logged out automatically
 
-        accountPage = MainPage.initPage().open()
-                .gotoAccountPage(email, password);
+        MainPage mainPage = accountInformationPage
+                .logout()
+                .fillEmail(email)
+                .fillPassword(password)
+                .submit();
 
-        String expectedResult = firstName + " " + lastName + '\n' + email;
+        sleep(3);
 
-        System.out.println(accountPage.getAccountContactInfoText());
+        AccountPage accountPage = mainPage.gotoAccountPage(email);
 
+        Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
         Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());
     }
 
     @AfterAll
     public static void finish() {
+        accountInformationPage.quit();
         //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
         accountInformationPage.quit();
         accountPage.quit();
