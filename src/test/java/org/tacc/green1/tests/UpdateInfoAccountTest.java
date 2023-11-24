@@ -13,6 +13,7 @@ import static org.tacc.green1.util.Utils.sleep;
 
 
 public class UpdateInfoAccountTest {
+    private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
 
     @BeforeAll
@@ -69,5 +70,7 @@ public class UpdateInfoAccountTest {
     public static void finish() {
         accountInformationPage.quit();
         //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
+        accountInformationPage.quit();
+        accountPage.quit();
     }
 }
