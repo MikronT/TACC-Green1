@@ -1,7 +1,7 @@
 package org.tacc.green1.util;
 
-public class XPath {
-    public interface Registration {
+public interface XPath {
+    interface Registration {
         String INPUT_FIRST_NAME = "//*[@id=\"firstname\"]",
                 INPUT_LAST_NAME = "//*[@id=\"lastname\"]",
                 INPUT_EMAIL = "//*[@id=\"email_address\"]",
@@ -10,19 +10,22 @@ public class XPath {
                 INPUT_SUBMIT_BUTTON = "//*[@id=\"form-validate\"]/div/div[1]/button";
     }
 
-    public interface AccountSelect {
+
+    interface AccountSelect {
         String ACCOUNT_SELECT_BUTTON = "/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button",
                 MY_ACCOUNT_OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[1]/a",
                 MY_WISH_LIST_OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[2]/a",
                 SIGN_OUT_OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a";
     }
 
-    public interface AccountProfile {
+
+    interface AccountProfile {
         String MY_ACCOUNT_WELCOME_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[1]/h1",
                 CONTACT_INFORMATION_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[1]/p";
     }
 
-    public interface MainPage {
+
+    interface MainPage {
         String WELCOME_MESSAGE_MAIN_PAGE = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span",
                 LINK_REGISTRATION = "/html/body/div[2]/header/div[1]/div/ul/li[3]/a";
     }

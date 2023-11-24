@@ -1,43 +1,55 @@
 package org.tacc.green1.pages;
 
-import org.openqa.selenium.By;
-import org.tacc.green1.util.XPath;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class RegistrationPage extends Modal implements XPath.Registration {
-    private static final By FIRST_NAME = By.xpath(INPUT_FIRST_NAME);
-    private static final By LAST_NAME = By.xpath(INPUT_LAST_NAME);
-    private static final By EMAIL = By.xpath(INPUT_EMAIL);
-    private static final By PASSWORD = By.xpath(INPUT_PASSWORD);
-    private static final By CONFIRM_PASSWORD = By.xpath(INPUT_CONFIRM_PASSWORD);
-    private static final By SUBMIT = By.xpath(INPUT_SUBMIT_BUTTON);
+public class RegistrationPage extends Modal {
+    @FindBy(id = "firstname")
+    private WebElement firstNameInput;
+
+    @FindBy(id = "lastname")
+    private WebElement lastNameInput;
+
+    @FindBy(id = "email_address")
+    private WebElement emailAddressInput;
+
+    @FindBy(id = "password")
+    private WebElement passwordInput;
+
+    @FindBy(id = "password-confirmation")
+    private WebElement confirmPasswordInput;
+
+    @FindBy(css = "button[class$='primary'] span")
+    private WebElement createAccountButton;
 
     public RegistrationPage fillFirstName(String firstName) {
-        modalDriver.findElement(FIRST_NAME).sendKeys(firstName);
+        firstNameInput.sendKeys(firstName);
         return this;
     }
 
     public RegistrationPage fillLastName(String lastName) {
-        modalDriver.findElement(LAST_NAME).sendKeys(lastName);
+        lastNameInput.sendKeys(lastName);
         return this;
     }
 
     public RegistrationPage fillEmail(String email) {
-        modalDriver.findElement(EMAIL).sendKeys(email);
+        emailAddressInput.sendKeys(email);
         return this;
     }
 
     public RegistrationPage fillPassword(String password) {
-        modalDriver.findElement(PASSWORD).sendKeys(password);
+        passwordInput.sendKeys(password);
         return this;
     }
 
     public RegistrationPage fillConfirmPassword(String password) {
-        modalDriver.findElement(CONFIRM_PASSWORD).sendKeys(password);
+        confirmPasswordInput.sendKeys(password);
         return this;
     }
 
-    public MainPage submit() {
-        modalDriver.findElement(SUBMIT).click();
-        return new MainPage();
+    public AccountPage submit() {
+        createAccountButton.click();
+        return PageFactory.initElements(modalDriver, AccountPage.class);
     }
 }

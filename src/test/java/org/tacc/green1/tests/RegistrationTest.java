@@ -1,46 +1,50 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.tacc.green1.pages.AccountPage;
-import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
 import org.tacc.green1.pages.RegistrationPage;
+import org.tacc.green1.util.RegistrationDataWriter;
 
 import java.util.stream.Stream;
 
-import static org.tacc.green1.util.TestData.NewTestUser.*;
+import static org.apache.commons.lang3.RandomStringUtils.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-@TestMethodOrder(MethodOrderer.MethodName.class)
 public class RegistrationTest {
     private static RegistrationPage registrationPage;
-    private static LoginPage loginPage;
 
-    static Stream<Arguments> provideLoginValues() {
-        return Stream.of(
-                Arguments.of(email, password)
-        );
-    }
-
-    static Stream<Arguments> provideRegistrationValues() {
-        return Stream.of(
-                Arguments.of(firstName, lastName, email, password, confirmPassword)
-        );
-    }
 
     @BeforeAll
-    static void prepare() {
+    public static void prepare() {
+        //TODO 23.11.2023: Provide better logic for automatic data cleanup
+        //RegistrationDataWriter.clear();
+
         registrationPage = MainPage.initPage().open().gotoRegistrationPage();
+    }
+
+
+    private static Stream<Arguments> provideRegistrationValues() {
+        String firstName = randomAlphanumeric(5, 10).toLowerCase();
+        String lastName = randomAlphanumeric(5, 10).toLowerCase();
+        String email = (randomAlphanumeric(5, 10) + "@"
+                + randomAlphanumeric(5, 10) + "."
+                + randomAlphabetic(2, 3)).toLowerCase();
+        String password = randomAscii(8, 16);
+
+        return Stream.of(
+                Arguments.of(firstName, lastName, email, password, password)
+        );
     }
 
     @ParameterizedTest
     @MethodSource("provideRegistrationValues")
-    @Order(1)
-    void registration(String firstName, String lastName, String email, String password, String confirmPassword) {
-        registrationPage
+    public void registration(String firstName, String lastName, String email, String password, String confirmPassword) {
+        var accountPage = registrationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
                 .fillEmail(email)
@@ -48,26 +52,15 @@ public class RegistrationTest {
                 .fillConfirmPassword(confirmPassword)
                 .submit();
 
-        Assertions.assertEquals("My Account", AccountPage.getAccountPageWelcomeText());
+        assertEquals("My Account", accountPage.getAccountPageWelcomeText());
 
-        AccountPage.logout();
+        //Save registration data for future
+        RegistrationDataWriter.append(firstName, lastName, email, password, confirmPassword);
     }
 
-    @ParameterizedTest
-    @MethodSource("provideLoginValues")
-    @Order(2)
-    void login(String email, String password) {
-        loginPage = MainPage.initPage().open().gotoLoginPage();
-        loginPage
-                .fillEmail(email)
-                .fillPassword(password)
-                .submit();
-
-        Assertions.assertEquals("My Account", AccountPage.getAccountPageWelcomeText());
-    }
 
     @AfterAll
-    static void finish() {
-        loginPage.quit();
+    public static void finish() {
+        registrationPage.quit();
     }
 }

@@ -1,8 +1,6 @@
 package org.tacc.green1.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
@@ -12,12 +10,18 @@ import java.util.Properties;
 import static org.tacc.green1.util.PropertiesInitializer.initializeLocalProperties;
 import static org.tacc.green1.util.Utils.sleep;
 
-
 public class MainPage extends Modal implements XPath.MainPage {
     private static final Properties PROPS = initializeLocalProperties("website.properties");
 
-    //@FindBy(className = "authorization-link")
-    //WebElement LINK_LOGIN;
+    /*@FindBy(className = "authorization-link")
+    private WebElement loginLink;
+
+    @FindBy(xpath = LINK_REGISTRATION)
+    private WebElement createAccountLink;
+
+    @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
+    private WebElement welcomeAccountLink;*/
+
     private static final By LINK_LOGIN = By.className("authorization-link");
     private static final By REGISTRATION = By.xpath(LINK_REGISTRATION);
     private static final By WELCOME_MESSAGE = By.xpath(WELCOME_MESSAGE_MAIN_PAGE);
@@ -36,15 +40,14 @@ public class MainPage extends Modal implements XPath.MainPage {
         return this;
     }
 
-
     public LoginPage gotoLoginPage() {
         modalDriver.findElement(LINK_LOGIN).click();
-        return new LoginPage();
+        return PageFactory.initElements(modalDriver, LoginPage.class);
     }
 
     public RegistrationPage gotoRegistrationPage() {
         modalDriver.findElement(REGISTRATION).click();
-        return new RegistrationPage();
+        return PageFactory.initElements(modalDriver, RegistrationPage.class);
     }
 
     public AccountPage gotoAccountPage(String email, String password) {

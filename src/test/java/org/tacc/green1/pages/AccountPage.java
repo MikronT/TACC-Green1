@@ -3,6 +3,7 @@ package org.tacc.green1.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.util.XPath;
 
 public class AccountPage extends Modal implements XPath.AccountSelect, XPath.AccountProfile {
@@ -33,9 +34,13 @@ public class AccountPage extends Modal implements XPath.AccountSelect, XPath.Acc
     //@FindBy(css = "body > div.page-wrapper > header > div.panel.wrapper > div > ul > li.customer-welcome > span > button")
     //private static WebElement modalMenuToggle;
 
-    public static void logout() {
-        modalDriver.findElement(ACCOUNT_SELECT).click();
-        modalDriver.findElement(SING_OUT).click();
+    @FindBy(css = "button.action.switch")
+    private WebElement modalMenuToggle;
+
+    public MainPage logout() {
+        modalMenuToggle.click();
+        signOutModalOption.click();
+        return PageFactory.initElements(modalDriver, MainPage.class);
     }
 
     public static String getAccountContactInfoText() {
