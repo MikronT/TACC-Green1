@@ -3,25 +3,23 @@ package org.tacc.green1.tests;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.pages.AccountInformationPage;
 import org.tacc.green1.pages.AccountPage;
-import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
-
-import java.time.LocalDate;
 
 import static org.tacc.green1.util.Utils.sleep;
 
+
 public class UpdateInfoAccountTest {
     private static AccountInformationPage accountInformationPage;
+
     @BeforeAll
-    static void prepare() { accountInformationPage = MainPage.initPage().open().gotoAccountInformationPage("volodymyr.nakonechnyi@gmail.com","Fw35tgvAXypdEgfX6YuyUW"); }
+    static void prepare() {
+        accountInformationPage = MainPage.initPage().open()
+                .gotoAccountInformationPage("volodymyr.nakonechnyi@gmail.com", "Fw35tgvAXypdEgfX6YuyUW");
+    }
 
     @ParameterizedTest
     @CsvSource({
@@ -38,7 +36,7 @@ public class UpdateInfoAccountTest {
 
         sleep(2);
 
-        new MainPage().gotoAccountPage(email, password);
+        MainPage.initPage().open().gotoAccountPage(email, password);
 
         String expectedResult = firstName + " " + lastName + '\n' + email;
 
@@ -49,7 +47,6 @@ public class UpdateInfoAccountTest {
 
     @AfterAll
     public static void finish() {
-        //Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
-        return;
+        //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
     }
 }

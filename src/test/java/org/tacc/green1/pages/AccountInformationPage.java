@@ -1,22 +1,21 @@
 package org.tacc.green1.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 
 public class AccountInformationPage extends Modal {
-    private By firstNameInput = By.id("firstname");
-    private By lastNameInput = By.id("lastname");
-    private By emailInputLocator = By.id("email");
-    private By currentPasswordInput = By.id("current-password");
-    private By newPasswordInput = By.id("password");
-    private By confirmPasswordInput = By.id("password-confirmation");
-    private By changeEmailCheckBox = By.id("change-email");
-    private By changePasswordCheckBox = By.id("change-password");
-    private By saveButton = By.cssSelector("#form-validate > div > div.primary > button");
+    private final By firstNameInput = By.id("firstname");
+    private final By lastNameInput = By.id("lastname");
+    private final By emailInputLocator = By.id("email");
+    private final By currentPasswordInput = By.id("current-password");
+    private final By newPasswordInput = By.id("password");
+    private final By confirmPasswordInput = By.id("password-confirmation");
+    private final By changeEmailCheckBox = By.id("change-email");
+    private final By changePasswordCheckBox = By.id("change-password");
+    private final By saveButton = By.cssSelector("#form-validate > div > div.primary > button");
 
-    private static By accountInformationOption = By.xpath("//*[@id=\"block-collapsible-nav\"]/ul/li[7]/a");
+    private static final By accountInformationOption = By.xpath("//*[@id=\"block-collapsible-nav\"]/ul/li[7]/a");
 
     public AccountInformationPage toggleEmailCheckBox() {
         modalDriver.findElement(changeEmailCheckBox).click();
@@ -49,14 +48,14 @@ public class AccountInformationPage extends Modal {
         return this;
     }
 
-    public AccountInformationPage inputPassword (String password) {
+    public AccountInformationPage inputPassword(String password) {
         WebElement currentPassword = modalDriver.findElement(currentPasswordInput);
         currentPassword.clear();
         currentPassword.sendKeys(password);
         return this;
     }
 
-    public AccountInformationPage inputConfirmationPassword (String confirmationPassword) {
+    public AccountInformationPage inputConfirmationPassword(String confirmationPassword) {
         WebElement confirmPassword = modalDriver.findElement(confirmPasswordInput);
         confirmPassword.clear();
         confirmPassword.sendKeys(confirmationPassword);
@@ -72,4 +71,3 @@ public class AccountInformationPage extends Modal {
         modalDriver.findElement(accountInformationOption).click();
     }
 }
-

@@ -10,6 +10,7 @@ import java.util.Properties;
 import static org.tacc.green1.util.PropertiesInitializer.initializeLocalProperties;
 import static org.tacc.green1.util.Utils.sleep;
 
+
 public class MainPage extends Modal implements XPath.MainPage {
     private static final Properties PROPS = initializeLocalProperties("website.properties");
 
@@ -53,7 +54,7 @@ public class MainPage extends Modal implements XPath.MainPage {
     public AccountPage gotoAccountPage(String email, String password) {
         gotoLoginPage().fillEmail(email).fillPassword(password).submit();
         AccountPage.gotoAccountPage();
-        return new AccountPage();
+        return PageFactory.initElements(modalDriver, AccountPage.class);
     }
 
     public AccountInformationPage gotoAccountInformationPage(String email, String password) {
@@ -61,7 +62,7 @@ public class MainPage extends Modal implements XPath.MainPage {
         sleep(3);
         AccountPage.gotoAccountPage();
         AccountInformationPage.gotoAccountInformationPage();
-        return new AccountInformationPage();
+        return PageFactory.initElements(modalDriver, AccountInformationPage.class);
     }
 
     public boolean isLoggedIn() {

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.util.XPath;
 
+
 public class AccountPage extends Modal implements XPath.AccountSelect, XPath.AccountProfile {
     private static final By ACCOUNT_SELECT = By.xpath(ACCOUNT_SELECT_BUTTON);
     private static final By MY_ACCOUNT = By.xpath(MY_ACCOUNT_OPTION);
@@ -28,17 +29,17 @@ public class AccountPage extends Modal implements XPath.AccountSelect, XPath.Acc
     @FindBy(css = "span[class='base']")
     private static WebElement welcomeTextElement;
 
-    private static By modalMenuToggle = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button");
-    private static By myAccountOption = By.xpath(MY_ACCOUNT_OPTION);
+    private static final By modalMenuToggle = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button");
+    private static final By myAccountOption = By.xpath(MY_ACCOUNT_OPTION);
 
     //@FindBy(css = "body > div.page-wrapper > header > div.panel.wrapper > div > ul > li.customer-welcome > span > button")
     //private static WebElement modalMenuToggle;
 
-    @FindBy(css = "button.action.switch")
-    private WebElement modalMenuToggle;
+    //@FindBy(css = "button.action.switch")
+    //private WebElement modalMenuToggle;
 
     public MainPage logout() {
-        modalMenuToggle.click();
+        //modalMenuToggle.click();
         signOutModalOption.click();
         return PageFactory.initElements(modalDriver, MainPage.class);
     }
@@ -47,11 +48,11 @@ public class AccountPage extends Modal implements XPath.AccountSelect, XPath.Acc
         return modalDriver.findElement(CONTACT_INFO).getText();
     }
 
-    public static String getAccountPageWelcomeText() {
+    public String getAccountPageWelcomeText() {
         return modalDriver.findElement(MY_ACCOUNT_TEXT).getText();
     }
 
-    public static void gotoAccountPage () {
+    public static void gotoAccountPage() {
         modalDriver.findElement(modalMenuToggle).click();
         modalDriver.findElement(myAccountOption).click();
     }
