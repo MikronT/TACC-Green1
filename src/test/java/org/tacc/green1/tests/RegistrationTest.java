@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RegistrationTest {
     private static RegistrationPage registrationPage;
 
-
     @BeforeAll
     public static void prepare() {
         //TODO 23.11.2023: Provide better logic for automatic data cleanup
