@@ -60,7 +60,7 @@ public class UpdateInfoAccountTest {
 
         sleep(3);
 
-        AccountPage accountPage = mainPage.gotoAccountPage(email);
+        accountPage = mainPage.gotoAccountPage(email);
 
         Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
         Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());
@@ -68,8 +68,6 @@ public class UpdateInfoAccountTest {
 
     @AfterAll
     public static void finish() {
-        accountInformationPage.quit();
-        //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
         accountInformationPage.quit();
         accountPage.quit();
     }
