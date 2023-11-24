@@ -2,7 +2,6 @@ package org.tacc.green1.util;
 
 public interface XPath {
     interface AccountSidebar {
-        // TODO: this should be a separate component within logged users
         String ACCOUNT_INFORMATION_LINK = "/html/body/div[2]/main/div[2]/div[2]/div/div[2]/ul/li[7]/a";
     }
 
