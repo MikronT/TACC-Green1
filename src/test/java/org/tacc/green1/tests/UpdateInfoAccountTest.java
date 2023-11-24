@@ -13,6 +13,7 @@ import static org.tacc.green1.util.Utils.sleep;
 
 
 public class UpdateInfoAccountTest {
+    private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
 
     @BeforeAll
@@ -36,17 +37,20 @@ public class UpdateInfoAccountTest {
 
         sleep(2);
 
-        MainPage.initPage().open().gotoAccountPage(email, password);
+        accountPage = MainPage.initPage().open()
+                .gotoAccountPage(email, password);
 
         String expectedResult = firstName + " " + lastName + '\n' + email;
 
-        System.out.println(AccountPage.getAccountContactInfoText());
+        System.out.println(accountPage.getAccountContactInfoText());
 
-        Assertions.assertEquals(expectedResult, AccountPage.getAccountContactInfoText());
+        Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());
     }
 
     @AfterAll
     public static void finish() {
         //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
+        accountInformationPage.quit();
+        accountPage.quit();
     }
 }

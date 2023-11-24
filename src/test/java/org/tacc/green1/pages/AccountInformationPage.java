@@ -27,17 +27,17 @@ public class AccountInformationPage extends Modal {
         return this;
     }
 
-    public AccountInformationPage inputFirstName(String newfirstName) {
+    public AccountInformationPage inputFirstName(String newFirstName) {
         WebElement firstName = modalDriver.findElement(firstNameInput);
         firstName.clear();
-        firstName.sendKeys(newfirstName);
+        firstName.sendKeys(newFirstName);
         return this;
     }
 
-    public AccountInformationPage inputLastName(String newlastName) {
+    public AccountInformationPage inputLastName(String newLastName) {
         WebElement lastName = modalDriver.findElement(lastNameInput);
         lastName.clear();
-        lastName.sendKeys(newlastName);
+        lastName.sendKeys(newLastName);
         return this;
     }
 

@@ -44,7 +44,7 @@ public class AccountPage extends Modal implements XPath.AccountSelect, XPath.Acc
         return PageFactory.initElements(modalDriver, MainPage.class);
     }
 
-    public static String getAccountContactInfoText() {
+    public String getAccountContactInfoText() {
         return modalDriver.findElement(CONTACT_INFO).getText();
     }
 
