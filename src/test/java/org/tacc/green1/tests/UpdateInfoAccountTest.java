@@ -11,6 +11,7 @@ import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
 
 public class UpdateInfoAccountTest {
+    private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
 
     @BeforeAll
@@ -33,7 +34,7 @@ public class UpdateInfoAccountTest {
     })
     void updatePublicInfoWithEmail(String firstName, String lastName, String email, String password) {
         String expectedResult = firstName + " " + lastName + '\n' + email;
-        AccountPage accountPage = accountInformationPage
+        accountPage = accountInformationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
                 .toggleEmailCheckBox()
@@ -54,6 +55,6 @@ public class UpdateInfoAccountTest {
     @AfterAll
     public static void finish() {
         accountInformationPage.quit();
-        //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
+        accountPage.quit();
     }
 }
