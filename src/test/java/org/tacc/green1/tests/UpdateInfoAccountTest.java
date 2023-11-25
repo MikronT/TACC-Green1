@@ -15,12 +15,11 @@ public class UpdateInfoAccountTest {
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
 
+
     @SuppressWarnings("SpellCheckingInspection")
     @BeforeAll
     static void prepare() {
-        accountInformationPage = MainPage
-                .initPage()
-                .open()
+        accountInformationPage = MainPage.initPage().open()
                 .gotoLoginPage()
                 .fillEmail("volodymyr.nakonechnyi@gmail.com")
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
@@ -31,13 +30,13 @@ public class UpdateInfoAccountTest {
                 .gotoAccountInformationPage();
     }
 
+
     @SuppressWarnings("SpellCheckingInspection")
     @ParameterizedTest
     @CsvSource({
             "Dodo,Uran,volodymyr.nakonechnyi@gmail.com,Fw35tgvAXypdEgfX6YuyUW",
     })
     void updatePublicInfoWithEmail(String firstName, String lastName, String email, String password) {
-        String expectedResult = firstName + " " + lastName + '\n' + email;
         accountPage = accountInformationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
@@ -56,8 +55,11 @@ public class UpdateInfoAccountTest {
                 .gotoAccountPage();
 
         Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
+
+        String expectedResult = firstName + " " + lastName + '\n' + email;
         Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());
     }
+
 
     @AfterAll
     public static void finish() {

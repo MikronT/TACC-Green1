@@ -74,7 +74,7 @@ public class AccountInformationPage extends Modal<AccountInformationPage> {
         return this;
     }
 
-    //TODO: refactor this method
+    //TODO 25.11.2023: Refactor this method once again
     @SuppressWarnings("unchecked")
     public <T extends Modal<T>> T submit() {
         saveButton.click();

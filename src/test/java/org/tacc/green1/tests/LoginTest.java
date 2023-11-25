@@ -9,13 +9,16 @@ import org.tacc.green1.pages.MainPage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class LoginTest {
     private static LoginPage loginPage;
 
+
     @BeforeEach
-    public void openLoginPage() {
+    public void prepare() {
         loginPage = MainPage.initPage().open().gotoLoginPage();
     }
+
 
     @ParameterizedTest
     @CsvFileSource(resources = "/registrationData.csv")
@@ -32,6 +35,7 @@ public class LoginTest {
                 .timeout(3)
                 .isLoggedIn());
     }
+
 
     @AfterEach
     public void finish() {
