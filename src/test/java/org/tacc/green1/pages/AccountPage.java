@@ -8,7 +8,7 @@ import org.tacc.green1.pages.authorized.components.AccountSidebar;
 import org.tacc.green1.util.XPath;
 
 
-public class AccountPage extends Modal implements XPath.AccountModal, XPath.AccountProfile {
+public class AccountPage extends Modal<AccountPage> implements XPath.AccountPage {
     @FindBy(xpath = CONTACT_INFORMATION_TEXT)
     private WebElement contactInfoTextElement;
 

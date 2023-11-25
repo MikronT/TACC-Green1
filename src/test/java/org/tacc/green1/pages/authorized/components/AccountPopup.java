@@ -6,13 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.pages.AccountPage;
 import org.tacc.green1.pages.MainPage;
 import org.tacc.green1.pages.Modal;
+import org.tacc.green1.util.XPath;
 
-import static org.tacc.green1.util.XPath.AccountModal.*;
 
-public class AccountModal extends Modal {
     @FindBy(css = "button.action.switch")
     WebElement customerMenuToggle;
 
+public class AccountPopup extends Modal<AccountPopup> implements XPath.AccountModal {
     @FindBy(xpath = MY_ACCOUNT_OPTION)
     WebElement myAccountModalOption;
 

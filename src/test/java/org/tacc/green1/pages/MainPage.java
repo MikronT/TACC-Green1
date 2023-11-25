@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.pages.authorized.components.AccountModal;
+import org.tacc.green1.pages.authorized.components.AccountPopup;
 import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
 
@@ -14,7 +14,7 @@ import java.util.Properties;
 import static org.tacc.green1.util.PropertiesInitializer.initializeLocalProperties;
 
 
-public class MainPage extends Modal implements XPath.MainPage {
+public class MainPage extends Modal<MainPage> implements XPath.MainPage {
     private static final Logger LOG = LogManager.getLogger(MainPage.class);
     private static final Properties PROPS = initializeLocalProperties("website.properties");
 
@@ -27,6 +27,7 @@ public class MainPage extends Modal implements XPath.MainPage {
     @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
     private WebElement welcomeAccountLink;
 
+
     public static MainPage initPage() {
         modalDriver = Utils.initDriver();
         return PageFactory.initElements(modalDriver, MainPage.class);
@@ -36,6 +37,7 @@ public class MainPage extends Modal implements XPath.MainPage {
         modalDriver.get(PROPS.getProperty("url"));
         return this;
     }
+
 
     public LoginPage gotoLoginPage() {
         loginLink.click();

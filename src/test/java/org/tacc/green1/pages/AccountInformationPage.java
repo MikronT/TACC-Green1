@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class AccountInformationPage extends Modal {
+public class AccountInformationPage extends Modal<AccountInformationPage> {
     private Boolean isEmailToggled = false;
 
     @FindBy(css = "#form-validate > div > div.primary > button")
@@ -31,6 +31,7 @@ public class AccountInformationPage extends Modal {
 
     @FindBy(id = "change-email")
     private WebElement changeEmailCheckbox;
+
 
     public AccountInformationPage toggleEmailCheckBox() {
         changeEmailCheckbox.click();
@@ -75,7 +76,7 @@ public class AccountInformationPage extends Modal {
 
     //TODO: refactor this method
     @SuppressWarnings("unchecked")
-    public <T extends Modal> T submit() {
+    public <T extends Modal<T>> T submit() {
         saveButton.click();
 
         if (isEmailToggled)
