@@ -7,10 +7,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.tacc.green1.pages.AccountInformationPage;
 import org.tacc.green1.pages.AccountPage;
+import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
-
-import static org.tacc.green1.util.Utils.sleep;
-
 
 public class UpdateInfoAccountTest {
     private static AccountPage accountPage;
@@ -18,21 +16,16 @@ public class UpdateInfoAccountTest {
 
     @BeforeAll
     static void prepare() {
-        MainPage mainPage = MainPage
+        accountInformationPage = MainPage
                 .initPage()
                 .open()
                 .gotoLoginPage()
                 .fillEmail("volodymyr.nakonechnyi@gmail.com")
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
-                .submit();
-
-        sleep(3);
-
-        accountInformationPage = mainPage
+                .submit()
+                .timeout(3).redirect(MainPage.class)
                 .gotoAccountPage("volodymyr.nakonechnyi@gmail.com")
                 .gotoAccountInformationPage();
-
-        sleep(3);
     }
 
     @ParameterizedTest
@@ -41,26 +34,19 @@ public class UpdateInfoAccountTest {
     })
     void updatePublicInfoWithEmail(String firstName, String lastName, String email, String password) {
         String expectedResult = firstName + " " + lastName + '\n' + email;
-        accountInformationPage
+        accountPage = accountInformationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
                 .toggleEmailCheckBox()
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit();
-
-        sleep(2);
-        // After this action, we've logged out automatically
-
-        MainPage mainPage = accountInformationPage
-                .logout()
+                .submit()
+                .timeout(2).redirect(LoginPage.class)
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit();
-
-        sleep(3);
-
-        accountPage = mainPage.gotoAccountPage(email);
+                .submit()
+                .timeout(3).redirect(MainPage.class)
+                .gotoAccountPage(email);
 
         Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
         Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());
