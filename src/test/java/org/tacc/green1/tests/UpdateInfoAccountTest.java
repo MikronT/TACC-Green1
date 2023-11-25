@@ -14,6 +14,7 @@ public class UpdateInfoAccountTest {
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
 
+    @SuppressWarnings("SpellCheckingInspection")
     @BeforeAll
     static void prepare() {
         accountInformationPage = MainPage
@@ -28,6 +29,7 @@ public class UpdateInfoAccountTest {
                 .gotoAccountInformationPage();
     }
 
+    @SuppressWarnings("SpellCheckingInspection")
     @ParameterizedTest
     @CsvSource({
             "Dodo,Uran,volodymyr.nakonechnyi@gmail.com,Fw35tgvAXypdEgfX6YuyUW",
@@ -54,7 +56,6 @@ public class UpdateInfoAccountTest {
 
     @AfterAll
     public static void finish() {
-        accountInformationPage.quit();
         accountPage.quit();
     }
 }

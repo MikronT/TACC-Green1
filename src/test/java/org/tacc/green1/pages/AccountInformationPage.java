@@ -32,10 +32,6 @@ public class AccountInformationPage extends Modal {
     @FindBy(id = "change-email")
     private WebElement changeEmailCheckbox;
 
-    public AccountPage gotoAccountPage() {
-        return PageFactory.initElements(modalDriver, AccountPage.class);
-    }
-
     public AccountInformationPage toggleEmailCheckBox() {
         changeEmailCheckbox.click();
         isEmailToggled = true;
@@ -77,17 +73,18 @@ public class AccountInformationPage extends Modal {
         return this;
     }
 
-    // TODO: refactor this method
+    //TODO: refactor this method
+    @SuppressWarnings("unchecked")
     public <T extends Modal> T submit() {
         saveButton.click();
-        if (isEmailToggled) {
-            logout();
-            return (T)PageFactory.initElements(modalDriver, LoginPage.class);
-        }
-        return (T)this;
+
+        if (isEmailToggled)
+            return (T) signOut();
+
+        return (T) this;
     }
 
-    public LoginPage logout() {
+    public LoginPage signOut() {
         return PageFactory.initElements(modalDriver, LoginPage.class);
     }
 }

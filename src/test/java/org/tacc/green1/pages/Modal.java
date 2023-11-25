@@ -8,9 +8,6 @@ import org.tacc.green1.util.Utils;
 public abstract class Modal {
     protected static WebDriver modalDriver;
 
-    public Modal() {
-    }
-
     public void quit() {
         modalDriver.quit();
     }
@@ -19,6 +16,7 @@ public abstract class Modal {
         return PageFactory.initElements(modalDriver, pageClass);
     }
 
+    @SuppressWarnings("unchecked")
     public <T extends Modal> T timeout(int seconds) {
         Utils.sleep(seconds);
         return (T) this;

@@ -27,10 +27,6 @@ public class MainPage extends Modal implements XPath.MainPage {
     @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
     private WebElement welcomeAccountLink;
 
-    public MainPage() {
-        super();
-    }
-
     public static MainPage initPage() {
         modalDriver = Utils.initDriver();
         return PageFactory.initElements(modalDriver, MainPage.class);
@@ -53,11 +49,14 @@ public class MainPage extends Modal implements XPath.MainPage {
 
     public AccountPage gotoAccountPage(String email) {
         String message = String.format("user %s is not logged in, check out your method call order", email);
+
         if (isLoggedIn()) {
             LOG.info(String.format("user %s is logged in", email));
-            getAccountModal().openModal().gotoMyAccount();
-            return PageFactory.initElements(modalDriver, AccountPage.class);
+            return getAccountModal()
+                    .openModal()
+                    .gotoMyAccount();
         }
+
         LOG.error(message);
         throw new IllegalStateException(message);
     }

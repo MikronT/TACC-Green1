@@ -35,7 +35,7 @@ public class LoginTest {
     }
 
     @AfterEach
-    public void logout() {
+    public void finish() {
         loginPage.quit();
     }
 }

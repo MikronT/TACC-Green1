@@ -9,16 +9,14 @@ import org.tacc.green1.util.XPath;
 
 
 public class AccountPage extends Modal implements XPath.AccountModal, XPath.AccountProfile {
-
     @FindBy(xpath = CONTACT_INFORMATION_TEXT)
     private WebElement contactInfoTextElement;
 
     @FindBy(css = "span[class='base']")
     private WebElement welcomeTextElement;
 
-    public MainPage logout() {
-        getAccountModal().signOut();
-        return PageFactory.initElements(modalDriver, MainPage.class);
+    public MainPage signOut() {
+        return getAccountModal().signOut();
     }
 
     public String getAccountContactInfoText() {
@@ -38,7 +36,7 @@ public class AccountPage extends Modal implements XPath.AccountModal, XPath.Acco
     }
 
     public AccountInformationPage gotoAccountInformationPage() {
-        getAccountSidebar().gotoAccountInformationPage();
-        return PageFactory.initElements(modalDriver, AccountInformationPage.class);
+        return getAccountSidebar()
+                .gotoAccountInformationPage();
     }
 }
