@@ -30,7 +30,6 @@ public class LoginTest {
                 .fillPassword(password)
                 .submit()
                 .timeout(3)
-                .redirect(MainPage.class)
                 .isLoggedIn());
     }
 

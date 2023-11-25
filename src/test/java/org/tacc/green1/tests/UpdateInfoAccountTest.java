@@ -25,8 +25,9 @@ public class UpdateInfoAccountTest {
                 .fillEmail("volodymyr.nakonechnyi@gmail.com")
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
                 .submit()
-                .timeout(3).redirect(MainPage.class)
-                .gotoAccountPage("volodymyr.nakonechnyi@gmail.com")
+                .timeout(3)
+                .openAccountPopup()
+                .gotoAccountPage()
                 .gotoAccountInformationPage();
     }
 
@@ -43,13 +44,16 @@ public class UpdateInfoAccountTest {
                 .toggleEmailCheckBox()
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit()
-                .timeout(2).redirect(LoginPage.class)
+                .<LoginPage>submit()
+
+                .timeout(2)
                 .fillEmail(email)
                 .fillPassword(password)
                 .submit()
-                .timeout(3).redirect(MainPage.class)
-                .gotoAccountPage(email);
+
+                .timeout(3)
+                .openAccountPopup()
+                .gotoAccountPage();
 
         Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
         Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());

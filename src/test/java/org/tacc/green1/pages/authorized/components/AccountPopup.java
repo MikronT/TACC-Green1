@@ -27,7 +27,7 @@ public class AccountPopup extends Modal<AccountPopup> implements XPath.AccountMo
         return this;
     }
 
-    public AccountPage gotoMyAccount() {
+    public AccountPage gotoAccountPage() {
         myAccountModalOption.click();
         return PageFactory.initElements(modalDriver, AccountPage.class);
     }

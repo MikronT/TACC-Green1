@@ -27,6 +27,9 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
     @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
     private WebElement welcomeAccountLink;
 
+    @FindBy(css = "button.action.switch")
+    WebElement accountPopupToggle;
+
 
     public static MainPage initPage() {
         modalDriver = Utils.initDriver();
@@ -49,23 +52,17 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
         return PageFactory.initElements(modalDriver, RegistrationPage.class);
     }
 
-    public AccountPage gotoAccountPage(String email) {
-        String message = String.format("user %s is not logged in, check out your method call order", email);
-
+    public AccountPopup openAccountPopup() {
         if (isLoggedIn()) {
-            LOG.info(String.format("user %s is logged in", email));
-            return getAccountModal()
-                    .openModal()
-                    .gotoMyAccount();
+            accountPopupToggle.click();
+            return PageFactory.initElements(modalDriver, AccountPopup.class);
         }
 
+        String message = "No user is not logged in, check out your method call order";
         LOG.error(message);
         throw new IllegalStateException(message);
     }
 
-    private AccountModal getAccountModal() {
-        return PageFactory.initElements(modalDriver, AccountModal.class);
-    }
 
     public boolean isLoggedIn() {
         try {

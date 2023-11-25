@@ -12,9 +12,6 @@ public abstract class Modal<T> {
         modalDriver.quit();
     }
 
-    public <T extends Modal> T redirect(Class<T> pageClass) {
-        return PageFactory.initElements(modalDriver, pageClass);
-    }
 
     @SuppressWarnings("unchecked")
     public T timeout(int seconds) {
