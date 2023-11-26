@@ -22,4 +22,9 @@ public interface XPath {
     interface AccountSidebar {
         String ACCOUNT_INFORMATION_LINK = "/html/body/div[2]/main/div[2]/div[2]/div/div[2]/ul/li[7]/a";
     }
+
+
+    interface ProductReviewModal {
+        String BUTTON_SUBMIT = "//*[@id=\"review-form\"]/div/div/button";
+    }
 }
