@@ -10,7 +10,7 @@ import org.tacc.green1.pages.MainPage;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginTest {
-    private static LoginPage loginPage;
+    private LoginPage loginPage;
 
     @BeforeEach
     public void openLoginPage() {

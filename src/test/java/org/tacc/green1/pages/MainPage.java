@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.pages.authorized.components.AccountModal;
+import org.tacc.green1.pages.search.AdvancedSearchPage;
 import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
 
@@ -26,6 +27,8 @@ public class MainPage extends Modal implements XPath.MainPage {
 
     @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
     private WebElement welcomeAccountLink;
+    @FindBy(xpath = LINK_ADVANCED_SEARCH)
+    private WebElement advancedSearchLink;
 
     public static MainPage initPage() {
         modalDriver = Utils.initDriver();
@@ -47,6 +50,7 @@ public class MainPage extends Modal implements XPath.MainPage {
         return PageFactory.initElements(modalDriver, RegistrationPage.class);
     }
 
+
     public AccountPage gotoAccountPage(String email) {
         String message = String.format("user %s is not logged in, check out your method call order", email);
 
@@ -59,6 +63,11 @@ public class MainPage extends Modal implements XPath.MainPage {
 
         LOG.error(message);
         throw new IllegalStateException(message);
+    }
+
+    public AdvancedSearchPage gotoAdvancedSearchPage() {
+        advancedSearchLink.click();
+        return PageFactory.initElements(modalDriver, AdvancedSearchPage.class);
     }
 
     private AccountModal getAccountModal() {

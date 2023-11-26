@@ -19,6 +19,7 @@ public interface XPath {
 
     interface MainPage {
         String WELCOME_MESSAGE_MAIN_PAGE = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span",
-                LINK_REGISTRATION = "/html/body/div[2]/header/div[1]/div/ul/li[3]/a";
+                LINK_REGISTRATION = "/html/body/div[2]/header/div[1]/div/ul/li[3]/a",
+                LINK_ADVANCED_SEARCH = "/html/body/div[2]/footer/div/ul/li[3]/a";
     }
 }
