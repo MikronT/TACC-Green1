@@ -9,18 +9,18 @@ import java.time.Duration;
 
 
 public abstract class Modal<T> {
-    private static Actions modalActions = null;
-    private static WebDriverWait modalWait;
+    private Actions modalActions = null;
+    private WebDriverWait modalWait;
     protected static WebDriver modalDriver;
 
 
-    protected static WebDriverWait modalWait() {
+    protected WebDriverWait modalWait() {
         if (modalWait == null)
             modalWait = new WebDriverWait(modalDriver, Duration.ofSeconds(3));
         return modalWait;
     }
 
-    protected static Actions modalActions() {
+    protected Actions modalActions() {
         if (modalActions == null)
             modalActions = new Actions(modalDriver);
         return modalActions;
