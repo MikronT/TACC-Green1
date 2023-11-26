@@ -4,10 +4,10 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.tacc.green1.pages.AccountInformationPage;
-import org.tacc.green1.pages.AccountPage;
-import org.tacc.green1.pages.LoginPage;
-import org.tacc.green1.pages.MainPage;
+import org.tacc.green1.model.AccountInformationPage;
+import org.tacc.green1.model.AccountPage;
+import org.tacc.green1.model.LoginPage;
+import org.tacc.green1.model.MainPage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

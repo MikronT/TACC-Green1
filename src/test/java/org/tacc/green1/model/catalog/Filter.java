@@ -1,4 +1,4 @@
-package org.tacc.green1.pages.catalog;
+package org.tacc.green1.model.catalog;
 
 @SuppressWarnings("unused")
 public interface Filter {

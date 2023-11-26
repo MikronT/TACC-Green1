@@ -1,10 +1,10 @@
-package org.tacc.green1.pages.authorized.components;
+package org.tacc.green1.model.authorized.components;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.pages.AccountInformationPage;
-import org.tacc.green1.pages.Modal;
+import org.tacc.green1.model.AccountInformationPage;
+import org.tacc.green1.model.Modal;
 import org.tacc.green1.util.XPath;
 
 

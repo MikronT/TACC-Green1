@@ -1,4 +1,4 @@
-package org.tacc.green1.pages.components;
+package org.tacc.green1.model.components;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

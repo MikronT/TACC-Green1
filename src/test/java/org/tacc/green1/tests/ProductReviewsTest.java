@@ -4,8 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.tacc.green1.pages.MainPage;
-import org.tacc.green1.pages.catalog.ProductReviewsTab;
+import org.tacc.green1.model.MainPage;
+import org.tacc.green1.model.catalog.ProductReviewsTab;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

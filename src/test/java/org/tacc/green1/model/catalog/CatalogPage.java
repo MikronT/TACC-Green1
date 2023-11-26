@@ -1,4 +1,4 @@
-package org.tacc.green1.pages.catalog;
+package org.tacc.green1.model.catalog;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.tacc.green1.pages.Modal;
+import org.tacc.green1.model.Modal;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;

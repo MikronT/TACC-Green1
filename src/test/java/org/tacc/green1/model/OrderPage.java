@@ -1,9 +1,9 @@
-package org.tacc.green1.pages;
+package org.tacc.green1.model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.pages.components.GoodsItem;
+import org.tacc.green1.model.components.GoodsItem;
 
 import java.util.List;
 

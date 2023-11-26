@@ -1,9 +1,9 @@
-package org.tacc.green1.pages.search;
+package org.tacc.green1.model.search;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.pages.Modal;
+import org.tacc.green1.model.Modal;
 
 
 public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {

@@ -1,9 +1,9 @@
-package org.tacc.green1.pages;
+package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.pages.authorized.components.AccountSidebar;
+import org.tacc.green1.model.authorized.components.AccountSidebar;
 import org.tacc.green1.util.XPath;
 
 

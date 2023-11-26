@@ -1,6 +1,6 @@
-package org.tacc.green1.pages.search;
+package org.tacc.green1.model.search;
 
-import org.tacc.green1.pages.Modal;
+import org.tacc.green1.model.Modal;
 
 
 public class CatalogAdvancedSearchPage extends Modal<CatalogAdvancedSearchPage> {

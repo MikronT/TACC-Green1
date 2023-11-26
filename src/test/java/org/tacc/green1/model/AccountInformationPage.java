@@ -1,4 +1,4 @@
-package org.tacc.green1.pages;
+package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
