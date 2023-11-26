@@ -8,7 +8,6 @@ import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.tacc.green1.util.Utils.sleep;
 
 
 public class LoginTest {
@@ -16,7 +15,7 @@ public class LoginTest {
 
 
     @BeforeEach
-    public void openLoginPage() {
+    public void prepare() {
         loginPage = MainPage.initPage().open().gotoLoginPage();
     }
 
@@ -28,19 +27,17 @@ public class LoginTest {
                           String email,
                           String password,
                           String ignoredConfirmPassword) {
-        var mainPage = loginPage
+        assertTrue(loginPage
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit();
-
-        sleep(2);
-
-        assertTrue(mainPage.isLoggedIn());
+                .submit()
+                .timeout(3)
+                .isLoggedIn());
     }
 
 
     @AfterEach
-    public void logout() {
+    public void finish() {
         loginPage.quit();
     }
 }

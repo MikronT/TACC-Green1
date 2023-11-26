@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage extends Modal {
+public class LoginPage extends Modal<LoginPage> {
     @FindBy(id = "email")
     private WebElement emailInput;
 
@@ -14,6 +14,7 @@ public class LoginPage extends Modal {
 
     @FindBy(css = "button.action.login.primary")
     private WebElement submitButton;
+
 
     public LoginPage fillEmail(String email) {
         emailInput.sendKeys(email);

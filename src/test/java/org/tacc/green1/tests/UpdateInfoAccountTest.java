@@ -1,76 +1,70 @@
 package org.tacc.green1.tests;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.tacc.green1.pages.AccountInformationPage;
 import org.tacc.green1.pages.AccountPage;
+import org.tacc.green1.pages.LoginPage;
 import org.tacc.green1.pages.MainPage;
 
-import static org.tacc.green1.util.Utils.sleep;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class UpdateInfoAccountTest {
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
 
+
+    @SuppressWarnings("SpellCheckingInspection")
     @BeforeAll
     static void prepare() {
-        MainPage mainPage = MainPage
-                .initPage()
-                .open()
+        accountInformationPage = MainPage.initPage().open()
                 .gotoLoginPage()
                 .fillEmail("volodymyr.nakonechnyi@gmail.com")
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
-                .submit();
+                .submit()
 
-        sleep(3);
-
-        accountInformationPage = mainPage
-                .gotoAccountPage("volodymyr.nakonechnyi@gmail.com")
+                .timeout(3)
+                .openAccountPopup()
+                .gotoAccountPage()
                 .gotoAccountInformationPage();
-
-        sleep(3);
     }
 
+
+    @SuppressWarnings("SpellCheckingInspection")
     @ParameterizedTest
     @CsvSource({
             "Dodo,Uran,volodymyr.nakonechnyi@gmail.com,Fw35tgvAXypdEgfX6YuyUW",
     })
     void updatePublicInfoWithEmail(String firstName, String lastName, String email, String password) {
-        String expectedResult = firstName + " " + lastName + '\n' + email;
-        accountInformationPage
+        accountPage = accountInformationPage
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
                 .toggleEmailCheckBox()
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit();
+                .<LoginPage>submit()
 
-        sleep(2);
-        // After this action, we've logged out automatically
-
-        MainPage mainPage = accountInformationPage
-                .logout()
+                .timeout(2)
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit();
+                .submit()
 
-        sleep(3);
+                .timeout(3)
+                .openAccountPopup()
+                .gotoAccountPage();
 
-        AccountPage accountPage = mainPage.gotoAccountPage(email);
+        assertEquals("My Account", accountPage.getAccountPageWelcomeText());
 
-        Assertions.assertEquals("My Account", accountPage.getAccountPageWelcomeText());
-        Assertions.assertEquals(expectedResult, accountPage.getAccountContactInfoText());
+        String expectedResult = firstName + " " + lastName + '\n' + email;
+        assertEquals(expectedResult, accountPage.getAccountContactInfoText());
     }
+
 
     @AfterAll
     public static void finish() {
-        accountInformationPage.quit();
-        //TODO: Короче, я не довбу, що ви там за цей час написали. Уже 1 ночі і я замахався, тому сорян)
-        accountInformationPage.quit();
         accountPage.quit();
     }
 }
