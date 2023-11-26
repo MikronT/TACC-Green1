@@ -22,7 +22,7 @@ public class ProductReviewsTab extends Modal<ProductReviewsTab> implements XPath
     private WebElement ratingBar_star5;
 
     @FindBy(id = "nickname_field")
-    private WebElement nicknameInput;
+    private WebElement nickNameInput;
 
     @FindBy(id = "summary_field")
     private WebElement summaryInput;
@@ -50,8 +50,8 @@ public class ProductReviewsTab extends Modal<ProductReviewsTab> implements XPath
         return this;
     }
 
-    public ProductReviewsTab fillNickname(String nickname) {
-        nicknameInput.sendKeys(nickname);
+    public ProductReviewsTab fillNickName(String nickname) {
+        nickNameInput.sendKeys(nickname);
         return this;
     }
 

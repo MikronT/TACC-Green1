@@ -24,12 +24,12 @@ public class ProductReviewsTest {
     @CsvFileSource(resources = "/productReviews.csv")
     public void writeReviewTest(boolean expectedToPass,
                                 int rating,
-                                String nickname,
+                                String nickName,
                                 String summary,
                                 String review) {
         productReviewsTab
                 .fillRatingBar(rating)
-                .fillNickname(nickname)
+                .fillNickName(nickName)
                 .fillSummary(summary)
                 .fillReview(review)
                 .submit()
