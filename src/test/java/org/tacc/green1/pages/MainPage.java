@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.pages.authorized.components.AccountPopup;
+import org.tacc.green1.pages.menu.MainMenu;
 import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
 
@@ -24,11 +25,11 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
     @FindBy(xpath = LINK_REGISTRATION)
     private WebElement createAccountLink;
 
-    @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
+    @FindBy(xpath = LINK_WELCOME_ACCOUNT)
     private WebElement welcomeAccountLink;
 
     @FindBy(css = "button.action.switch")
-    WebElement accountPopupToggle;
+    private WebElement accountPopupToggle;
 
 
     public static MainPage initPage() {
@@ -63,14 +64,20 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
         throw new IllegalStateException(message);
     }
 
+    public MainMenu gotoMainMenu() {
+        timeout(1);
+        return PageFactory.initElements(modalDriver, MainMenu.class);
+    }
+
 
     public boolean isLoggedIn() {
         try {
             var message = welcomeAccountLink.getText();
             //Manual welcome message check
             return message.contains("Welcome, ");
-        } catch (Exception ignored) {
+        } catch (Exception e) {
             //Element not found, not logged in
+            LOG.warn("The user is not logged in", e);
             return false;
         }
     }

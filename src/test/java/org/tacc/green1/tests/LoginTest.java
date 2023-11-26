@@ -27,7 +27,6 @@ public class LoginTest {
                           String email,
                           String password,
                           String ignoredConfirmPassword) {
-
         assertTrue(loginPage
                 .fillEmail(email)
                 .fillPassword(password)
