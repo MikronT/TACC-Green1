@@ -69,8 +69,9 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
             var message = welcomeAccountLink.getText();
             //Manual welcome message check
             return message.contains("Welcome, ");
-        } catch (Exception ignored) {
+        } catch (Exception e) {
             //Element not found, not logged in
+            LOG.warn("The user is not logged in", e);
             return false;
         }
     }
