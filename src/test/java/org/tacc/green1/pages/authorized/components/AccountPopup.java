@@ -11,13 +11,13 @@ import org.tacc.green1.util.XPath;
 
 public class AccountPopup extends Modal<AccountPopup> implements XPath.AccountModal {
     @FindBy(xpath = MY_ACCOUNT_OPTION)
-    WebElement myAccountModalOption;
+    private WebElement myAccountModalOption;
 
     @FindBy(xpath = MY_WISH_LIST_OPTION)
-    WebElement wishListModalOption;
+    private WebElement wishListModalOption;
 
     @FindBy(xpath = SIGN_OUT_OPTION)
-    WebElement signOutModalOption;
+    private WebElement signOutModalOption;
 
 
     public AccountPage gotoAccountPage() {

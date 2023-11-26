@@ -28,7 +28,7 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
     private WebElement welcomeAccountLink;
 
     @FindBy(css = "button.action.switch")
-    WebElement accountPopupToggle;
+    private WebElement accountPopupToggle;
 
 
     public static MainPage initPage() {
