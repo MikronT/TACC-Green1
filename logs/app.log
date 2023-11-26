@@ -954,3 +954,87 @@ item
 2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Neve Studio Dance Jacket
 2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Nadia Elements Shell
 2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Josie Yoga Jacket
+2023-11-26 22:19:04 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:19:11 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:19:11 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:19:11 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:19:12 | ERROR | FilterDropdown:76 | No corresponding argument was found by name: black
+2023-11-26 22:21:05 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:21:13 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:21:13 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:21:13 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:21:13 | ERROR | FilterDropdown:80 | No corresponding argument was found by name: Black
+2023-11-26 22:21:48 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:21:55 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:21:55 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:21:55 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Antonia Racer Tank
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Bella Tank
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Lucia Cross-Fit Bra
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Electra Bra Top
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Desiree Fitness Tee
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Gwyn Endurance Tee
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Minerva LumaTech™ V-Tee
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Juliana Short-Sleeve Tee
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Olivia 1/4 Zip Light Jacket
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Neve Studio Dance Jacket
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Nadia Elements Shell
+2023-11-26 22:21:56 | DEBUG | CatalogFilteringTest:36 | Josie Yoga Jacket
+2023-11-26 22:24:18 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:24:25 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:24:25 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:24:25 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:24:27 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:24:30 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:24:33 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:24:36 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:25:21 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:25:28 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:25:28 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:25:28 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:25:31 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:25:34 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:25:38 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:27:01 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:27:08 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:27:08 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:27:08 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:27:10 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:27:15 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:27:15 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:27:15 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:27:15 | ERROR | FilterDropdown:80 | No corresponding argument was found by name: lavender
+2023-11-26 22:27:15 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:27:22 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:27:22 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 22:27:22 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 22:27:24 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:27:30 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:27:30 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 22:27:30 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 22:27:52 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:27:59 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:27:59 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:27:59 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:27:59 | ERROR | FilterDropdown:80 | No corresponding argument was found by name: lavender
+2023-11-26 22:44:52 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:44:59 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:44:59 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:44:59 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:45:00 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:00:45 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:00:53 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:00:53 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 23:00:53 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 23:00:54 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:01:01 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:01:01 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 23:01:01 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 23:01:02 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:01:09 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:01:09 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:01:09 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:01:10 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:01:16 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:01:16 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:01:16 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
