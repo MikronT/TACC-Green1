@@ -24,6 +24,11 @@ public interface XPath {
     }
 
 
+    interface AddressBookPage {
+        String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button";
+    }
+
+
     interface ProductReviewModal {
         String BUTTON_SUBMIT = "//*[@id=\"review-form\"]/div/div/button";
     }
