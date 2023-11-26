@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.pages.authorized.components.AccountPopup;
 import org.tacc.green1.pages.menu.MainMenu;
+import org.tacc.green1.pages.search.AdvancedSearchPage;
 import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
 
@@ -30,6 +31,9 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
 
     @FindBy(css = "button.action.switch")
     private WebElement accountPopupToggle;
+
+    @FindBy(xpath = LINK_ADVANCED_SEARCH)
+    private WebElement advancedSearchLink;
 
 
     public static MainPage initPage() {
@@ -67,6 +71,11 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
     public MainMenu gotoMainMenu() {
         timeout(1);
         return PageFactory.initElements(modalDriver, MainMenu.class);
+    }
+
+    public AdvancedSearchPage gotoAdvancedSearchPage() {
+        advancedSearchLink.click();
+        return PageFactory.initElements(modalDriver, AdvancedSearchPage.class);
     }
 
 
