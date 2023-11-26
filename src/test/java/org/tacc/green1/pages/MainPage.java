@@ -2,6 +2,7 @@ package org.tacc.green1.pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -74,5 +75,12 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
             LOG.warn("The user is not logged in", e);
             return false;
         }
+    }
+
+    //TODO 26.11.2023: Don't do crimes
+    public ProductReviewsTab doCrimes() {
+        modalDriver.get("https://magento.softwaretestingboard.com/fusion-backpack.html");
+        modalDriver.findElement(By.id("tab-label-reviews")).click();
+        return PageFactory.initElements(modalDriver, ProductReviewsTab.class);
     }
 }

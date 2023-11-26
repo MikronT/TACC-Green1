@@ -16,7 +16,10 @@ public class ProductReviewsTest {
 
     @BeforeEach
     public void prepare() {
+        //TODO 26.11.2023: Don't do crimes
         productReviewsTab = MainPage.initPage().open()
+                .doCrimes()
+                /*.openProductReviewsTab()*/;
     }
 
 
