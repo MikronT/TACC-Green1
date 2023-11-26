@@ -8,9 +8,13 @@ public interface XPath {
 
 
     interface MainMenu {
-        String MENU_ITEM_WOMEN = "//*[@id=\"store.menu\"]/nav/ul/li[2]",
+        String MENU_ITEM = "//*[@id=\"store.menu\"]/nav/ul",
+                MENU_ITEM_WOMEN = MENU_ITEM + "/li[2]",
                 MENU_ITEM_WOMEN_LINK = MENU_ITEM_WOMEN + "/a",
-                MENU_ITEM_WOMEN_TOPS = MENU_ITEM_WOMEN + "/ul/li[1]";
+                MENU_ITEM_WOMEN_TOPS = MENU_ITEM_WOMEN + "/ul/li[1]",
+                MENU_ITEM_MEN = MENU_ITEM + "/li[3]",
+                MENU_ITEM_MEN_LINK = MENU_ITEM_MEN + "/a",
+                MENU_ITEM_MEN_BOTTOMS = MENU_ITEM_MEN + "/ul/li[2]";
     }
 
 

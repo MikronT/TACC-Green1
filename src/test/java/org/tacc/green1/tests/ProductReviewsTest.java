@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.pages.MainPage;
-import org.tacc.green1.pages.ProductReviewsTab;
+import org.tacc.green1.pages.catalog.ProductReviewsTab;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,10 +16,14 @@ public class ProductReviewsTest {
 
     @BeforeEach
     public void prepare() {
-        //TODO 26.11.2023: Don't do crimes
         productReviewsTab = MainPage.initPage().open()
-                .doCrimes()
-                /*.openProductReviewsTab()*/;
+                .gotoMainMenu()
+                .openMenCategoryPopup()
+                .gotoMenBottomsCatalogPage()
+                .getVisibleProductCards()
+                .getFirst()
+                .gotoProductPage()
+                .gotoProductReviewsTab();
     }
 
 
