@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.pages.Modal;
-import org.tacc.green1.pages.catalog.WomenTopsCatalogPage;
+import org.tacc.green1.pages.catalog.CatalogPage;
 import org.tacc.green1.util.XPath;
 
 
@@ -13,8 +13,8 @@ public class WomenCategoryPopup extends Modal<WomenCategoryPopup> implements XPa
     private WebElement womenTopsCategoryItem;
 
 
-    public WomenTopsCatalogPage gotoWomenTopsCatalogPage() {
+    public CatalogPage gotoWomenTopsCatalogPage() {
         womenTopsCategoryItem.click();
-        return PageFactory.initElements(modalDriver, WomenTopsCatalogPage.class);
+        return PageFactory.initElements(modalDriver, CatalogPage.class);
     }
 }

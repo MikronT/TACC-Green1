@@ -31,6 +31,25 @@ public interface XPath {
     }
 
 
+    interface CatalogPage {
+        String DROPDOWN_LIMITER = "//*[@class=\"toolbar toolbar-products\"][2]/div[3]/div/select",
+                FILTER_DROPDOWNS = "//*[@id=\"narrow-by-list\"]/div",
+                PRODUCT_CARDS = "//*[@class=\"products list items product-items\"]/li";
+    }
+
+
+    interface FilterDropdown {
+        String LABEL_NAME = "div[1]";
+        String OPTIONS_LIST = "div[2]/ol/li/a";
+        String OPTIONS_SQUARE = "div[2]/div/div/a/div";
+    }
+
+
+    interface ProductCard {
+        String LABEL_NAME = "div/div/strong/a";
+    }
+
+
     interface ProductReviewModal {
         String BUTTON_SUBMIT = "//*[@id=\"review-form\"]/div/div/button";
     }
