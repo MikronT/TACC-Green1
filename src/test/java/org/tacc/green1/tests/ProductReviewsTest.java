@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.pages.MainPage;
-import org.tacc.green1.pages.ProductReviewsTab;
+import org.tacc.green1.pages.catalog.ProductReviewsTab;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,6 +17,13 @@ public class ProductReviewsTest {
     @BeforeEach
     public void prepare() {
         productReviewsTab = MainPage.initPage().open()
+                .gotoMainMenu()
+                .openMenCategoryPopup()
+                .gotoMenBottomsCatalogPage()
+                .getVisibleProductCards()
+                .getFirst()
+                .gotoProductPage()
+                .gotoProductReviewsTab();
     }
 
 
@@ -24,12 +31,12 @@ public class ProductReviewsTest {
     @CsvFileSource(resources = "/productReviews.csv")
     public void writeReviewTest(boolean expectedToPass,
                                 int rating,
-                                String nickname,
+                                String nickName,
                                 String summary,
                                 String review) {
         productReviewsTab
                 .fillRatingBar(rating)
-                .fillNickname(nickname)
+                .fillNickName(nickName)
                 .fillSummary(summary)
                 .fillReview(review)
                 .submit()

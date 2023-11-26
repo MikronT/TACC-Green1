@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class LoginTest {
-    private static LoginPage loginPage;
+    private LoginPage loginPage;
 
 
     @BeforeEach
