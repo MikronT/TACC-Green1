@@ -2,8 +2,15 @@ package org.tacc.green1.util;
 
 public interface XPath {
     interface MainPage {
-        String WELCOME_MESSAGE_MAIN_PAGE = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span",
+        String LINK_WELCOME_ACCOUNT = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span",
                 LINK_REGISTRATION = "/html/body/div[2]/header/div[1]/div/ul/li[3]/a";
+    }
+
+
+    interface MainMenu {
+        String MENU_ITEM_WOMEN = "//*[@id=\"store.menu\"]/nav/ul/li[2]",
+                MENU_ITEM_WOMEN_LINK = MENU_ITEM_WOMEN + "/a",
+                MENU_ITEM_WOMEN_TOPS = MENU_ITEM_WOMEN + "/ul/li[1]";
     }
 
 

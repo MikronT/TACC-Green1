@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.pages.authorized.components.AccountPopup;
+import org.tacc.green1.pages.menu.MainMenu;
 import org.tacc.green1.util.Utils;
 import org.tacc.green1.util.XPath;
 
@@ -25,7 +26,7 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
     @FindBy(xpath = LINK_REGISTRATION)
     private WebElement createAccountLink;
 
-    @FindBy(xpath = WELCOME_MESSAGE_MAIN_PAGE)
+    @FindBy(xpath = LINK_WELCOME_ACCOUNT)
     private WebElement welcomeAccountLink;
 
     @FindBy(css = "button.action.switch")
@@ -62,6 +63,11 @@ public class MainPage extends Modal<MainPage> implements XPath.MainPage {
         String message = "No user is not logged in, check out your method call order";
         LOG.error(message);
         throw new IllegalStateException(message);
+    }
+
+    public MainMenu gotoMainMenu() {
+        timeout(1);
+        return PageFactory.initElements(modalDriver, MainMenu.class);
     }
 
 
