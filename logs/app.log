@@ -302,3 +302,655 @@ Session ID: c0ca11a0617921ae388a6b2cd7e22a77
 2023-11-26 04:35:21 | INFO  | Utils:24 | started driver initialization...
 2023-11-26 04:38:04 | INFO  | Utils:24 | started driver initialization...
 2023-11-26 04:38:10 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 17:41:27 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 17:43:33 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 17:45:28 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 17:46:02 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 17:47:07 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:00:14 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:00:48 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:02:03 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:03:22 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:03:56 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:04:43 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:05:03 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:06:23 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:06:50 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:08:59 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:09:10 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:09:32 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:09:49 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:14:54 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:19:24 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:19:59 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:20:43 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:22:25 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:25:39 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:26:55 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:28:12 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:30:55 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:32:01 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogPage:64 | Making product card
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:09 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:32:10 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:31 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:33:37 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:37 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:33:38 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:12 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:50:34 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:50:41 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:52:12 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Breathe-Easy Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Antonia Racer Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Maya Tunic
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Chloe Compete Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Leah Yoga Top
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Nona Fitness Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Nora Practice Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Zoe Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Bella Tank
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Lucia Cross-Fit Bra
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Prima Compete Bra Top
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Celeste Sports Bra
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Erica Evercool Sports Bra
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Electra Bra Top
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Desiree Fitness Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Gwyn Endurance Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Radiant Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Diva Gym Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Karissa V-Neck Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Tiffany Fitness Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Minerva LumaTech™ V-Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Juliana Short-Sleeve Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Elisa EverCool™ Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Layla Tee
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Iris Workout Top
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Gabrielle Micro Sleeve Top
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Olivia 1/4 Zip Light Jacket
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Juno Jacket
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Neve Studio Dance Jacket
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Nadia Elements Shell
+2023-11-26 18:52:19 | DEBUG | CatalogFilteringTest:34 | Jade Yoga Jacket
+2023-11-26 18:52:20 | DEBUG | CatalogFilteringTest:34 | Adrienne Trek Jacket
+2023-11-26 18:52:20 | DEBUG | CatalogFilteringTest:34 | Inez Full Zip Jacket
+2023-11-26 18:52:20 | DEBUG | CatalogFilteringTest:34 | Riona Full Zip Jacket
+2023-11-26 18:52:20 | DEBUG | CatalogFilteringTest:34 | Ingrid Running Jacket
+2023-11-26 18:52:20 | DEBUG | CatalogFilteringTest:34 | Augusta Pullover Jacket
+2023-11-26 21:02:26 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Breathe-Easy Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Antonia Racer Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Maya Tunic
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Chloe Compete Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Leah Yoga Top
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Nona Fitness Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Nora Practice Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Zoe Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Bella Tank
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Lucia Cross-Fit Bra
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Prima Compete Bra Top
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Celeste Sports Bra
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Erica Evercool Sports Bra
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Electra Bra Top
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Desiree Fitness Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Gwyn Endurance Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Radiant Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Diva Gym Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Karissa V-Neck Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Tiffany Fitness Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Minerva LumaTech™ V-Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Juliana Short-Sleeve Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Elisa EverCool™ Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Layla Tee
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Iris Workout Top
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Gabrielle Micro Sleeve Top
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:02:38 | DEBUG | CatalogFilteringTest:36 | Juno Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Neve Studio Dance Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Nadia Elements Shell
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Jade Yoga Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Adrienne Trek Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Inez Full Zip Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Riona Full Zip Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Ingrid Running Jacket
+2023-11-26 21:02:39 | DEBUG | CatalogFilteringTest:36 | Augusta Pullover Jacket
+2023-11-26 21:03:12 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Breathe-Easy Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Antonia Racer Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Maya Tunic
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Chloe Compete Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Leah Yoga Top
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Nona Fitness Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Nora Practice Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Zoe Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Bella Tank
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Lucia Cross-Fit Bra
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Prima Compete Bra Top
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Celeste Sports Bra
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Erica Evercool Sports Bra
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Electra Bra Top
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Desiree Fitness Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Gwyn Endurance Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Radiant Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Diva Gym Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Karissa V-Neck Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Tiffany Fitness Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Minerva LumaTech™ V-Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Juliana Short-Sleeve Tee
+2023-11-26 21:03:19 | DEBUG | CatalogFilteringTest:36 | Elisa EverCool™ Tee
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Layla Tee
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Iris Workout Top
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Gabrielle Micro Sleeve Top
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Juno Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Neve Studio Dance Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Nadia Elements Shell
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Jade Yoga Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Adrienne Trek Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Inez Full Zip Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Riona Full Zip Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Ingrid Running Jacket
+2023-11-26 21:03:20 | DEBUG | CatalogFilteringTest:36 | Augusta Pullover Jacket
+2023-11-26 21:03:48 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | INFO  | FilterDropdown:54 | 
+2023-11-26 21:03:56 | ERROR | CatalogPage:86 | No filter was found corresponding to name: activity
+2023-11-26 21:04:15 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:04:22 | ERROR | CatalogPage:86 | No filter was found corresponding to name: activity
+2023-11-26 21:04:54 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:05:01 | INFO  | FilterDropdown:54 | Cocona® performance fabric 9
+item
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Breathe-Easy Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Antonia Racer Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Maya Tunic
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Chloe Compete Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Leah Yoga Top
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Nona Fitness Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Nora Practice Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Zoe Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Bella Tank
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Lucia Cross-Fit Bra
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Prima Compete Bra Top
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Celeste Sports Bra
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Erica Evercool Sports Bra
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Electra Bra Top
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Desiree Fitness Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Gwyn Endurance Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Radiant Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Diva Gym Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Karissa V-Neck Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Tiffany Fitness Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Minerva LumaTech™ V-Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Juliana Short-Sleeve Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Elisa EverCool™ Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Layla Tee
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Iris Workout Top
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Gabrielle Micro Sleeve Top
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Juno Jacket
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Neve Studio Dance Jacket
+2023-11-26 21:05:01 | DEBUG | CatalogFilteringTest:37 | Nadia Elements Shell
+2023-11-26 21:05:02 | DEBUG | CatalogFilteringTest:37 | Jade Yoga Jacket
+2023-11-26 21:05:02 | DEBUG | CatalogFilteringTest:37 | Adrienne Trek Jacket
+2023-11-26 21:05:02 | DEBUG | CatalogFilteringTest:37 | Inez Full Zip Jacket
+2023-11-26 21:05:02 | DEBUG | CatalogFilteringTest:37 | Riona Full Zip Jacket
+2023-11-26 21:05:02 | DEBUG | CatalogFilteringTest:37 | Ingrid Running Jacket
+2023-11-26 21:05:02 | DEBUG | CatalogFilteringTest:37 | Augusta Pullover Jacket
+2023-11-26 21:06:38 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:06:45 | INFO  | FilterDropdown:54 | Insulated 4
+item
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Breathe-Easy Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Antonia Racer Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Maya Tunic
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Chloe Compete Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Leah Yoga Top
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Nona Fitness Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Nora Practice Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Zoe Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Bella Tank
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Lucia Cross-Fit Bra
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Prima Compete Bra Top
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Celeste Sports Bra
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Erica Evercool Sports Bra
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Electra Bra Top
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Desiree Fitness Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Gwyn Endurance Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Radiant Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Diva Gym Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Karissa V-Neck Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Tiffany Fitness Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Minerva LumaTech™ V-Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Juliana Short-Sleeve Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Elisa EverCool™ Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Layla Tee
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Iris Workout Top
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Gabrielle Micro Sleeve Top
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Juno Jacket
+2023-11-26 21:06:45 | DEBUG | CatalogFilteringTest:37 | Neve Studio Dance Jacket
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Nadia Elements Shell
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Jade Yoga Jacket
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Adrienne Trek Jacket
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Inez Full Zip Jacket
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Riona Full Zip Jacket
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Ingrid Running Jacket
+2023-11-26 21:06:46 | DEBUG | CatalogFilteringTest:37 | Augusta Pullover Jacket
+2023-11-26 21:07:24 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Insulated 4
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Jacket 12
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Lightweight 6
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Hooded 5
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Heavy Duty 1
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Rain Coat 2
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Hard Shell 3
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Soft Shell 8
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Windbreaker 4
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | ¼ zip 5
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Full Zip 12
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Reversible 2
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Bra 5
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Sweatshirt 5
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Tank 9
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Tee 12
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Pullover 10
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Hoodie 9
+item
+2023-11-26 21:07:31 | INFO  | FilterDropdown:54 | Camisole 1
+item
+2023-11-26 21:07:31 | DEBUG | CatalogFilteringTest:37 | Breathe-Easy Tank
+2023-11-26 21:07:31 | DEBUG | CatalogFilteringTest:37 | Antonia Racer Tank
+2023-11-26 21:07:31 | DEBUG | CatalogFilteringTest:37 | Maya Tunic
+2023-11-26 21:07:31 | DEBUG | CatalogFilteringTest:37 | Chloe Compete Tank
+2023-11-26 21:07:31 | DEBUG | CatalogFilteringTest:37 | Leah Yoga Top
+2023-11-26 21:07:31 | DEBUG | CatalogFilteringTest:37 | Nona Fitness Tank
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Nora Practice Tank
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Zoe Tank
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Bella Tank
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Lucia Cross-Fit Bra
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Prima Compete Bra Top
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Celeste Sports Bra
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Erica Evercool Sports Bra
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Electra Bra Top
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Desiree Fitness Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Gwyn Endurance Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Radiant Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Diva Gym Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Karissa V-Neck Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Tiffany Fitness Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Minerva LumaTech™ V-Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Juliana Short-Sleeve Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Elisa EverCool™ Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Layla Tee
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Iris Workout Top
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Gabrielle Micro Sleeve Top
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Juno Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Neve Studio Dance Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Nadia Elements Shell
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Jade Yoga Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Adrienne Trek Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Inez Full Zip Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Riona Full Zip Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Ingrid Running Jacket
+2023-11-26 21:07:32 | DEBUG | CatalogFilteringTest:37 | Augusta Pullover Jacket
+2023-11-26 21:08:16 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Insulated 4
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Jacket 12
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Lightweight 6
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Hooded 5
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Heavy Duty 1
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Rain Coat 2
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Hard Shell 3
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Soft Shell 8
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Windbreaker 4
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | ¼ zip 5
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Full Zip 12
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Reversible 2
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Bra 5
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Sweatshirt 5
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Tank 9
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Tee 12
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Pullover 10
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Hoodie 9
+2023-11-26 21:08:24 | INFO  | FilterDropdown:54 | Camisole 1
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Breathe-Easy Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Antonia Racer Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Maya Tunic
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Chloe Compete Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Leah Yoga Top
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Nona Fitness Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Nora Practice Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Zoe Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Bella Tank
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Lucia Cross-Fit Bra
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Prima Compete Bra Top
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Celeste Sports Bra
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Erica Evercool Sports Bra
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Electra Bra Top
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Desiree Fitness Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Gwyn Endurance Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Radiant Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Diva Gym Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Karissa V-Neck Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Tiffany Fitness Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Minerva LumaTech™ V-Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Juliana Short-Sleeve Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Elisa EverCool™ Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Layla Tee
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Iris Workout Top
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Gabrielle Micro Sleeve Top
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Juno Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Neve Studio Dance Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Nadia Elements Shell
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Jade Yoga Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Adrienne Trek Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Inez Full Zip Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Riona Full Zip Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Ingrid Running Jacket
+2023-11-26 21:08:24 | DEBUG | CatalogFilteringTest:37 | Augusta Pullover Jacket
+2023-11-26 21:09:23 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:09:32 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:09:52 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Insulated 4
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Jacket 12
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Lightweight 6
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Hooded 5
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Heavy Duty 1
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Rain Coat 2
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Hard Shell 3
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Soft Shell 8
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Windbreaker 4
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | ¼ zip 5
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Full Zip 12
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Reversible 2
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Bra 5
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Sweatshirt 5
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Tank 9
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Tee 12
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Pullover 10
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Hoodie 9
+item
+2023-11-26 21:09:59 | INFO  | FilterDropdown:54 | Camisole 1
+item
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Breathe-Easy Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Antonia Racer Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Maya Tunic
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Chloe Compete Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Leah Yoga Top
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Nona Fitness Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Nora Practice Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Zoe Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Bella Tank
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Lucia Cross-Fit Bra
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Prima Compete Bra Top
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Celeste Sports Bra
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Erica Evercool Sports Bra
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Electra Bra Top
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Desiree Fitness Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Gwyn Endurance Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Radiant Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Diva Gym Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Karissa V-Neck Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Tiffany Fitness Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Minerva LumaTech™ V-Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Juliana Short-Sleeve Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Elisa EverCool™ Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Layla Tee
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Iris Workout Top
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Gabrielle Micro Sleeve Top
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Olivia 1/4 Zip Light Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Juno Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Neve Studio Dance Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Nadia Elements Shell
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Jade Yoga Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Adrienne Trek Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Inez Full Zip Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Riona Full Zip Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Ingrid Running Jacket
+2023-11-26 21:09:59 | DEBUG | CatalogFilteringTest:37 | Augusta Pullover Jacket
+2023-11-26 21:25:45 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:25:52 | ERROR | FilterDropdown:61 | No corresponding argument was found by name: Black
+2023-11-26 21:29:05 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:29:12 | ERROR | FilterDropdown:68 | No corresponding argument was found by name: Black
+2023-11-26 21:30:01 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:30:12 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:30:19 | ERROR | FilterDropdown:71 | No corresponding argument was found by name: Black
+2023-11-26 21:31:40 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:31:48 | ERROR | FilterDropdown:74 | No corresponding argument was found by name: Black
+2023-11-26 21:32:21 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:32:27 | DEBUG | FilterDropdown:53 | Filter expanded
+2023-11-26 21:32:27 | ERROR | FilterDropdown:75 | No corresponding argument was found by name: Black
+2023-11-26 21:34:43 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:34:49 | DEBUG | FilterDropdown:53 | Filter expanded
+2023-11-26 21:34:49 | DEBUG | FilterDropdown:56 | List Options: 0
+2023-11-26 21:34:49 | DEBUG | FilterDropdown:57 | Square Options: 0
+2023-11-26 21:34:49 | ERROR | FilterDropdown:78 | No corresponding argument was found by name: Black
+2023-11-26 21:35:17 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:35:24 | DEBUG | FilterDropdown:53 | Filter expanded
+2023-11-26 21:35:24 | DEBUG | FilterDropdown:56 | List Options: 0
+2023-11-26 21:35:24 | DEBUG | FilterDropdown:57 | Square Options: 10
+2023-11-26 21:35:24 | DEBUG | FilterDropdown:71 | Looking in Black
+2023-11-26 21:36:09 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:36:16 | DEBUG | FilterDropdown:53 | Filter expanded
+2023-11-26 21:36:16 | DEBUG | FilterDropdown:56 | List Options: 0
+2023-11-26 21:36:16 | DEBUG | FilterDropdown:57 | Square Options: 10
+2023-11-26 21:36:16 | DEBUG | FilterDropdown:71 | Looking in Black
+2023-11-26 21:36:40 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 21:36:47 | DEBUG | FilterDropdown:53 | Filter expanded
+2023-11-26 21:36:47 | DEBUG | FilterDropdown:56 | List Options: 0
+2023-11-26 21:36:47 | DEBUG | FilterDropdown:57 | Square Options: 10
+2023-11-26 21:36:47 | DEBUG | FilterDropdown:71 | Looking in Black
+2023-11-26 22:13:39 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:13:49 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:13:49 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:13:49 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:14:06 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:14:13 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:14:13 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:14:13 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:14:53 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 22:15:00 | INFO  | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 22:15:00 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 22:15:00 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Antonia Racer Tank
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Bella Tank
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Lucia Cross-Fit Bra
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Electra Bra Top
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Desiree Fitness Tee
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Gwyn Endurance Tee
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Minerva LumaTech™ V-Tee
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Juliana Short-Sleeve Tee
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Olivia 1/4 Zip Light Jacket
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Neve Studio Dance Jacket
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Nadia Elements Shell
+2023-11-26 22:15:01 | DEBUG | CatalogFilteringTest:36 | Josie Yoga Jacket
