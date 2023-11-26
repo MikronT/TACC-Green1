@@ -7,10 +7,13 @@ import org.tacc.green1.pages.components.GoodsItem;
 
 import java.util.List;
 
-public class OrderPage extends Modal {
+
+public class OrderPage extends Modal<OrderPage> {
     @FindBy(css = "#maincontent > div.columns > div.column.main > div.products.wrapper.grid.products-grid > ol")
     private WebElement goodsListElement;
-    private List<WebElement> goodsList = goodsListElement.findElements(By.tagName("li"));
+
+    private final List<WebElement> goodsList = goodsListElement.findElements(By.tagName("li"));
+
 
     void addItemToCart(int itemCount, int sizeCount, int colorCount) {
         GoodsItem goodsItem = new GoodsItem(goodsList.get(itemCount));

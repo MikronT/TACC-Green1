@@ -7,18 +7,20 @@ import org.tacc.green1.pages.Modal;
 
 import java.util.List;
 
-public class Cart extends Modal {
-    @FindBy(css="body > div.page-wrapper > header > div.header.content > div.minicart-wrapper > a")
+
+public class Cart extends Modal<Cart> {
+    @FindBy(css = "body > div.page-wrapper > header > div.header.content > div.minicart-wrapper > a")
     private WebElement cartMenuToggle;
 
-    @FindBy(id="top-cart-btn-checkout")
+    @FindBy(id = "top-cart-btn-checkout")
     private WebElement proceedToCheckoutButton;
 
-    @FindBy(id="btn-minicart-close")
+    @FindBy(id = "btn-minicart-close")
     private WebElement closeCartButton;
 
-    @FindBy(id="mini-cart")
+    @FindBy(id = "mini-cart")
     private WebElement cartOrderList;
+
 
     private CartItem getCartItemSafely(List<WebElement> cartItems, int itemCount) {
         try {
