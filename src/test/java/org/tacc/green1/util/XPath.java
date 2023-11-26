@@ -36,6 +36,11 @@ public interface XPath {
     }
 
 
+    interface AddressBookPage {
+        String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button";
+    }
+
+
     interface CatalogPage {
         String DROPDOWN_LIMITER = "//*[@class=\"toolbar toolbar-products\"][2]/div[3]/div/select",
                 FILTER_DROPDOWNS = "//*[@id=\"narrow-by-list\"]/div",
