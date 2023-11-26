@@ -1040,3 +1040,74 @@ item
 2023-11-26 23:01:16 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
 2023-11-26 23:22:01 | INFO  | Utils:24 | started driver initialization...
 2023-11-26 23:22:15 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:24:19 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:24:29 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:24:36 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:24:45 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:24:53 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:25:01 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:25:07 | INFO  | RegistrationDataWriter:21 | Writing new registration data entry to .\src\test\resources\registrationData.csv
+2023-11-26 23:25:07 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:25:27 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:25:39 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:25:50 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:25:56 | INFO  | CatalogPage:92 | Applying filter color with argument black
+2023-11-26 23:25:56 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:25:56 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 23:25:56 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 23:25:56 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: black
+2023-11-26 23:25:58 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:26:04 | INFO  | CatalogPage:92 | Applying filter color with argument yellow
+2023-11-26 23:26:04 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:26:04 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 23:26:04 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 23:26:04 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: yellow
+2023-11-26 23:26:05 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:26:12 | INFO  | CatalogPage:92 | Applying filter style with argument jacket
+2023-11-26 23:26:12 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:26:12 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:26:12 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:26:12 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: jacket
+2023-11-26 23:26:13 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:26:19 | INFO  | CatalogPage:92 | Applying filter style with argument hooded
+2023-11-26 23:26:19 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:26:19 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:26:19 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:26:19 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: hooded
+2023-11-26 23:27:17 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:27:24 | INFO  | CatalogPage:92 | Applying filter color with argument black
+2023-11-26 23:27:24 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:27:24 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 23:27:24 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 23:27:25 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: black
+2023-11-26 23:27:26 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:27:32 | INFO  | CatalogPage:92 | Applying filter color with argument yellow
+2023-11-26 23:27:32 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:27:32 | DEBUG | FilterDropdown:57 | List options available for filtering: 0
+2023-11-26 23:27:32 | DEBUG | FilterDropdown:58 | Square options available for filtering: 10
+2023-11-26 23:27:32 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: yellow
+2023-11-26 23:27:34 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:27:40 | INFO  | CatalogPage:92 | Applying filter style with argument jacket
+2023-11-26 23:27:40 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:27:40 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:27:40 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:27:40 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: jacket
+2023-11-26 23:27:41 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:27:48 | INFO  | CatalogPage:92 | Applying filter style with argument hooded
+2023-11-26 23:27:48 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:27:48 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:27:48 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:27:48 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: hooded
+2023-11-26 23:28:10 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:28:17 | INFO  | CatalogPage:92 | Applying filter style with argument hooded
+2023-11-26 23:28:17 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:28:17 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:28:17 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:28:17 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: hooded
+2023-11-26 23:28:40 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:28:48 | INFO  | Utils:24 | started driver initialization...
+2023-11-26 23:28:55 | INFO  | CatalogPage:92 | Applying filter style with argument hooded
+2023-11-26 23:28:55 | DEBUG | FilterDropdown:54 | Filter dropdown expanded
+2023-11-26 23:28:55 | DEBUG | FilterDropdown:57 | List options available for filtering: 19
+2023-11-26 23:28:55 | DEBUG | FilterDropdown:58 | Square options available for filtering: 0
+2023-11-26 23:28:55 | DEBUG | FilterDropdown:86 | Found corresponding filter for argument: hooded

@@ -1,7 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class CatalogFilteringTest {
-    private static final Logger LOG = LogManager.getLogger(CatalogFilteringTest.class);
     private static CatalogPage catalogPage;
 
 
