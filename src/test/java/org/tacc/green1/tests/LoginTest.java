@@ -9,13 +9,16 @@ import org.tacc.green1.pages.MainPage;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class LoginTest {
     private LoginPage loginPage;
 
+
     @BeforeEach
-    public void openLoginPage() {
+    public void prepare() {
         loginPage = MainPage.initPage().open().gotoLoginPage();
     }
+
 
     @ParameterizedTest
     @CsvFileSource(resources = "/registrationData.csv")
@@ -24,15 +27,14 @@ public class LoginTest {
                           String email,
                           String password,
                           String ignoredConfirmPassword) {
-
         assertTrue(loginPage
                 .fillEmail(email)
                 .fillPassword(password)
                 .submit()
                 .timeout(3)
-                .redirect(MainPage.class)
                 .isLoggedIn());
     }
+
 
     @AfterEach
     public void finish() {

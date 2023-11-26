@@ -4,7 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegistrationPage extends Modal {
+
+public class RegistrationPage extends Modal<RegistrationPage> {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 
@@ -22,6 +23,7 @@ public class RegistrationPage extends Modal {
 
     @FindBy(css = "button[class$='primary'] span")
     private WebElement createAccountButton;
+
 
     public RegistrationPage fillFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
