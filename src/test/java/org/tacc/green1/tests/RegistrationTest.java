@@ -7,11 +7,11 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.RegistrationPage;
+import org.tacc.green1.util.RandomData;
 import org.tacc.green1.util.RegistrationDataWriter;
 
 import java.util.stream.Stream;
 
-import static org.apache.commons.lang3.RandomStringUtils.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -29,12 +29,10 @@ public class RegistrationTest {
 
 
     private static Stream<Arguments> provideRegistrationValues() {
-        String firstName = randomAlphanumeric(5, 10).toLowerCase();
-        String lastName = randomAlphanumeric(5, 10).toLowerCase();
-        String email = (randomAlphanumeric(5, 10) + "@"
-                + randomAlphanumeric(5, 10) + "."
-                + randomAlphabetic(2, 3)).toLowerCase();
-        String password = randomAscii(8, 16);
+        String firstName = RandomData.name();
+        String lastName = RandomData.name();
+        String email = RandomData.email();
+        String password = RandomData.password();
 
         return Stream.of(
                 Arguments.of(firstName, lastName, email, password, password)
