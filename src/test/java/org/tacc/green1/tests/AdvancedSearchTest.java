@@ -5,8 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.search.AdvancedSearchPage;
-import org.junit.jupiter.api.Assertions;
+import org.tacc.green1.model.AdvancedSearchPage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
