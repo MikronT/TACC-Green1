@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.model.authorized.components.AccountPopup;
+import org.tacc.green1.model.account.AccountPopup;
 import org.tacc.green1.model.menu.MainMenu;
 import org.tacc.green1.model.search.AdvancedSearchPage;
 import org.tacc.green1.util.Utils;
