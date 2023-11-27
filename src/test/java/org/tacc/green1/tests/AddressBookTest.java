@@ -62,9 +62,9 @@ public class AddressBookTest {
                 .fillStreet2(street2)
                 .fillStreet3(street3)
                 .fillCity(city)
+                .selectCountry(country)
                 .selectRegion(region)
                 .fillZip(zip)
-                .selectCountry(country)
                 .submit();
 
         var billingAddress = addressBookPage.getDefaultBillingAddress();
