@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.catalog.CatalogPage;
 
 
 public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
@@ -49,9 +50,9 @@ public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
         productPriceToInput.sendKeys(price_to);
         return this;
     }
-    public CatalogAdvancedSearchPage submit() {
+    public CatalogPage submit() {
         submitButton.click();
         timeout(3);
-        return PageFactory.initElements(modalDriver, CatalogAdvancedSearchPage.class);
+        return PageFactory.initElements(modalDriver, CatalogPage.class);
     }
 }
