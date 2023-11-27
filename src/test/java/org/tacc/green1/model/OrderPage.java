@@ -12,6 +12,4 @@ public class OrderPage extends Modal<OrderPage> {
     private WebElement goodsListElement;
 
     private final List<WebElement> goodsList = goodsListElement.findElements(By.tagName("li"));
-
-
 }
