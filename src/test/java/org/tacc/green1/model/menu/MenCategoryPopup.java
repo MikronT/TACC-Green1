@@ -9,7 +9,7 @@ import org.tacc.green1.util.XPath;
 
 
 public class MenCategoryPopup extends Modal<MenCategoryPopup> implements XPath.MainMenu {
-    @FindBy(xpath = MENU_ITEM_MEN_BOTTOMS)
+    @FindBy(xpath = OPTION_MEN_BOTTOMS)
     private WebElement menBottomsCategoryItem;
 
 

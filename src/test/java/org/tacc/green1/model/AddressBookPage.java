@@ -40,8 +40,7 @@ public class AddressBookPage extends Modal<AddressBookPage> implements XPath.Add
     @FindBy(id = "country")
     private Select countryDropdown;
 
-    //TODO 27.11.2023: Add submit button
-    @FindBy(id = "")
+    @FindBy(xpath = BUTTON_SUBMIT)
     private WebElement submitButton;
 
 
