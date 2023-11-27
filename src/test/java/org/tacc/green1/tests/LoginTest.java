@@ -31,7 +31,6 @@ public class LoginTest {
                 .fillEmail(email)
                 .fillPassword(password)
                 .submit()
-                .timeout(3)
                 .isLoggedIn());
     }
 

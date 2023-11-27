@@ -26,7 +26,6 @@ public class UpdateInfoAccountTest {
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
                 .submit()
 
-                .timeout(3)
                 .openAccountPopup()
                 .gotoMyAccountPage()
                 .gotoAccountSidebar()
@@ -53,7 +52,6 @@ public class UpdateInfoAccountTest {
                 .fillPassword(password)
                 .submit()
 
-                .timeout(3)
                 .openAccountPopup()
                 .gotoMyAccountPage();
 
