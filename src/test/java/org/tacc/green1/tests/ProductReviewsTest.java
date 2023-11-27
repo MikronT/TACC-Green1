@@ -21,7 +21,7 @@ public class ProductReviewsTest {
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage()
                 .getVisibleProductCards()
-                .getFirst()
+                .get(0)
                 .gotoProductPage()
                 .gotoProductReviewsTab();
     }

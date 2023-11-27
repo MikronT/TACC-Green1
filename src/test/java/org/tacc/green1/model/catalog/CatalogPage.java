@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.cart.Cart;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
@@ -99,5 +100,9 @@ public class CatalogPage extends Modal<CatalogPage> implements XPath.CatalogPage
         return productCards.stream()
                 .map(card -> PageFactory.initElements(card, ProductCard.class))
                 .collect(Collectors.toList());
+    }
+
+    public Cart initCart() {
+        return PageFactory.initElements(modalDriver, Cart.class);
     }
 }
