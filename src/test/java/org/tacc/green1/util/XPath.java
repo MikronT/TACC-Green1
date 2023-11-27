@@ -32,13 +32,6 @@ public interface XPath {
     }
 
 
-    interface AccountSidebar {
-        String _LINK = "/html/body/div[2]/main/div[2]/div[2]/div/div[2]/ul",
-                LINK_ADDRESS_BOOK = _LINK + "/li[6]/a",
-                LINK_ACCOUNT_INFORMATION = _LINK + "/li[7]/a";
-    }
-
-
     interface AddressBookPage {
         String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button";
     }

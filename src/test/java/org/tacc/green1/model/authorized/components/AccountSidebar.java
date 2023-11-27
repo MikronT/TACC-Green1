@@ -6,14 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.AccountInformationPage;
 import org.tacc.green1.model.AddressBookPage;
 import org.tacc.green1.model.Modal;
-import org.tacc.green1.util.XPath;
 
 
-public class AccountSidebar extends Modal<AccountSidebar> implements XPath.AccountSidebar {
-    @FindBy(xpath = LINK_ADDRESS_BOOK)
+public class AccountSidebar extends Modal<AccountSidebar> {
+    @FindBy(partialLinkText = "Address Book")
     private WebElement addressBookLink;
 
-    @FindBy(xpath = LINK_ACCOUNT_INFORMATION)
+    @FindBy(partialLinkText = "Account Information")
     private WebElement accountInformationLink;
 
 
