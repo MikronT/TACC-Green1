@@ -29,6 +29,7 @@ public class UpdateInfoAccountTest {
                 .timeout(3)
                 .openAccountPopup()
                 .gotoMyAccountPage()
+                .gotoAccountSidebar()
                 .gotoAccountInformationPage();
     }
 

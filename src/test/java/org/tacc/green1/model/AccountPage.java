@@ -23,12 +23,7 @@ public class AccountPage extends Modal<AccountPage> implements XPath.AccountPage
         return welcomeTextElement.getText();
     }
 
-    private AccountSidebar getAccountSidebar() {
+    public AccountSidebar gotoAccountSidebar() {
         return PageFactory.initElements(modalDriver, AccountSidebar.class);
-    }
-
-    public AccountInformationPage gotoAccountInformationPage() {
-        return getAccountSidebar()
-                .gotoAccountInformationPage();
     }
 }
