@@ -28,6 +28,7 @@ public class LoginPage extends Modal<LoginPage> {
 
     public MainPage submit() {
         submitButton.click();
+        timeout(3);
         return PageFactory.initElements(modalDriver, MainPage.class);
     }
 }

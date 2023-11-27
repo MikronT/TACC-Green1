@@ -9,13 +9,13 @@ public interface XPath {
 
 
     interface MainMenu {
-        String MENU_ITEM = "//*[@id=\"store.menu\"]/nav/ul",
-                MENU_ITEM_WOMEN = MENU_ITEM + "/li[2]",
-                MENU_ITEM_WOMEN_LINK = MENU_ITEM_WOMEN + "/a",
-                MENU_ITEM_WOMEN_TOPS = MENU_ITEM_WOMEN + "/ul/li[1]",
-                MENU_ITEM_MEN = MENU_ITEM + "/li[3]",
-                MENU_ITEM_MEN_LINK = MENU_ITEM_MEN + "/a",
-                MENU_ITEM_MEN_BOTTOMS = MENU_ITEM_MEN + "/ul/li[2]";
+        String _OPTION = "//*[@id=\"store.menu\"]/nav/ul",
+                OPTION_WOMEN = _OPTION + "/li[2]",
+                OPTION_WOMEN_LINK = OPTION_WOMEN + "/a",
+                OPTION_WOMEN_TOPS = OPTION_WOMEN + "/ul/li[1]",
+                OPTION_MEN = _OPTION + "/li[3]",
+                OPTION_MEN_LINK = OPTION_MEN + "/a",
+                OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
     }
 
 
@@ -24,20 +24,26 @@ public interface XPath {
     }
 
 
-    interface AccountModal {
-        String MY_ACCOUNT_OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[1]/a",
-                MY_WISH_LIST_OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[2]/a",
-                SIGN_OUT_OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a";
+    interface AccountPopup {
+        String _OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul",
+                OPTION_MY_ACCOUNT = _OPTION + "/li[1]/a",
+                OPTION_MY_WISH_LIST = _OPTION + "/li[2]/a",
+                OPTION_SIGN_OUT = _OPTION + "/li[3]/a";
     }
 
 
     interface AccountSidebar {
-        String ACCOUNT_INFORMATION_LINK = "/html/body/div[2]/main/div[2]/div[2]/div/div[2]/ul/li[7]/a";
+        String _LINK = "//*[@id=\"block-collapsible-nav\"]/ul",
+                LINK_ADDRESS_BOOK = _LINK + "/li[6]/a",
+                LINK_ACCOUNT_INFORMATION = _LINK + "/li[7]/a";
     }
 
 
     interface AddressBookPage {
-        String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button";
+        String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button",
+                _ADDRESS_BLOCK = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]",
+                ADDRESS_BLOCK_BILLING = _ADDRESS_BLOCK + "/div[1]/div[1]/address",
+                ADDRESS_BLOCK_SHIPPING = _ADDRESS_BLOCK + "/div[2]/div[1]/address";
     }
 
 

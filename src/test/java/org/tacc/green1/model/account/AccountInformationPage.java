@@ -1,8 +1,10 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.account;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.tacc.green1.model.LoginPage;
+import org.tacc.green1.model.Modal;
 
 
 public class AccountInformationPage extends Modal<AccountInformationPage> {

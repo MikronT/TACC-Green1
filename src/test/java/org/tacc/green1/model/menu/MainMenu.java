@@ -8,10 +8,10 @@ import org.tacc.green1.util.XPath;
 
 
 public class MainMenu extends Modal<MainMenu> implements XPath.MainMenu {
-    @FindBy(xpath = MENU_ITEM_WOMEN_LINK)
+    @FindBy(xpath = OPTION_WOMEN_LINK)
     private WebElement womenCategoryItem;
 
-    @FindBy(xpath = MENU_ITEM_MEN_LINK)
+    @FindBy(xpath = OPTION_MEN_LINK)
     private WebElement menCategoryItem;
 
 

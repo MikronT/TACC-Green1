@@ -4,8 +4,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.tacc.green1.model.AccountInformationPage;
-import org.tacc.green1.model.AccountPage;
+import org.tacc.green1.model.account.AccountInformationPage;
+import org.tacc.green1.model.account.AccountPage;
 import org.tacc.green1.model.LoginPage;
 import org.tacc.green1.model.MainPage;
 
@@ -26,9 +26,9 @@ public class UpdateInfoAccountTest {
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
                 .submit()
 
-                .timeout(3)
                 .openAccountPopup()
-                .gotoAccountPage()
+                .gotoMyAccountPage()
+                .gotoAccountSidebar()
                 .gotoAccountInformationPage();
     }
 
@@ -52,9 +52,8 @@ public class UpdateInfoAccountTest {
                 .fillPassword(password)
                 .submit()
 
-                .timeout(3)
                 .openAccountPopup()
-                .gotoAccountPage();
+                .gotoMyAccountPage();
 
         assertEquals("My Account", accountPage.getAccountPageWelcomeText());
 
