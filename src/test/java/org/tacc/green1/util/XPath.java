@@ -62,9 +62,30 @@ public interface XPath {
 
 
     interface ProductCard {
-        String LABEL_NAME = "div/div/strong/a";
+        String LABEL_NAME = "div/div/strong/a",
+                PRODUCT_COLOR = "div/div/div[2]/div[2]/div/div",
+                PRODUCT_SIZE = "div/div/div[2]/div[1]/div/div",
+                PRODUCT_ADD_BUTTON_CART = "div/div/div[3]/div/div[1]/form/button";
+
     }
 
+    interface Cart {
+        String CART_OPEN = "/html/body/div[2]/header/div[2]/div[1]/a",
+                CART_CLOSE = "//*[@id=\"btn-minicart-close\"]",
+                CART_ITEMS = "//*[@id=\"mini-cart\"]/li";
+    }
+
+    interface CartItem {
+        String DELETE_BUTTON = "div/div/div[3]/div[2]/a",
+                UPDATE_PRODUCT_BUTTON = "div/div/div[3]/div[1]/a",
+                QUANTITY_INPUT = "//*[@id=\"cart-item-487282-qty\"]",
+                SEE_DETAILS_BUTTON = "div/div/div[1]/span",
+                SIZE_TEXT = "div/div/div[1]/div/dl/dd[1]/span",
+                COLOR_TEXT = "div/div/div[1]/div/dl/dd[2]/span",
+                PRICE_TEXT = "div/div/div[2]/div[1]/span/span/span/span",
+                CONFIRM_DELETE_BUTTON = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
+
+    }
 
     interface ProductReviewModal {
         String BUTTON_SUBMIT = "//*[@id=\"review-form\"]/div/div/button";

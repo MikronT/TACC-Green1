@@ -1,6 +1,5 @@
 package org.tacc.green1.model.search;
 
-import io.opentelemetry.api.internal.Utils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -30,26 +29,32 @@ public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
         productNameInput.sendKeys(name);
         return this;
     }
+
     public AdvancedSearchPage fillProductSKU(String sku) {
         productSKUInput.sendKeys(sku);
         return this;
     }
+
     public AdvancedSearchPage fillProductDescription(String description) {
         productDescriptionInput.sendKeys(description);
         return this;
     }
+
     public AdvancedSearchPage fillProductShortDescription(String short_description) {
         productShortDescriptionInput.sendKeys(short_description);
         return this;
     }
+
     public AdvancedSearchPage fillProductPriceFrom(String price) {
         productPriceFromInput.sendKeys(price);
         return this;
     }
+
     public AdvancedSearchPage fillProductPriceTo(String price_to) {
         productPriceToInput.sendKeys(price_to);
         return this;
     }
+
     public CatalogPage submit() {
         submitButton.click();
         timeout(3);
