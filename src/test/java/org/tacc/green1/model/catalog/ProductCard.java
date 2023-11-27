@@ -1,24 +1,67 @@
 package org.tacc.green1.model.catalog;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.Modal;
 import org.tacc.green1.util.XPath;
+
+import java.util.List;
+import java.util.stream.Stream;
+
+import static javax.swing.UIManager.get;
 
 
 public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard {
     @FindBy(xpath = LABEL_NAME)
     private WebElement titleLabel;
 
+    @FindAll({
+            @FindBy(xpath = PRODUCT_SIZE)
+    })
+    private List<WebElement> sizeList;
+
+    @FindAll({
+            @FindBy(xpath = PRODUCT_COLOR)
+    })
+    private List<WebElement> colorList;
+
+    @FindBy(xpath = PRODUCT_ADD_BUTTON_CART)
+    private WebElement productAddButtonCart;
 
     public ProductPage gotoProductPage() {
         titleLabel.click();
         return PageFactory.initElements(modalDriver, ProductPage.class);
     }
 
+    public ProductCard chooseColor(String color) {
+        colorList.stream()
+                .filter(item -> color.equals(item.getAttribute("aria-label")))
+                .findFirst()
+                .ifPresent(WebElement::click);
+
+        return this;
+    }
+
+    public ProductCard chooseSize(int size) {
+        sizeList.stream()
+                .filter(item -> {
+                    int itemSize = Integer.parseInt(item.getAttribute("aria-label"));
+                    return size == itemSize;
+                })
+                .findFirst()
+                .ifPresent(WebElement::click);
+
+        return this;
+    }
 
     public String getName() {
         return titleLabel.getText();
+    }
+
+    public ProductCard submit() {
+        productAddButtonCart.click();
+        return this;
     }
 }
