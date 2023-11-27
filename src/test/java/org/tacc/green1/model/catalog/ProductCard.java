@@ -8,9 +8,6 @@ import org.tacc.green1.model.Modal;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
-import java.util.stream.Stream;
-
-import static javax.swing.UIManager.get;
 
 
 public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard {

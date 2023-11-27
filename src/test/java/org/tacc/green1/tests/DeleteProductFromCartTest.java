@@ -53,6 +53,6 @@ public class DeleteProductFromCartTest {
 
     @AfterAll
     public static void finish() {
-        //catalogPage.quit();
+        catalogPage.quit();
     }
 }

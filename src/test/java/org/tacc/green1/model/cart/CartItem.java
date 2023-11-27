@@ -1,6 +1,5 @@
 package org.tacc.green1.model.cart;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.Modal;
@@ -8,25 +7,25 @@ import org.tacc.green1.util.XPath;
 
 
 public class CartItem extends Modal<CartItem> implements XPath.CartItem {
-    @FindBy(xpath=DELETE_BUTTON)
+    @FindBy(xpath = DELETE_BUTTON)
     private WebElement deleteButton;
 
-    @FindBy(xpath=QUANTITY_INPUT)
+    @FindBy(xpath = QUANTITY_INPUT)
     private WebElement quantityInput;
 
-    @FindBy(xpath=UPDATE_PRODUCT_BUTTON)
+    @FindBy(xpath = UPDATE_PRODUCT_BUTTON)
     private WebElement updateProductButton;
 
-    @FindBy(xpath=SEE_DETAILS_BUTTON)
+    @FindBy(xpath = SEE_DETAILS_BUTTON)
     private WebElement seeDetailsButton;
 
-    @FindBy(xpath=SIZE_TEXT)
+    @FindBy(xpath = SIZE_TEXT)
     private WebElement sizeText;
 
-    @FindBy(xpath=COLOR_TEXT)
+    @FindBy(xpath = COLOR_TEXT)
     private WebElement colorText;
 
-    @FindBy(xpath=PRICE_TEXT)
+    @FindBy(xpath = PRICE_TEXT)
     private WebElement priceText;
 
     @FindBy(xpath = CONFIRM_DELETE_BUTTON)
@@ -67,7 +66,7 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
     }
 
     public String getPrice() {
-        return  priceText.getText();
+        return priceText.getText();
     }
 
     public CartItem confirmDelete() {
