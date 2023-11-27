@@ -28,7 +28,7 @@ public class UpdateInfoAccountTest {
 
                 .timeout(3)
                 .openAccountPopup()
-                .gotoAccountPage()
+                .gotoMyAccountPage()
                 .gotoAccountInformationPage();
     }
 
@@ -54,7 +54,7 @@ public class UpdateInfoAccountTest {
 
                 .timeout(3)
                 .openAccountPopup()
-                .gotoAccountPage();
+                .gotoMyAccountPage();
 
         assertEquals("My Account", accountPage.getAccountPageWelcomeText());
 
