@@ -65,7 +65,8 @@ public class AddressBookTest {
                 .selectCountry(country)
                 .selectRegion(region)
                 .fillZip(zip)
-                .submit();
+                .submit()
+                .timeout(1);
 
         var billingAddress = addressBookPage.getDefaultBillingAddress();
         var shippingAddress = addressBookPage.getDefaultShippingAddress();

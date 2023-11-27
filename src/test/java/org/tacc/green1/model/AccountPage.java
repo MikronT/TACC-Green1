@@ -24,6 +24,7 @@ public class AccountPage extends Modal<AccountPage> implements XPath.AccountPage
     }
 
     public AccountSidebar gotoAccountSidebar() {
+        timeout(1);
         return PageFactory.initElements(modalDriver, AccountSidebar.class);
     }
 }

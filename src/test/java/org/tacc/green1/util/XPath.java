@@ -33,7 +33,7 @@ public interface XPath {
 
 
     interface AccountSidebar {
-        String _LINK = "/html/body/div[2]/main/div[2]/div[2]/div/div[2]/ul",
+        String _LINK = "//*[@id=\"block-collapsible-nav\"]/ul",
                 LINK_ADDRESS_BOOK = _LINK + "/li[6]/a",
                 LINK_ACCOUNT_INFORMATION = _LINK + "/li[7]/a";
     }
