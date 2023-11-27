@@ -6,19 +6,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.search.AdvancedSearchPage;
-
-
 public class AdvancedSearchTest {
     private AdvancedSearchPage advancedSearchPage;
-
-
     @BeforeEach
     public void openAdvancedSearchPage() {
         advancedSearchPage = MainPage.initPage().open()
                 .gotoAdvancedSearchPage();
     }
-
-
     @ParameterizedTest
     @CsvFileSource(resources = "/advancedSearchData.csv")
     public void advancedSearch(String productName,
@@ -28,12 +22,15 @@ public class AdvancedSearchTest {
                                String fromPrice,
                                String toPrice) {
         //TODO 27.11.2023: Finish advanced search
-        var catalogAdvancedSearchPage = advancedSearchPage
+        var catalogAdvancedSearchPageByName = advancedSearchPage
                 .fillProductName(productName)
+                .fillProductSKU(sku)
+                .fillProductDescription(description)
+                .fillProductShortDescription(shortDescription)
+                .fillProductPriceFrom(fromPrice)
+                .fillProductPriceTo(toPrice)
                 .submit();
     }
-
-
     @AfterEach
     public void finish() {
         advancedSearchPage.quit();
