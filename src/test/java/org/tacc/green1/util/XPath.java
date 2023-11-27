@@ -33,7 +33,10 @@ public interface XPath {
 
 
     interface AddressBookPage {
-        String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button";
+        String BUTTON_SUBMIT = "//*[@id=\"form-validate\"]/div/div[1]/button",
+                _ADDRESS_BLOCK = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]",
+                ADDRESS_BLOCK_BILLING = _ADDRESS_BLOCK + "/div[1]/div[1]/address",
+                ADDRESS_BLOCK_SHIPPING = _ADDRESS_BLOCK + "/div[2]/div[1]/address";
     }
 
 

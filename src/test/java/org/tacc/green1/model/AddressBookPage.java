@@ -32,75 +32,92 @@ public class AddressBookPage extends Modal<AddressBookPage> implements XPath.Add
     private WebElement cityInput;
 
     @FindBy(id = "region_id")
-    private Select regionDropdown;
+    private WebElement regionDropdown;
 
     @FindBy(id = "zip")
     private WebElement zipInput;
 
     @FindBy(id = "country")
-    private Select countryDropdown;
+    private WebElement countryDropdown;
 
     @FindBy(xpath = BUTTON_SUBMIT)
     private WebElement submitButton;
 
+    @FindBy(xpath = ADDRESS_BLOCK_BILLING)
+    private WebElement billingAddressBlock;
 
-    public AddressBookPage fillFirstNameInput(String firstName) {
+    @FindBy(xpath = ADDRESS_BLOCK_SHIPPING)
+    private WebElement shippingAddressBlock;
+
+
+    public AddressBookPage fillFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
         return this;
     }
 
-    public AddressBookPage fillLastNameInput(String lastName) {
+    public AddressBookPage fillLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
         return this;
     }
 
-    public AddressBookPage fillCompanyInput(String company) {
+    public AddressBookPage fillCompany(String company) {
         companyInput.sendKeys(company);
         return this;
     }
 
-    public AddressBookPage fillTelephoneInput(String telephone) {
+    public AddressBookPage fillTelephone(String telephone) {
         telephoneInput.sendKeys(telephone);
         return this;
     }
 
-    public AddressBookPage fillStreetInput1(String street1) {
+    public AddressBookPage fillStreet1(String street1) {
         streetInput1.sendKeys(street1);
         return this;
     }
 
-    public AddressBookPage fillStreetInput2(String street2) {
+    public AddressBookPage fillStreet2(String street2) {
         streetInput2.sendKeys(street2);
         return this;
     }
 
-    public AddressBookPage fillStreetInput3(String street3) {
+    public AddressBookPage fillStreet3(String street3) {
         streetInput3.sendKeys(street3);
         return this;
     }
 
-    public AddressBookPage fillCityInput(String city) {
+    public AddressBookPage fillCity(String city) {
         cityInput.sendKeys(city);
         return this;
     }
 
-    public AddressBookPage fillRegionDropdown(String region) {
-        regionDropdown.selectByValue(region);
+    public AddressBookPage selectRegion(String region) {
+        var regionSelect = new Select(regionDropdown);
+        regionSelect.selectByVisibleText(region);
         return this;
     }
 
-    public AddressBookPage fillZipInput(String zip) {
+    public AddressBookPage fillZip(String zip) {
         zipInput.sendKeys(zip);
         return this;
     }
 
-    public AddressBookPage fillCountryDropdown(String country) {
-        countryDropdown.selectByValue(country);
+    public AddressBookPage selectCountry(String country) {
+        var countrySelect = new Select(countryDropdown);
+        countrySelect.selectByVisibleText(country);
         return this;
     }
 
     public AddressBookPage submit() {
         submitButton.click();
         return this;
+    }
+
+
+    public String getDefaultBillingAddress() {
+        return billingAddressBlock.getText();
+    }
+
+    public String getDefaultShippingAddress() {
+        return shippingAddressBlock.getText();
     }
 }
