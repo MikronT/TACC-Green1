@@ -4,15 +4,23 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.tacc.green1.model.AdvancedSearchPage;
 import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.search.AdvancedSearchPage;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
 public class AdvancedSearchTest {
     private AdvancedSearchPage advancedSearchPage;
+
+
     @BeforeEach
     public void openAdvancedSearchPage() {
         advancedSearchPage = MainPage.initPage().open()
                 .gotoAdvancedSearchPage();
     }
+
+
     @ParameterizedTest
     @CsvFileSource(resources = "/advancedSearchData.csv")
     public void advancedSearch(String productName,
@@ -20,17 +28,21 @@ public class AdvancedSearchTest {
                                String description,
                                String shortDescription,
                                String fromPrice,
-                               String toPrice) {
-        //TODO 27.11.2023: Finish advanced search
-        var catalogAdvancedSearchPageByName = advancedSearchPage
+                               String toPrice,
+                               String assertName) {
+        assertTrue(advancedSearchPage
                 .fillProductName(productName)
                 .fillProductSKU(sku)
                 .fillProductDescription(description)
                 .fillProductShortDescription(shortDescription)
                 .fillProductPriceFrom(fromPrice)
                 .fillProductPriceTo(toPrice)
-                .submit();
+                .submit()
+                .getVisibleProductCards()
+                .stream().anyMatch(productCard -> assertName.equals(productCard.getName())));
     }
+
+
     @AfterEach
     public void finish() {
         advancedSearchPage.quit();

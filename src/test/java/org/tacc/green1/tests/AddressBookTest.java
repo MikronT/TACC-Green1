@@ -6,8 +6,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.tacc.green1.model.account.AddressBookPage;
 import org.tacc.green1.model.MainPage;
+import org.tacc.green1.model.account.AddressBookPage;
 import org.tacc.green1.util.RandomData;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

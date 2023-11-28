@@ -23,7 +23,6 @@ public class OrderPage extends Modal<OrderPage> implements XPath.OrderPage {
     private WebElement city;
     @FindBy(xpath=STATE_PROVINCE)
     private WebElement stateProvince;
-
     @FindBy(xpath=POSTAL_CODE)
     private WebElement postalCode;
     @FindBy(xpath=COUNTRY)
