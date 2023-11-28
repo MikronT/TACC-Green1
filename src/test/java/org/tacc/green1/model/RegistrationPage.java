@@ -2,11 +2,11 @@ package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.account.AccountPage;
+import org.tacc.green1.model.base.Page;
 
 
-public class RegistrationPage extends Modal<RegistrationPage> {
+public class RegistrationPage extends Page<RegistrationPage> {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 
@@ -53,6 +53,6 @@ public class RegistrationPage extends Modal<RegistrationPage> {
 
     public AccountPage submit() {
         createAccountButton.click();
-        return PageFactory.initElements(modalDriver, AccountPage.class);
+        return new AccountPage();
     }
 }

@@ -2,12 +2,11 @@ package org.tacc.green1.model.account;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.LoginPage;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Page;
 
 
-public class AccountInformationPage extends Modal<AccountInformationPage> {
+public class AccountInformationPage extends Page<AccountInformationPage> {
     private Boolean isEmailToggled = false;
 
     @FindBy(css = "#form-validate > div > div.primary > button")
@@ -78,7 +77,7 @@ public class AccountInformationPage extends Modal<AccountInformationPage> {
 
     //TODO 25.11.2023: Refactor this method once again
     @SuppressWarnings("unchecked")
-    public <T extends Modal<T>> T submit() {
+    public <T extends Page<T>> T submit() {
         saveButton.click();
 
         if (isEmailToggled)
@@ -88,6 +87,6 @@ public class AccountInformationPage extends Modal<AccountInformationPage> {
     }
 
     public LoginPage signOut() {
-        return PageFactory.initElements(modalDriver, LoginPage.class);
+        return new LoginPage();
     }
 }

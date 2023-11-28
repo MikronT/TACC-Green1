@@ -11,12 +11,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class LoginTest {
+    private MainPage mainPage;
     private LoginPage loginPage;
 
 
     @BeforeEach
     public void prepare() {
-        loginPage = MainPage.initPage().open().gotoLoginPage();
+        mainPage = MainPage.openBrowser();
+        loginPage = mainPage.gotoLoginPage();
     }
 
 
@@ -27,16 +29,17 @@ public class LoginTest {
                           String email,
                           String password,
                           String ignoredConfirmPassword) {
-        assertTrue(loginPage
+        loginPage
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit()
-                .isLoggedIn());
+                .submit();
+
+        assertTrue(mainPage.isClientLoggedIn());
     }
 
 
     @AfterEach
     public void finish() {
-        loginPage.quit();
+        mainPage.quitDriver();
     }
 }

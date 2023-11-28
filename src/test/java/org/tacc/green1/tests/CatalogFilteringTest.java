@@ -16,7 +16,7 @@ public class CatalogFilteringTest {
 
     @BeforeEach
     public void prepare() {
-        catalogPage = MainPage.initPage().open()
+        catalogPage = MainPage.openBrowser()
                 .gotoMainMenu()
                 .openWomenCategoryPopup()
                 .gotoWomenTopsCatalogPage();
@@ -39,6 +39,6 @@ public class CatalogFilteringTest {
 
     @AfterEach
     public void finish() {
-        catalogPage.quit();
+        catalogPage.quitDriver();
     }
 }

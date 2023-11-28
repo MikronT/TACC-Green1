@@ -2,10 +2,11 @@ package org.tacc.green1.model.catalog;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
@@ -28,6 +29,11 @@ public class FilterDropdown extends Modal<FilterDropdown> implements XPath.Filte
             @FindBy(xpath = OPTIONS_SQUARE)
     })
     private List<WebElement> squareOptions;
+
+
+    public FilterDropdown(SearchContext context) {
+        super(context);
+    }
 
 
     public String getName() {

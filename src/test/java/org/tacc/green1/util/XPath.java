@@ -1,14 +1,15 @@
 package org.tacc.green1.util;
 
 public interface XPath {
-    interface MainPage {
+    interface Page {
         String LINK_WELCOME_ACCOUNT = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span";
         String LINK_REGISTRATION = "/html/body/div[2]/header/div[1]/div/ul/li[3]/a";
+        String BUTTON_OPEN_CART = "/html/body/div[2]/header/div[2]/div[1]/a";
         String LINK_ADVANCED_SEARCH = "/html/body/div[2]/footer/div/ul/li[3]/a";
     }
 
 
-    interface MainMenu {
+    interface HeaderMenu {
         String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
         String OPTION_WOMEN = _OPTION + "/li[2]";
         String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
@@ -70,9 +71,9 @@ public interface XPath {
 
 
     interface Cart {
-        String CART_OPEN = "/html/body/div[2]/header/div[2]/div[1]/a";
-        String CART_CLOSE = "//*[@id=\"btn-minicart-close\"]";
-        String CART_ITEMS = "//*[@id=\"mini-cart\"]/li";
+        String BUTTON_CLOSE = "//*[@id=\"btn-minicart-close\"]";
+        String ITEMS = "//*[@id=\"mini-cart\"]/li";
+        String BUTTON_CHECKOUT = "//*[@id=\"top-cart-btn-checkout\"]";
     }
 
 

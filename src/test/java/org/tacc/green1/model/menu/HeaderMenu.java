@@ -2,12 +2,12 @@ package org.tacc.green1.model.menu;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Modal;
+import org.tacc.green1.util.Actor;
 import org.tacc.green1.util.XPath;
 
 
-public class MainMenu extends Modal<MainMenu> implements XPath.MainMenu {
+public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
     @FindBy(xpath = OPTION_WOMEN_LINK)
     private WebElement womenCategoryItem;
 
@@ -16,18 +16,18 @@ public class MainMenu extends Modal<MainMenu> implements XPath.MainMenu {
 
 
     public WomenCategoryPopup openWomenCategoryPopup() {
-        modalActions()
+        Actor.getActions()
                 .moveToElement(womenCategoryItem)
                 .build()
                 .perform();
-        return PageFactory.initElements(modalDriver, WomenCategoryPopup.class);
+        return new WomenCategoryPopup();
     }
 
     public MenCategoryPopup openMenCategoryPopup() {
-        modalActions()
+        Actor.getActions()
                 .moveToElement(menCategoryItem)
                 .build()
                 .perform();
-        return PageFactory.initElements(modalDriver, MenCategoryPopup.class);
+        return new MenCategoryPopup();
     }
 }

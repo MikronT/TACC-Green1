@@ -1,7 +1,6 @@
 package org.tacc.green1.tests;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -9,13 +8,21 @@ import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.OrderPage;
 import org.tacc.green1.model.catalog.CatalogPage;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
 public class OrderTest {
     private static CatalogPage catalogPage;
 
+
     @BeforeAll
     public static void prepare() {
-        catalogPage = MainPage.initPage().open().gotoMainMenu().openMenCategoryPopup().gotoMenBottomsCatalogPage();
+        catalogPage = MainPage.openBrowser()
+                .gotoMainMenu()
+                .openMenCategoryPopup()
+                .gotoMenBottomsCatalogPage();
     }
+
 
     @ParameterizedTest
     @CsvSource({
@@ -23,8 +30,7 @@ public class OrderTest {
     })
     void orderTest(String color, int size, int countProduct, String email, String firstName, String lastName,
                    String company, String streetAddress, String city, String country, String postalCode,
-                   String stateProvince, String phoneNumber)
-    {
+                   String stateProvince, String phoneNumber) {
 
         catalogPage.getVisibleProductCards()
                 .get(countProduct)
@@ -33,9 +39,7 @@ public class OrderTest {
                 .submit()
                 .timeout(3);
 
-        catalogPage
-                .initCart()
-                .open()
+        catalogPage.openCart()
                 .timeout(3)
                 .proceedToCheckout()
                 .timeout(3)
@@ -56,11 +60,12 @@ public class OrderTest {
                 .placeOrder()
                 .timeout(4);
 
-        Assertions.assertEquals("Thank you for your purchase!", OrderPage.getThanksText());
+        assertEquals("Thank you for your purchase!", OrderPage.getThanksText());
     }
+
 
     @AfterAll
     public static void finish() {
-        catalogPage.quit();
+        catalogPage.quitDriver();
     }
 }

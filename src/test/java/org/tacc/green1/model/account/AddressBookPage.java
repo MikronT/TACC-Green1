@@ -3,11 +3,11 @@ package org.tacc.green1.model.account;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Page;
 import org.tacc.green1.util.XPath;
 
 
-public class AddressBookPage extends Modal<AddressBookPage> implements XPath.AddressBookPage {
+public class AddressBookPage extends Page<AddressBookPage> implements XPath.AddressBookPage {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 

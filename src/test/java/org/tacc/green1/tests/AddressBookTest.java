@@ -26,7 +26,7 @@ public class AddressBookTest {
         String email = RandomData.email();
         String password = RandomData.password();
 
-        addressBookPage = MainPage.initPage().open()
+        addressBookPage = MainPage.openBrowser()
                 .gotoRegistrationPage()
                 .fillFirstName(firstName)
                 .fillLastName(lastName)
@@ -82,6 +82,6 @@ public class AddressBookTest {
 
     @AfterEach
     public void finish() {
-        addressBookPage.quit();
+        addressBookPage.quitDriver();
     }
 }

@@ -16,7 +16,7 @@ public class ProductReviewsTest {
 
     @BeforeEach
     public void prepare() {
-        productReviewsTab = MainPage.initPage().open()
+        productReviewsTab = MainPage.openBrowser()
                 .gotoMainMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage()
@@ -48,6 +48,6 @@ public class ProductReviewsTest {
 
     @AfterEach
     public void finish() {
-        productReviewsTab.quit();
+        productReviewsTab.quitDriver();
     }
 }

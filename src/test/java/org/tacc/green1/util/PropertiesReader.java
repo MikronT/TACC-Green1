@@ -5,12 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-public final class PropertiesInitializer {
-    public static Properties initializeLocalProperties(String filename) {
-        return initialize(getLocalPath(filename));
-    }
-
-    public static Properties initialize(String propertiesPath) {
+public final class PropertiesReader {
+    public static Properties init(String propertiesPath) {
         Properties returnProps = new Properties();
 
         try (FileInputStream stream = new FileInputStream(propertiesPath)) {
@@ -22,7 +18,11 @@ public final class PropertiesInitializer {
         return returnProps;
     }
 
-    public static String getLocalPath(String filename) {
+    public static Properties initLocal(String filename) {
+        return init(getLocalPath(filename));
+    }
+
+    private static String getLocalPath(String filename) {
         return ClassLoader.getSystemResource(filename).getPath();
     }
 }

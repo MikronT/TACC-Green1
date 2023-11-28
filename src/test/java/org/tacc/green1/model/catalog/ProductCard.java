@@ -1,10 +1,10 @@
 package org.tacc.green1.model.catalog;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
@@ -27,9 +27,15 @@ public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard
     @FindBy(xpath = PRODUCT_ADD_BUTTON_CART)
     private WebElement productAddButtonCart;
 
+
+    public ProductCard(SearchContext context) {
+        super(context);
+    }
+
+
     public ProductPage gotoProductPage() {
         titleLabel.click();
-        return PageFactory.initElements(modalDriver, ProductPage.class);
+        return new ProductPage();
     }
 
     public ProductCard chooseColor(String color) {
@@ -37,7 +43,6 @@ public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard
                 .filter(item -> color.equals(item.getAttribute("aria-label")))
                 .findFirst()
                 .ifPresent(WebElement::click);
-
         return this;
     }
 

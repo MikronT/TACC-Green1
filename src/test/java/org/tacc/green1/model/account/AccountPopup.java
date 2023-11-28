@@ -2,9 +2,8 @@ package org.tacc.green1.model.account;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
@@ -21,11 +20,11 @@ public class AccountPopup extends Modal<AccountPopup> implements XPath.AccountPo
 
     public AccountPage gotoMyAccountPage() {
         myAccountOption.click();
-        return PageFactory.initElements(modalDriver, AccountPage.class);
+        return new AccountPage();
     }
 
     public MainPage signOut() {
         signOutOption.click();
-        return PageFactory.initElements(modalDriver, MainPage.class);
+        return new MainPage();
     }
 }

@@ -6,18 +6,17 @@ import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.tacc.green1.model.Modal;
-import org.tacc.green1.model.cart.Cart;
+import org.tacc.green1.model.base.Page;
+import org.tacc.green1.util.Waiter;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class CatalogPage extends Modal<CatalogPage> implements XPath.CatalogPage {
+public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage {
     private static final Logger LOG = LogManager.getLogger(CatalogPage.class);
 
     @FindBy(xpath = DROPDOWN_LIMITER)
@@ -40,7 +39,8 @@ public class CatalogPage extends Modal<CatalogPage> implements XPath.CatalogPage
      * Ensures the catalog frame is loaded completely and ready for interaction through any other method
      */
     protected void waitForAjax() {
-        modalWait().until(ExpectedConditions.visibilityOf(limiterDropdown));
+        Waiter.get3SecondWait()
+                .until(ExpectedConditions.visibilityOf(limiterDropdown));
     }
 
     public CatalogPage showMaxProductsPerPage() {
@@ -61,7 +61,7 @@ public class CatalogPage extends Modal<CatalogPage> implements XPath.CatalogPage
 
         if (filters == null)
             filters = filterDropdowns.stream()
-                    .map(dropdown -> PageFactory.initElements(dropdown, FilterDropdown.class))
+                    .map(FilterDropdown::new)
                     .collect(Collectors.toList());
 
         return filters;
@@ -98,11 +98,7 @@ public class CatalogPage extends Modal<CatalogPage> implements XPath.CatalogPage
 
     public List<ProductCard> getVisibleProductCards() {
         return productCards.stream()
-                .map(card -> PageFactory.initElements(card, ProductCard.class))
+                .map(ProductCard::new)
                 .collect(Collectors.toList());
-    }
-
-    public Cart initCart() {
-        return PageFactory.initElements(modalDriver, Cart.class);
     }
 }

@@ -24,7 +24,8 @@ public class RegistrationTest {
         //TODO 23.11.2023: Provide better logic for automatic data cleanup
         //RegistrationDataWriter.clear();
 
-        registrationPage = MainPage.initPage().open().gotoRegistrationPage();
+        registrationPage = MainPage.openBrowser()
+                .gotoRegistrationPage();
     }
 
 
@@ -59,6 +60,6 @@ public class RegistrationTest {
 
     @AfterAll
     public static void finish() {
-        registrationPage.quit();
+        registrationPage.quitDriver();
     }
 }

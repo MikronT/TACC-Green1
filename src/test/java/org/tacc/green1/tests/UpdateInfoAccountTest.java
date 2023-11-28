@@ -20,7 +20,7 @@ public class UpdateInfoAccountTest {
     @SuppressWarnings("SpellCheckingInspection")
     @BeforeAll
     static void prepare() {
-        accountInformationPage = MainPage.initPage().open()
+        accountInformationPage = MainPage.openBrowser()
                 .gotoLoginPage()
                 .fillEmail("volodymyr.nakonechnyi@gmail.com")
                 .fillPassword("Fw35tgvAXypdEgfX6YuyUW")
@@ -64,6 +64,6 @@ public class UpdateInfoAccountTest {
 
     @AfterAll
     public static void finish() {
-        accountPage.quit();
+        accountPage.quitDriver();
     }
 }

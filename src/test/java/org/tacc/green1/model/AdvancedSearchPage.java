@@ -2,26 +2,32 @@ package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.tacc.green1.model.base.Page;
 import org.tacc.green1.model.catalog.CatalogPage;
 
 
-public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
+public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
     @FindBy(id = "name")
     private WebElement productNameInput;
+
     @FindBy(id = "sku")
     private WebElement productSKUInput;
+
     @FindBy(id = "description")
     private WebElement productDescriptionInput;
+
     @FindBy(id = "short_description")
     private WebElement productShortDescriptionInput;
+
     @FindBy(id = "price")
     private WebElement productPriceFromInput;
+
     @FindBy(id = "price_to")
     private WebElement productPriceToInput;
 
     @FindBy(css = "#form-validate > div > div > button")
     private WebElement submitButton;
+
 
 
     public AdvancedSearchPage fillProductName(String name) {
@@ -57,6 +63,6 @@ public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
     public CatalogPage submit() {
         submitButton.click();
         timeout(3);
-        return PageFactory.initElements(modalDriver, CatalogPage.class);
+        return new CatalogPage();
     }
 }

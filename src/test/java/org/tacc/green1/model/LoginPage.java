@@ -2,10 +2,10 @@ package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.tacc.green1.model.base.Page;
 
 
-public class LoginPage extends Modal<LoginPage> {
+public class LoginPage extends Page<LoginPage> {
     @FindBy(id = "email")
     private WebElement emailInput;
 
@@ -26,9 +26,7 @@ public class LoginPage extends Modal<LoginPage> {
         return this;
     }
 
-    public MainPage submit() {
+    public void submit() {
         submitButton.click();
-        timeout(3);
-        return PageFactory.initElements(modalDriver, MainPage.class);
     }
 }

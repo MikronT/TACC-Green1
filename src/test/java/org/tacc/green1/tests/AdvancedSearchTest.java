@@ -16,7 +16,7 @@ public class AdvancedSearchTest {
 
     @BeforeEach
     public void openAdvancedSearchPage() {
-        advancedSearchPage = MainPage.initPage().open()
+        advancedSearchPage = MainPage.openBrowser()
                 .gotoAdvancedSearchPage();
     }
 
@@ -45,6 +45,6 @@ public class AdvancedSearchTest {
 
     @AfterEach
     public void finish() {
-        advancedSearchPage.quit();
+        advancedSearchPage.quitDriver();
     }
 }
