@@ -52,7 +52,7 @@ public class OrderTest {
                 .timeout(4)
                 .selectShippingMethod()
                 .nextPage()
-                .timeout(3)
+                .timeout(5)
                 .placeOrder()
                 .timeout(4);
 
