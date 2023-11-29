@@ -6,9 +6,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.account.AddressBookPage;
-import org.tacc.green1.util.RandomData;
+import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -21,20 +20,11 @@ public class AddressBookTest {
 
     @BeforeEach
     public void prepare() {
-        String firstName = RandomData.name();
-        String lastName = RandomData.name();
-        String email = RandomData.email();
-        String password = RandomData.password();
+        var mainPage = TestClient.openBrowserAndRegister();
 
-        addressBookPage = MainPage.openBrowser()
-                .gotoRegistrationPage()
-                .fillFirstName(firstName)
-                .fillLastName(lastName)
-                .fillEmail(email)
-                .fillPassword(password)
-                .fillConfirmPassword(password)
-                .submit()
-
+        addressBookPage = mainPage
+                .openAccountPopup()
+                .gotoMyAccountPage()
                 .gotoAccountSidebar()
                 .gotoAddressBookPage();
     }
@@ -42,29 +32,14 @@ public class AddressBookTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/addressList.csv")
-    public void updateShippingAddress(String firstName,
-                                      String lastName,
-                                      String company,
-                                      String telephone,
-                                      String street1,
-                                      String street2,
-                                      String street3,
-                                      String city,
-                                      String region,
-                                      String zip,
-                                      String country) {
+    public void setNewUserShippingAddress(String firstName, String lastName, String company, String telephone,
+                                          String street1, String street2, String street3, String city,
+                                          String region, String zip, String country) {
         addressBookPage
-                .fillFirstName(firstName)
-                .fillLastName(lastName)
-                .fillCompany(company)
-                .fillTelephone(telephone)
-                .fillStreet1(street1)
-                .fillStreet2(street2)
-                .fillStreet3(street3)
-                .fillCity(city)
-                .selectCountry(country)
-                .selectRegion(region)
-                .fillZip(zip)
+                .fillForm(
+                        firstName, lastName, company, telephone,
+                        street1, street2, street3, city,
+                        region, zip, country)
                 .submit()
                 .timeout(1);
 
@@ -72,9 +47,9 @@ public class AddressBookTest {
         var shippingAddress = addressBookPage.getDefaultShippingAddress();
 
         //Ensure neither is blank
-        assertFalse(billingAddress.isBlank());
+        assertFalse(billingAddress.isBlank(), "Billing address is blank, probably timeout");
         //Then check for equality
-        assertEquals(billingAddress, shippingAddress);
+        assertEquals(billingAddress, shippingAddress, "Billing and shipping addresses didn't match");
 
         LOG.info("Billing addresses matched");
     }
@@ -82,6 +57,6 @@ public class AddressBookTest {
 
     @AfterEach
     public void finish() {
-        addressBookPage.quitDriver();
+        TestClient.quitBrowser();
     }
 }

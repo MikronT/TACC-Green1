@@ -62,7 +62,7 @@ public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard
         return titleLabel.getText();
     }
 
-    public ProductCard submit() {
+    public ProductCard submitAddToCart() {
         productAddButtonCart.click();
         return this;
     }

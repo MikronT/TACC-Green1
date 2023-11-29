@@ -32,13 +32,13 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     private WebElement postalCode;
 
     @FindBy(xpath = COUNTRY)
-    private WebElement Country;
+    private WebElement country;
 
     @FindBy(xpath = PHONE_NUMBER)
-    private WebElement PhoneNumber;
+    private WebElement phoneNumber;
 
     @FindBy(xpath = SHIPPING_METHOD)
-    private WebElement ShippingMethod;
+    private WebElement shippingMethod;
 
     @FindBy(xpath = NEXT_BUTTON)
     private WebElement nextButton;
@@ -47,7 +47,7 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     private WebElement placeOrderButton;
 
     @FindBy(xpath = THANKS_TEXT)
-    private static WebElement thanksText;
+    private WebElement thanksText;
 
 
     public OrderPage enterEmail(String emailAddress) {
@@ -91,17 +91,33 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     }
 
     public OrderPage selectCountry(String countryValue) {
-        Country.click();
+        //TODO 29.11.2023: Pick specified country
+        country.click();
         return this;
     }
 
     public OrderPage enterPhoneNumber(String phoneNumberValue) {
-        PhoneNumber.sendKeys(phoneNumberValue);
+        phoneNumber.sendKeys(phoneNumberValue);
         return this;
     }
 
+    public OrderPage fillForm(String email, String firstName, String lastName,
+                              String company, String streetAddress, String city, String country, String postalCode,
+                              String stateProvince, String phoneNumber) {
+        return enterEmail(email)
+                .enterFirstName(firstName)
+                .enterLastName(lastName)
+                .enterCompany(company)
+                .enterStreetAddress(streetAddress)
+                .enterCity(city)
+                .selectCountry(country)
+                .enterPostalCode(postalCode)
+                .enterStateProvince(stateProvince)
+                .enterPhoneNumber(phoneNumber);
+    }
+
     public OrderPage selectShippingMethod() {
-        ShippingMethod.click();
+        shippingMethod.click();
         return this;
     }
 
@@ -115,7 +131,8 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
         return this;
     }
 
-    public static String getThanksText() {
+
+    public String getThanksText() {
         return thanksText.getText();
     }
 }

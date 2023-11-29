@@ -57,6 +57,11 @@ public class AccountInformationPage extends Page<AccountInformationPage> {
         return this;
     }
 
+    public AccountInformationPage fillNameForm(String newFirstName, String newLastName) {
+        return fillFirstName(newFirstName)
+                .fillLastName(newLastName);
+    }
+
     public AccountInformationPage fillEmail(String email) {
         emailInput.clear();
         emailInput.sendKeys(email);

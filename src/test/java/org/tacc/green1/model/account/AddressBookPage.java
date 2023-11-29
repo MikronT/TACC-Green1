@@ -108,6 +108,31 @@ public class AddressBookPage extends Page<AddressBookPage> implements XPath.Addr
         return this;
     }
 
+    public AddressBookPage fillForm(String firstName,
+                                    String lastName,
+                                    String company,
+                                    String telephone,
+                                    String street1,
+                                    String street2,
+                                    String street3,
+                                    String city,
+                                    String region,
+                                    String zip,
+                                    String country) {
+        return fillFirstName(firstName)
+                .fillLastName(lastName)
+                .fillCompany(company)
+                .fillTelephone(telephone)
+                .fillStreet1(street1)
+                .fillStreet2(street2)
+                .fillStreet3(street3)
+                .fillCity(city)
+                //Fill country first as the region select depends on the country chosen
+                .selectCountry(country)
+                .selectRegion(region)
+                .fillZip(zip);
+    }
+
     public AddressBookPage submit() {
         submitButton.click();
         return this;

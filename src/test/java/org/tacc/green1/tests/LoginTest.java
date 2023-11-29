@@ -1,24 +1,31 @@
 package org.tacc.green1.tests;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.LoginPage;
-import org.tacc.green1.model.MainPage;
+import org.tacc.green1.model.base.Page;
+import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class LoginTest {
-    private MainPage mainPage;
+    private static Page<?> page;
     private LoginPage loginPage;
 
 
+    @BeforeAll
+    public static void initClient() {
+        page = TestClient.openBrowser();
+    }
+
     @BeforeEach
     public void prepare() {
-        mainPage = MainPage.openBrowser();
-        loginPage = mainPage.gotoLoginPage();
+        loginPage = page.gotoLoginPage();
     }
 
 
@@ -27,19 +34,22 @@ public class LoginTest {
     public void loginTest(String ignoredFirstName,
                           String ignoredLastName,
                           String email,
-                          String password,
-                          String ignoredConfirmPassword) {
-        loginPage
-                .fillEmail(email)
-                .fillPassword(password)
+                          String password) {
+        loginPage.fillForm(email, password)
                 .submit();
 
-        assertTrue(mainPage.isClientLoggedIn());
+        assertTrue(page.isClientLoggedIn(), "Logging in failed");
     }
 
 
     @AfterEach
-    public void finish() {
-        mainPage.quitDriver();
+    public void signOut() {
+        page.openAccountPopup()
+                .signOut();
+    }
+
+    @AfterAll
+    public static void finish() {
+        TestClient.quitBrowser();
     }
 }

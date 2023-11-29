@@ -16,13 +16,8 @@ public abstract class Modal<T> {
     }
 
     protected Modal(SearchContext context) {
-        LOG.info("Initializing modal for class: " + getClass().getName());
+        LOG.info("Initializing modal for class: " + getClass().getSimpleName());
         PageFactory.initElements(context, this);
-    }
-
-
-    public void quitDriver() {
-        DriverManager.quitDriver();
     }
 
 

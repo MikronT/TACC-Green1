@@ -3,6 +3,7 @@ package org.tacc.green1.model;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Page;
+import org.tacc.green1.util.TestClient;
 
 
 public class LoginPage extends Page<LoginPage> {
@@ -18,15 +19,25 @@ public class LoginPage extends Page<LoginPage> {
 
     public LoginPage fillEmail(String email) {
         emailInput.sendKeys(email);
+        TestClient.setEmail(email);
         return this;
     }
 
     public LoginPage fillPassword(String password) {
         passwordInput.sendKeys(password);
+        TestClient.setPassword(password);
         return this;
     }
 
-    public void submit() {
+    public LoginPage fillForm(String email,
+                              String password) {
+        return fillEmail(email)
+                .fillPassword(password);
+    }
+
+    public MainPage submit() {
         submitButton.click();
+        timeout(1);
+        return new MainPage();
     }
 }

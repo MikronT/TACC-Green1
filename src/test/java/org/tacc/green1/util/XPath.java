@@ -1,11 +1,16 @@
 package org.tacc.green1.util;
 
+@SuppressWarnings("SpellCheckingInspection")
 public interface XPath {
     interface Page {
-        String LINK_WELCOME_ACCOUNT = "/html/body/div[2]/header/div[1]/div/ul/li[1]/span";
-        String LINK_REGISTRATION = "/html/body/div[2]/header/div[1]/div/ul/li[3]/a";
-        String BUTTON_OPEN_CART = "/html/body/div[2]/header/div[2]/div[1]/a";
-        String LINK_ADVANCED_SEARCH = "/html/body/div[2]/footer/div/ul/li[3]/a";
+        String _HEADER = "/html/body/div[2]/header";
+        String LINK_LOGO = _HEADER + "/div[2]/a";
+        String LINK_WELCOME_ACCOUNT = _HEADER + "/div[1]/div/ul/li[1]/span";
+        String LINK_REGISTRATION = _HEADER + "/div[1]/div/ul/li[3]/a";
+        String BUTTON_OPEN_CART = _HEADER + "/div[2]/div[1]/a";
+
+        String _FOOTER = "/html/body/div[2]/footer";
+        String LINK_ADVANCED_SEARCH = _FOOTER + "/div/ul/li[3]/a";
     }
 
 
@@ -96,15 +101,18 @@ public interface XPath {
 
     interface OrderPage {
         String EMAIL = "//*[@id=\"customer-email\"]";
-        String FIRST_NAME = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[1]/div/input";
-        String LAST_NAME = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[2]/div/input";
-        String COMPANY = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[3]/div/input";
-        String STREET_ADDRESS = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/fieldset/div/div[1]/div/input";
-        String CITY = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[4]/div/input";
-        String STATE_PROVINCE = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[6]/div/input";
-        String POSTAL_CODE = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[7]/div/input";
-        String COUNTRY = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[8]/div/select/option[4]";
-        String PHONE_NUMBER = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div/div[9]/div/input";
+
+        String _FIELD = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[1]/div[2]/form[2]/div";
+        String FIRST_NAME = _FIELD + "/div[1]/div/input";
+        String LAST_NAME = _FIELD + "/div[2]/div/input";
+        String COMPANY = _FIELD + "/div[3]/div/input";
+        String STREET_ADDRESS = _FIELD + "/fieldset/div/div[1]/div/input";
+        String CITY = _FIELD + "/div[4]/div/input";
+        String STATE_PROVINCE = _FIELD + "/div[6]/div/input";
+        String POSTAL_CODE = _FIELD + "/div[7]/div/input";
+        String COUNTRY = _FIELD + "/div[8]/div/select/option[4]";
+        String PHONE_NUMBER = _FIELD + "/div[9]/div/input";
+
         String SHIPPING_METHOD = "//*[@id=\"checkout-shipping-method-load\"]/table/tbody/tr/td[1]/input";
         String NEXT_BUTTON = "//*[@id=\"shipping-method-buttons-container\"]/div/button";
         String PLACE_ORDER_BUTTON = "//*[@id=\"checkout-payment-method-load\"]/div/div/div[2]/div[2]/div[4]/div/button";

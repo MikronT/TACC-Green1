@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.AdvancedSearchPage;
 import org.tacc.green1.model.LoginPage;
+import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.RegistrationPage;
 import org.tacc.green1.model.account.AccountPopup;
 import org.tacc.green1.model.cart.Cart;
@@ -15,6 +16,9 @@ import org.tacc.green1.util.XPath;
 
 public abstract class Page<T> extends Modal<T> implements XPath.Page {
     private static final Logger LOG = LogManager.getLogger(Page.class);
+
+    @FindBy(xpath = LINK_LOGO)
+    private WebElement logoLink;
 
     @FindBy(className = "authorization-link")
     private WebElement loginLink;
@@ -34,6 +38,11 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
     @FindBy(xpath = LINK_ADVANCED_SEARCH)
     private WebElement advancedSearchLink;
 
+
+    public MainPage gotoMainPage() {
+        logoLink.click();
+        return new MainPage();
+    }
 
     public LoginPage gotoLoginPage() {
         loginLink.click();
@@ -73,6 +82,7 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
 
 
     public boolean isClientLoggedIn() {
+        timeout(1);
         try {
             var message = welcomeAccountLink.getText();
             //Manual welcome message check

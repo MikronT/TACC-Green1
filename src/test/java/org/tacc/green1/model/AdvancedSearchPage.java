@@ -29,7 +29,6 @@ public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
     private WebElement submitButton;
 
 
-
     public AdvancedSearchPage fillProductName(String name) {
         productNameInput.sendKeys(name);
         return this;
@@ -55,9 +54,23 @@ public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
         return this;
     }
 
-    public AdvancedSearchPage fillProductPriceTo(String price_to) {
-        productPriceToInput.sendKeys(price_to);
+    public AdvancedSearchPage fillProductPriceTo(String price) {
+        productPriceToInput.sendKeys(price);
         return this;
+    }
+
+    public AdvancedSearchPage fillForm(String productName,
+                                       String sku,
+                                       String description,
+                                       String shortDescription,
+                                       String fromPrice,
+                                       String toPrice) {
+        return fillProductName(productName)
+                .fillProductSKU(sku)
+                .fillProductDescription(description)
+                .fillProductShortDescription(shortDescription)
+                .fillProductPriceFrom(fromPrice)
+                .fillProductPriceTo(toPrice);
     }
 
     public CatalogPage submit() {

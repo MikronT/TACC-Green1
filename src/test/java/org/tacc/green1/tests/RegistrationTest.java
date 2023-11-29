@@ -5,10 +5,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.RegistrationPage;
 import org.tacc.green1.util.RandomData;
-import org.tacc.green1.util.RegistrationDataWriter;
+import org.tacc.green1.util.TestClient;
 
 import java.util.stream.Stream;
 
@@ -21,45 +20,40 @@ public class RegistrationTest {
 
     @BeforeAll
     public static void prepare() {
-        //TODO 23.11.2023: Provide better logic for automatic data cleanup
-        //RegistrationDataWriter.clear();
+        var mainPage = TestClient.openBrowser();
 
-        registrationPage = MainPage.openBrowser()
-                .gotoRegistrationPage();
+        registrationPage = mainPage.gotoRegistrationPage();
     }
 
 
-    private static Stream<Arguments> provideRegistrationValues() {
+    private static Stream<Arguments> provideRegistrationData() {
         String firstName = RandomData.name();
         String lastName = RandomData.name();
         String email = RandomData.email();
         String password = RandomData.password();
 
         return Stream.of(
-                Arguments.of(firstName, lastName, email, password, password)
+                Arguments.of(firstName, lastName, email, password)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("provideRegistrationValues")
-    public void registration(String firstName, String lastName, String email, String password, String confirmPassword) {
+    @MethodSource("provideRegistrationData")
+    public void registerSuccessfully(String firstName,
+                                     String lastName,
+                                     String email,
+                                     String password) {
         var accountPage = registrationPage
-                .fillFirstName(firstName)
-                .fillLastName(lastName)
-                .fillEmail(email)
-                .fillPassword(password)
-                .fillConfirmPassword(confirmPassword)
+                .fillForm(firstName, lastName, email, password, password)
                 .submit();
 
-        assertEquals("My Account", accountPage.getAccountPageWelcomeText());
-
-        //Save registration data for future
-        RegistrationDataWriter.append(firstName, lastName, email, password, confirmPassword);
+        assertEquals("My Account", accountPage.getAccountPageWelcomeText(),
+                "Registration failed");
     }
 
 
     @AfterAll
     public static void finish() {
-        registrationPage.quitDriver();
+        TestClient.quitBrowser();
     }
 }

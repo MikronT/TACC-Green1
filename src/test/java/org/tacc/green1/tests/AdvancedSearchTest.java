@@ -1,50 +1,62 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.AdvancedSearchPage;
-import org.tacc.green1.model.MainPage;
+import org.tacc.green1.model.base.Page;
+import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class AdvancedSearchTest {
+    private static Page<?> page;
     private AdvancedSearchPage advancedSearchPage;
 
 
+    @BeforeAll
+    public static void initClient() {
+        page = TestClient.openBrowser();
+    }
+
     @BeforeEach
-    public void openAdvancedSearchPage() {
-        advancedSearchPage = MainPage.openBrowser()
-                .gotoAdvancedSearchPage();
+    public void gotoAdvancedSearchPage() {
+        advancedSearchPage = page.gotoAdvancedSearchPage();
     }
 
 
     @ParameterizedTest
     @CsvFileSource(resources = "/advancedSearchData.csv")
-    public void advancedSearch(String productName,
+    public void searchProducts(String productName,
                                String sku,
                                String description,
                                String shortDescription,
                                String fromPrice,
                                String toPrice,
                                String assertName) {
-        assertTrue(advancedSearchPage
-                .fillProductName(productName)
-                .fillProductSKU(sku)
-                .fillProductDescription(description)
-                .fillProductShortDescription(shortDescription)
-                .fillProductPriceFrom(fromPrice)
-                .fillProductPriceTo(toPrice)
-                .submit()
+        var catalogPage = advancedSearchPage
+                .fillForm(productName,
+                        sku,
+                        description,
+                        shortDescription,
+                        fromPrice,
+                        toPrice)
+                .submit();
+
+        boolean exampleProductFound = catalogPage
                 .getVisibleProductCards()
-                .stream().anyMatch(productCard -> assertName.equals(productCard.getName())));
+                .stream()
+                .anyMatch(productCard -> assertName.equals(productCard.getName()));
+
+        assertTrue(exampleProductFound, "Applied search criteria didn't return the example product");
     }
 
 
-    @AfterEach
-    public void finish() {
-        advancedSearchPage.quitDriver();
+    @AfterAll
+    public static void finish() {
+        TestClient.quitBrowser();
     }
 }
