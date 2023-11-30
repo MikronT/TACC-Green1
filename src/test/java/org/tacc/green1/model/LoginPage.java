@@ -37,7 +37,6 @@ public class LoginPage extends Page<LoginPage> {
 
     public MainPage submit() {
         submitButton.click();
-        timeout(1);
         return new MainPage();
     }
 }

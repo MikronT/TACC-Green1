@@ -50,6 +50,7 @@ public interface XPath {
         String _ADDRESS_BLOCK = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]";
         String ADDRESS_BLOCK_BILLING = _ADDRESS_BLOCK + "/div[1]/div[1]/address";
         String ADDRESS_BLOCK_SHIPPING = _ADDRESS_BLOCK + "/div[2]/div[1]/address";
+        String ADDRESS_SUCCESS_CHANGE_TEXT = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div";
     }
 
 
@@ -79,6 +80,9 @@ public interface XPath {
         String BUTTON_CLOSE = "//*[@id=\"btn-minicart-close\"]";
         String ITEMS = "//*[@id=\"mini-cart\"]/li";
         String BUTTON_CHECKOUT = "//*[@id=\"top-cart-btn-checkout\"]";
+        String ITEMS_COUNTER = "//span[@class='counter-label' and text()]";
+        String SUCCESS_ADDED_ITEM_CART = "//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div";
+        String EMPTY_CART_TEXT = "//*[@id=\"minicart-content-wrapper\"]/div[2]/strong";
     }
 
 
@@ -96,6 +100,7 @@ public interface XPath {
 
     interface ProductReviewModal {
         String BUTTON_SUBMIT = "//*[@id=\"review-form\"]/div/div/button";
+        String SUCCESS_ADDED_REVIEW_TEXT = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div";
     }
 
 
@@ -117,5 +122,6 @@ public interface XPath {
         String NEXT_BUTTON = "//*[@id=\"shipping-method-buttons-container\"]/div/button";
         String PLACE_ORDER_BUTTON = "//*[@id=\"checkout-payment-method-load\"]/div/div/div[2]/div[2]/div[4]/div/button";
         String THANKS_TEXT = "//*[@id=\"maincontent\"]/div[1]/h1/span";
+        String CONTINUE_SHOPPING_BUTTON = "//*[@id=\"maincontent\"]/div[3]/div/div[2]/div/div/a";
     }
 }

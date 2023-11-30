@@ -5,16 +5,18 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.openqa.selenium.By;
 import org.tacc.green1.model.LoginPage;
 import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.account.AccountInformationPage;
 import org.tacc.green1.model.account.AccountPage;
 import org.tacc.green1.util.TestClient;
+import org.tacc.green1.util.XPath;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class UpdateInfoAccountTest {
+public class UpdateInfoAccountTest implements XPath.AccountPage {
     private static MainPage mainPage;
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
@@ -49,14 +51,16 @@ public class UpdateInfoAccountTest {
         var loginPage = accountInformationPage
                 .fillNameForm(firstName, lastName)
                 .toggleEmailCheckBox()
+                .timeoutByLocator(By.id("email"))
                 .fillEmail(email)
                 .fillPassword(password)
                 .<LoginPage>submit()
-                .timeout(3);
+                .timeoutByLocator(By.id("email"));
 
         loginPage
                 .fillForm(email, password)
-                .submit();
+                .submit()
+                .timeoutByLocator(By.xpath(CONTACT_INFORMATION_TEXT));
 
         mainPage.openAccountPopup()
                 .gotoMyAccountPage();

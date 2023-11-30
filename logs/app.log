@@ -2106,3 +2106,1055 @@ Session ID: 6fdb3e554a4d3c0a8be7e5feceb4a725
 2023-11-29 21:38:37 | INFO  | Modal:19 | Initializing modal for class: MainPage
 2023-11-29 21:38:39 | INFO  | Modal:19 | Initializing modal for class: AccountPopup
 2023-11-29 21:38:40 | INFO  | Modal:19 | Initializing modal for class: MainPage
+2023-11-30 12:25:12 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 12:25:15 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 12:25:17 | INFO  | Modal:19 | Initializing modal for class: MainPage
+2023-11-30 12:25:18 | INFO  | Modal:19 | Initializing modal for class: HeaderMenu
+2023-11-30 12:25:19 | INFO  | Modal:19 | Initializing modal for class: MenCategoryPopup
+2023-11-30 12:25:20 | INFO  | Modal:19 | Initializing modal for class: CatalogPage
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:23 | INFO  | Modal:19 | Initializing modal for class: ProductCard
+2023-11-30 12:25:26 | INFO  | Modal:19 | Initializing modal for class: Cart
+2023-11-30 12:25:26 | INFO  | Modal:19 | Initializing modal for class: CartItem
+2023-11-30 15:02:48 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:02:50 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:02:51 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:02:52 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:02:54 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:02:54 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:02:55 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:02:55 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:02:55 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:03:00 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:03:01 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:03:03 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:03:04 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:03:04 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:03:05 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:07 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:10 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:03:10 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:03:17 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:03:18 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:03:20 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:03:21 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:03:21 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:03:22 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:24 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:03:27 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:03:27 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:05:53 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:05:54 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:05:56 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:05:57 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:05:57 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:05:58 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:00 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:06:03 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:06:03 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:09:29 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:09:30 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:09:32 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:09:33 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:09:33 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:09:34 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:35 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:36 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:09:39 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:09:39 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:09:44 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:12:34 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:12:36 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:12:38 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:12:39 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:12:39 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:12:40 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:12:42 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:13:11 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:13:12 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:13:14 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:13:15 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:13:15 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:13:16 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:13:18 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:13:56 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:13:58 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:14:00 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:14:01 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:14:01 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:14:02 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:14:03 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:01 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:16:02 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:16:04 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:16:05 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:16:05 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:16:06 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:16:08 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:18:25 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:18:26 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:18:28 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:18:29 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:18:29 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:18:30 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:18:32 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:18:54 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:18:56 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:18:58 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:18:59 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:18:59 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:19:00 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:19:02 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:19:27 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:20:44 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:20:45 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:20:47 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:20:48 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:20:48 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:20:49 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:20:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:20:51 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:21:06 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:21:18 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:21:20 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:21:22 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:21:23 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:21:23 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:21:24 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:21:25 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:23:55 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:23:56 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:23:58 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:23:59 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:23:59 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:24:00 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:24:02 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:27:12 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:27:14 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:27:16 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:27:17 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:27:17 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:27:18 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:19 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:27:44 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:27:45 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:27:47 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:27:48 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:27:48 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:27:49 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:27:51 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:33:43 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:33:45 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:33:47 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:33:48 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:33:48 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:33:49 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:50 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:33:51 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:35:18 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:35:19 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:35:21 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:35:22 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:35:22 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:35:23 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:35:25 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:37:18 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:37:20 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:37:22 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:37:23 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:37:23 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:37:24 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:25 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:37:31 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:37:31 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:40:10 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:40:12 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:40:13 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:40:14 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 15:40:15 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 15:40:15 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:17 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 15:40:22 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 15:40:22 | INFO  | Modal:27 | Initializing modal for class: CartItem
+2023-11-30 15:56:48 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:57:04 | INFO  | TestClient:106 | Logging in as John Doe with chunguk@yahoo.com
+2023-11-30 15:57:04 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:57:06 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:57:08 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:57:08 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 15:57:11 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:57:12 | ERROR | Page:60 | No user is not logged in, check out your method call order
+2023-11-30 15:57:32 | INFO  | TestClient:106 | Logging in as Nikola Tesla with nikola14.tesla10@gmail.com
+2023-11-30 15:57:32 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 15:57:33 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 15:57:35 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:57:37 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 15:57:39 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 15:57:40 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 15:57:41 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 15:57:42 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 15:57:43 | INFO  | Modal:27 | Initializing modal for class: AccountInformationPage
+2023-11-30 16:01:52 | INFO  | TestClient:106 | Logging in as Nikola Tesla with nikola14.tesla10@gmail.com
+2023-11-30 16:01:52 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:01:54 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:01:56 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:01:57 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:02:00 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:02:01 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:02:02 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:02:03 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:02:04 | INFO  | Modal:27 | Initializing modal for class: AccountInformationPage
+2023-11-30 16:02:11 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:02:17 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:02:18 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:02:19 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:03:58 | INFO  | TestClient:106 | Logging in as Nikola Tesla with nikola14.tesla10@gmail.com
+2023-11-30 16:03:58 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:04:00 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:04:05 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:04:05 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:04:08 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:04:09 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:04:10 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:04:11 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:04:12 | INFO  | Modal:27 | Initializing modal for class: AccountInformationPage
+2023-11-30 16:04:19 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:04:22 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:04:23 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:04:24 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:06:08 | INFO  | TestClient:106 | Logging in as Nikola Tesla with nikola14.tesla10@gmail.com
+2023-11-30 16:06:08 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:06:10 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:06:11 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:06:12 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:06:14 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:06:15 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:06:16 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:06:17 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:06:18 | INFO  | Modal:27 | Initializing modal for class: AccountInformationPage
+2023-11-30 16:06:20 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:06:22 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:06:23 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:06:24 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:20:03 | INFO  | TestClient:106 | Logging in as Nikola Tesla with nikola14.tesla10@gmail.com
+2023-11-30 16:20:03 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:20:05 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:20:07 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:20:09 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:20:10 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:20:11 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:20:12 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:20:13 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:20:14 | INFO  | Modal:27 | Initializing modal for class: AccountInformationPage
+2023-11-30 16:20:32 | INFO  | TestClient:106 | Logging in as Nikola Tesla with nikola14.tesla10@gmail.com
+2023-11-30 16:20:32 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:20:34 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:20:35 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:20:36 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:20:38 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:20:39 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:20:40 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:20:41 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:20:42 | INFO  | Modal:27 | Initializing modal for class: AccountInformationPage
+2023-11-30 16:20:44 | INFO  | Modal:27 | Initializing modal for class: LoginPage
+2023-11-30 16:20:46 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:20:47 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:20:48 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:21:15 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:21:16 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:21:18 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:21:19 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:21:19 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:21:26 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 16:21:27 | INFO  | Modal:27 | Initializing modal for class: OrderPage
+2023-11-30 16:22:11 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:22:12 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:22:14 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:22:15 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:22:15 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:16 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:22:22 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 16:22:23 | INFO  | Modal:27 | Initializing modal for class: OrderPage
+2023-11-30 16:24:03 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:24:05 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:24:06 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:24:07 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:24:08 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:09 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:24:14 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 16:24:15 | INFO  | Modal:27 | Initializing modal for class: OrderPage
+2023-11-30 16:29:16 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:29:17 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:29:20 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:29:21 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:29:21 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:22 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:28 | INFO  | Modal:27 | Initializing modal for class: Cart
+2023-11-30 16:29:29 | INFO  | Modal:27 | Initializing modal for class: OrderPage
+2023-11-30 16:29:46 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:29:47 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:29:49 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:29:50 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:29:50 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:51 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:29:53 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:29:53 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:30:01 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:30:01 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:04 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:30:05 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:30:06 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:32:42 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:32:43 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:32:45 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:32:46 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:32:46 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:48 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:32:50 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:32:50 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:32:59 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:32:59 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:01 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:33:02 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:33:02 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:34:59 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:35:01 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:35:03 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:35:04 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:35:04 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:05 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:07 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:35:07 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:35:16 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:35:16 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:18 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:35:19 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:35:19 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:36:14 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:36:15 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:36:17 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:36:18 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:36:19 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:20 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:21 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:36:21 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:36:25 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:36:25 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:26 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:36:27 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:36:27 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:37:44 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:37:45 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:37:47 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:37:48 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:37:48 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:49 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:37:51 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:37:51 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:37:59 | INFO  | Modal:27 | Initializing modal for class: HeaderMenu
+2023-11-30 16:37:59 | INFO  | Modal:27 | Initializing modal for class: MenCategoryPopup
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: CatalogPage
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:02 | INFO  | Modal:27 | Initializing modal for class: ProductCard
+2023-11-30 16:38:03 | INFO  | Modal:27 | Initializing modal for class: ProductPage
+2023-11-30 16:38:03 | INFO  | Modal:27 | Initializing modal for class: ProductReviewsTab
+2023-11-30 16:39:49 | INFO  | TestClient:120 | Registering as 9qjawht thhzgaq with lhvs7reb@dijbtu.zu
+2023-11-30 16:39:49 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:39:51 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:39:53 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:39:54 | INFO  | Modal:27 | Initializing modal for class: RegistrationPage
+2023-11-30 16:39:57 | INFO  | TestClient:69 | Saving user: 9qjawht,thhzgaq,lhvs7reb@dijbtu.zu,z#9ysG5+j46
+
+2023-11-30 16:39:57 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:39:58 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:39:59 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:40:00 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:40:01 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:40:02 | INFO  | Modal:27 | Initializing modal for class: AddressBookPage
+2023-11-30 16:40:06 | INFO  | AddressBookTest:54 | Billing addresses matched
+2023-11-30 16:40:06 | INFO  | TestClient:120 | Registering as kb2d1 mjpk10g with tdylg81u@6khlky2xu.wm
+2023-11-30 16:40:06 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:40:07 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:40:09 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:40:10 | INFO  | Modal:27 | Initializing modal for class: RegistrationPage
+2023-11-30 16:40:13 | INFO  | TestClient:69 | Saving user: kb2d1,mjpk10g,tdylg81u@6khlky2xu.wm,T3)rypy )
+
+2023-11-30 16:40:13 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:40:13 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:40:15 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:40:15 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:40:16 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:40:18 | INFO  | Modal:27 | Initializing modal for class: AddressBookPage
+2023-11-30 16:40:21 | INFO  | AddressBookTest:54 | Billing addresses matched
+2023-11-30 16:40:21 | INFO  | TestClient:120 | Registering as oggkd j9ji8 with cigkh@ua0pr.xs
+2023-11-30 16:40:21 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:40:22 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:40:24 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:40:25 | INFO  | Modal:27 | Initializing modal for class: RegistrationPage
+2023-11-30 16:40:28 | INFO  | TestClient:69 | Saving user: oggkd,j9ji8,cigkh@ua0pr.xs,Pxt'Dc"^l@z3rik
+
+2023-11-30 16:40:28 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:40:29 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:40:30 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:40:31 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:40:32 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:40:33 | INFO  | Modal:27 | Initializing modal for class: AddressBookPage
+2023-11-30 16:40:37 | INFO  | AddressBookTest:54 | Billing addresses matched
+2023-11-30 16:42:11 | INFO  | TestClient:120 | Registering as nh0vvf 6c53z with rmyot@xtd5if.og
+2023-11-30 16:42:11 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:42:12 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:42:14 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:42:15 | INFO  | Modal:27 | Initializing modal for class: RegistrationPage
+2023-11-30 16:42:18 | INFO  | TestClient:69 | Saving user: nh0vvf,6c53z,rmyot@xtd5if.og,h+Fg+aSjb
+
+2023-11-30 16:42:18 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:42:19 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:42:20 | INFO  | Modal:27 | Initializing modal for class: AccountPopup
+2023-11-30 16:42:21 | INFO  | Modal:27 | Initializing modal for class: AccountPage
+2023-11-30 16:42:22 | INFO  | Modal:27 | Initializing modal for class: AccountSidebar
+2023-11-30 16:42:24 | INFO  | Modal:27 | Initializing modal for class: AddressBookPage
+2023-11-30 16:42:27 | INFO  | AddressBookTest:54 | Billing addresses matched
+2023-11-30 16:42:27 | INFO  | TestClient:120 | Registering as oxpb7r mjofwokl8 with glcviwd@tjricbo9a.ix
+2023-11-30 16:42:27 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:42:28 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:42:28 | INFO  | TestClient:120 | Registering as f3put j7ohlq3g with f2imcfkpi@7tcifw67.ry
+2023-11-30 16:42:28 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
+2023-11-30 16:42:28 | INFO  | Modal:27 | Initializing modal for class: MainPage
+2023-11-30 16:45:01 | INFO  | TestClient:120 | Registering as aogm4r cxxezn with qspx5@fvbruz8x.sk
+2023-11-30 16:45:01 | INFO  | DriverManager:18 | Initializing driver: chrome
+2023-11-30 16:45:02 | INFO  | TestClient:97 | Opening main page by URL: https://magento.softwaretestingboard.com
