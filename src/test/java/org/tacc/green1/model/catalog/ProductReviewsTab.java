@@ -66,16 +66,6 @@ public class ProductReviewsTab extends Modal<ProductReviewsTab> implements XPath
         return this;
     }
 
-    public ProductReviewsTab fillForm(int rating,
-                                      String nickName,
-                                      String summary,
-                                      String review) {
-        return fillRatingBar(rating)
-                .fillNickName(nickName)
-                .fillSummary(summary)
-                .fillReview(review);
-    }
-
     public ProductReviewsTab submit() {
         submitButton.click();
         return this;

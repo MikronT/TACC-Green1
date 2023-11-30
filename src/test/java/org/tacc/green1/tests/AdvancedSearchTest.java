@@ -38,12 +38,12 @@ public class AdvancedSearchTest {
                                String toPrice,
                                String assertName) {
         var catalogPage = advancedSearchPage
-                .fillForm(productName,
-                        sku,
-                        description,
-                        shortDescription,
-                        fromPrice,
-                        toPrice)
+                .fillProductName(productName)
+                .fillProductSKU(sku)
+                .fillProductDescription(description)
+                .fillProductShortDescription(shortDescription)
+                .fillProductPriceFrom(fromPrice)
+                .fillProductPriceTo(toPrice)
                 .submit();
 
         boolean exampleProductFound = catalogPage

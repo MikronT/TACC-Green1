@@ -35,7 +35,9 @@ public class LoginTest {
                           String ignoredLastName,
                           String email,
                           String password) {
-        loginPage.fillForm(email, password)
+        loginPage
+                .fillEmail(email)
+                .fillPassword(password)
                 .submit();
 
         assertTrue(page.isClientLoggedIn(), "Logging in failed");

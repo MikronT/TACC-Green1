@@ -104,21 +104,6 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
         return this;
     }
 
-    public OrderPage fillForm(String email, String firstName, String lastName,
-                              String company, String streetAddress, String city, String country, String postalCode,
-                              String stateProvince, String phoneNumber) {
-        return enterEmail(email)
-                .enterFirstName(firstName)
-                .enterLastName(lastName)
-                .enterCompany(company)
-                .enterStreetAddress(streetAddress)
-                .enterCity(city)
-                .selectCountry(country)
-                .enterPostalCode(postalCode)
-                .enterStateProvince(stateProvince)
-                .enterPhoneNumber(phoneNumber);
-    }
-
     public OrderPage selectShippingMethod() {
         shippingMethod.click();
         return this;

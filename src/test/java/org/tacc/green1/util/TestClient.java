@@ -107,7 +107,8 @@ public class TestClient {
 
         return openBrowser()
                 .gotoLoginPage()
-                .fillForm(email, password)
+                .fillEmail(email)
+                .fillPassword(password)
                 .submit();
     }
 
@@ -121,8 +122,14 @@ public class TestClient {
 
         return openBrowser()
                 .gotoRegistrationPage()
-                .fillForm(firstName, lastName, email, password, password)
+
+                .fillFirstName(firstName)
+                .fillLastName(lastName)
+                .fillEmail(email)
+                .fillPassword(password)
+                .fillConfirmPassword(password)
                 .submit()
+
                 .gotoMainPage();
     }
 

@@ -27,40 +27,32 @@ public class RegistrationPage extends Page<RegistrationPage> {
     private WebElement createAccountButton;
 
 
-    private void fillFirstName(String firstName) {
+    public RegistrationPage fillFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
         TestClient.setFirstName(firstName);
+        return this;
     }
 
-    private void fillLastName(String lastName) {
+    public RegistrationPage fillLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
         TestClient.setLastName(lastName);
+        return this;
     }
 
-    private void fillEmail(String email) {
+    public RegistrationPage fillEmail(String email) {
         emailAddressInput.sendKeys(email);
         TestClient.setEmail(email);
+        return this;
     }
 
-    private void fillPassword(String password) {
+    public RegistrationPage fillPassword(String password) {
         passwordInput.sendKeys(password);
         TestClient.setPassword(password);
+        return this;
     }
 
-    private void fillConfirmPassword(String password) {
+    public RegistrationPage fillConfirmPassword(String password) {
         confirmPasswordInput.sendKeys(password);
-    }
-
-    public RegistrationPage fillForm(String firstName,
-                                     String lastName,
-                                     String email,
-                                     String password,
-                                     String confirmPassword) {
-        fillFirstName(firstName);
-        fillLastName(lastName);
-        fillEmail(email);
-        fillPassword(password);
-        fillConfirmPassword(confirmPassword);
         return this;
     }
 

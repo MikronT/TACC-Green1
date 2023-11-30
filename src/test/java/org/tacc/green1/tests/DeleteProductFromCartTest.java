@@ -3,13 +3,10 @@ package org.tacc.green1.tests;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.tacc.green1.model.cart.Cart;
+import org.tacc.green1.model.cart.CartItem;
 import org.tacc.green1.model.catalog.CatalogPage;
-import org.tacc.green1.model.catalog.ProductCard;
 import org.tacc.green1.util.TestClient;
 import org.tacc.green1.util.XPath;
 
@@ -30,8 +27,7 @@ public class DeleteProductFromCartTest implements XPath.Cart {
         catalogPage = mainPage
                 .gotoMainMenu()
                 .openMenCategoryPopup()
-                .gotoMenBottomsCatalogPage()
-                .showMaxProductsPerPage();
+                .gotoMenBottomsCatalogPage();
 
         var productCard = catalogPage.getVisibleProductCards().get(0);
 
@@ -39,7 +35,6 @@ public class DeleteProductFromCartTest implements XPath.Cart {
                 .chooseSize(32)
                 .submitAddToCart()
                 .timeoutByLocator(By.xpath(SUCCESS_ADDED_ITEM_CART));
-
     }
 
 
@@ -47,17 +42,17 @@ public class DeleteProductFromCartTest implements XPath.Cart {
     public void deleteProductFromCartTest() {
         Cart cart = catalogPage.openCart();
 
-
-        cart
+        List<CartItem> cartItems = cart
                 .timeoutByLocator(By.xpath(ITEMS))
-                .getVisibleCartItems()
-                .get(0)
+                .getVisibleCartItems();
+
+        cartItems.get(0)
                 .deleteItemFromCart()
                 .timeoutByLocator(By.xpath(CONFIRM_DELETE_BUTTON))
                 .confirmDelete()
                 .timeoutByLocator(By.xpath(EMPTY_CART_TEXT));
 
-        assertEquals(0, cart.getVisibleCartItems().size(),
+        assertEquals(0, cartItems.size(),
                 "Couldn't delete product from the cart");
     }
 

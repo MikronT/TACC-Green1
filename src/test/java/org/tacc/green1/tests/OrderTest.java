@@ -56,11 +56,19 @@ public class OrderTest implements XPath.Cart, XPath.OrderPage {
         var orderPage = cart
                 .proceedToCheckout()
                 .timeoutByLocator(By.xpath(EMAIL))
-                .fillForm(
-                        email, firstName, lastName,
-                        company, streetAddress, city, country, postalCode,
-                        stateProvince, phoneNumber)
+
+                .enterEmail(email)
+                .enterFirstName(firstName)
+                .enterLastName(lastName)
+                .enterCompany(company)
+                .enterStreetAddress(streetAddress)
+                .enterCity(city)
+                .selectCountry(country)
+                .enterPostalCode(postalCode)
+                .enterStateProvince(stateProvince)
+                .enterPhoneNumber(phoneNumber)
                 .timeoutByLocator(By.xpath(SHIPPING_METHOD))
+
                 .selectShippingMethod()
                 .nextPage()
                 .timeoutByLocator(By.xpath(PLACE_ORDER_BUTTON))

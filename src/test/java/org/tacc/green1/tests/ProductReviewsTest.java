@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.openqa.selenium.By;
 import org.tacc.green1.model.base.Page;
 import org.tacc.green1.model.catalog.ProductReviewsTab;
 import org.tacc.green1.util.TestClient;
@@ -13,7 +12,6 @@ import org.tacc.green1.util.TestClient;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.tacc.green1.util.XPath.ProductReviewModal.SUCCESS_ADDED_REVIEW_TEXT;
 
 
 public class ProductReviewsTest {
@@ -51,7 +49,10 @@ public class ProductReviewsTest {
                                 String summary,
                                 String review) {
         productReviewsTab
-                .fillForm(rating, nickName, summary, review)
+                .fillRatingBar(rating)
+                .fillNickName(nickName)
+                .fillSummary(summary)
+                .fillReview(review)
                 .submit()
                 .timeout(4);
 

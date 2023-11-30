@@ -44,7 +44,11 @@ public class RegistrationTest {
                                      String email,
                                      String password) {
         var accountPage = registrationPage
-                .fillForm(firstName, lastName, email, password, password)
+                .fillFirstName(firstName)
+                .fillLastName(lastName)
+                .fillEmail(email)
+                .fillPassword(password)
+                .fillConfirmPassword(password)
                 .submit();
 
         assertEquals("My Account", accountPage.getAccountPageWelcomeText(),

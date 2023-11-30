@@ -59,20 +59,6 @@ public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
         return this;
     }
 
-    public AdvancedSearchPage fillForm(String productName,
-                                       String sku,
-                                       String description,
-                                       String shortDescription,
-                                       String fromPrice,
-                                       String toPrice) {
-        return fillProductName(productName)
-                .fillProductSKU(sku)
-                .fillProductDescription(description)
-                .fillProductShortDescription(shortDescription)
-                .fillProductPriceFrom(fromPrice)
-                .fillProductPriceTo(toPrice);
-    }
-
     public CatalogPage submit() {
         submitButton.click();
         timeout(3);

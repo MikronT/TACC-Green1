@@ -29,12 +29,6 @@ public class LoginPage extends Page<LoginPage> {
         return this;
     }
 
-    public LoginPage fillForm(String email,
-                              String password) {
-        return fillEmail(email)
-                .fillPassword(password);
-    }
-
     public MainPage submit() {
         submitButton.click();
         return new MainPage();

@@ -58,7 +58,8 @@ public class UpdateInfoAccountTest implements XPath.AccountPage {
                 .timeoutByLocator(By.id("email"));
 
         loginPage
-                .fillForm(email, password)
+                .fillEmail(email)
+                .fillPassword(password)
                 .submit()
                 .timeoutByLocator(By.xpath(CONTACT_INFORMATION_TEXT));
 

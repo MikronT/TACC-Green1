@@ -45,7 +45,7 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
 
 
     public CatalogPage showMaxProductsPerPage() {
-        waitForAjax();
+
 
         var limiterSelect = new Select(limiterDropdown);
 
