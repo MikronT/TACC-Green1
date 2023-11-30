@@ -49,6 +49,9 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     @FindBy(xpath = THANKS_TEXT)
     private WebElement thanksText;
 
+    @FindBy(xpath = "//*[@id=\"shipping\"]/div[1]")
+    private WebElement mainOrderPageText;
+
 
     public OrderPage enterEmail(String emailAddress) {
         email.sendKeys(emailAddress);
@@ -131,6 +134,9 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
         return this;
     }
 
+    public WebElement getMainOrderPageTextElement() {
+        return mainOrderPageText;
+    }
 
     public String getThanksText() {
         return thanksText.getText();

@@ -2,16 +2,24 @@ package org.tacc.green1.tests;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.tacc.green1.model.cart.Cart;
 import org.tacc.green1.model.catalog.CatalogPage;
+import org.tacc.green1.model.catalog.ProductCard;
 import org.tacc.green1.util.TestClient;
+import org.tacc.green1.util.XPath;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.tacc.green1.util.XPath.CartItem.CONFIRM_DELETE_BUTTON;
 
 
-public class DeleteProductFromCartTest {
+public class DeleteProductFromCartTest implements XPath.Cart {
     private static CatalogPage catalogPage;
 
 
@@ -24,26 +32,30 @@ public class DeleteProductFromCartTest {
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage()
                 .showMaxProductsPerPage();
+
+        var productCard = catalogPage.getVisibleProductCards().get(0);
+
+        productCard.chooseColor("Red")
+                .chooseSize(32)
+                .submitAddToCart()
+                .timeoutByLocator(By.xpath(SUCCESS_ADDED_ITEM_CART));
+
     }
 
 
-    @ParameterizedTest
-    @CsvSource("Red,32")
-    public void test1(String color, int size) {
-        var productCard = catalogPage.getVisibleProductCards().get(0);
-
-        productCard.chooseColor(color)
-                .chooseSize(size)
-                .submitAddToCart()
-                .timeout(3);
-
+    @Test
+    public void deleteProductFromCartTest() {
         Cart cart = catalogPage.openCart();
 
-        cart.getVisibleCartItems().get(0)
+
+        cart
+                .timeoutByLocator(By.xpath(ITEMS))
+                .getVisibleCartItems()
+                .get(0)
                 .deleteItemFromCart()
-                .timeout(2)
+                .timeoutByLocator(By.xpath(CONFIRM_DELETE_BUTTON))
                 .confirmDelete()
-                .timeout(2);
+                .timeoutByLocator(By.xpath(EMPTY_CART_TEXT));
 
         assertEquals(0, cart.getVisibleCartItems().size(),
                 "Couldn't delete product from the cart");

@@ -6,11 +6,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.openqa.selenium.By;
 import org.tacc.green1.model.account.AddressBookPage;
 import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.tacc.green1.util.XPath.AddressBookPage.ADDRESS_SUCCESS_CHANGE_TEXT;
 
 
 public class AddressBookTest {
@@ -41,7 +43,7 @@ public class AddressBookTest {
                         street1, street2, street3, city,
                         region, zip, country)
                 .submit()
-                .timeout(1);
+                .timeoutByLocator(By.xpath(ADDRESS_SUCCESS_CHANGE_TEXT));
 
         var billingAddress = addressBookPage.getDefaultBillingAddress();
         var shippingAddress = addressBookPage.getDefaultShippingAddress();

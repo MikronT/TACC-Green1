@@ -4,16 +4,18 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.openqa.selenium.By;
 import org.tacc.green1.model.catalog.CatalogPage;
 import org.tacc.green1.model.catalog.ProductCard;
 import org.tacc.green1.util.TestClient;
+import org.tacc.green1.util.XPath;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class OrderTest {
+public class OrderTest implements XPath.Cart, XPath.OrderPage {
     private static CatalogPage catalogPage;
     private static List<ProductCard> visibleProductsCards;
 
@@ -45,25 +47,25 @@ public class OrderTest {
                 .chooseSize(size)
                 .chooseColor(color)
                 .submitAddToCart()
-                .timeout(3);
+                .timeoutByLocator(By.xpath(SUCCESS_ADDED_ITEM_CART));
 
         var cart = catalogPage
                 .openCart()
-                .timeout(3);
+                .timeoutByLocator(By.xpath(ITEMS));
 
         var orderPage = cart
                 .proceedToCheckout()
-                .timeout(3)
+                .timeoutByLocator(By.xpath(EMAIL))
                 .fillForm(
                         email, firstName, lastName,
                         company, streetAddress, city, country, postalCode,
                         stateProvince, phoneNumber)
-                .timeout(4)
+                .timeoutByLocator(By.xpath(SHIPPING_METHOD))
                 .selectShippingMethod()
                 .nextPage()
-                .timeout(5)
+                .timeoutByLocator(By.xpath(PLACE_ORDER_BUTTON))
                 .placeOrder()
-                .timeout(4);
+                .timeoutByLocator(By.xpath(CONTINUE_SHOPPING_BUTTON));
 
         assertEquals("Thank you for your purchase!", orderPage.getThanksText(),
                 "Order placed thanks text didn't match");

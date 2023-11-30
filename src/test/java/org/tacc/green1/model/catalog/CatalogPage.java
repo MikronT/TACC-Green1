@@ -43,6 +43,7 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
                 .until(ExpectedConditions.visibilityOf(limiterDropdown));
     }
 
+
     public CatalogPage showMaxProductsPerPage() {
         waitForAjax();
 
