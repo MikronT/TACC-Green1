@@ -2,7 +2,7 @@ package org.tacc.green1.model.catalog;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
@@ -64,6 +64,16 @@ public class ProductReviewsTab extends Modal<ProductReviewsTab> implements XPath
     public ProductReviewsTab fillReview(String review) {
         reviewInput.sendKeys(review);
         return this;
+    }
+
+    public ProductReviewsTab fillForm(int rating,
+                                      String nickName,
+                                      String summary,
+                                      String review) {
+        return fillRatingBar(rating)
+                .fillNickName(nickName)
+                .fillSummary(summary)
+                .fillReview(review);
     }
 
     public ProductReviewsTab submit() {

@@ -1,8 +1,9 @@
 package org.tacc.green1.model.cart;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
@@ -30,6 +31,11 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
 
     @FindBy(xpath = CONFIRM_DELETE_BUTTON)
     private WebElement confirmDeleteButton;
+
+
+    public CartItem(SearchContext context) {
+        super(context);
+    }
 
 
     public CartItem deleteItemFromCart() {

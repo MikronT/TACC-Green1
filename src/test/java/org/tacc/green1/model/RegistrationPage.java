@@ -2,11 +2,12 @@ package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.tacc.green1.model.account.AccountPage;
+import org.tacc.green1.model.base.Page;
+import org.tacc.green1.util.TestClient;
 
 
-public class RegistrationPage extends Modal<RegistrationPage> {
+public class RegistrationPage extends Page<RegistrationPage> {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 
@@ -26,33 +27,46 @@ public class RegistrationPage extends Modal<RegistrationPage> {
     private WebElement createAccountButton;
 
 
-    public RegistrationPage fillFirstName(String firstName) {
+    private void fillFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
-        return this;
+        TestClient.setFirstName(firstName);
     }
 
-    public RegistrationPage fillLastName(String lastName) {
+    private void fillLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
-        return this;
+        TestClient.setLastName(lastName);
     }
 
-    public RegistrationPage fillEmail(String email) {
+    private void fillEmail(String email) {
         emailAddressInput.sendKeys(email);
-        return this;
+        TestClient.setEmail(email);
     }
 
-    public RegistrationPage fillPassword(String password) {
+    private void fillPassword(String password) {
         passwordInput.sendKeys(password);
-        return this;
+        TestClient.setPassword(password);
     }
 
-    public RegistrationPage fillConfirmPassword(String password) {
+    private void fillConfirmPassword(String password) {
         confirmPasswordInput.sendKeys(password);
+    }
+
+    public RegistrationPage fillForm(String firstName,
+                                     String lastName,
+                                     String email,
+                                     String password,
+                                     String confirmPassword) {
+        fillFirstName(firstName);
+        fillLastName(lastName);
+        fillEmail(email);
+        fillPassword(password);
+        fillConfirmPassword(confirmPassword);
         return this;
     }
 
     public AccountPage submit() {
         createAccountButton.click();
-        return PageFactory.initElements(modalDriver, AccountPage.class);
+        TestClient.save();
+        return new AccountPage();
     }
 }

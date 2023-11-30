@@ -2,21 +2,26 @@ package org.tacc.green1.model;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.tacc.green1.model.base.Page;
 import org.tacc.green1.model.catalog.CatalogPage;
 
 
-public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
+public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
     @FindBy(id = "name")
     private WebElement productNameInput;
+
     @FindBy(id = "sku")
     private WebElement productSKUInput;
+
     @FindBy(id = "description")
     private WebElement productDescriptionInput;
+
     @FindBy(id = "short_description")
     private WebElement productShortDescriptionInput;
+
     @FindBy(id = "price")
     private WebElement productPriceFromInput;
+
     @FindBy(id = "price_to")
     private WebElement productPriceToInput;
 
@@ -49,14 +54,28 @@ public class AdvancedSearchPage extends Modal<AdvancedSearchPage> {
         return this;
     }
 
-    public AdvancedSearchPage fillProductPriceTo(String price_to) {
-        productPriceToInput.sendKeys(price_to);
+    public AdvancedSearchPage fillProductPriceTo(String price) {
+        productPriceToInput.sendKeys(price);
         return this;
+    }
+
+    public AdvancedSearchPage fillForm(String productName,
+                                       String sku,
+                                       String description,
+                                       String shortDescription,
+                                       String fromPrice,
+                                       String toPrice) {
+        return fillProductName(productName)
+                .fillProductSKU(sku)
+                .fillProductDescription(description)
+                .fillProductShortDescription(shortDescription)
+                .fillProductPriceFrom(fromPrice)
+                .fillProductPriceTo(toPrice);
     }
 
     public CatalogPage submit() {
         submitButton.click();
         timeout(3);
-        return PageFactory.initElements(modalDriver, CatalogPage.class);
+        return new CatalogPage();
     }
 }

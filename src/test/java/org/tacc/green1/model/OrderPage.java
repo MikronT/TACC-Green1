@@ -1,43 +1,55 @@
 package org.tacc.green1.model;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.tacc.green1.model.base.Page;
 import org.tacc.green1.util.XPath;
 
-import java.util.List;
 
-
-public class OrderPage extends Modal<OrderPage> implements XPath.OrderPage {
-    @FindBy(xpath=EMAIL)
+public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
+    @FindBy(xpath = EMAIL)
     private WebElement email;
-    @FindBy(xpath=FIRST_NAME)
+
+    @FindBy(xpath = FIRST_NAME)
     private WebElement firstName;
-    @FindBy(xpath=LAST_NAME)
+
+    @FindBy(xpath = LAST_NAME)
     private WebElement lastName;
-    @FindBy(xpath=COMPANY)
+
+    @FindBy(xpath = COMPANY)
     private WebElement company;
-    @FindBy(xpath=STREET_ADDRESS)
-    private WebElement streetAdress;
-    @FindBy(xpath=CITY)
+
+    @FindBy(xpath = STREET_ADDRESS)
+    private WebElement streetAddress;
+
+    @FindBy(xpath = CITY)
     private WebElement city;
-    @FindBy(xpath=STATE_PROVINCE)
+
+    @FindBy(xpath = STATE_PROVINCE)
     private WebElement stateProvince;
-    @FindBy(xpath=POSTAL_CODE)
+
+    @FindBy(xpath = POSTAL_CODE)
     private WebElement postalCode;
-    @FindBy(xpath=COUNTRY)
-    private WebElement Country;
-    @FindBy(xpath=PHONE_NUMBER)
-    private WebElement PhoneNumber;
-    @FindBy(xpath=SHIPPING_METHOD)
-    private WebElement ShippingMethod;
-    @FindBy(xpath=NEXT_BUTTON)
+
+    @FindBy(xpath = COUNTRY)
+    private WebElement country;
+
+    @FindBy(xpath = PHONE_NUMBER)
+    private WebElement phoneNumber;
+
+    @FindBy(xpath = SHIPPING_METHOD)
+    private WebElement shippingMethod;
+
+    @FindBy(xpath = NEXT_BUTTON)
     private WebElement nextButton;
-    @FindBy(xpath=PLACE_ORDER_BUTTON)
+
+    @FindBy(xpath = PLACE_ORDER_BUTTON)
     private WebElement placeOrderButton;
 
-    @FindBy(xpath=THANKS_TEXT)
-    private static WebElement thanksText;
+    @FindBy(xpath = THANKS_TEXT)
+    private WebElement thanksText;
+
+
     public OrderPage enterEmail(String emailAddress) {
         email.sendKeys(emailAddress);
         return this;
@@ -59,7 +71,7 @@ public class OrderPage extends Modal<OrderPage> implements XPath.OrderPage {
     }
 
     public OrderPage enterStreetAddress(String streetAddressValue) {
-        streetAdress.sendKeys(streetAddressValue);
+        streetAddress.sendKeys(streetAddressValue);
         return this;
     }
 
@@ -79,18 +91,36 @@ public class OrderPage extends Modal<OrderPage> implements XPath.OrderPage {
     }
 
     public OrderPage selectCountry(String countryValue) {
-        Country.click();
+        //TODO 29.11.2023: Pick specified country
+        country.click();
         return this;
     }
 
     public OrderPage enterPhoneNumber(String phoneNumberValue) {
-        PhoneNumber.sendKeys(phoneNumberValue);
+        phoneNumber.sendKeys(phoneNumberValue);
         return this;
     }
+
+    public OrderPage fillForm(String email, String firstName, String lastName,
+                              String company, String streetAddress, String city, String country, String postalCode,
+                              String stateProvince, String phoneNumber) {
+        return enterEmail(email)
+                .enterFirstName(firstName)
+                .enterLastName(lastName)
+                .enterCompany(company)
+                .enterStreetAddress(streetAddress)
+                .enterCity(city)
+                .selectCountry(country)
+                .enterPostalCode(postalCode)
+                .enterStateProvince(stateProvince)
+                .enterPhoneNumber(phoneNumber);
+    }
+
     public OrderPage selectShippingMethod() {
-        ShippingMethod.click();
+        shippingMethod.click();
         return this;
     }
+
     public OrderPage nextPage() {
         nextButton.click();
         return this;
@@ -101,7 +131,8 @@ public class OrderPage extends Modal<OrderPage> implements XPath.OrderPage {
         return this;
     }
 
-    public static String getThanksText() {
+
+    public String getThanksText() {
         return thanksText.getText();
     }
 }

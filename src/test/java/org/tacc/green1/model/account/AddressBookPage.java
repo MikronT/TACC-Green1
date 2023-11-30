@@ -3,11 +3,11 @@ package org.tacc.green1.model.account;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.tacc.green1.model.Modal;
+import org.tacc.green1.model.base.Page;
 import org.tacc.green1.util.XPath;
 
 
-public class AddressBookPage extends Modal<AddressBookPage> implements XPath.AddressBookPage {
+public class AddressBookPage extends Page<AddressBookPage> implements XPath.AddressBookPage {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 
@@ -106,6 +106,31 @@ public class AddressBookPage extends Modal<AddressBookPage> implements XPath.Add
         var countrySelect = new Select(countryDropdown);
         countrySelect.selectByVisibleText(country);
         return this;
+    }
+
+    public AddressBookPage fillForm(String firstName,
+                                    String lastName,
+                                    String company,
+                                    String telephone,
+                                    String street1,
+                                    String street2,
+                                    String street3,
+                                    String city,
+                                    String region,
+                                    String zip,
+                                    String country) {
+        return fillFirstName(firstName)
+                .fillLastName(lastName)
+                .fillCompany(company)
+                .fillTelephone(telephone)
+                .fillStreet1(street1)
+                .fillStreet2(street2)
+                .fillStreet3(street3)
+                .fillCity(city)
+                //Fill country first as the region select depends on the country chosen
+                .selectCountry(country)
+                .selectRegion(region)
+                .fillZip(zip);
     }
 
     public AddressBookPage submit() {
