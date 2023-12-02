@@ -13,6 +13,8 @@ public class MenCategoryPopup extends Modal<MenCategoryPopup> implements XPath.H
 
 
     public CatalogPage gotoMenBottomsCatalogPage() {
+        timeoutByVisibility(menBottomsCategoryItem);
+
         menBottomsCategoryItem.click();
         return new CatalogPage();
     }

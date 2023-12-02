@@ -53,8 +53,7 @@ public class ProductReviewsTest {
                 .fillNickName(nickName)
                 .fillSummary(summary)
                 .fillReview(review)
-                .submit()
-                .timeout(4);
+                .submit();
 
         assertEquals(expectedToPass, productReviewsTab.isReviewSubmitted(),
                 "Posting the review didn't go as expected");

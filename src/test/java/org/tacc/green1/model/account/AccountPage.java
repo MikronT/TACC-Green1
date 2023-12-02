@@ -14,6 +14,10 @@ public class AccountPage extends Page<AccountPage> implements XPath.AccountPage 
     private WebElement welcomeTextElement;
 
 
+    public AccountPage() {
+        timeoutByVisibility(contactInfoTextElement);
+    }
+
 
     public String getAccountContactInfoText() {
         return contactInfoTextElement.getText();

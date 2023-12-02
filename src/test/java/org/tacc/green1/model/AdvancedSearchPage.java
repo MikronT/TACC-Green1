@@ -61,7 +61,6 @@ public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
 
     public CatalogPage submit() {
         submitButton.click();
-        timeout(3);
         return new CatalogPage();
     }
 }

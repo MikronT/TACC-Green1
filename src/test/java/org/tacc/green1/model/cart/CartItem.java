@@ -38,19 +38,10 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
     }
 
 
-    public CartItem deleteItemFromCart() {
-        deleteButton.click();
-        return this;
-    }
-
     public CartItem setQuantity(int quantity) {
         quantityInput.clear();
         quantityInput.sendKeys(quantity + "");
         return this;
-    }
-
-    public String getQuantity() {
-        return quantityInput.getText();
     }
 
     public CartItem toggleSeeDetails() {
@@ -58,25 +49,39 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
         return this;
     }
 
-    public String getOrderSize() {
-        return sizeText.getText();
-    }
-
-    public String getOrderColor() {
-        return colorText.getText();
-    }
-
     public CartItem updateProduct() {
         updateProductButton.click();
         return this;
     }
 
-    public String getPrice() {
-        return priceText.getText();
+    public CartItem deleteItemFromCart() {
+        deleteButton.click();
+
+        timeoutByVisibility(confirmDeleteButton);
+        return this;
     }
 
     public CartItem confirmDelete() {
         confirmDeleteButton.click();
+
+        timeout(1);
         return this;
+    }
+
+
+    public String getQuantity() {
+        return quantityInput.getText();
+    }
+
+    public String getSize() {
+        return sizeText.getText();
+    }
+
+    public String getColor() {
+        return colorText.getText();
+    }
+
+    public String getPrice() {
+        return priceText.getText();
     }
 }

@@ -8,6 +8,9 @@ import org.tacc.green1.util.XPath;
 
 
 public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
+    @FindBy(xpath = OPTION_WOMEN_ARROW)
+    private WebElement womenCategoryArrow;
+
     @FindBy(xpath = OPTION_WOMEN_LINK)
     private WebElement womenCategoryItem;
 
@@ -15,7 +18,14 @@ public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
     private WebElement menCategoryItem;
 
 
+    public HeaderMenu() {
+        timeoutByVisibility(womenCategoryArrow);
+    }
+
+
     public WomenCategoryPopup openWomenCategoryPopup() {
+        timeoutByVisibility(womenCategoryItem);
+
         Actor.getActions()
                 .moveToElement(womenCategoryItem)
                 .build()
@@ -24,6 +34,8 @@ public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
     }
 
     public MenCategoryPopup openMenCategoryPopup() {
+        timeoutByVisibility(menCategoryItem);
+
         Actor.getActions()
                 .moveToElement(menCategoryItem)
                 .build()

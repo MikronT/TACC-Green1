@@ -66,7 +66,6 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
     }
 
     public HeaderMenu gotoMainMenu() {
-        timeout(1);
         return new HeaderMenu();
     }
 

@@ -1,5 +1,6 @@
 package org.tacc.green1.model.catalog;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Modal;
@@ -73,12 +74,15 @@ public class ProductReviewsTab extends Modal<ProductReviewsTab> implements XPath
 
     public boolean isReviewSubmitted() {
         try {
-            var message = reviewSubmittedMessage.getText();
-            //Manual success message check
-            return message.contains("You submitted ");
-        } catch (Exception ignored) {
+            timeoutByVisibility(reviewSubmittedMessage);
+        } catch (TimeoutException ignored) {
             //Element not found, no success message
             return false;
         }
+
+        var message = reviewSubmittedMessage.getText();
+        //Manual success message check
+        return message.contains("You submitted ");
     }
+    //TODO 02.12.2023: Add method isReviewNotSubmitted and check for error messages to appear
 }

@@ -13,6 +13,8 @@ public class WomenCategoryPopup extends Modal<WomenCategoryPopup> implements XPa
 
 
     public CatalogPage gotoWomenTopsCatalogPage() {
+        timeoutByVisibility(womenTopsCategoryItem);
+
         womenTopsCategoryItem.click();
         return new CatalogPage();
     }

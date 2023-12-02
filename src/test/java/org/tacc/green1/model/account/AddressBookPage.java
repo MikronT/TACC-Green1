@@ -44,6 +44,9 @@ public class AddressBookPage extends Page<AddressBookPage> implements XPath.Addr
     @FindBy(xpath = BUTTON_SUBMIT)
     private WebElement submitButton;
 
+    @FindBy(xpath = MESSAGE_ADDRESS_CHANGED)
+    private WebElement addressChangedMessage;
+
     @FindBy(xpath = ADDRESS_BLOCK_BILLING)
     private WebElement billingAddressBlock;
 
@@ -110,6 +113,8 @@ public class AddressBookPage extends Page<AddressBookPage> implements XPath.Addr
 
     public AddressBookPage submit() {
         submitButton.click();
+
+        timeoutByVisibility(addressChangedMessage);
         return this;
     }
 

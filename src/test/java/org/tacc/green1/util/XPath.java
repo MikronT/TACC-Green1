@@ -18,6 +18,7 @@ public interface XPath {
         String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
         String OPTION_WOMEN = _OPTION + "/li[2]";
         String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
+        String OPTION_WOMEN_ARROW = OPTION_WOMEN_LINK + "/span[1]";
         String OPTION_WOMEN_TOPS = OPTION_WOMEN + "/ul/li[1]";
         String OPTION_MEN = _OPTION + "/li[3]";
         String OPTION_MEN_LINK = OPTION_MEN + "/a";
@@ -50,7 +51,7 @@ public interface XPath {
         String _ADDRESS_BLOCK = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]";
         String ADDRESS_BLOCK_BILLING = _ADDRESS_BLOCK + "/div[1]/div[1]/address";
         String ADDRESS_BLOCK_SHIPPING = _ADDRESS_BLOCK + "/div[2]/div[1]/address";
-        String ADDRESS_SUCCESS_CHANGE_TEXT = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div";
+        String MESSAGE_ADDRESS_CHANGED = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div";
     }
 
 
@@ -58,6 +59,7 @@ public interface XPath {
         String DROPDOWN_LIMITER = "//*[@class=\"toolbar toolbar-products\"][2]/div[3]/div/select";
         String FILTER_DROPDOWNS = "//*[@id=\"narrow-by-list\"]/div";
         String PRODUCT_CARDS = "//*[@class=\"products list items product-items\"]/li";
+        String MESSAGE_ITEM_ADDED = "//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div";
     }
 
 
@@ -81,8 +83,7 @@ public interface XPath {
         String ITEMS = "//*[@id=\"mini-cart\"]/li";
         String BUTTON_CHECKOUT = "//*[@id=\"top-cart-btn-checkout\"]";
         String ITEMS_COUNTER = "//span[@class='counter-label' and text()]";
-        String SUCCESS_ADDED_ITEM_CART = "//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div";
-        String EMPTY_CART_TEXT = "//*[@id=\"minicart-content-wrapper\"]/div[2]/strong";
+        String MESSAGE_EMPTY_CART_OR_RECENTLY_ADDED = "//*[@id=\"minicart-content-wrapper\"]/div[2]/strong";
     }
 
 
@@ -122,6 +123,6 @@ public interface XPath {
         String NEXT_BUTTON = "//*[@id=\"shipping-method-buttons-container\"]/div/button";
         String PLACE_ORDER_BUTTON = "//*[@id=\"checkout-payment-method-load\"]/div/div/div[2]/div[2]/div[4]/div/button";
         String THANKS_TEXT = "//*[@id=\"maincontent\"]/div[1]/h1/span";
-        String CONTINUE_SHOPPING_BUTTON = "//*[@id=\"maincontent\"]/div[3]/div/div[2]/div/div/a";
+        String BUTTON_CONTINUE_SHOPPING = "//*[@id=\"maincontent\"]/div[3]/div/div[2]/div/div/a";
     }
 }

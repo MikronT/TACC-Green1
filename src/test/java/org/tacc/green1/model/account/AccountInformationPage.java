@@ -37,6 +37,8 @@ public class AccountInformationPage extends Page<AccountInformationPage> {
     public AccountInformationPage toggleEmailCheckBox() {
         changeEmailCheckbox.click();
         isEmailToggled = true;
+
+        timeoutByVisibility(emailInput);
         return this;
     }
 
@@ -80,7 +82,6 @@ public class AccountInformationPage extends Page<AccountInformationPage> {
         return this;
     }
 
-    //TODO 25.11.2023: Refactor this method once again
     @SuppressWarnings("unchecked")
     public <T extends Page<T>> T submit() {
         saveButton.click();
