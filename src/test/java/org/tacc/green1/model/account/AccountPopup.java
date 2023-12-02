@@ -7,7 +7,7 @@ import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
-public class AccountPopup extends Modal<AccountPopup> implements XPath.AccountPopup {
+public class AccountPopup extends Modal implements XPath.AccountPopup {
     @FindBy(xpath = OPTION_MY_ACCOUNT)
     private WebElement myAccountOption;
 

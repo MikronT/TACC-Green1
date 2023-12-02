@@ -7,7 +7,7 @@ import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
-public class ProductReviewsTab extends Modal<ProductReviewsTab> implements XPath.ProductReviewModal {
+public class ProductReviewsTab extends Modal implements XPath.ProductReviewModal {
     @FindBy(id = "Rating_1_label")
     private WebElement ratingBar_star1;
 

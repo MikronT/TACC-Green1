@@ -14,7 +14,7 @@ import org.tacc.green1.model.menu.HeaderMenu;
 import org.tacc.green1.util.XPath;
 
 
-public abstract class Page<T> extends Modal<T> implements XPath.Page {
+public abstract class Page<T> extends Modal implements XPath.Page {
     private static final Logger LOG = LogManager.getLogger(Page.class);
 
     @FindBy(xpath = LINK_LOGO)

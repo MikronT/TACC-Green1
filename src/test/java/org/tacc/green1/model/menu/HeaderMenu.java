@@ -7,7 +7,7 @@ import org.tacc.green1.util.DriverManager;
 import org.tacc.green1.util.XPath;
 
 
-public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
+public class HeaderMenu extends Modal implements XPath.HeaderMenu {
     @FindBy(xpath = OPTION_WOMEN_ARROW)
     private WebElement womenCategoryArrow;
 

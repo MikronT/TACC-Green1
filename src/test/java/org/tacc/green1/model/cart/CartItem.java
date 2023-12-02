@@ -7,7 +7,7 @@ import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
-public class CartItem extends Modal<CartItem> implements XPath.CartItem {
+public class CartItem extends Modal implements XPath.CartItem {
     @FindBy(xpath = DELETE_BUTTON)
     private WebElement deleteButton;
 

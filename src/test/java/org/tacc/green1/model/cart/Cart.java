@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Cart extends Modal<Cart> implements XPath.Cart {
+public class Cart extends Modal implements XPath.Cart {
     @FindBy(xpath = BUTTON_CLOSE)
     private WebElement closeButton;
 

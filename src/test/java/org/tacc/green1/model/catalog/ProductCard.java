@@ -10,7 +10,7 @@ import org.tacc.green1.util.XPath;
 import java.util.List;
 
 
-public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard {
+public class ProductCard extends Modal implements XPath.ProductCard {
     @FindBy(xpath = LABEL_NAME)
     private WebElement titleLabel;
 

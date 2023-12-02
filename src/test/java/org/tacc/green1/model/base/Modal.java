@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public abstract class Modal<T> {
+public abstract class Modal {
     private static final Logger LOG = LogManager.getLogger(Modal.class);
 
     protected WebDriver driver;
@@ -36,12 +36,10 @@ public abstract class Modal<T> {
     }
 
 
-    //TODO 01.12.2023: Get rid of generic T return value
-    @SuppressWarnings("unchecked")
-    public T timeoutByVisibility(WebElement... elements) {
+    public void timeoutByVisibility(WebElement... elements) {
         if (elements.length == 0) {
             LOG.debug("No elements to wait for");
-            return (T) this;
+            return;
         }
 
         Wait<WebDriver> wait = new FluentWait<>(driver)
@@ -51,24 +49,21 @@ public abstract class Modal<T> {
 
         LOG.debug("Waiting for elements: " + Arrays.toString(elements));
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
-        return (T) this;
     }
 
-    public T timeoutByVisibility(List<WebElement> elements) {
-        return timeoutByVisibility(elements.toArray(new WebElement[0]));
+    public void timeoutByVisibility(List<WebElement> elements) {
+        timeoutByVisibility(elements.toArray(new WebElement[0]));
     }
 
 
     //TODO 28.11.2023: Get rid of this piece of garbage
     @Deprecated
-    @SuppressWarnings({"unchecked", "DeprecatedIsStillUsed"})
-    public T timeout(int seconds) {
+    @SuppressWarnings({"DeprecatedIsStillUsed"})
+    public void timeout(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-        return (T) this;
     }
 }
