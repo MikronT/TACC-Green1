@@ -28,7 +28,6 @@ public class AccountPage extends Page<AccountPage> implements XPath.AccountPage 
     }
 
     public AccountSidebar gotoAccountSidebar() {
-        timeout(1);
         return new AccountSidebar();
     }
 }

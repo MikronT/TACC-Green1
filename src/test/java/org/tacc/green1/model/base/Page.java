@@ -95,7 +95,9 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
 
 
     public boolean isClientLoggedIn() {
+        //Hardcoded timeout
         timeout(1);
+
         try {
             var message = welcomeAccountLink.getText();
             //Manual welcome message check
