@@ -20,7 +20,7 @@ public class DeleteProductFromCartTest {
         var mainPage = TestClient.openBrowser();
 
         catalogPage = mainPage
-                .gotoMainMenu()
+                .gotoHeaderMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 

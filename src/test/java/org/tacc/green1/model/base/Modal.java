@@ -35,13 +35,9 @@ public abstract class Modal<T> {
 
 
     //TODO 01.12.2023: Get rid of generic T return value
-    public T timeoutByVisibility(WebElement... elements) {
-        return timeoutByVisibility(Arrays.stream(elements).toList());
-    }
-
     @SuppressWarnings("unchecked")
-    public T timeoutByVisibility(List<WebElement> elements) {
-        if (elements.isEmpty()) {
+    public T timeoutByVisibility(WebElement... elements) {
+        if (elements.length == 0) {
             LOG.debug("No elements to wait for");
             return (T) this;
         }
@@ -51,10 +47,15 @@ public abstract class Modal<T> {
                 .pollingEvery(Duration.ofMillis(250))
                 .ignoring(NoSuchElementException.class);
 
-        LOG.debug("Waiting for elements: " + elements);
+        LOG.debug("Waiting for elements: " + Arrays.toString(elements));
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
         return (T) this;
     }
+
+    public T timeoutByVisibility(List<WebElement> elements) {
+        return timeoutByVisibility(elements.toArray(new WebElement[0]));
+    }
+
 
     //TODO 28.11.2023: Get rid of this piece of garbage
     @Deprecated

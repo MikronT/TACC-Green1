@@ -27,7 +27,7 @@ public class ProductReviewsTest {
     @BeforeEach
     public void prepare() {
         var catalogPage = page
-                .gotoMainMenu()
+                .gotoHeaderMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 

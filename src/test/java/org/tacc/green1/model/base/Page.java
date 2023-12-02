@@ -65,7 +65,7 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
         return new AccountPopup();
     }
 
-    public HeaderMenu gotoMainMenu() {
+    public HeaderMenu gotoHeaderMenu() {
         return new HeaderMenu();
     }
 

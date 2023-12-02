@@ -23,7 +23,7 @@ public class OrderTest {
         var mainPage = TestClient.openBrowser();
 
         catalogPage = mainPage
-                .gotoMainMenu()
+                .gotoHeaderMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 
