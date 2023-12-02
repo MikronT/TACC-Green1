@@ -11,6 +11,8 @@ public interface XPath {
 
         String _FOOTER = "/html/body/div[2]/footer";
         String LINK_ADVANCED_SEARCH = _FOOTER + "/div/ul/li[3]/a";
+
+        String BUTTON_CONFIRM_DELETE = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
     }
 
 
@@ -56,7 +58,7 @@ public interface XPath {
 
 
     interface CatalogPage {
-        String DROPDOWN_LIMITER = "//*[@class=\"toolbar toolbar-products\"][2]/div[3]/div/select";
+        String DROPDOWN_LIMITER = "//*[@class=\"toolbar toolbar-products\"][2]/div[@class=\"field limiter\"]/div/select";
         String FILTER_DROPDOWNS = "//*[@id=\"narrow-by-list\"]/div";
         String PRODUCT_CARDS = "//*[@class=\"products list items product-items\"]/li";
         String MESSAGE_ITEM_ADDED = "//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div";
@@ -95,7 +97,6 @@ public interface XPath {
         String SIZE_TEXT = "div/div/div[1]/div/dl/dd[1]/span";
         String COLOR_TEXT = "div/div/div[1]/div/dl/dd[2]/span";
         String PRICE_TEXT = "div/div/div[2]/div[1]/span/span/span/span";
-        String CONFIRM_DELETE_BUTTON = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
     }
 
 

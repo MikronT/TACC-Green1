@@ -27,15 +27,7 @@ public class Cart extends Modal<Cart> implements XPath.Cart {
     private WebElement checkoutButton;
 
 
-    public Cart() {
-        timeoutByVisibility(cartItems);
-    }
-
-
     public List<CartItem> getVisibleCartItems() {
-        //TODO 01.12.2023: May fall cause recently added message not always appears
-        timeoutByVisibility(emptyCartOrRecentlyAddedMessage);
-
         return cartItems.stream()
                 .map(CartItem::new)
                 .collect(Collectors.toList());

@@ -27,9 +27,6 @@ public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard
     @FindBy(xpath = PRODUCT_ADD_BUTTON_CART)
     private WebElement productAddButtonCart;
 
-    @FindBy(xpath = XPath.CatalogPage.MESSAGE_ITEM_ADDED)
-    private WebElement itemAddedMessage;
-
 
     public ProductCard(SearchContext context) {
         super(context);
@@ -64,7 +61,8 @@ public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard
     public ProductCard submitAddToCart() {
         productAddButtonCart.click();
 
-        timeoutByVisibility(itemAddedMessage);
+        //Hardcoded timeout
+        timeout(3);
         return this;
     }
 

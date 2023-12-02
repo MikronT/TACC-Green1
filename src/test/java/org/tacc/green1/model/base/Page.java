@@ -38,6 +38,9 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
     @FindBy(xpath = LINK_ADVANCED_SEARCH)
     private WebElement advancedSearchLink;
 
+    @FindBy(xpath = BUTTON_CONFIRM_DELETE)
+    private WebElement confirmDeleteButton;
+
 
     public MainPage gotoMainPage() {
         logoLink.click();
@@ -56,7 +59,7 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
 
     public AccountPopup openAccountPopup() {
         if (!isClientLoggedIn()) {
-            String message = "No user is not logged in, check out your method call order";
+            String message = "No user is logged in, check out your method call order";
             LOG.error(message);
             throw new IllegalStateException(message);
         }
@@ -77,6 +80,17 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
     public AdvancedSearchPage gotoAdvancedSearchPage() {
         advancedSearchLink.click();
         return new AdvancedSearchPage();
+    }
+
+    @SuppressWarnings("unchecked")
+    public T confirmDelete() {
+        timeoutByVisibility(confirmDeleteButton);
+
+        confirmDeleteButton.click();
+
+        //Hardcoded timeout
+        timeout(3);
+        return (T) this;
     }
 
 

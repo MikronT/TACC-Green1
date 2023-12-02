@@ -38,8 +38,9 @@ public class DeleteProductFromCartTest {
         Cart cart = catalogPage.openCart();
 
         CartItem cartItem = cart.getVisibleCartItems().get(0);
-        cartItem.deleteItemFromCart()
-                .confirmDelete();
+        cartItem.deleteItemFromCart();
+
+        catalogPage.confirmDelete();
 
         assertEquals(0, cart.getVisibleCartItems().size(),
                 "Couldn't delete product from the cart");

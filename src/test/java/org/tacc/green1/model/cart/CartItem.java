@@ -29,9 +29,6 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
     @FindBy(xpath = PRICE_TEXT)
     private WebElement priceText;
 
-    @FindBy(xpath = CONFIRM_DELETE_BUTTON)
-    private WebElement confirmDeleteButton;
-
 
     public CartItem(SearchContext context) {
         super(context);
@@ -56,15 +53,6 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
 
     public CartItem deleteItemFromCart() {
         deleteButton.click();
-
-        timeoutByVisibility(confirmDeleteButton);
-        return this;
-    }
-
-    public CartItem confirmDelete() {
-        confirmDeleteButton.click();
-
-        timeout(1);
         return this;
     }
 

@@ -39,8 +39,6 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
 
 
     public CatalogPage showMaxProductsPerPage() {
-
-
         var limiterSelect = new Select(limiterDropdown);
 
         int optionsCount = limiterSelect.getOptions().size();
