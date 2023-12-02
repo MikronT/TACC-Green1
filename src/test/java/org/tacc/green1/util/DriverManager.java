@@ -6,11 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 
 
 public class DriverManager {
     private static final Logger LOG = LogManager.getLogger(DriverManager.class);
+
+    private static Actions actions;
     private static WebDriver driver;
 
 
@@ -32,6 +35,7 @@ public class DriverManager {
 
     public static void setDriverType(String driverType) {
         driver = initDriver(driverType);
+        actions = null;
     }
 
     public static WebDriver getDriver() {
@@ -44,6 +48,12 @@ public class DriverManager {
             setDriverType(driverType);
         }
         return driver;
+    }
+
+    public static Actions getActions() {
+        if (actions == null)
+            actions = new Actions(driver);
+        return actions;
     }
 
 

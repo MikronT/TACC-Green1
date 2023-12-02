@@ -21,9 +21,11 @@ import java.util.List;
 public abstract class Modal<T> {
     private static final Logger LOG = LogManager.getLogger(Modal.class);
 
+    protected WebDriver driver;
+
 
     protected Modal() {
-        var driver = DriverManager.getDriver();
+        driver = DriverManager.getDriver();
         var elementLocatorFactory = new AjaxElementLocatorFactory(driver, 5);
         PageFactory.initElements(elementLocatorFactory, this);
     }
@@ -42,7 +44,7 @@ public abstract class Modal<T> {
             return (T) this;
         }
 
-        Wait<WebDriver> wait = new FluentWait<>(DriverManager.getDriver())
+        Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(7))
                 .pollingEvery(Duration.ofMillis(250))
                 .ignoring(NoSuchElementException.class);

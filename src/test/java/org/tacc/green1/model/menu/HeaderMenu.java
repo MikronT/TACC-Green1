@@ -3,7 +3,7 @@ package org.tacc.green1.model.menu;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Modal;
-import org.tacc.green1.util.Actor;
+import org.tacc.green1.util.DriverManager;
 import org.tacc.green1.util.XPath;
 
 
@@ -27,7 +27,7 @@ public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
     public WomenCategoryPopup openWomenCategoryPopup() {
         timeoutByVisibility(womenCategoryItem);
 
-        Actor.getActions()
+        DriverManager.getActions()
                 .moveToElement(womenCategoryItem)
                 .build()
                 .perform();
@@ -37,7 +37,7 @@ public class HeaderMenu extends Modal<HeaderMenu> implements XPath.HeaderMenu {
     public MenCategoryPopup openMenCategoryPopup() {
         timeoutByVisibility(menCategoryItem);
 
-        Actor.getActions()
+        DriverManager.getActions()
                 .moveToElement(menCategoryItem)
                 .build()
                 .perform();
