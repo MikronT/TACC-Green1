@@ -124,7 +124,7 @@ public class TestClient {
         String url = PropertiesReader.initLocal("website.properties")
                 .getProperty("url");
 
-        return new MainPage().open(url);
+        return MainPage.open(url);
     }
 
     public void login(Page<?> page) {
