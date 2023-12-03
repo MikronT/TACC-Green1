@@ -88,14 +88,12 @@ public abstract class Page<T> extends Modal implements XPath.Page {
 
         confirmDeleteButton.click();
 
-        //Hardcoded timeout
         timeout(3);
         return (T) this;
     }
 
 
     public boolean isClientLoggedIn() {
-        //Hardcoded timeout
         timeout(1);
 
         try {

@@ -56,7 +56,6 @@ public abstract class Modal {
     }
 
 
-    //TODO 28.11.2023: Get rid of this piece of garbage
     @Deprecated
     public void timeout(int seconds) {
         try {

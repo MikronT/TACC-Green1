@@ -61,7 +61,6 @@ public class ProductCard extends Modal implements XPath.ProductCard {
     public ProductCard submitAddToCart() {
         productAddButtonCart.click();
 
-        //Hardcoded timeout
         timeout(3);
         return this;
     }
