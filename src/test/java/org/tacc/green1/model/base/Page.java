@@ -2,6 +2,7 @@ package org.tacc.green1.model.base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.AdvancedSearchPage;
@@ -94,16 +95,16 @@ public abstract class Page<T> extends Modal implements XPath.Page {
 
 
     public boolean isClientLoggedIn() {
-        timeout(1);
-
         try {
-            var message = welcomeAccountLink.getText();
-            //Manual welcome message check
-            return message.contains("Welcome, ");
-        } catch (Exception e) {
+            timeoutByVisibility(welcomeAccountLink);
+        } catch (TimeoutException e) {
             //Element not found, not logged in
             LOG.warn("The user is not logged in", e);
             return false;
         }
+
+        var message = welcomeAccountLink.getText();
+        //Manual welcome message check
+        return message.contains("Welcome, ");
     }
 }
