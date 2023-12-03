@@ -22,10 +22,11 @@ public class UpdateInfoAccountTest implements XPath.AccountPage {
 
     @BeforeAll
     public static void initClient() {
-        var mainPage = TestClient.openBrowserAndLogin();
+        var testClient = TestClient.pickAnySavedUser();
+        var mainPage = TestClient.openBrowserAndLogin(testClient);
 
-        email = TestClient.getEmail();
-        password = TestClient.getPassword();
+        email = testClient.getEmail();
+        password = testClient.getPassword();
 
         accountPage = mainPage
                 .openAccountPopup()

@@ -16,13 +16,13 @@ public class TestClient {
     private static final Logger LOG = LogManager.getLogger(TestClient.class);
     private static final Path FILE = new File("./src/test/resources/registrationData.csv").toPath();
 
-    private static String firstName = "Nikola";
-    private static String lastName = "Tesla";
-    private static String email = "nikola14.tesla10@gmail.com";
-    private static String password = "C>;:decH9y|E/@m;3p~F94&vp";
+    private String firstName = "Nikola";
+    private String lastName = "Tesla";
+    private String email = "nikola14.tesla10@gmail.com";
+    private String password = "C>;:decH9y|E/@m;3p~F94&vp";
 
 
-    public static void pickAnySavedUser() {
+    public static TestClient pickAnySavedUser() {
         var random = new Random();
 
         String line = "";
@@ -34,36 +34,41 @@ public class TestClient {
             LOG.warn("Unable to read file, returning empty data", e);
         }
 
-        var client = new TestClient();
+        var testClient = new TestClient();
 
         String[] words = line.split(",");
         if (words.length < 4)
-            return;
+            return testClient;
 
-        setFirstName(words[0]);
-        setLastName(words[1]);
-        setEmail(words[2]);
-        setPassword(words[3]);
+        return testClient
+                .setFirstName(words[0])
+                .setLastName(words[1])
+                .setEmail(words[2])
+                .setPassword(words[3]);
     }
 
-    public static void setFirstName(String value) {
+    public TestClient setFirstName(String value) {
         firstName = value;
+        return this;
     }
 
-    public static void setLastName(String value) {
+    public TestClient setLastName(String value) {
         lastName = value;
+        return this;
     }
 
-    public static void setEmail(String value) {
+    public TestClient setEmail(String value) {
         email = value;
+        return this;
     }
 
-    public static void setPassword(String value) {
+    public TestClient setPassword(String value) {
         password = value;
+        return this;
     }
 
 
-    public static void save() {
+    public void save() {
         var line = firstName + "," + lastName + "," + email + "," + password + System.lineSeparator();
 
         LOG.info("Saving user: " + line);
@@ -94,15 +99,16 @@ public class TestClient {
         return new MainPage().open(url);
     }
 
-    public static MainPage openBrowserAndLogin() {
-        pickAnySavedUser();
-
-        LOG.info("Logging in as " + firstName + ' ' + lastName + " with " + email);
+    public static MainPage openBrowserAndLogin(TestClient testClient) {
+        LOG.info("Logging in as "
+                + testClient.getFirstName() + ' '
+                + testClient.getLastName() + " with "
+                + testClient.getEmail());
 
         return openBrowser()
                 .gotoLoginPage()
-                .fillEmail(email)
-                .fillPassword(password)
+                .fillEmail(testClient.getEmail())
+                .fillPassword(testClient.getPassword())
                 .submit();
     }
 
@@ -140,11 +146,11 @@ public class TestClient {
         return lastName;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public static String getPassword() {
+    public String getPassword() {
         return password;
     }
 }

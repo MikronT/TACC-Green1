@@ -53,6 +53,13 @@ public class RegistrationTest {
 
         assertEquals("My Account", accountPage.getAccountPageWelcomeText(),
                 "Registration failed");
+
+        new TestClient()
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setEmail(email)
+                .setPassword(password)
+                .save();
     }
 
 
