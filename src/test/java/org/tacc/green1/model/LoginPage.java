@@ -33,6 +33,9 @@ public class LoginPage extends Page<LoginPage> {
 
     public MainPage submit() {
         submitButton.click();
+
+        //Hardcoded timeout
+        timeout(1);
         return new MainPage();
     }
 }
