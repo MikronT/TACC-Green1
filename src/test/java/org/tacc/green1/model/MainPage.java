@@ -9,9 +9,12 @@ public class MainPage extends Page<MainPage> {
     private static final Logger LOG = LogManager.getLogger(MainPage.class);
 
 
-    public MainPage open(String url) {
+    public static MainPage open(String url) {
+        var mainPage = new MainPage();
+
         LOG.info("Opening main page by URL: " + url);
-        driver.get(url);
-        return this;
+        mainPage.driver.get(url);
+
+        return mainPage;
     }
 }

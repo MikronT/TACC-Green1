@@ -84,5 +84,4 @@ public class ProductReviewsTab extends Modal implements XPath.ProductReviewModal
         //Manual success message check
         return message.contains("You submitted ");
     }
-    //TODO 02.12.2023: Add method isReviewNotSubmitted and check for error messages to appear
 }
