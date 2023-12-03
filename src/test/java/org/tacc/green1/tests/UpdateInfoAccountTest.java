@@ -1,6 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,12 +8,11 @@ import org.tacc.green1.model.LoginPage;
 import org.tacc.green1.model.account.AccountInformationPage;
 import org.tacc.green1.model.account.AccountPage;
 import org.tacc.green1.util.TestClient;
-import org.tacc.green1.util.XPath;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class UpdateInfoAccountTest implements XPath.AccountPage {
+public class UpdateInfoAccountTest extends BaseTest {
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
     private static String email, password;
@@ -22,10 +20,12 @@ public class UpdateInfoAccountTest implements XPath.AccountPage {
 
     @BeforeAll
     public static void initClient() {
-        var mainPage = TestClient.openBrowserAndLogin();
+        var mainPage = TestClient.openBrowser();
+        var testClient = TestClient.pickAnySavedKnownClient();
+        testClient.login(mainPage);
 
-        email = TestClient.getEmail();
-        password = TestClient.getPassword();
+        email = testClient.getEmail();
+        password = testClient.getPassword();
 
         accountPage = mainPage
                 .openAccountPopup()
@@ -63,11 +63,5 @@ public class UpdateInfoAccountTest implements XPath.AccountPage {
         String expectedResult = firstName + " " + lastName + '\n' + email;
         assertEquals(expectedResult, accountPage.getAccountContactInfoText(),
                 "Public info didn't update successfully");
-    }
-
-
-    @AfterAll
-    public static void finish() {
-        TestClient.quitBrowser();
     }
 }

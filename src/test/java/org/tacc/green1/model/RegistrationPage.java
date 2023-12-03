@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.account.AccountPage;
 import org.tacc.green1.model.base.Page;
-import org.tacc.green1.util.TestClient;
 
 
 public class RegistrationPage extends Page<RegistrationPage> {
@@ -29,25 +28,21 @@ public class RegistrationPage extends Page<RegistrationPage> {
 
     public RegistrationPage fillFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
-        TestClient.setFirstName(firstName);
         return this;
     }
 
     public RegistrationPage fillLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
-        TestClient.setLastName(lastName);
         return this;
     }
 
     public RegistrationPage fillEmail(String email) {
         emailAddressInput.sendKeys(email);
-        TestClient.setEmail(email);
         return this;
     }
 
     public RegistrationPage fillPassword(String password) {
         passwordInput.sendKeys(password);
-        TestClient.setPassword(password);
         return this;
     }
 
@@ -58,7 +53,6 @@ public class RegistrationPage extends Page<RegistrationPage> {
 
     public AccountPage submit() {
         createAccountButton.click();
-        TestClient.save();
         return new AccountPage();
     }
 }

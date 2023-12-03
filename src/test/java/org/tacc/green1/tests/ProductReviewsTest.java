@@ -1,6 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,7 +13,7 @@ import java.util.Random;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class ProductReviewsTest {
+public class ProductReviewsTest extends BaseTest {
     private static Page<?> page;
     private ProductReviewsTab productReviewsTab;
 
@@ -57,11 +56,5 @@ public class ProductReviewsTest {
 
         assertEquals(expectedToPass, productReviewsTab.isReviewSubmitted(),
                 "Posting the review didn't go as expected");
-    }
-
-
-    @AfterAll
-    public static void finish() {
-        TestClient.quitBrowser();
     }
 }
