@@ -19,6 +19,7 @@ public class HeaderMenu extends Modal implements XPath.HeaderMenu {
 
 
     public HeaderMenu() {
+        timeoutByVisibility(womenCategoryArrow);
         timeout(1);
     }
 

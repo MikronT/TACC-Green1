@@ -124,6 +124,7 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     }
 
     public OrderPage placeOrder() {
+        timeoutByVisibility(placeOrderButton);
         timeout(1);
 
         placeOrderButton.click();

@@ -56,7 +56,6 @@ public abstract class Modal {
     }
 
 
-    @Deprecated
     public void timeout(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
