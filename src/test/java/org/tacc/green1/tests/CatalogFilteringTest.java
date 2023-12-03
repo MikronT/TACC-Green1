@@ -25,7 +25,7 @@ public class CatalogFilteringTest {
     @BeforeEach
     public void prepare() {
         catalogPage = page
-                .gotoMainMenu()
+                .gotoHeaderMenu()
                 .openWomenCategoryPopup()
                 .gotoWomenTopsCatalogPage()
                 .showMaxProductsPerPage();

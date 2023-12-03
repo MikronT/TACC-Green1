@@ -17,6 +17,11 @@ public class LoginPage extends Page<LoginPage> {
     private WebElement submitButton;
 
 
+    public LoginPage() {
+        timeoutByVisibility(emailInput);
+    }
+
+
     public LoginPage fillEmail(String email) {
         emailInput.sendKeys(email);
         TestClient.setEmail(email);

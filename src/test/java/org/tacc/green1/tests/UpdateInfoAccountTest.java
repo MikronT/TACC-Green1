@@ -5,9 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.openqa.selenium.By;
 import org.tacc.green1.model.LoginPage;
-import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.account.AccountInformationPage;
 import org.tacc.green1.model.account.AccountPage;
 import org.tacc.green1.util.TestClient;
@@ -17,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class UpdateInfoAccountTest implements XPath.AccountPage {
-    private static MainPage mainPage;
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
     private static String email, password;
@@ -25,7 +22,7 @@ public class UpdateInfoAccountTest implements XPath.AccountPage {
 
     @BeforeAll
     public static void initClient() {
-        mainPage = TestClient.openBrowserAndLogin();
+        var mainPage = TestClient.openBrowserAndLogin();
 
         email = TestClient.getEmail();
         password = TestClient.getPassword();
@@ -51,20 +48,14 @@ public class UpdateInfoAccountTest implements XPath.AccountPage {
         var loginPage = accountInformationPage
                 .fillNameForm(firstName, lastName)
                 .toggleEmailCheckBox()
-                .timeoutByLocator(By.id("email"))
                 .fillEmail(email)
                 .fillPassword(password)
-                .<LoginPage>submit()
-                .timeoutByLocator(By.id("email"));
+                .<LoginPage>submit();
 
         loginPage
                 .fillEmail(email)
                 .fillPassword(password)
-                .submit()
-                .timeoutByLocator(By.xpath(CONTACT_INFORMATION_TEXT));
-
-        mainPage.openAccountPopup()
-                .gotoMyAccountPage();
+                .submit();
 
         assertEquals("My Account", accountPage.getAccountPageWelcomeText(),
                 "Logging in failed");

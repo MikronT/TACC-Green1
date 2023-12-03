@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Cart extends Modal<Cart> implements XPath.Cart {
+public class Cart extends Modal implements XPath.Cart {
     @FindBy(xpath = BUTTON_CLOSE)
     private WebElement closeButton;
 
-    @FindBy(id = "mini-cart")
-    private WebElement orderList;
+    @FindBy(xpath = MESSAGE_EMPTY_CART_OR_RECENTLY_ADDED)
+    private WebElement emptyCartOrRecentlyAddedMessage;
 
     @FindAll({
             @FindBy(xpath = ITEMS)
@@ -24,7 +24,7 @@ public class Cart extends Modal<Cart> implements XPath.Cart {
     private List<WebElement> cartItems;
 
     @FindBy(xpath = BUTTON_CHECKOUT)
-    private WebElement proceedToCheckoutButton;
+    private WebElement checkoutButton;
 
 
     public List<CartItem> getVisibleCartItems() {
@@ -34,7 +34,7 @@ public class Cart extends Modal<Cart> implements XPath.Cart {
     }
 
     public OrderPage proceedToCheckout() {
-        proceedToCheckoutButton.click();
+        checkoutButton.click();
         return new OrderPage();
     }
 }

@@ -7,7 +7,7 @@ import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
-public class CartItem extends Modal<CartItem> implements XPath.CartItem {
+public class CartItem extends Modal implements XPath.CartItem {
     @FindBy(xpath = DELETE_BUTTON)
     private WebElement deleteButton;
 
@@ -29,19 +29,11 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
     @FindBy(xpath = PRICE_TEXT)
     private WebElement priceText;
 
-    @FindBy(xpath = CONFIRM_DELETE_BUTTON)
-    private WebElement confirmDeleteButton;
-
 
     public CartItem(SearchContext context) {
         super(context);
     }
 
-
-    public CartItem deleteItemFromCart() {
-        deleteButton.click();
-        return this;
-    }
 
     public CartItem setQuantity(int quantity) {
         quantityInput.clear();
@@ -49,21 +41,9 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
         return this;
     }
 
-    public String getQuantity() {
-        return quantityInput.getText();
-    }
-
     public CartItem toggleSeeDetails() {
         seeDetailsButton.click();
         return this;
-    }
-
-    public String getOrderSize() {
-        return sizeText.getText();
-    }
-
-    public String getOrderColor() {
-        return colorText.getText();
     }
 
     public CartItem updateProduct() {
@@ -71,12 +51,25 @@ public class CartItem extends Modal<CartItem> implements XPath.CartItem {
         return this;
     }
 
-    public String getPrice() {
-        return priceText.getText();
+    public CartItem deleteItemFromCart() {
+        deleteButton.click();
+        return this;
     }
 
-    public CartItem confirmDelete() {
-        confirmDeleteButton.click();
-        return this;
+
+    public String getQuantity() {
+        return quantityInput.getText();
+    }
+
+    public String getSize() {
+        return sizeText.getText();
+    }
+
+    public String getColor() {
+        return colorText.getText();
+    }
+
+    public String getPrice() {
+        return priceText.getText();
     }
 }

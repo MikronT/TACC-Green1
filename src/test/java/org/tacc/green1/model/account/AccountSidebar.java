@@ -6,7 +6,7 @@ import org.tacc.green1.model.base.Modal;
 import org.tacc.green1.util.XPath;
 
 
-public class AccountSidebar extends Modal<AccountSidebar> implements XPath.AccountSidebar {
+public class AccountSidebar extends Modal implements XPath.AccountSidebar {
     @FindBy(xpath = LINK_ADDRESS_BOOK)
     private WebElement addressBookLink;
 

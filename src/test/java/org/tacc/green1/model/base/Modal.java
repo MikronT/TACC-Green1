@@ -2,25 +2,32 @@ package org.tacc.green1.model.base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.tacc.green1.util.DriverManager;
 
 import java.time.Duration;
-import java.util.NoSuchElementException;
+import java.util.Arrays;
+import java.util.List;
 
 
-public abstract class Modal<T> {
+public abstract class Modal {
     private static final Logger LOG = LogManager.getLogger(Modal.class);
+
+    protected WebDriver driver;
 
 
     protected Modal() {
-        this(DriverManager.getDriver());
+        driver = DriverManager.getDriver();
+        var elementLocatorFactory = new AjaxElementLocatorFactory(driver, 5);
+        PageFactory.initElements(elementLocatorFactory, this);
     }
 
     protected Modal(SearchContext context) {
@@ -29,27 +36,34 @@ public abstract class Modal<T> {
     }
 
 
-    //TODO 28.11.2023: Get rid of this piece of garbage
-    @SuppressWarnings("unchecked")
-    public T timeoutByLocator(By locator) {
-        Wait<WebDriver> wait = new FluentWait<>(DriverManager.getDriver())
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofSeconds(5))
-                .ignoring(NoSuchElementException.class);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    public void timeoutByVisibility(WebElement... elements) {
+        if (elements.length == 0) {
+            LOG.debug("No elements to wait for");
+            return;
+        }
 
-        return (T) this;
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(7))
+                .pollingEvery(Duration.ofMillis(250))
+                .ignoring(NoSuchElementException.class);
+
+        LOG.debug("Waiting for elements: " + Arrays.toString(elements));
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
+    public void timeoutByVisibility(List<WebElement> elements) {
+        timeoutByVisibility(elements.toArray(new WebElement[0]));
+    }
+
+
+    //TODO 28.11.2023: Get rid of this piece of garbage
     @Deprecated
-    @SuppressWarnings({"unchecked", "DeprecatedIsStillUsed"})
-    public T timeout(int seconds) {
+    @SuppressWarnings({"DeprecatedIsStillUsed"})
+    public void timeout(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-        return (T) this;
     }
 }

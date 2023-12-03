@@ -14,7 +14,7 @@ import org.tacc.green1.model.menu.HeaderMenu;
 import org.tacc.green1.util.XPath;
 
 
-public abstract class Page<T> extends Modal<T> implements XPath.Page {
+public abstract class Page<T> extends Modal implements XPath.Page {
     private static final Logger LOG = LogManager.getLogger(Page.class);
 
     @FindBy(xpath = LINK_LOGO)
@@ -38,6 +38,9 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
     @FindBy(xpath = LINK_ADVANCED_SEARCH)
     private WebElement advancedSearchLink;
 
+    @FindBy(xpath = BUTTON_CONFIRM_DELETE)
+    private WebElement confirmDeleteButton;
+
 
     public MainPage gotoMainPage() {
         logoLink.click();
@@ -56,7 +59,7 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
 
     public AccountPopup openAccountPopup() {
         if (!isClientLoggedIn()) {
-            String message = "No user is not logged in, check out your method call order";
+            String message = "No user is logged in, check out your method call order";
             LOG.error(message);
             throw new IllegalStateException(message);
         }
@@ -65,8 +68,7 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
         return new AccountPopup();
     }
 
-    public HeaderMenu gotoMainMenu() {
-        timeout(1);
+    public HeaderMenu gotoHeaderMenu() {
         return new HeaderMenu();
     }
 
@@ -80,9 +82,22 @@ public abstract class Page<T> extends Modal<T> implements XPath.Page {
         return new AdvancedSearchPage();
     }
 
+    @SuppressWarnings("unchecked")
+    public T confirmDelete() {
+        timeoutByVisibility(confirmDeleteButton);
+
+        confirmDeleteButton.click();
+
+        //Hardcoded timeout
+        timeout(3);
+        return (T) this;
+    }
+
 
     public boolean isClientLoggedIn() {
+        //Hardcoded timeout
         timeout(1);
+
         try {
             var message = welcomeAccountLink.getText();
             //Manual welcome message check

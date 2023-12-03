@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class FilterDropdown extends Modal<FilterDropdown> implements XPath.FilterDropdown {
+public class FilterDropdown extends Modal implements XPath.FilterDropdown {
     private static final Logger LOG = LogManager.getLogger(FilterDropdown.class);
     private boolean expanded = false;
 

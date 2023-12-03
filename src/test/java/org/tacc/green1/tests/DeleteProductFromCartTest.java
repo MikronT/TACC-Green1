@@ -3,20 +3,15 @@ package org.tacc.green1.tests;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.tacc.green1.model.cart.Cart;
 import org.tacc.green1.model.cart.CartItem;
 import org.tacc.green1.model.catalog.CatalogPage;
 import org.tacc.green1.util.TestClient;
-import org.tacc.green1.util.XPath;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.tacc.green1.util.XPath.CartItem.CONFIRM_DELETE_BUTTON;
 
 
-public class DeleteProductFromCartTest implements XPath.Cart {
+public class DeleteProductFromCartTest {
     private static CatalogPage catalogPage;
 
 
@@ -25,16 +20,16 @@ public class DeleteProductFromCartTest implements XPath.Cart {
         var mainPage = TestClient.openBrowser();
 
         catalogPage = mainPage
-                .gotoMainMenu()
+                .gotoHeaderMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 
         var productCard = catalogPage.getVisibleProductCards().get(0);
 
-        productCard.chooseColor("Red")
+        productCard
+                .chooseColor("Red")
                 .chooseSize(32)
-                .submitAddToCart()
-                .timeoutByLocator(By.xpath(SUCCESS_ADDED_ITEM_CART));
+                .submitAddToCart();
     }
 
 
@@ -42,17 +37,12 @@ public class DeleteProductFromCartTest implements XPath.Cart {
     public void deleteProductFromCartTest() {
         Cart cart = catalogPage.openCart();
 
-        List<CartItem> cartItems = cart
-                .timeoutByLocator(By.xpath(ITEMS))
-                .getVisibleCartItems();
+        CartItem cartItem = cart.getVisibleCartItems().get(0);
+        cartItem.deleteItemFromCart();
 
-        cartItems.get(0)
-                .deleteItemFromCart()
-                .timeoutByLocator(By.xpath(CONFIRM_DELETE_BUTTON))
-                .confirmDelete()
-                .timeoutByLocator(By.xpath(EMPTY_CART_TEXT));
+        catalogPage.confirmDelete();
 
-        assertEquals(0, cartItems.size(),
+        assertEquals(0, cart.getVisibleCartItems().size(),
                 "Couldn't delete product from the cart");
     }
 

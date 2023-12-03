@@ -91,13 +91,7 @@ public class TestClient {
         String url = PropertiesReader.initLocal("website.properties")
                 .getProperty("url");
 
-        //Open browser window
-        var driver = DriverManager.getDriver();
-
-        LOG.info("Opening main page by URL: " + url);
-        driver.get(url);
-
-        return new MainPage();
+        return new MainPage().open(url);
     }
 
     public static MainPage openBrowserAndLogin() {

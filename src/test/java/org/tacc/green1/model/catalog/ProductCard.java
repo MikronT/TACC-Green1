@@ -10,7 +10,7 @@ import org.tacc.green1.util.XPath;
 import java.util.List;
 
 
-public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard {
+public class ProductCard extends Modal implements XPath.ProductCard {
     @FindBy(xpath = LABEL_NAME)
     private WebElement titleLabel;
 
@@ -58,12 +58,16 @@ public class ProductCard extends Modal<ProductCard> implements XPath.ProductCard
         return this;
     }
 
-    public String getName() {
-        return titleLabel.getText();
-    }
-
     public ProductCard submitAddToCart() {
         productAddButtonCart.click();
+
+        //Hardcoded timeout
+        timeout(3);
         return this;
+    }
+
+
+    public String getName() {
+        return titleLabel.getText();
     }
 }

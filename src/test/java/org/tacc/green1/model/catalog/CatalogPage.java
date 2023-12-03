@@ -6,10 +6,8 @@ import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.tacc.green1.model.base.Page;
-import org.tacc.green1.util.Waiter;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
@@ -35,18 +33,12 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
     private List<WebElement> productCards;
 
 
-    /**
-     * Ensures the catalog frame is loaded completely and ready for interaction through any other method
-     */
-    protected void waitForAjax() {
-        Waiter.get3SecondWait()
-                .until(ExpectedConditions.visibilityOf(limiterDropdown));
+    public CatalogPage() {
+        timeoutByVisibility(limiterDropdown);
     }
 
 
     public CatalogPage showMaxProductsPerPage() {
-
-
         var limiterSelect = new Select(limiterDropdown);
 
         int optionsCount = limiterSelect.getOptions().size();
@@ -58,8 +50,6 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
 
 
     private List<FilterDropdown> getAllFilters() {
-        waitForAjax();
-
         if (filters == null)
             filters = filterDropdowns.stream()
                     .map(FilterDropdown::new)

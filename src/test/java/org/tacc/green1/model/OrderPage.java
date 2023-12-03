@@ -49,8 +49,13 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     @FindBy(xpath = THANKS_TEXT)
     private WebElement thanksText;
 
-    @FindBy(xpath = "//*[@id=\"shipping\"]/div[1]")
-    private WebElement mainOrderPageText;
+    @FindBy(xpath = BUTTON_CONTINUE_SHOPPING)
+    private WebElement continueShoppingButton;
+
+
+    public OrderPage() {
+        timeoutByVisibility(email);
+    }
 
 
     public OrderPage enterEmail(String emailAddress) {
@@ -105,22 +110,27 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     }
 
     public OrderPage selectShippingMethod() {
+        timeoutByVisibility(shippingMethod);
+
         shippingMethod.click();
         return this;
     }
 
     public OrderPage nextPage() {
         nextButton.click();
+
+        timeoutByVisibility(placeOrderButton);
         return this;
     }
 
     public OrderPage placeOrder() {
-        placeOrderButton.click();
-        return this;
-    }
+        //Hardcoded timeout
+        timeout(1);
 
-    public WebElement getMainOrderPageTextElement() {
-        return mainOrderPageText;
+        placeOrderButton.click();
+
+        timeoutByVisibility(continueShoppingButton);
+        return this;
     }
 
     public String getThanksText() {
