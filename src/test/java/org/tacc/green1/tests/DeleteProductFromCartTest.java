@@ -1,6 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.tacc.green1.model.cart.Cart;
@@ -11,7 +10,7 @@ import org.tacc.green1.util.TestClient;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class DeleteProductFromCartTest {
+public class DeleteProductFromCartTest extends BaseTest {
     private static CatalogPage catalogPage;
 
 
@@ -44,11 +43,5 @@ public class DeleteProductFromCartTest {
 
         assertEquals(0, cart.getVisibleCartItems().size(),
                 "Couldn't delete product from the cart");
-    }
-
-
-    @AfterAll
-    public static void finish() {
-        TestClient.quitBrowser();
     }
 }

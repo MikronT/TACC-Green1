@@ -1,6 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -13,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class OrderTest {
+public class OrderTest extends BaseTest {
     private static CatalogPage catalogPage;
     private static List<ProductCard> visibleProductsCards;
 
@@ -66,11 +65,5 @@ public class OrderTest {
 
         assertEquals("Thank you for your purchase!", orderPage.getThanksText(),
                 "Order placed thanks text didn't match");
-    }
-
-
-    @AfterAll
-    public static void finish() {
-        TestClient.quitBrowser();
     }
 }

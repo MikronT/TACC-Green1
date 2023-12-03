@@ -3,9 +3,11 @@ package org.tacc.green1.tests;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.tacc.green1.model.MainPage;
 import org.tacc.green1.model.account.AddressBookPage;
 import org.tacc.green1.util.TestClient;
 
@@ -13,14 +15,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
-public class AddressBookTest {
+public class AddressBookTest extends BaseTest {
     private static final Logger LOG = LogManager.getLogger(AddressBookTest.class);
+    private static MainPage mainPage;
     private static AddressBookPage addressBookPage;
 
 
+    @BeforeAll
+    public static void initClient() {
+        mainPage = TestClient.openBrowser();
+    }
+
     @BeforeEach
     public void prepare() {
-        var mainPage = TestClient.openBrowserAndRegister();
+        var testClient = TestClient.generateRandomNewClient();
+        testClient.register(mainPage);
 
         addressBookPage = mainPage
                 .openAccountPopup()
@@ -64,6 +73,7 @@ public class AddressBookTest {
 
     @AfterEach
     public void finish() {
-        TestClient.quitBrowser();
+        addressBookPage.openAccountPopup()
+                .signOut();
     }
 }

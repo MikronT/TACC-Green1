@@ -1,6 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +11,7 @@ import org.tacc.green1.util.TestClient;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class CatalogFilteringTest {
+public class CatalogFilteringTest extends BaseTest {
     private static Page<?> page;
     private static CatalogPage catalogPage;
 
@@ -45,11 +44,5 @@ public class CatalogFilteringTest {
                 .anyMatch(productCard -> exampleProduct.equals(productCard.getName()));
 
         assertTrue(exampleProductFound, "Applied filters didn't return the example product");
-    }
-
-
-    @AfterAll
-    public static void finish() {
-        TestClient.quitBrowser();
     }
 }

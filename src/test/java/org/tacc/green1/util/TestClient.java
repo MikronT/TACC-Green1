@@ -2,7 +2,10 @@ package org.tacc.green1.util;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.tacc.green1.model.LoginPage;
 import org.tacc.green1.model.MainPage;
+import org.tacc.green1.model.RegistrationPage;
+import org.tacc.green1.model.base.Page;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +25,15 @@ public class TestClient {
     private String password = "C>;:decH9y|E/@m;3p~F94&vp";
 
 
-    public static TestClient pickAnySavedUser() {
+    public static TestClient generateRandomNewClient() {
+        return new TestClient()
+                .setFirstName(RandomData.name())
+                .setLastName(RandomData.name())
+                .setEmail(RandomData.email())
+                .setPassword(RandomData.password());
+    }
+
+    public static TestClient pickAnySavedKnownClient() {
         var random = new Random();
 
         String line = "";
@@ -68,6 +79,23 @@ public class TestClient {
     }
 
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+
     public void save() {
         var line = firstName + "," + lastName + "," + email + "," + password + System.lineSeparator();
 
@@ -99,35 +127,38 @@ public class TestClient {
         return new MainPage().open(url);
     }
 
-    public static MainPage openBrowserAndLogin(TestClient testClient) {
+    public void login(Page<?> page) {
         LOG.info("Logging in as "
-                + testClient.getFirstName() + ' '
-                + testClient.getLastName() + " with "
-                + testClient.getEmail());
+                + getFirstName() + ' '
+                + getLastName() + " with "
+                + getEmail());
 
-        return openBrowser()
-                .gotoLoginPage()
-                .fillEmail(testClient.getEmail())
-                .fillPassword(testClient.getPassword())
+        var loginPage = page instanceof LoginPage castToLoginPage ?
+                castToLoginPage :
+                page.gotoLoginPage();
+
+        loginPage
+                .fillEmail(getEmail())
+                .fillPassword(getPassword())
                 .submit();
     }
 
-    public static MainPage openBrowserAndRegister() {
-        var firstName = RandomData.name();
-        var lastName = RandomData.name();
-        var email = RandomData.email();
-        var password = RandomData.password();
+    public void register(Page<?> page) {
+        LOG.info("Registering as "
+                + getFirstName() + ' '
+                + getLastName() + " with "
+                + getEmail());
 
-        LOG.info("Registering as " + firstName + ' ' + lastName + " with " + email);
+        var registrationPage = page instanceof RegistrationPage castToRegistrationPage ?
+                castToRegistrationPage :
+                page.gotoRegistrationPage();
 
-        return openBrowser()
-                .gotoRegistrationPage()
-
-                .fillFirstName(firstName)
-                .fillLastName(lastName)
-                .fillEmail(email)
-                .fillPassword(password)
-                .fillConfirmPassword(password)
+        registrationPage
+                .fillFirstName(getFirstName())
+                .fillLastName(getLastName())
+                .fillEmail(getEmail())
+                .fillPassword(getPassword())
+                .fillConfirmPassword(getPassword())
                 .submit()
 
                 .gotoMainPage();
@@ -135,22 +166,5 @@ public class TestClient {
 
     public static void quitBrowser() {
         DriverManager.quitDriver();
-    }
-
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
     }
 }

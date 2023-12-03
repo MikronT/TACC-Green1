@@ -1,6 +1,5 @@
 package org.tacc.green1.tests;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +12,7 @@ import org.tacc.green1.util.TestClient;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class LoginTest {
+public class LoginTest extends BaseTest {
     private static Page<?> page;
     private LoginPage loginPage;
 
@@ -48,10 +47,5 @@ public class LoginTest {
     public void signOut() {
         page.openAccountPopup()
                 .signOut();
-    }
-
-    @AfterAll
-    public static void finish() {
-        TestClient.quitBrowser();
     }
 }
