@@ -95,6 +95,7 @@ public abstract class Page<T> extends Modal implements XPath.Page {
 
 
     public boolean isClientLoggedIn() {
+        timeout(1);
         try {
             timeoutByVisibility(welcomeAccountLink);
         } catch (TimeoutException e) {
