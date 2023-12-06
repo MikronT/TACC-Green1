@@ -9,6 +9,7 @@ import org.tacc.green1.model.pages.catalog.ProductReviewsTab;
 import org.tacc.green1.util.TestClient;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -29,7 +30,14 @@ public class ProductSortTest extends BaseTest {
 
     @Test
     public void productSortTest() {
-        List<ProductCard> sortedProductCards = catalogPage.getVisibleProductCards().stream().sorted(productCart -> productCart.);
+        List<ProductCard> sortedProductCards = catalogPage
+                            .getVisibleProductCards()
+                            .stream()
+                            .sorted((productCart1, productCard2) ->
+                                    productCart1.getPrice().compareTo(productCard2.getPrice()))
+                                    .toList();
+
+        //catalogPage
 
         //assertEquals();
     }
