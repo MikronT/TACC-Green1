@@ -35,10 +35,6 @@ public interface XPath {
         String LINK_ADVANCED_SEARCH = _FOOTER + "/div/ul/li[3]/a";
     }
 
-    interface Page {
-        String BUTTON_CONFIRM_DELETE = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
-    }
-
     interface AccountPage {
         String CONTACT_INFORMATION_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[1]/p";
     }
@@ -102,6 +98,7 @@ public interface XPath {
 
     interface CartItem {
         String DELETE_BUTTON = "div/div/div[3]/div[2]/a";
+        String BUTTON_CONFIRM_DELETE = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
         String UPDATE_PRODUCT_BUTTON = "div/div/div[3]/div[1]/a";
         String QUANTITY_INPUT = "//*[@id=\"cart-item-487282-qty\"]";
         String SEE_DETAILS_BUTTON = "div/div/div[1]/span";
@@ -136,5 +133,6 @@ public interface XPath {
         String PLACE_ORDER_BUTTON = "//*[@id=\"checkout-payment-method-load\"]/div/div/div[2]/div[2]/div[4]/div/button";
         String THANKS_TEXT = "//*[@id=\"maincontent\"]/div[1]/h1/span";
         String BUTTON_CONTINUE_SHOPPING = "//*[@id=\"maincontent\"]/div[3]/div/div[2]/div/div/a";
+        String LOADING_MASK = "//div[@class='loader']";
     }
 }
