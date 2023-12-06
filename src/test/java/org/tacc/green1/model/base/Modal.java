@@ -14,7 +14,6 @@ import org.tacc.green1.util.PropertiesReader;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Properties;
 
 
 public abstract class Modal {
@@ -30,8 +29,9 @@ public abstract class Modal {
         PageFactory.initElements(elementLocatorFactory, this);
 
         if (COOKIE_SESSION_NAME == null) {
-            Properties websiteProps = PropertiesReader.initLocal("website.properties");
-            COOKIE_SESSION_NAME = websiteProps.getProperty("cookie.session");
+            COOKIE_SESSION_NAME = PropertiesReader
+                    .initLocal("website.properties")
+                    .getProperty("cookie.session");
         }
     }
 
