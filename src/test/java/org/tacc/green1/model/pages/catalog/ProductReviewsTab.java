@@ -1,13 +1,13 @@
-package org.tacc.green1.model.catalog;
+package org.tacc.green1.model.pages.catalog;
 
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.base.Modal;
+import org.tacc.green1.model.base.Component;
 import org.tacc.green1.util.XPath;
 
 
-public class ProductReviewsTab extends Modal implements XPath.ProductReviewModal {
+public class ProductReviewsTab extends Component implements XPath.ProductReviewModal {
     @FindBy(id = "Rating_1_label")
     private WebElement ratingBar_star1;
 
@@ -76,7 +76,7 @@ public class ProductReviewsTab extends Modal implements XPath.ProductReviewModal
         try {
             timeoutByVisibility(reviewSubmittedMessage);
         } catch (TimeoutException ignored) {
-            //Element not found, no success message
+            //Element is not found, no success message
             return false;
         }
 

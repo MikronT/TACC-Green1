@@ -1,15 +1,15 @@
-package org.tacc.green1.model.base.components;
+package org.tacc.green1.model.components.header;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.LoginPage;
-import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.RegistrationPage;
-import org.tacc.green1.model.account.AccountPopup;
 import org.tacc.green1.model.base.Component;
-import org.tacc.green1.model.cart.Cart;
+import org.tacc.green1.model.components.header.cart.Cart;
+import org.tacc.green1.model.pages.LoginPage;
+import org.tacc.green1.model.pages.MainPage;
+import org.tacc.green1.model.pages.RegistrationPage;
+import org.tacc.green1.model.pages.account.AccountPopup;
 import org.tacc.green1.util.XPath;
 
 public class HeaderComponent extends Component implements XPath.Header, XPath.Header.HeaderMenu {
@@ -48,8 +48,8 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
         return new RegistrationPage();
     }
 
-    public org.tacc.green1.model.menu.HeaderMenu gotoHeaderMenu() {
-        return new org.tacc.green1.model.menu.HeaderMenu();
+    public org.tacc.green1.model.components.header.menu.HeaderMenu gotoHeaderMenu() {
+        return new org.tacc.green1.model.components.header.menu.HeaderMenu();
     }
 
     public AccountPopup openAccountPopup() {

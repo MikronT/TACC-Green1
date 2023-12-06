@@ -1,17 +1,18 @@
-package org.tacc.green1.model.cart;
+package org.tacc.green1.model.components.header.cart;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.OrderPage;
-import org.tacc.green1.model.base.Modal;
+import org.tacc.green1.model.base.Component;
+import org.tacc.green1.model.pages.OrderPage;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Cart extends Modal implements XPath.Cart {
+public class Cart extends Component implements XPath.Cart {
     @FindBy(xpath = BUTTON_CLOSE)
     private WebElement closeButton;
 
@@ -25,6 +26,12 @@ public class Cart extends Modal implements XPath.Cart {
 
     @FindBy(xpath = BUTTON_CHECKOUT)
     private WebElement checkoutButton;
+
+    public Cart(SearchContext context) {
+        super(context);
+    }
+
+    public Cart() {}
 
 
     public List<CartItem> getVisibleCartItems() {

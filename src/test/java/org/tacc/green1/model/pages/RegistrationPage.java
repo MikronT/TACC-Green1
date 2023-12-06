@@ -1,9 +1,9 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.account.AccountPage;
 import org.tacc.green1.model.base.Page;
+import org.tacc.green1.model.pages.account.AccountPage;
 
 
 public class RegistrationPage extends Page<RegistrationPage> {

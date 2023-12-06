@@ -1,4 +1,4 @@
-package org.tacc.green1.model.catalog;
+package org.tacc.green1.model.pages.catalog;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

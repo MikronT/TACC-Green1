@@ -1,9 +1,9 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Page;
-import org.tacc.green1.model.catalog.CatalogPage;
+import org.tacc.green1.model.pages.catalog.CatalogPage;
 
 
 public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
