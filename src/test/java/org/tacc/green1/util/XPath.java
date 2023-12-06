@@ -2,31 +2,42 @@ package org.tacc.green1.util;
 
 @SuppressWarnings("SpellCheckingInspection")
 public interface XPath {
-    interface Page {
+    interface Header {
         String _HEADER = "/html/body/div[2]/header";
         String LINK_LOGO = _HEADER + "/div[2]/a";
         String LINK_WELCOME_ACCOUNT = _HEADER + "/div[1]/div/ul/li[1]/span";
         String LINK_REGISTRATION = _HEADER + "/div[1]/div/ul/li[3]/a";
         String BUTTON_OPEN_CART = _HEADER + "/div[2]/div[1]/a";
 
+        interface HeaderMenu {
+
+            String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
+
+            String OPTION_WOMEN = _OPTION + "/li[2]";
+
+            String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
+
+            String OPTION_WOMEN_ARROW = OPTION_WOMEN_LINK + "/span[1]";
+
+            String OPTION_WOMEN_TOPS = OPTION_WOMEN + "/ul/li[1]";
+
+            String OPTION_MEN = _OPTION + "/li[3]";
+
+            String OPTION_MEN_LINK = OPTION_MEN + "/a";
+
+            String OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
+
+        }
+    }
+
+    interface Footer {
         String _FOOTER = "/html/body/div[2]/footer";
         String LINK_ADVANCED_SEARCH = _FOOTER + "/div/ul/li[3]/a";
+    }
 
+    interface Page {
         String BUTTON_CONFIRM_DELETE = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
     }
-
-
-    interface HeaderMenu {
-        String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
-        String OPTION_WOMEN = _OPTION + "/li[2]";
-        String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
-        String OPTION_WOMEN_ARROW = OPTION_WOMEN_LINK + "/span[1]";
-        String OPTION_WOMEN_TOPS = OPTION_WOMEN + "/ul/li[1]";
-        String OPTION_MEN = _OPTION + "/li[3]";
-        String OPTION_MEN_LINK = OPTION_MEN + "/a";
-        String OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
-    }
-
 
     interface AccountPage {
         String CONTACT_INFORMATION_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[1]/p";
