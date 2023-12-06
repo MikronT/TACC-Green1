@@ -11,34 +11,29 @@ public class HeaderMenu extends Component implements XPath.Header.HeaderMenu {
     @FindBy(xpath = OPTION_WOMEN_ARROW)
     private WebElement womenCategoryArrow;
 
-    @FindBy(xpath = OPTION_WOMEN_LINK)
-    private WebElement womenCategoryItem;
+    @FindBy(xpath = OPTIOM_WOMEN_MENU_ITEM)
+    private WebElement womenMenuItem;
 
-    @FindBy(xpath = OPTION_MEN_LINK)
-    private WebElement menCategoryItem;
+    @FindBy(xpath = OPTION_MEN_MENU_ITEM)
+    public WebElement menMenuItem;
 
     public HeaderMenu() {
-        timeoutByVisibility(womenCategoryArrow);
-        timeout(1);
+        timeoutByVisibility(5, womenCategoryArrow);
     }
 
     public WomenCategoryPopup openWomenCategoryPopup() {
-        timeoutByVisibility(womenCategoryItem);
-
         DriverManager.getActions()
-                .moveToElement(womenCategoryItem)
-                .build()
+                .moveToElement(womenMenuItem)
                 .perform();
+
         return new WomenCategoryPopup();
     }
 
     public MenCategoryPopup openMenCategoryPopup() {
-        timeoutByVisibility(menCategoryItem);
-
         DriverManager.getActions()
-                .moveToElement(menCategoryItem)
-                .build()
+                .moveToElement(menMenuItem)
                 .perform();
+
         return new MenCategoryPopup();
     }
 }
