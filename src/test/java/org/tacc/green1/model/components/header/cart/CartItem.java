@@ -33,7 +33,6 @@ public class CartItem extends Component implements XPath.CartItem {
     @FindBy(xpath = BUTTON_CONFIRM_DELETE)
     private WebElement confirmDeleteButton;
 
-    // TODO: move to xpath
     @FindAll({
             @FindBy(xpath = CART_ITEMS_WRAPPER),
             @FindBy(css = CART_ITEMS_WRAPPER_CSS)
