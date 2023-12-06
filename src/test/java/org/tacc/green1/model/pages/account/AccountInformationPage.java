@@ -6,7 +6,7 @@ import org.tacc.green1.model.base.Page;
 import org.tacc.green1.model.pages.LoginPage;
 
 
-public class AccountInformationPage extends Page<AccountInformationPage> {
+public class AccountInformationPage extends Page {
     private Boolean isEmailToggled = false;
 
     @FindBy(css = "#form-validate > div > div.primary > button")
@@ -32,7 +32,6 @@ public class AccountInformationPage extends Page<AccountInformationPage> {
 
     @FindBy(id = "change-email")
     private WebElement changeEmailCheckbox;
-
 
     public AccountInformationPage toggleEmailCheckBox() {
         changeEmailCheckbox.click();
@@ -83,7 +82,7 @@ public class AccountInformationPage extends Page<AccountInformationPage> {
     }
 
     @SuppressWarnings("unchecked")
-    public <T extends Page<T>> T submit() {
+    public <T extends Page> T submit() {
         saveButton.click();
 
         if (isEmailToggled)

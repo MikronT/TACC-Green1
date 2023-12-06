@@ -7,7 +7,7 @@ import org.tacc.green1.model.base.Page;
 import org.tacc.green1.util.XPath;
 
 
-public class AddressBookPage extends Page<AddressBookPage> implements XPath.AddressBookPage {
+public class AddressBookPage extends Page implements XPath.AddressBookPage {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 
@@ -117,7 +117,6 @@ public class AddressBookPage extends Page<AddressBookPage> implements XPath.Addr
         timeoutByVisibility(addressChangedMessage);
         return this;
     }
-
 
     public String getDefaultBillingAddress() {
         return billingAddressBlock.getText();

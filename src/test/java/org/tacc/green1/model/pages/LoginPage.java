@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Page;
 
 
-public class LoginPage extends Page<LoginPage> {
+public class LoginPage extends Page {
     @FindBy(id = "email")
     private WebElement emailInput;
 

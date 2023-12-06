@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class LoginTest extends BaseTest {
-    private static Page<?> page;
+    private static Page page;
     private LoginPage loginPage;
 
     @BeforeAll

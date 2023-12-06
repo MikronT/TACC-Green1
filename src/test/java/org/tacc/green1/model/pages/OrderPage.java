@@ -6,7 +6,7 @@ import org.tacc.green1.model.base.Page;
 import org.tacc.green1.util.XPath;
 
 
-public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
+public class OrderPage extends Page implements XPath.OrderPage {
     @FindBy(xpath = EMAIL)
     private WebElement email;
 

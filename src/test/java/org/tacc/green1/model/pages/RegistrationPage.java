@@ -6,7 +6,7 @@ import org.tacc.green1.model.base.Page;
 import org.tacc.green1.model.pages.account.AccountPage;
 
 
-public class RegistrationPage extends Page<RegistrationPage> {
+public class RegistrationPage extends Page {
     @FindBy(id = "firstname")
     private WebElement firstNameInput;
 

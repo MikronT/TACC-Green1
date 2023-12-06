@@ -127,7 +127,7 @@ public class TestClient {
         return MainPage.open(url);
     }
 
-    public void login(Page<?> page) {
+    public void login(Page page) {
         LOG.info("Logging in as "
                 + getFirstName() + ' '
                 + getLastName() + " with "
@@ -143,7 +143,7 @@ public class TestClient {
                 .submit();
     }
 
-    public void register(Page<?> page) {
+    public void register(Page page) {
         LOG.info("Registering as "
                 + getFirstName() + ' '
                 + getLastName() + " with "

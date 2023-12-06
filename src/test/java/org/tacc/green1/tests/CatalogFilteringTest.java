@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class CatalogFilteringTest extends BaseTest {
-    private static Page<?> page;
+    private static Page page;
     private static CatalogPage catalogPage;
 
 

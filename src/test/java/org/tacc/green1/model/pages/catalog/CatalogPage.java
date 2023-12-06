@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage {
+public class CatalogPage extends Page implements XPath.CatalogPage {
     private static final Logger LOG = LogManager.getLogger(CatalogPage.class);
 
     @FindBy(xpath = DROPDOWN_LIMITER)
@@ -37,7 +37,6 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
         timeoutByVisibility(limiterDropdown);
     }
 
-
     public CatalogPage showMaxProductsPerPage() {
         var limiterSelect = new Select(limiterDropdown);
 
@@ -47,7 +46,6 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
 
         return this;
     }
-
 
     private List<FilterDropdown> getAllFilters() {
         if (filters == null)
@@ -85,7 +83,6 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
         getFilter(name).apply(argument);
         return this;
     }
-
 
     public List<ProductCard> getVisibleProductCards() {
         return productCards.stream()

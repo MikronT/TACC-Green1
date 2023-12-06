@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class ProductReviewsTest extends BaseTest {
-    private static Page<?> page;
+    private static Page page;
     private ProductReviewsTab productReviewsTab;
 
     @BeforeAll

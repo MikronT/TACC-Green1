@@ -22,7 +22,6 @@ public class HeaderMenu extends Component implements XPath.Header.HeaderMenu {
         timeout(1);
     }
 
-
     public WomenCategoryPopup openWomenCategoryPopup() {
         timeoutByVisibility(womenCategoryItem);
 

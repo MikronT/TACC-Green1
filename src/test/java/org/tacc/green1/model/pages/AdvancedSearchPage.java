@@ -6,7 +6,7 @@ import org.tacc.green1.model.base.Page;
 import org.tacc.green1.model.pages.catalog.CatalogPage;
 
 
-public class AdvancedSearchPage extends Page<AdvancedSearchPage> {
+public class AdvancedSearchPage extends Page {
     @FindBy(id = "name")
     private WebElement productNameInput;
 
