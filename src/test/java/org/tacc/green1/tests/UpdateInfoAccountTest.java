@@ -4,9 +4,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.tacc.green1.model.LoginPage;
-import org.tacc.green1.model.account.AccountInformationPage;
-import org.tacc.green1.model.account.AccountPage;
+import org.tacc.green1.model.pages.LoginPage;
+import org.tacc.green1.model.pages.account.AccountInformationPage;
+import org.tacc.green1.model.pages.account.AccountPage;
 import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,7 +16,6 @@ public class UpdateInfoAccountTest extends BaseTest {
     private static AccountPage accountPage;
     private static AccountInformationPage accountInformationPage;
     private static String email, password;
-
 
     @BeforeAll
     public static void initClient() {
@@ -28,6 +27,7 @@ public class UpdateInfoAccountTest extends BaseTest {
         password = testClient.getPassword();
 
         accountPage = mainPage
+                .gotoHeaderComponent()
                 .openAccountPopup()
                 .gotoMyAccountPage();
     }
@@ -38,7 +38,6 @@ public class UpdateInfoAccountTest extends BaseTest {
                 .gotoAccountSidebar()
                 .gotoAccountInformationPage();
     }
-
 
     @ParameterizedTest
     @CsvSource({

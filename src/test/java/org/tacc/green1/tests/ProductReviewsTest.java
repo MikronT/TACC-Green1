@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.base.Page;
-import org.tacc.green1.model.catalog.ProductReviewsTab;
+import org.tacc.green1.model.pages.catalog.ProductReviewsTab;
 import org.tacc.green1.util.TestClient;
 
 import java.util.Random;
@@ -17,7 +17,6 @@ public class ProductReviewsTest extends BaseTest {
     private static Page<?> page;
     private ProductReviewsTab productReviewsTab;
 
-
     @BeforeAll
     public static void initClient() {
         page = TestClient.openBrowser();
@@ -26,6 +25,7 @@ public class ProductReviewsTest extends BaseTest {
     @BeforeEach
     public void prepare() {
         var catalogPage = page
+                .gotoHeaderComponent()
                 .gotoHeaderMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
@@ -38,7 +38,6 @@ public class ProductReviewsTest extends BaseTest {
 
         productReviewsTab = productPage.gotoProductReviewsTab();
     }
-
 
     @ParameterizedTest
     @CsvFileSource(resources = "/productReviews.csv")

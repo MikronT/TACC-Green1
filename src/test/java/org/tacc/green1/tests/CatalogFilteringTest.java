@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.base.Page;
-import org.tacc.green1.model.catalog.CatalogPage;
+import org.tacc.green1.model.pages.catalog.CatalogPage;
 import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -24,6 +24,7 @@ public class CatalogFilteringTest extends BaseTest {
     @BeforeEach
     public void prepare() {
         catalogPage = page
+                .gotoHeaderComponent()
                 .gotoHeaderMenu()
                 .openWomenCategoryPopup()
                 .gotoWomenTopsCatalogPage()

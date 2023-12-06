@@ -3,8 +3,8 @@ package org.tacc.green1.tests;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.tacc.green1.model.catalog.CatalogPage;
-import org.tacc.green1.model.catalog.ProductCard;
+import org.tacc.green1.model.pages.catalog.CatalogPage;
+import org.tacc.green1.model.pages.catalog.ProductCard;
 import org.tacc.green1.util.TestClient;
 
 import java.util.List;
@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class OrderTest extends BaseTest {
     private static CatalogPage catalogPage;
     private static List<ProductCard> visibleProductsCards;
-
 
     @BeforeAll
     public static void prepare() {
@@ -29,7 +28,6 @@ public class OrderTest extends BaseTest {
 
         visibleProductsCards = catalogPage.getVisibleProductCards();
     }
-
 
     @SuppressWarnings("SpellCheckingInspection")
     @ParameterizedTest

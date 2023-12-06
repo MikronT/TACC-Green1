@@ -7,8 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.account.AddressBookPage;
+import org.tacc.green1.model.pages.MainPage;
+import org.tacc.green1.model.pages.account.AddressBookPage;
 import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,6 +32,7 @@ public class AddressBookTest extends BaseTest {
         testClient.register(mainPage);
 
         addressBookPage = mainPage
+                .gotoHeaderComponent()
                 .openAccountPopup()
                 .gotoMyAccountPage()
                 .gotoAccountSidebar()
@@ -73,7 +74,9 @@ public class AddressBookTest extends BaseTest {
 
     @AfterEach
     public void finish() {
-        addressBookPage.openAccountPopup()
+        addressBookPage
+                .gotoHeaderComponent()
+                .openAccountPopup()
                 .signOut();
     }
 }
