@@ -3,11 +3,11 @@ package org.tacc.green1.model.account;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.base.Modal;
+import org.tacc.green1.model.base.Component;
 import org.tacc.green1.util.XPath;
 
 
-public class AccountPopup extends Modal implements XPath.AccountPopup {
+public class AccountPopup extends Component implements XPath.AccountPopup {
     @FindBy(xpath = OPTION_MY_ACCOUNT)
     private WebElement myAccountOption;
 
@@ -16,7 +16,6 @@ public class AccountPopup extends Modal implements XPath.AccountPopup {
 
     @FindBy(xpath = OPTION_SIGN_OUT)
     private WebElement signOutOption;
-
 
     public AccountPage gotoMyAccountPage() {
         myAccountOption.click();

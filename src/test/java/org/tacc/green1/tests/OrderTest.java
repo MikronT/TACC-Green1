@@ -22,6 +22,7 @@ public class OrderTest extends BaseTest {
         var mainPage = TestClient.openBrowser();
 
         catalogPage = mainPage
+                .gotoHeaderComponent()
                 .gotoHeaderMenu()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
@@ -45,7 +46,7 @@ public class OrderTest extends BaseTest {
                 .chooseColor(color)
                 .submitAddToCart();
 
-        var cart = catalogPage.openCart();
+        var cart = catalogPage.gotoHeaderComponent().openCart();
 
         var orderPage = cart
                 .proceedToCheckout()

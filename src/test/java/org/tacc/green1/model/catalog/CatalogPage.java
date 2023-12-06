@@ -63,7 +63,7 @@ public class CatalogPage extends Page<CatalogPage> implements XPath.CatalogPage 
                 .filter(filterDropdown -> name.equalsIgnoreCase(filterDropdown.getName()))
                 .toList();
 
-        //Required filter was found
+        // The Required filter was found
         if (foundFilters.size() == 1)
             return foundFilters.get(0);
 
