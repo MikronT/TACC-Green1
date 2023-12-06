@@ -29,6 +29,9 @@ public class CartItem extends Component implements XPath.CartItem {
     @FindBy(xpath = PRICE_TEXT)
     private WebElement priceText;
 
+    @FindBy(xpath = BUTTON_CONFIRM_DELETE)
+    private WebElement confirmDeleteButton;
+
     public CartItem(SearchContext context) {
         super(context);
     }
@@ -54,6 +57,14 @@ public class CartItem extends Component implements XPath.CartItem {
         return this;
     }
 
+    @SuppressWarnings("unchecked")
+    public <T> T confirmDelete() {
+        timeout(3);
+        timeoutByVisibility(true, confirmDeleteButton);
+
+        confirmDeleteButton.click();
+        return (T) this;
+    }
 
     public String getQuantity() {
         return quantityInput.getText();
