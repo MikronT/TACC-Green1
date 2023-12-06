@@ -14,13 +14,14 @@ import org.tacc.green1.util.PropertiesReader;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 
 public abstract class Modal {
     private static final Logger LOG = LogManager.getLogger(Modal.class);
 
-    protected WebDriver driver;
     private String COOKIE_SESSION_NAME;
+    protected WebDriver driver;
 
 
     protected Modal() {
@@ -41,73 +42,50 @@ public abstract class Modal {
     }
 
 
-    public void timeoutByVisibility(WebElement... elements) {
-        if (elements.length == 0) {
-            LOG.debug("No elements to wait for");
-            return;
-        }
-
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(7))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(NoSuchElementException.class);
-
-        LOG.debug("Waiting for elements: " + Arrays.toString(elements));
-        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
-    }
-
-    public void timeoutByVisibility(int seconds, WebElement... elements) {
-        if (elements.length == 0) {
-            LOG.debug("No elements to wait for");
-            return;
-        }
-
+    private <V> void timeout(int seconds, Function<WebDriver, V> expectedConditionFunction) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(seconds))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
 
-        LOG.debug("Waiting for elements: " + Arrays.toString(elements));
-        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+        wait.until(expectedConditionFunction);
     }
 
+    protected void timeoutByVisibility(int seconds, WebElement... elements) {
+        LOG.debug("Waiting for elements to appear: " + Arrays.toString(elements));
 
-    public void timeoutByVisibility(List<WebElement> elements) {
+        timeout(seconds,
+                localDriver -> ExpectedConditions
+                        .visibilityOfAllElements(elements)
+                        .apply(localDriver));
+    }
+
+    protected void timeoutByVisibility(WebElement... elements) {
+        timeoutByVisibility(7, elements);
+    }
+
+    protected void timeoutByVisibility(List<WebElement> elements) {
         timeoutByVisibility(elements.toArray(new WebElement[0]));
     }
 
-    public void timeoutByInvisibility(int seconds, WebElement... elements) {
-        if (elements.length == 0) {
-            LOG.debug("No elements to wait for, returning...");
-            return;
-        }
+    protected void timeoutByInvisibility(int seconds, WebElement... elements) {
+        LOG.debug("Waiting for elements to disappear: " + Arrays.toString(elements));
 
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(seconds))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(NoSuchElementException.class);
-
-        LOG.debug(String.format("Waiting for elements -> %s to disappear...", Arrays.stream(elements).toArray()));
-        wait.until(ExpectedConditions.invisibilityOfAllElements(elements));
+        timeout(seconds,
+                localDriver -> ExpectedConditions
+                        .invisibilityOfAllElements(elements)
+                        .apply(localDriver));
     }
 
-    public void timeoutByClickability(int seconds, WebElement element) {
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(seconds))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(NoSuchElementException.class);
+    protected void timeoutByClickability(int seconds, WebElement element) {
+        LOG.debug("Waiting for element to be clickable: " + element);
 
-        LOG.debug("Waiting for clickable element: " + element);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        timeout(seconds,
+                localDriver -> ExpectedConditions
+                        .elementToBeClickable(element)
+                        .apply(localDriver));
     }
 
-    public void timeout(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000L);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     public boolean isClientLoggedIn() {
         Cookie sessionID = driver.manage().getCookieNamed(COOKIE_SESSION_NAME);
