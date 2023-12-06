@@ -16,6 +16,7 @@ public interface XPath {
             String OPTION_WOMEN = _OPTION + "/li[2]";
 
             String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
+            String OPTIOM_WOMEN_MENU_ITEM = "//*[@id='ui-id-4']";
 
             String OPTION_WOMEN_ARROW = OPTION_WOMEN_LINK + "/span[1]";
 
@@ -24,6 +25,7 @@ public interface XPath {
             String OPTION_MEN = _OPTION + "/li[3]";
 
             String OPTION_MEN_LINK = OPTION_MEN + "/a";
+            String OPTION_MEN_MENU_ITEM = "//*[@id='ui-id-5']";
 
             String OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
 
