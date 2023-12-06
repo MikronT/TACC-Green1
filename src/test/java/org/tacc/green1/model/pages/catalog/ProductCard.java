@@ -57,11 +57,9 @@ public class ProductCard extends Component implements XPath.ProductCard {
         return this;
     }
 
-    public ProductCard submitAddToCart() {
+    public <T> T  submitAddToCart() {
         productAddButtonCart.click();
-
-        timeout(3);
-        return this;
+        return (T) this;
     }
 
 
