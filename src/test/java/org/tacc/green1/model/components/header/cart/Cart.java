@@ -26,6 +26,7 @@ public class Cart extends Component implements XPath.Cart {
     @FindBy(xpath = BUTTON_CHECKOUT)
     private WebElement checkoutButton;
 
+
     public List<CartItem> getVisibleCartItems() {
         return cartItems.stream()
                 .map(CartItem::new)
