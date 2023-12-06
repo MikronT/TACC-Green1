@@ -2,32 +2,37 @@ package org.tacc.green1.model.base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.tacc.green1.util.DriverManager;
+import org.tacc.green1.util.PropertiesReader;
 
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
 
 
 public abstract class Modal {
     private static final Logger LOG = LogManager.getLogger(Modal.class);
 
     protected WebDriver driver;
+    private String COOKIE_SESSION_NAME;
 
 
     protected Modal() {
         driver = DriverManager.getDriver();
         var elementLocatorFactory = new AjaxElementLocatorFactory(driver, 5);
         PageFactory.initElements(elementLocatorFactory, this);
+
+        if (COOKIE_SESSION_NAME == null) {
+            Properties websiteProps = PropertiesReader.initLocal("website.properties");
+            COOKIE_SESSION_NAME = websiteProps.getProperty("cookie.session");
+        }
     }
 
     protected Modal(SearchContext context) {
@@ -62,5 +67,11 @@ public abstract class Modal {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public boolean isClientLoggedIn() {
+        Cookie sessionID = driver.manage().getCookieNamed(COOKIE_SESSION_NAME);
+        LOG.info(String.format("Cookie named %s value: %s", COOKIE_SESSION_NAME, sessionID));
+        return sessionID != null;
     }
 }
