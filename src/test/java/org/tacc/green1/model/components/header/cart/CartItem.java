@@ -2,6 +2,7 @@ package org.tacc.green1.model.components.header.cart;
 
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
 import org.tacc.green1.util.XPath;
@@ -32,6 +33,13 @@ public class CartItem extends Component implements XPath.CartItem {
     @FindBy(xpath = BUTTON_CONFIRM_DELETE)
     private WebElement confirmDeleteButton;
 
+    // TODO: move to xpath
+    @FindAll({
+            @FindBy(xpath = CART_ITEMS_WRAPPER),
+            @FindBy(css = CART_ITEMS_WRAPPER_CSS)
+    })
+    private WebElement cartPopupItems;
+
     public CartItem(SearchContext context) {
         super(context);
     }
@@ -59,10 +67,11 @@ public class CartItem extends Component implements XPath.CartItem {
 
     @SuppressWarnings("unchecked")
     public <T> T confirmDelete() {
-        timeout(3);
-        timeoutByVisibility(true, confirmDeleteButton);
+        timeoutByVisibility(confirmDeleteButton);
 
         confirmDeleteButton.click();
+
+        timeoutByInvisibility(2, cartPopupItems);
         return (T) this;
     }
 

@@ -97,6 +97,8 @@ public interface XPath {
 
 
     interface CartItem {
+        String CART_ITEMS_WRAPPER = "//div[@data-action='scroll']";
+        String CART_ITEMS_WRAPPER_CSS = "ol.minicart-items";
         String DELETE_BUTTON = "div/div/div[3]/div[2]/a";
         String BUTTON_CONFIRM_DELETE = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
         String UPDATE_PRODUCT_BUTTON = "div/div/div[3]/div[1]/a";
