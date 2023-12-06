@@ -3,7 +3,6 @@ package org.tacc.green1.tests;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.tacc.green1.model.components.header.cart.Cart;
-import org.tacc.green1.model.components.header.cart.CartItem;
 import org.tacc.green1.model.pages.catalog.CatalogPage;
 import org.tacc.green1.util.TestClient;
 
@@ -34,12 +33,15 @@ public class DeleteProductFromCartTest extends BaseTest {
 
     @Test
     public void deleteProductFromCartTest() {
-        Cart cart = catalogPage.gotoHeaderComponent().openCart();
+        Cart cart = catalogPage
+                .gotoHeaderComponent()
+                .openCart();
 
-        CartItem cartItem = cart.getVisibleCartItems().get(0);
-        cartItem.deleteItemFromCart();
-
-        catalogPage.confirmDelete();
+        cart
+                .getVisibleCartItems()
+                .get(0)
+                .deleteItemFromCart()
+                .confirmDelete();
 
         assertEquals(0, cart.getVisibleCartItems().size(),
                 "Couldn't delete product from the cart");

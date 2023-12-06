@@ -33,6 +33,8 @@ public class Cart extends Component implements XPath.Cart {
     }
 
     public OrderPage proceedToCheckout() {
+        timeoutByInvisibility(5, emptyCartOrRecentlyAddedMessage);
+
         checkoutButton.click();
         return new OrderPage();
     }
