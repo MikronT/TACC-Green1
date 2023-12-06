@@ -52,6 +52,9 @@ public class OrderPage extends Page implements XPath.OrderPage {
     @FindBy(xpath = BUTTON_CONTINUE_SHOPPING)
     private WebElement continueShoppingButton;
 
+    @FindBy(xpath = LOADING_MASK)
+    public WebElement pleaseWaitMask;
+
 
     public OrderPage() {
         timeoutByVisibility(email);
@@ -124,12 +127,11 @@ public class OrderPage extends Page implements XPath.OrderPage {
     }
 
     public OrderPage placeOrder() {
-        timeoutByVisibility(placeOrderButton);
-        timeout(1);
+        timeoutByInvisibility(5, pleaseWaitMask);
 
         placeOrderButton.click();
 
-        timeoutByVisibility(continueShoppingButton);
+        timeoutByInvisibility(5, placeOrderButton);
         return this;
     }
 
