@@ -27,7 +27,6 @@ public class ProductCard extends Component implements XPath.ProductCard {
     @FindBy(xpath = PRODUCT_ADD_BUTTON_CART)
     private WebElement productAddButtonCart;
 
-
     public ProductCard(SearchContext context) {
         super(context);
     }
