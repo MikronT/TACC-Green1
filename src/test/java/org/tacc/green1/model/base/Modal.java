@@ -49,17 +49,57 @@ public abstract class Modal {
 
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(7))
-                .pollingEvery(Duration.ofMillis(250))
+                .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
 
         LOG.debug("Waiting for elements: " + Arrays.toString(elements));
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
+    public void timeoutByVisibility(int seconds, WebElement... elements) {
+        if (elements.length == 0) {
+            LOG.debug("No elements to wait for");
+            return;
+        }
+
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(seconds))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+
+        LOG.debug("Waiting for elements: " + Arrays.toString(elements));
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+    }
+
+
     public void timeoutByVisibility(List<WebElement> elements) {
         timeoutByVisibility(elements.toArray(new WebElement[0]));
     }
 
+    public void timeoutByInvisibility(int seconds, WebElement... elements) {
+        if (elements.length == 0) {
+            LOG.debug("No elements to wait for, returning...");
+            return;
+        }
+
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(seconds))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+
+        LOG.debug(String.format("Waiting for elements -> %s to disappear...", Arrays.stream(elements).toArray()));
+        wait.until(ExpectedConditions.invisibilityOfAllElements(elements));
+    }
+
+    public void timeoutByClickability(int seconds, WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(seconds))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+
+        LOG.debug("Waiting for clickable element: " + element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
 
     public void timeout(int seconds) {
         try {

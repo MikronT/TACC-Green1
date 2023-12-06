@@ -34,7 +34,7 @@ public class LoginPage extends Page {
     public MainPage submit() {
         submitButton.click();
 
-        timeout(1);
+        timeoutByInvisibility(3, passwordInput);
         return new MainPage();
     }
 }
