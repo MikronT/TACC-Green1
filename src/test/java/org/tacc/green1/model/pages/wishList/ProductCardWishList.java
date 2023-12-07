@@ -1,4 +1,7 @@
 package org.tacc.green1.model.pages.wishList;
 
-public class ProductCardWishList {
+import org.tacc.green1.model.base.Component;
+
+public class ProductCardWishList extends Component {
+
 }

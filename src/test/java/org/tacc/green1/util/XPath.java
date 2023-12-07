@@ -146,4 +146,9 @@ public interface XPath {
         String WISH_LIST = "//*[@id=\"wishlist-view-form\"]/div[1]/ol";
         String WISH_LIST_ITEM = "//*[@id=\"wishlist-view-form\"]/div[1]/ol/li";
     }
+
+    interface ProductCardWishList {
+        String LABEL_NAME = "div/strong/a";
+        String PRICE = "div/div[1]/p/span/span/span";
+    }
 }
