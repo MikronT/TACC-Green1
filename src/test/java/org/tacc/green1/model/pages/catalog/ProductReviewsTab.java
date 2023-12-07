@@ -1,6 +1,6 @@
 package org.tacc.green1.model.pages.catalog;
 
-import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -35,8 +35,10 @@ public class ProductReviewsTab extends Component implements XPath.ProductReviewM
     @FindBy(xpath = BUTTON_SUBMIT)
     private WebElement submitButton;
 
-    @FindBy(css = "[data-ui-id=\"message-success\"]")
-    private WebElement reviewSubmittedMessage;
+
+    protected ProductReviewsTab(SearchContext context) {
+        super(context);
+    }
 
 
     public ProductReviewsTab fillRatingBar(int rating) {
@@ -70,18 +72,5 @@ public class ProductReviewsTab extends Component implements XPath.ProductReviewM
     public ProductReviewsTab submit() {
         submitButton.click();
         return this;
-    }
-
-    public boolean isReviewSubmitted() {
-        try {
-            timeoutByVisibility(reviewSubmittedMessage);
-        } catch (TimeoutException ignored) {
-            //Element is not found, no success message
-            return false;
-        }
-
-        var message = reviewSubmittedMessage.getText();
-        //Manual success message check
-        return message.contains("You submitted ");
     }
 }
