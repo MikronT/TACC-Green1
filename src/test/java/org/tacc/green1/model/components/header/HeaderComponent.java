@@ -90,6 +90,8 @@ public class HeaderComponent extends Component implements XPath.Header {
         }
 
         openCart.click();
+
+        timeoutByVisibility(2, cartBlock);
         return new Cart(cartBlock);
     }
 }
