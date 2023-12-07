@@ -1,5 +1,6 @@
 package org.tacc.green1.model.pages.wishList;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -11,6 +12,10 @@ public class ProductCardWishList extends Component implements XPath.ProductCardW
 
     @FindBy(xpath = PRICE)
     private WebElement price;
+
+    public ProductCardWishList(SearchContext context) {
+        super(context);
+    }
 
     public String getLabelName() {
         return labelName.getText();

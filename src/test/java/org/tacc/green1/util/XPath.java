@@ -88,6 +88,7 @@ public interface XPath {
         String PRODUCT_COLOR = "div/div/div[2]/div[2]/div/div";
         String PRODUCT_SIZE = "div/div/div[2]/div[1]/div/div";
         String PRODUCT_ADD_BUTTON_CART = "div/div/div[3]/div/div[1]/form/button";
+        String ADD_WISH_LIST_BUTTON = "div/div/div[4]/div/div[2]/a[1]";
     }
 
 
