@@ -42,5 +42,9 @@ public class AddToCartTest extends BaseTest{
                 .submitAddToCart();
 
         var cart = catalogPage.gotoHeaderComponent().openCart();
+        catalogPage.gotoHeaderComponent().gotoLoginPage();
+        loginPage.fillEmail("cwucfmlm@y9ipcuvzr.cp");
+        loginPage.fillPassword("Yc?oXOX<");
+        loginPage.submit();
     }
 }
