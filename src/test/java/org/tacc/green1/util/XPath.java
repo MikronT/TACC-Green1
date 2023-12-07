@@ -12,6 +12,7 @@ public interface XPath {
         String LINK_LOGO = "div[2]/a";
         String LINK_WELCOME_ACCOUNT = "div[1]/div/ul/li[1]/span";
         String LINK_REGISTRATION = "div[1]/div/ul/li[3]/a";
+        String ACCOUNT_POPUP = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul";
         String BUTTON_OPEN_CART = "div[2]/div[1]/a";
 
 
@@ -46,10 +47,9 @@ public interface XPath {
 
 
     interface AccountPopup {
-        String _OPTION = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul";
-        String OPTION_MY_ACCOUNT = _OPTION + "/li[1]/a";
-        String OPTION_MY_WISH_LIST = _OPTION + "/li[2]/a";
-        String OPTION_SIGN_OUT = _OPTION + "/li[3]/a";
+        String OPTION_MY_ACCOUNT = "li[1]/a";
+        String OPTION_MY_WISH_LIST = "li[2]/a";
+        String OPTION_SIGN_OUT = "li[3]/a";
     }
 
 

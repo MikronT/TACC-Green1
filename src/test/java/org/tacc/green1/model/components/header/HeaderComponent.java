@@ -32,6 +32,9 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
     @FindBy(css = "button.action.switch")
     private WebElement accountPopupToggle;
 
+    @FindBy(xpath = ACCOUNT_POPUP)
+    private WebElement accountPopupBlock;
+
     @FindBy(xpath = BUTTON_OPEN_CART)
     private WebElement openCart;
 
@@ -71,7 +74,7 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
         }
 
         accountPopupToggle.click();
-        return new AccountPopup();
+        return new AccountPopup(accountPopupBlock);
     }
 
     public Cart openCart() {
