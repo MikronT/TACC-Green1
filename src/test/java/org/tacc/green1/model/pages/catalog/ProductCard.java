@@ -58,7 +58,8 @@ public class ProductCard extends Component implements XPath.ProductCard {
         return this;
     }
 
-    public <T> T  submitAddToCart() {
+    @SuppressWarnings("unchecked")
+    public <T> T submitAddToCart() {
         productAddButtonCart.click();
         return (T) this;
     }

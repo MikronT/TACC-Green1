@@ -12,9 +12,6 @@ public abstract class Component extends Modal {
     protected final SearchContext context;
 
 
-    //TODO 07.12.2023: Get rid of this constructor
-    protected Component() {context = null;}
-
     protected Component(SearchContext context) {
         this.context = context;
         LOG.info("Initializing component for class: " + getClass().getSimpleName());
