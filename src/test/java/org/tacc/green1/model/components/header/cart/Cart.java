@@ -1,5 +1,6 @@
 package org.tacc.green1.model.components.header.cart;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +26,11 @@ public class Cart extends Component implements XPath.Cart {
 
     @FindBy(xpath = BUTTON_CHECKOUT)
     private WebElement checkoutButton;
+
+
+    public Cart(SearchContext context) {
+        super(context);
+    }
 
 
     public List<CartItem> getVisibleCartItems() {

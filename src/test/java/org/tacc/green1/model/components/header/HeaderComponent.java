@@ -38,8 +38,11 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
     @FindBy(xpath = BUTTON_OPEN_CART)
     private WebElement openCart;
 
-    private WebElement cartLoading;
     @FindBy(xpath = CART_LOADER)
+    private WebElement cartLoader;
+
+    @FindBy(xpath = CART)
+    private WebElement cartBlock;
 
 
     public HeaderComponent(SearchContext context) {
@@ -81,6 +84,6 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
         timeoutByInvisibility(3, cartLoading);
 
         openCart.click();
-        return new Cart();
+        return new Cart(cartBlock);
     }
 }
