@@ -13,6 +13,9 @@ public class AccountPage extends Page implements XPath.AccountPage {
     @FindBy(css = "span[class='base']")
     private WebElement welcomeTextElement;
 
+    @FindBy(xpath = ACCOUNT_SIDEBAR)
+    private WebElement accountSidebarBlock;
+
 
     public AccountPage() {
         timeoutByVisibility(contactInfoTextElement);
@@ -28,6 +31,6 @@ public class AccountPage extends Page implements XPath.AccountPage {
     }
 
     public AccountSidebar gotoAccountSidebar() {
-        return new AccountSidebar();
+        return new AccountSidebar(accountSidebarBlock);
     }
 }

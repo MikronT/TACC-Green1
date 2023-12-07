@@ -41,6 +41,7 @@ public interface XPath {
 
     interface AccountPage {
         String CONTACT_INFORMATION_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[1]/p";
+        String ACCOUNT_SIDEBAR = "//*[@id=\"block-collapsible-nav\"]/ul";
     }
 
 
@@ -52,9 +53,8 @@ public interface XPath {
 
 
     interface AccountSidebar {
-        String _LINK = "//*[@id=\"block-collapsible-nav\"]/ul";
-        String LINK_ADDRESS_BOOK = _LINK + "/li[6]/a";
-        String LINK_ACCOUNT_INFORMATION = _LINK + "/li[7]/a";
+        String LINK_ADDRESS_BOOK = "li[6]/a";
+        String LINK_ACCOUNT_INFORMATION = "li[7]/a";
     }
 
 
