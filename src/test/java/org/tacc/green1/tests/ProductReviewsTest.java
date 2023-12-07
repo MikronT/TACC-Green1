@@ -26,8 +26,7 @@ public class ProductReviewsTest extends BaseTest {
     @BeforeEach
     public void prepare() {
         var catalogPage = page
-                .gotoHeaderComponent()
-                .gotoHeaderMenu()
+                .gotoMenuComponent()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 

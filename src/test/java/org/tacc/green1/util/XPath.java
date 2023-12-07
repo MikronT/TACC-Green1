@@ -4,6 +4,7 @@ package org.tacc.green1.util;
 public interface XPath {
     interface Page {
         String HEADER = "/html/body/div[2]/header";
+        String MENU = "/html/body/div[2]/div[1]/div/div[2]/nav/ul";
         String FOOTER = "/html/body/div[2]/footer";
     }
 
@@ -19,21 +20,16 @@ public interface XPath {
 
 
         interface Menu {
-            String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
+            String WOMEN = "li[2]";
+            String WOMEN_ITEM = "//*[@id='ui-id-4']";
+            String WOMEN_ARROW = WOMEN_ITEM + "/span[1]";
 
-            String OPTION_WOMEN = _OPTION + "/li[2]";
+            String WOMEN_TOPS = WOMEN + "/ul/li[1]";
 
-            String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
-            String OPTION_WOMEN_ARROW = OPTION_WOMEN_LINK + "/span[1]";
-            String OPTIOM_WOMEN_ITEM = "//*[@id='ui-id-4']";
+            String MEN = "li[3]";
+            String MEN_ITEM = "//*[@id='ui-id-5']";
 
-            String OPTION_WOMEN_TOPS = OPTION_WOMEN + "/ul/li[1]";
-
-            String OPTION_MEN = _OPTION + "/li[3]";
-
-            String OPTION_MEN_ITEM = "//*[@id='ui-id-5']";
-
-            String OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
+            String MEN_BOTTOMS = MEN + "/ul/li[2]";
         }
     }
 

@@ -17,8 +17,7 @@ public class DeleteProductFromCartTest extends BaseTest {
         var mainPage = TestClient.openBrowser();
 
         catalogPage = mainPage
-                .gotoHeaderComponent()
-                .gotoHeaderMenu()
+                .gotoMenuComponent()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 

@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
 import org.tacc.green1.model.components.header.cart.Cart;
-import org.tacc.green1.model.components.header.menu.HeaderMenu;
 import org.tacc.green1.model.pages.LoginPage;
 import org.tacc.green1.model.pages.MainPage;
 import org.tacc.green1.model.pages.RegistrationPage;
@@ -65,10 +64,6 @@ public class HeaderComponent extends Component implements XPath.Header {
     public RegistrationPage gotoRegistrationPage() {
         createAccountLink.click();
         return new RegistrationPage();
-    }
-
-    public HeaderMenu gotoHeaderMenu() {
-        return new HeaderMenu();
     }
 
     public AccountPopup openAccountPopup() {

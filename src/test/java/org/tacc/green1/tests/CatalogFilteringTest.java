@@ -24,8 +24,7 @@ public class CatalogFilteringTest extends BaseTest {
     @BeforeEach
     public void prepare() {
         catalogPage = page
-                .gotoHeaderComponent()
-                .gotoHeaderMenu()
+                .gotoMenuComponent()
                 .openWomenCategoryPopup()
                 .gotoWomenTopsCatalogPage()
                 .showMaxProductsPerPage();

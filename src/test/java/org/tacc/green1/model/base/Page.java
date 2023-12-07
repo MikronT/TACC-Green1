@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.components.FooterComponent;
 import org.tacc.green1.model.components.header.HeaderComponent;
+import org.tacc.green1.model.components.menu.MenuComponent;
 import org.tacc.green1.util.XPath;
 
 
@@ -15,6 +16,9 @@ public abstract class Page extends Modal implements XPath.Page {
     @FindBy(xpath = HEADER)
     private WebElement headerBlock;
 
+    @FindBy(xpath = MENU)
+    private WebElement menuBlock;
+
     @FindBy(xpath = FOOTER)
     private WebElement footerBlock;
 
@@ -22,6 +26,12 @@ public abstract class Page extends Modal implements XPath.Page {
     public HeaderComponent gotoHeaderComponent() {
         LOG.debug(String.format("Moving into class %s", HeaderComponent.class.getSimpleName()));
         return new HeaderComponent(headerBlock);
+    }
+
+    public MenuComponent gotoMenuComponent() {
+        //TODO 07.12.2023: Get rid of duplicated log entries
+        LOG.debug(String.format("Moving into class %s", MenuComponent.class.getSimpleName()));
+        return new MenuComponent(menuBlock);
     }
 
     public FooterComponent gotoFooterComponent() {

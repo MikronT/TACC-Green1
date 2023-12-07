@@ -9,11 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 public abstract class Component extends Modal {
     private static final Logger LOG = LogManager.getLogger(Component.class);
 
+    protected final SearchContext context;
+
 
     //TODO 07.12.2023: Get rid of this constructor
-    protected Component() {}
+    protected Component() {context = null;}
 
     protected Component(SearchContext context) {
+        this.context = context;
         LOG.info("Initializing component for class: " + getClass().getSimpleName());
         PageFactory.initElements(context, this);
     }

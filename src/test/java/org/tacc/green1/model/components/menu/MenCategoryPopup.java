@@ -1,5 +1,6 @@
-package org.tacc.green1.model.components.header.menu;
+package org.tacc.green1.model.components.menu;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -8,8 +9,13 @@ import org.tacc.green1.util.XPath;
 
 
 public class MenCategoryPopup extends Component implements XPath.Header.Menu {
-    @FindBy(xpath = OPTION_MEN_BOTTOMS)
+    @FindBy(xpath = MEN_BOTTOMS)
     private WebElement menBottomsCategoryItem;
+
+
+    protected MenCategoryPopup(SearchContext context) {
+        super(context);
+    }
 
 
     public CatalogPage gotoMenBottomsCatalogPage() {
