@@ -10,6 +10,7 @@ public abstract class Component extends Modal {
     private static final Logger LOG = LogManager.getLogger(Component.class);
 
 
+    //TODO 07.12.2023: Get rid of this constructor
     protected Component() {}
 
     protected Component(SearchContext context) {
