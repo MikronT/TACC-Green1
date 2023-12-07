@@ -71,8 +71,14 @@ public interface XPath {
         String FILTER_DROPDOWNS = "//*[@id=\"narrow-by-list\"]/div";
         String PRODUCT_CARDS = "//*[@class=\"products list items product-items\"]/li";
         String MESSAGE_ITEM_ADDED = "//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div";
+
+
     }
 
+    interface SortDropdown {
+        String SORT_DROPDOWN = "//*[@id=\"sorter\"]";
+        String SORT_OPTIONS = "//*[@id=\"sorter\"]/option";
+    }
 
     interface FilterDropdown {
         String LABEL_NAME = "div[1]";
@@ -83,6 +89,7 @@ public interface XPath {
 
     interface ProductCard {
         String LABEL_NAME = "div/div/strong/a";
+        String PRODUCT_PRICE_MEN = "span.price";
         String PRODUCT_COLOR = "div/div/div[2]/div[2]/div/div";
         String PRODUCT_SIZE = "div/div/div[2]/div[1]/div/div";
         String PRODUCT_ADD_BUTTON_CART = "div/div/div[3]/div/div[1]/form/button";

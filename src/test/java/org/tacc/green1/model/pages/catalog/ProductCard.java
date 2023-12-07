@@ -9,10 +9,15 @@ import org.tacc.green1.util.XPath;
 
 import java.util.List;
 
+import static java.lang.Double.parseDouble;
+
 
 public class ProductCard extends Component implements XPath.ProductCard {
     @FindBy(xpath = LABEL_NAME)
     private WebElement titleLabel;
+
+    @FindBy(css = PRODUCT_PRICE_MEN)
+    private WebElement price;
 
     @FindAll({
             @FindBy(xpath = PRODUCT_SIZE)
@@ -66,4 +71,6 @@ public class ProductCard extends Component implements XPath.ProductCard {
     public String getName() {
         return titleLabel.getText();
     }
+
+    public Double getPrice() { return parseDouble(price.getText().substring(1)); };
 }

@@ -89,4 +89,8 @@ public class CatalogPage extends Page implements XPath.CatalogPage {
                 .map(ProductCard::new)
                 .collect(Collectors.toList());
     }
+
+    public SortDropdown getSortDropdown() {
+        return new SortDropdown();
+    }
 }
