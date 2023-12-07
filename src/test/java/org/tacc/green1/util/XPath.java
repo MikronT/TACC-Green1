@@ -89,7 +89,7 @@ public interface XPath {
 
     interface ProductCard {
         String LABEL_NAME = "div/div/strong/a";
-        String PRODUCT_PRICE = "div/div/div[1]/span/span/span[2]/span";
+        String PRODUCT_PRICE_MEN = "span.price";
         String PRODUCT_COLOR = "div/div/div[2]/div[2]/div/div";
         String PRODUCT_SIZE = "div/div/div[2]/div[1]/div/div";
         String PRODUCT_ADD_BUTTON_CART = "div/div/div[3]/div/div[1]/form/button";

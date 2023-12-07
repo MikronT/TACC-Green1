@@ -16,7 +16,7 @@ public class ProductCard extends Component implements XPath.ProductCard {
     @FindBy(xpath = LABEL_NAME)
     private WebElement titleLabel;
 
-    @FindBy(xpath = PRODUCT_PRICE)
+    @FindBy(css = PRODUCT_PRICE_MEN)
     private WebElement price;
 
     @FindAll({

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
 import org.tacc.green1.util.XPath;
 
+import java.util.Collections;
 import java.util.List;
 
 public class SortDropdown extends Component implements XPath.SortDropdown {
@@ -17,12 +18,20 @@ public class SortDropdown extends Component implements XPath.SortDropdown {
     )
     private List<WebElement> sortDropdownOptions;
 
-    void chooseOption(String optionValue) {
-        WebElement chosenOption = sortDropdownOptions.stream()
+    public SortDropdown sortDropdownClick() {
+        sortDropdown.click();
+        return this;
+    }
+    public SortDropdown chooseOption(String optionValue) {
+        WebElement chosenOption =
+                sortDropdownOptions.stream()
                 .filter(option -> option.getText().equals(optionValue))
                 .toList()
                 .get(0);
 
         chosenOption.click();
+
+        return this;
     }
 }
+
