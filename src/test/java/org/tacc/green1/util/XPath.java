@@ -1,5 +1,7 @@
 package org.tacc.green1.util;
 
+import org.tacc.green1.tests.MyWishListTest;
+
 @SuppressWarnings("SpellCheckingInspection")
 public interface XPath {
     interface Header {
@@ -86,6 +88,7 @@ public interface XPath {
         String PRODUCT_COLOR = "div/div/div[2]/div[2]/div/div";
         String PRODUCT_SIZE = "div/div/div[2]/div[1]/div/div";
         String PRODUCT_ADD_BUTTON_CART = "div/div/div[3]/div/div[1]/form/button";
+        String ADD_WISH_LIST_BUTTON = "div/div/div[4]/div/div[2]/a[1]";
     }
 
 
@@ -138,5 +141,15 @@ public interface XPath {
         String THANKS_TEXT = "//*[@id=\"maincontent\"]/div[1]/h1/span";
         String BUTTON_CONTINUE_SHOPPING = "//*[@id=\"maincontent\"]/div[3]/div/div[2]/div/div/a";
         String LOADING_MASK = "//div[@class='loader']";
+    }
+
+    interface MyWishList {
+        String WISH_LIST = "//*[@id=\"wishlist-view-form\"]/div[1]/ol";
+        String WISH_LIST_ITEM = "//*[@id=\"wishlist-view-form\"]/div[1]/ol/li";
+    }
+
+    interface ProductCardWishList {
+        String LABEL_NAME = "div/strong/a";
+        String PRICE = "div/div[1]/p/span/span/span";
     }
 }

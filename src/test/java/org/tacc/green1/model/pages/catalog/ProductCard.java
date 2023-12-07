@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
+import org.tacc.green1.model.base.Page;
+import org.tacc.green1.model.pages.wishList.MyWishListPage;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
@@ -26,6 +28,9 @@ public class ProductCard extends Component implements XPath.ProductCard {
 
     @FindBy(xpath = PRODUCT_ADD_BUTTON_CART)
     private WebElement productAddButtonCart;
+
+    @FindBy(xpath = ADD_WISH_LIST_BUTTON)
+    private WebElement addWishListButton;
 
     public ProductCard(SearchContext context) {
         super(context);
@@ -56,6 +61,13 @@ public class ProductCard extends Component implements XPath.ProductCard {
 
         return this;
     }
+
+    public MyWishListPage addProductCardToWishList() {
+        addWishListButton.click();
+
+        return new MyWishListPage();
+    }
+
 
     public <T> T  submitAddToCart() {
         productAddButtonCart.click();
