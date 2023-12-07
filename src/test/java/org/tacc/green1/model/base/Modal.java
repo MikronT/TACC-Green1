@@ -39,11 +39,6 @@ public abstract class Modal {
         }
     }
 
-    protected Modal(SearchContext context) {
-        LOG.info("Initializing modal for class: " + getClass().getSimpleName());
-        PageFactory.initElements(context, this);
-    }
-
 
     private <V> void timeout(int seconds, Function<WebDriver, V> expectedConditionFunction) {
         Wait<WebDriver> wait = new FluentWait<>(driver)

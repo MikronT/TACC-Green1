@@ -2,6 +2,7 @@ package org.tacc.green1.model.components.header;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -36,6 +37,11 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
 
     @FindBy(xpath = "/html/body/div[2]/header/div[2]/div[1]/a/div")
     private WebElement cartLoading;
+
+
+    public HeaderComponent(SearchContext context) {
+        super(context);
+    }
 
 
     public MainPage gotoMainPage() {

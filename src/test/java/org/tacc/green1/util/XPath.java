@@ -2,12 +2,18 @@ package org.tacc.green1.util;
 
 @SuppressWarnings("SpellCheckingInspection")
 public interface XPath {
+    interface Page {
+        String HEADER = "/html/body/div[2]/header";
+        String FOOTER = "/html/body/div[2]/footer";
+    }
+
+
     interface Header {
-        String _HEADER = "/html/body/div[2]/header";
-        String LINK_LOGO = _HEADER + "/div[2]/a";
-        String LINK_WELCOME_ACCOUNT = _HEADER + "/div[1]/div/ul/li[1]/span";
-        String LINK_REGISTRATION = _HEADER + "/div[1]/div/ul/li[3]/a";
-        String BUTTON_OPEN_CART = _HEADER + "/div[2]/div[1]/a";
+        String LINK_LOGO = "div[2]/a";
+        String LINK_WELCOME_ACCOUNT = "div[1]/div/ul/li[1]/span";
+        String LINK_REGISTRATION = "div[1]/div/ul/li[3]/a";
+        String BUTTON_OPEN_CART = "div[2]/div[1]/a";
+
 
         interface HeaderMenu {
             String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
@@ -15,16 +21,14 @@ public interface XPath {
             String OPTION_WOMEN = _OPTION + "/li[2]";
 
             String OPTION_WOMEN_LINK = OPTION_WOMEN + "/a";
-            String OPTIOM_WOMEN_MENU_ITEM = "//*[@id='ui-id-4']";
-
             String OPTION_WOMEN_ARROW = OPTION_WOMEN_LINK + "/span[1]";
+            String OPTIOM_WOMEN_ITEM = "//*[@id='ui-id-4']";
 
             String OPTION_WOMEN_TOPS = OPTION_WOMEN + "/ul/li[1]";
 
             String OPTION_MEN = _OPTION + "/li[3]";
 
-            String OPTION_MEN_LINK = OPTION_MEN + "/a";
-            String OPTION_MEN_MENU_ITEM = "//*[@id='ui-id-5']";
+            String OPTION_MEN_ITEM = "//*[@id='ui-id-5']";
 
             String OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
         }
@@ -32,8 +36,7 @@ public interface XPath {
 
 
     interface Footer {
-        String _FOOTER = "/html/body/div[2]/footer";
-        String LINK_ADVANCED_SEARCH = _FOOTER + "/div/ul/li[3]/a";
+        String LINK_ADVANCED_SEARCH = "div/ul/li[3]/a";
     }
 
 
