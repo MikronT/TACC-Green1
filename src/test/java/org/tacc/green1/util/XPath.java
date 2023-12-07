@@ -15,6 +15,7 @@ public interface XPath {
         String ACCOUNT_POPUP = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul";
         String BUTTON_OPEN_CART = "div[2]/div[1]/a";
         String CART_LOADER = "div[2]/div[1]/a/span[2]/div";
+        String CART = "div[2]/div[1]/div/div/div";
 
 
         interface HeaderMenu {
@@ -96,7 +97,7 @@ public interface XPath {
     interface Cart {
         String BUTTON_CLOSE = "//*[@id=\"btn-minicart-close\"]";
         String ITEMS = "//*[@id=\"mini-cart\"]/li";
-        String BUTTON_CHECKOUT = "//*[@id=\"top-cart-btn-checkout\"]";
+        String BUTTON_CHECKOUT = "div[2]/div[3]/div/button";
         String ITEMS_COUNTER = "//span[@class='counter-label' and text()]";
         String MESSAGE_EMPTY_CART_OR_RECENTLY_ADDED = "//*[@id=\"minicart-content-wrapper\"]/div[2]/strong";
     }

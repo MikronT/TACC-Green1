@@ -41,6 +41,7 @@ public class Cart extends Component implements XPath.Cart {
 
     public OrderPage proceedToCheckout() {
         timeoutByInvisibility(5, emptyCartOrRecentlyAddedMessage);
+        timeoutByVisibility(5, checkoutButton);
 
         checkoutButton.click();
         return new OrderPage();

@@ -3,6 +3,7 @@ package org.tacc.green1.model.components.header;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -81,7 +82,16 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
     }
 
     public Cart openCart() {
-        timeoutByInvisibility(3, cartLoading);
+        //Try waiting for cart loader
+        try {
+            LOG.debug("Waiting for cart loader to appear");
+            timeoutByVisibility(2, cartLoader);
+            LOG.debug("Waiting for cart loader to disappear");
+            timeoutByInvisibility(2, cartLoader);
+            LOG.debug("Cart loader completed");
+        } catch (TimeoutException e) {
+            LOG.info("Probably, no cart loader ¯\\_(ツ)_/¯", e);
+        }
 
         openCart.click();
         return new Cart(cartBlock);
