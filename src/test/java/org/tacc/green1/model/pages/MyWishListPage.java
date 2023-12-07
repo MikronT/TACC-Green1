@@ -1,2 +1,5 @@
-package org.tacc.green1.model.pages;public class MyWishListPage {
+package org.tacc.green1.model.pages;
+
+public class MyWishListPage {
+
 }
