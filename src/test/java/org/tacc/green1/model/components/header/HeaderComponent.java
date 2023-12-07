@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
 import org.tacc.green1.model.components.header.cart.Cart;
+import org.tacc.green1.model.components.header.menu.HeaderMenu;
 import org.tacc.green1.model.pages.LoginPage;
 import org.tacc.green1.model.pages.MainPage;
 import org.tacc.green1.model.pages.RegistrationPage;
@@ -15,7 +16,7 @@ import org.tacc.green1.model.pages.account.AccountPopup;
 import org.tacc.green1.util.XPath;
 
 
-public class HeaderComponent extends Component implements XPath.Header, XPath.Header.HeaderMenu {
+public class HeaderComponent extends Component implements XPath.Header {
     private static final Logger LOG = LogManager.getLogger(HeaderComponent.class);
 
     @FindBy(xpath = LINK_LOGO)
@@ -66,8 +67,8 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
         return new RegistrationPage();
     }
 
-    public org.tacc.green1.model.components.header.menu.HeaderMenu gotoHeaderMenu() {
-        return new org.tacc.green1.model.components.header.menu.HeaderMenu();
+    public HeaderMenu gotoHeaderMenu() {
+        return new HeaderMenu();
     }
 
     public AccountPopup openAccountPopup() {

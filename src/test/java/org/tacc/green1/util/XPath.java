@@ -18,7 +18,7 @@ public interface XPath {
         String CART = "div[2]/div[1]/div/div/div";
 
 
-        interface HeaderMenu {
+        interface Menu {
             String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
 
             String OPTION_WOMEN = _OPTION + "/li[2]";

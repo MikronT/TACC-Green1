@@ -7,7 +7,7 @@ import org.tacc.green1.model.pages.catalog.CatalogPage;
 import org.tacc.green1.util.XPath;
 
 
-public class MenCategoryPopup extends Component implements XPath.Header.HeaderMenu {
+public class MenCategoryPopup extends Component implements XPath.Header.Menu {
     @FindBy(xpath = OPTION_MEN_BOTTOMS)
     private WebElement menBottomsCategoryItem;
 
