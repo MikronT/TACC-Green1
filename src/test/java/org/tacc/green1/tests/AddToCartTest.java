@@ -3,8 +3,6 @@ package org.tacc.green1.tests;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.tacc.green1.model.base.Page;
-import org.tacc.green1.model.pages.LoginPage;
 import org.tacc.green1.model.pages.catalog.CatalogPage;
 import org.tacc.green1.model.pages.catalog.ProductCard;
 import org.tacc.green1.util.TestClient;
@@ -13,10 +11,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AddToCartTest extends BaseTest{
+public class AddToCartTest extends BaseTest {
     private static CatalogPage catalogPage;
-    private static LoginPage loginPage;
     private static List<ProductCard> visibleProductsCards;
+
     @BeforeAll
     public static void prepare() {
         var mainPage = TestClient.openBrowser();
@@ -29,11 +27,12 @@ public class AddToCartTest extends BaseTest{
 
         visibleProductsCards = catalogPage.getVisibleProductCards();
     }
+
     @ParameterizedTest
     @CsvSource({
-            "Red, 33, 0"
+            "Red, 33, 1"
     })
-    public void addToCartTest(String color, int size, int productNumber) throws InterruptedException {
+    public void addToCartTest(String color, int size, int productNumber) {
         var desiredProductCard = visibleProductsCards.get(productNumber);
 
         desiredProductCard
@@ -41,10 +40,11 @@ public class AddToCartTest extends BaseTest{
                 .chooseColor(color)
                 .submitAddToCart();
 
+        catalogPage.gotoHeaderComponent().openCart();
+        var testClient = TestClient.generateRandomNewClient();
+        testClient.register(catalogPage);
         var cart = catalogPage.gotoHeaderComponent().openCart();
-        catalogPage.gotoHeaderComponent().gotoLoginPage();
-        loginPage.fillEmail("cwucfmlm@y9ipcuvzr.cp");
-        loginPage.fillPassword("Yc?oXOX<");
-        loginPage.submit();
+        var added_el = cart.getVisibleCartItems().get(0);
+        assertEquals(String.valueOf(productNumber), added_el.getQuantity(), "Quantity must match");
     }
 }

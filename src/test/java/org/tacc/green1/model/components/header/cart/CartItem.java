@@ -75,7 +75,7 @@ public class CartItem extends Component implements XPath.CartItem {
     }
 
     public String getQuantity() {
-        return quantityInput.getText();
+        return quantityInput.getAttribute("data-item-qty");
     }
 
     public String getSize() {
