@@ -38,8 +38,8 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
     @FindBy(xpath = BUTTON_OPEN_CART)
     private WebElement openCart;
 
-    @FindBy(xpath = "/html/body/div[2]/header/div[2]/div[1]/a/div")
     private WebElement cartLoading;
+    @FindBy(xpath = CART_LOADER)
 
 
     public HeaderComponent(SearchContext context) {

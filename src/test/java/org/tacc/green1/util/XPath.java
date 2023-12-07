@@ -14,6 +14,7 @@ public interface XPath {
         String LINK_REGISTRATION = "div[1]/div/ul/li[3]/a";
         String ACCOUNT_POPUP = "/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul";
         String BUTTON_OPEN_CART = "div[2]/div[1]/a";
+        String CART_LOADER = "div[2]/div[1]/a/span[2]/div";
 
 
         interface HeaderMenu {
