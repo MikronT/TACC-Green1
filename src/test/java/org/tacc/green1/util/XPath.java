@@ -104,7 +104,7 @@ public interface XPath {
         String DELETE_BUTTON = "div/div/div[3]/div[2]/a";
         String BUTTON_CONFIRM_DELETE = "//button[@class='action-primary action-accept' and @type='button' and @data-role='action']/span[text()='OK']";
         String UPDATE_PRODUCT_BUTTON = "div/div/div[3]/div[1]/a";
-        String QUANTITY_INPUT = "//*[@id=\"cart-item-487282-qty\"]";
+        String QUANTITY_INPUT = "div/div/div[2]/div[2]/input";
         String SEE_DETAILS_BUTTON = "div/div/div[1]/span";
         String SIZE_TEXT = "div/div/div[1]/div/dl/dd[1]/span";
         String COLOR_TEXT = "div/div/div[1]/div/dl/dd[2]/span";
