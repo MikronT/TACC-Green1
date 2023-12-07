@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.tacc.green1.model.RegistrationPage;
+import org.tacc.green1.model.pages.RegistrationPage;
 import org.tacc.green1.util.TestClient;
 
 import java.util.stream.Stream;
@@ -15,14 +15,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RegistrationTest extends BaseTest {
     private static RegistrationPage registrationPage;
 
-
     @BeforeAll
     public static void prepare() {
         var mainPage = TestClient.openBrowser();
 
-        registrationPage = mainPage.gotoRegistrationPage();
+        registrationPage = mainPage.gotoHeaderComponent().gotoRegistrationPage();
     }
-
 
     private static Stream<Arguments> provideRegistrationData() {
         var testClient = TestClient.generateRandomNewClient();

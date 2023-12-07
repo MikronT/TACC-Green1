@@ -1,4 +1,4 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -6,7 +6,7 @@ import org.tacc.green1.model.base.Page;
 import org.tacc.green1.util.XPath;
 
 
-public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
+public class OrderPage extends Page implements XPath.OrderPage {
     @FindBy(xpath = EMAIL)
     private WebElement email;
 
@@ -51,6 +51,9 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
 
     @FindBy(xpath = BUTTON_CONTINUE_SHOPPING)
     private WebElement continueShoppingButton;
+
+    @FindBy(xpath = LOADING_MASK)
+    public WebElement pleaseWaitMask;
 
 
     public OrderPage() {
@@ -124,12 +127,11 @@ public class OrderPage extends Page<OrderPage> implements XPath.OrderPage {
     }
 
     public OrderPage placeOrder() {
-        timeoutByVisibility(placeOrderButton);
-        timeout(1);
+        timeoutByInvisibility(5, pleaseWaitMask);
 
         placeOrderButton.click();
 
-        timeoutByVisibility(continueShoppingButton);
+        timeoutByInvisibility(5, placeOrderButton);
         return this;
     }
 

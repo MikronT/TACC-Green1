@@ -1,4 +1,4 @@
-package org.tacc.green1.model.catalog;
+package org.tacc.green1.model.pages.catalog;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,14 +6,14 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.base.Modal;
+import org.tacc.green1.model.base.Component;
 import org.tacc.green1.util.XPath;
 
 import java.util.List;
 import java.util.Optional;
 
 
-public class FilterDropdown extends Modal implements XPath.FilterDropdown {
+public class FilterDropdown extends Component implements XPath.FilterDropdown {
     private static final Logger LOG = LogManager.getLogger(FilterDropdown.class);
     private boolean expanded = false;
 
@@ -91,7 +91,7 @@ public class FilterDropdown extends Modal implements XPath.FilterDropdown {
 
         LOG.debug("Found corresponding filter for argument: " + argument);
 
-        //Finally apply filter
+        //Finally, apply filter
         requestedOption.get().click();
     }
 }

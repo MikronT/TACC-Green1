@@ -1,11 +1,11 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.tacc.green1.model.base.Page;
 
 
-public class MainPage extends Page<MainPage> {
+public class MainPage extends Page {
     private static final Logger LOG = LogManager.getLogger(MainPage.class);
 
 

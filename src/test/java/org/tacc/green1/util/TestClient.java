@@ -2,10 +2,10 @@ package org.tacc.green1.util;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.tacc.green1.model.LoginPage;
-import org.tacc.green1.model.MainPage;
-import org.tacc.green1.model.RegistrationPage;
 import org.tacc.green1.model.base.Page;
+import org.tacc.green1.model.pages.LoginPage;
+import org.tacc.green1.model.pages.MainPage;
+import org.tacc.green1.model.pages.RegistrationPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -127,7 +127,7 @@ public class TestClient {
         return MainPage.open(url);
     }
 
-    public void login(Page<?> page) {
+    public void login(Page page) {
         LOG.info("Logging in as "
                 + getFirstName() + ' '
                 + getLastName() + " with "
@@ -135,7 +135,7 @@ public class TestClient {
 
         var loginPage = page instanceof LoginPage castToLoginPage ?
                 castToLoginPage :
-                page.gotoLoginPage();
+                page.gotoHeaderComponent().gotoLoginPage();
 
         loginPage
                 .fillEmail(getEmail())
@@ -143,7 +143,7 @@ public class TestClient {
                 .submit();
     }
 
-    public void register(Page<?> page) {
+    public void register(Page page) {
         LOG.info("Registering as "
                 + getFirstName() + ' '
                 + getLastName() + " with "
@@ -151,7 +151,7 @@ public class TestClient {
 
         var registrationPage = page instanceof RegistrationPage castToRegistrationPage ?
                 castToRegistrationPage :
-                page.gotoRegistrationPage();
+                page.gotoHeaderComponent().gotoRegistrationPage();
 
         registrationPage
                 .fillFirstName(getFirstName())
@@ -161,6 +161,7 @@ public class TestClient {
                 .fillConfirmPassword(getPassword())
                 .submit()
 
+                .gotoHeaderComponent()
                 .gotoMainPage();
     }
 

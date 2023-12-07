@@ -1,13 +1,14 @@
-package org.tacc.green1.model.cart;
+package org.tacc.green1.model.components.header.cart;
 
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.tacc.green1.model.base.Modal;
+import org.tacc.green1.model.base.Component;
 import org.tacc.green1.util.XPath;
 
 
-public class CartItem extends Modal implements XPath.CartItem {
+public class CartItem extends Component implements XPath.CartItem {
     @FindBy(xpath = DELETE_BUTTON)
     private WebElement deleteButton;
 
@@ -29,11 +30,18 @@ public class CartItem extends Modal implements XPath.CartItem {
     @FindBy(xpath = PRICE_TEXT)
     private WebElement priceText;
 
+    @FindBy(xpath = BUTTON_CONFIRM_DELETE)
+    private WebElement confirmDeleteButton;
+
+    @FindAll({
+            @FindBy(xpath = CART_ITEMS_WRAPPER),
+            @FindBy(css = CART_ITEMS_WRAPPER_CSS)
+    })
+    private WebElement cartPopupItems;
 
     public CartItem(SearchContext context) {
         super(context);
     }
-
 
     public CartItem setQuantity(int quantity) {
         quantityInput.clear();
@@ -56,6 +64,15 @@ public class CartItem extends Modal implements XPath.CartItem {
         return this;
     }
 
+    @SuppressWarnings("unchecked")
+    public <T> T confirmDelete() {
+        timeoutByVisibility(confirmDeleteButton);
+
+        confirmDeleteButton.click();
+
+        timeoutByInvisibility(2, cartPopupItems);
+        return (T) this;
+    }
 
     public String getQuantity() {
         return quantityInput.getText();

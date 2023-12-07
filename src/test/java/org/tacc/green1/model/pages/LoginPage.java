@@ -1,11 +1,11 @@
-package org.tacc.green1.model;
+package org.tacc.green1.model.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Page;
 
 
-public class LoginPage extends Page<LoginPage> {
+public class LoginPage extends Page {
     @FindBy(id = "email")
     private WebElement emailInput;
 
@@ -34,7 +34,7 @@ public class LoginPage extends Page<LoginPage> {
     public MainPage submit() {
         submitButton.click();
 
-        timeout(1);
+        timeoutByInvisibility(3, passwordInput);
         return new MainPage();
     }
 }

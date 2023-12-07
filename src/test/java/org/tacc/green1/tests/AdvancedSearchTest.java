@@ -4,15 +4,15 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.tacc.green1.model.AdvancedSearchPage;
 import org.tacc.green1.model.base.Page;
+import org.tacc.green1.model.pages.AdvancedSearchPage;
 import org.tacc.green1.util.TestClient;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class AdvancedSearchTest extends BaseTest {
-    private static Page<?> page;
+    private static Page page;
     private AdvancedSearchPage advancedSearchPage;
 
 
@@ -23,7 +23,7 @@ public class AdvancedSearchTest extends BaseTest {
 
     @BeforeEach
     public void gotoAdvancedSearchPage() {
-        advancedSearchPage = page.gotoAdvancedSearchPage();
+        advancedSearchPage = page.gotoFooterComponent().gotoAdvancedSearchPage();
     }
 
 
