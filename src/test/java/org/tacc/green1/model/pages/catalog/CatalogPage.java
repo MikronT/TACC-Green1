@@ -37,6 +37,7 @@ public class CatalogPage extends Page implements XPath.CatalogPage {
         timeoutByVisibility(limiterDropdown);
     }
 
+
     public CatalogPage showMaxProductsPerPage() {
         var limiterSelect = new Select(limiterDropdown);
 

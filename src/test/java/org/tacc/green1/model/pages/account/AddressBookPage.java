@@ -118,6 +118,7 @@ public class AddressBookPage extends Page implements XPath.AddressBookPage {
         return this;
     }
 
+
     public String getDefaultBillingAddress() {
         return billingAddressBlock.getText();
     }

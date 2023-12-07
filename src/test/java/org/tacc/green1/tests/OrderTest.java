@@ -16,6 +16,7 @@ public class OrderTest extends BaseTest {
     private static CatalogPage catalogPage;
     private static List<ProductCard> visibleProductsCards;
 
+
     @BeforeAll
     public static void prepare() {
         var mainPage = TestClient.openBrowser();
@@ -28,6 +29,7 @@ public class OrderTest extends BaseTest {
 
         visibleProductsCards = catalogPage.getVisibleProductCards();
     }
+
 
     @SuppressWarnings("SpellCheckingInspection")
     @ParameterizedTest

@@ -17,6 +17,7 @@ public class ProductReviewsTest extends BaseTest {
     private static Page page;
     private ProductReviewsTab productReviewsTab;
 
+
     @BeforeAll
     public static void initClient() {
         page = TestClient.openBrowser();
@@ -38,6 +39,7 @@ public class ProductReviewsTest extends BaseTest {
 
         productReviewsTab = productPage.gotoProductReviewsTab();
     }
+
 
     @ParameterizedTest
     @CsvFileSource(resources = "/productReviews.csv")

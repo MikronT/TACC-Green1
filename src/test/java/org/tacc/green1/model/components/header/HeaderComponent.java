@@ -12,6 +12,7 @@ import org.tacc.green1.model.pages.RegistrationPage;
 import org.tacc.green1.model.pages.account.AccountPopup;
 import org.tacc.green1.util.XPath;
 
+
 public class HeaderComponent extends Component implements XPath.Header, XPath.Header.HeaderMenu {
     private static final Logger LOG = LogManager.getLogger(HeaderComponent.class);
 

@@ -13,9 +13,11 @@ public class AccountPage extends Page implements XPath.AccountPage {
     @FindBy(css = "span[class='base']")
     private WebElement welcomeTextElement;
 
+
     public AccountPage() {
         timeoutByVisibility(contactInfoTextElement);
     }
+
 
     public String getAccountContactInfoText() {
         return contactInfoTextElement.getText();

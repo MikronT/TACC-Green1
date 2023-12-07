@@ -2,7 +2,10 @@ package org.tacc.green1.model.base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,7 +24,7 @@ public abstract class Modal {
     private static final Logger LOG = LogManager.getLogger(Modal.class);
 
     private String COOKIE_SESSION_NAME;
-    protected WebDriver driver;
+    protected final WebDriver driver;
 
 
     protected Modal() {

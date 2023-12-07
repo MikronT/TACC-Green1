@@ -39,9 +39,11 @@ public class CartItem extends Component implements XPath.CartItem {
     })
     private WebElement cartPopupItems;
 
+
     public CartItem(SearchContext context) {
         super(context);
     }
+
 
     public CartItem setQuantity(int quantity) {
         quantityInput.clear();
@@ -73,6 +75,7 @@ public class CartItem extends Component implements XPath.CartItem {
         timeoutByInvisibility(2, cartPopupItems);
         return (T) this;
     }
+
 
     public String getQuantity() {
         return quantityInput.getText();

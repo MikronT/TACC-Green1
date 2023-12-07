@@ -11,6 +11,7 @@ public class WomenCategoryPopup extends Component implements XPath.Header.Header
     @FindBy(xpath = OPTION_WOMEN_TOPS)
     private WebElement womenTopsCategoryItem;
 
+
     public CatalogPage gotoWomenTopsCatalogPage() {
         timeoutByVisibility(womenTopsCategoryItem);
 

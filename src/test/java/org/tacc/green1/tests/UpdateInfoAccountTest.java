@@ -17,6 +17,7 @@ public class UpdateInfoAccountTest extends BaseTest {
     private static AccountInformationPage accountInformationPage;
     private static String email, password;
 
+
     @BeforeAll
     public static void initClient() {
         var mainPage = TestClient.openBrowser();
@@ -38,6 +39,7 @@ public class UpdateInfoAccountTest extends BaseTest {
                 .gotoAccountSidebar()
                 .gotoAccountInformationPage();
     }
+
 
     @ParameterizedTest
     @CsvSource({

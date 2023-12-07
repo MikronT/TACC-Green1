@@ -33,6 +33,7 @@ public class AccountInformationPage extends Page {
     @FindBy(id = "change-email")
     private WebElement changeEmailCheckbox;
 
+
     public AccountInformationPage toggleEmailCheckBox() {
         changeEmailCheckbox.click();
         isEmailToggled = true;

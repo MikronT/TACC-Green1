@@ -11,11 +11,12 @@ public class HeaderMenu extends Component implements XPath.Header.HeaderMenu {
     @FindBy(xpath = OPTION_WOMEN_ARROW)
     private WebElement womenCategoryArrow;
 
-    @FindBy(xpath = OPTIOM_WOMEN_MENU_ITEM)
+    @FindBy(xpath = OPTIOM_WOMEN_ITEM)
     private WebElement womenMenuItem;
 
-    @FindBy(xpath = OPTION_MEN_MENU_ITEM)
+    @FindBy(xpath = OPTION_MEN_ITEM)
     public WebElement menMenuItem;
+
 
     public HeaderMenu() {
         timeoutByVisibility(5, womenCategoryArrow);

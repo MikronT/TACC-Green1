@@ -10,7 +10,6 @@ public interface XPath {
         String BUTTON_OPEN_CART = _HEADER + "/div[2]/div[1]/a";
 
         interface HeaderMenu {
-
             String _OPTION = "//*[@id=\"store.menu\"]/nav/ul";
 
             String OPTION_WOMEN = _OPTION + "/li[2]";
@@ -28,14 +27,15 @@ public interface XPath {
             String OPTION_MEN_MENU_ITEM = "//*[@id='ui-id-5']";
 
             String OPTION_MEN_BOTTOMS = OPTION_MEN + "/ul/li[2]";
-
         }
     }
+
 
     interface Footer {
         String _FOOTER = "/html/body/div[2]/footer";
         String LINK_ADVANCED_SEARCH = _FOOTER + "/div/ul/li[3]/a";
     }
+
 
     interface AccountPage {
         String CONTACT_INFORMATION_TEXT = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[1]/p";

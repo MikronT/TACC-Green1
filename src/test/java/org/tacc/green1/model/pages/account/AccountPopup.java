@@ -17,6 +17,7 @@ public class AccountPopup extends Component implements XPath.AccountPopup {
     @FindBy(xpath = OPTION_SIGN_OUT)
     private WebElement signOutOption;
 
+
     public AccountPage gotoMyAccountPage() {
         myAccountOption.click();
         return new AccountPage();

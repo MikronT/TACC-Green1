@@ -13,6 +13,7 @@ public class AccountSidebar extends Component implements XPath.AccountSidebar {
     @FindBy(xpath = LINK_ACCOUNT_INFORMATION)
     private WebElement accountInformationLink;
 
+
     public AddressBookPage gotoAddressBookPage() {
         addressBookLink.click();
         return new AddressBookPage();

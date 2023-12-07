@@ -16,6 +16,7 @@ public class LoginTest extends BaseTest {
     private static Page page;
     private LoginPage loginPage;
 
+
     @BeforeAll
     public static void initClient() {
         page = TestClient.openBrowser();
@@ -25,6 +26,7 @@ public class LoginTest extends BaseTest {
     public void prepare() {
         loginPage = page.gotoHeaderComponent().gotoLoginPage();
     }
+
 
     @ParameterizedTest
     @CsvFileSource(resources = "/registrationData.csv")
@@ -39,6 +41,7 @@ public class LoginTest extends BaseTest {
 
         assertTrue(page.isClientLoggedIn(), "Logging in failed");
     }
+
 
     @AfterEach
     public void signOut() {
