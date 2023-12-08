@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "da00693f-a0e7-46cc-a455-f6a243ca6c80",
+		"name": "News Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31647913"
+	},
+	"item": [
+		{
+			"name": "Get all econews",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Update info\", async () => {\r",
+							"    pm.request.body = {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify(updatedNews)\r",
+							"    }\r",
+							"\r",
+							"    await pm.response.status(200)\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "greencity.greencity.social/econews",
+					"host": [
+						"greencity",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"econews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const checkInfo = JSON.stringify( {\r",
+							"            \"id\": 990,\r",
+							"            \"title\": \"А я сейчас вам покажу\",\r",
+							"            \"content\": \"А я сейчас вам покажу, откуда на Беларусь готовилось нападение. И если бы за шесть часов до операции не был нанесён превентивный удар по позициям. Четыре позиции, я сейчас покажу карту, я принёс. Они бы атаковали наши войска Беларуси и России, которые были на учении. Поэтому не мы развязали эту войну, у нас совесть чиста. Хорошо, что начали. Биологическое оружие, самые большие электростанции атомные — и всё это были готовы взорвать.\",\r",
+							"            \"shortInfo\": null,\r",
+							"            \"author\": {\r",
+							"                \"id\": 1168,\r",
+							"                \"name\": \"MikronP\"\r",
+							"            },\r",
+							"            \"creationDate\": \"2023-12-08T14:19:17.104185Z\",\r",
+							"            \"imagePath\": \"https://csb10032000a548f571.blob.core.windows.net/allfiles/9b9b1ac4-b21b-4bcb-86dc-454e539a47e9map.png\",\r",
+							"            \"source\": null,\r",
+							"            \"tagsUa\": [\r",
+							"                \"Події\"\r",
+							"            ],\r",
+							"            \"tagsEn\": [\r",
+							"                \"Events\"\r",
+							"            ],\r",
+							"            \"likes\": 0,\r",
+							"            \"countComments\": 0,\r",
+							"            \"countOfEcoNews\": 355\r",
+							"        });\r",
+							"\r",
+							"pm.test(\"Get by id\", async () => {\r",
+							"    pm.request.addQueryParams.add({\r",
+							"        key: 'id',\r",
+							"        value: '990',\r",
+							"    });\r",
+							"    \r",
+							"    const res = await pm.response.body;\r",
+							"\r",
+							"    pm.expect(res, \"response correct\").eql(checkInfo)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "greencity.greencity.social/econews/",
+					"host": [
+						"greencity",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"econews",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

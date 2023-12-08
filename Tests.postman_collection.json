@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "5ab09b81-4a9d-4a05-b8cc-073a1f5f7271",
+		"name": "Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31647913"
+	},
+	"item": [
+		{
+			"name": "greencity-user.greencity.social/error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const user = {\r",
+							"    email: \"volodymyr.nakonechnyi28@gmail.com\",\r",
+							"    password: \"mGSB4XjH4VSJkyX0!\"\r",
+							"} \r",
+							"\r",
+							"pm.test(\"Correct data test\", async () => {\r",
+							"     pm.request.body = {\r",
+							"        mode: 'raw',\r",
+							"        raw: user.json()\r",
+							"    };\r",
+							"\r",
+							"    const responseData = await pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData.ownRegistrations, \"Login data isn't correct\").to.eql(true);\r",
+							"})\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"volodymyr.nakonechnyi28@gmail.com\",\r\n    \"password\": \"mGSB4XjH4VSJkyX0!\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "greencity-user.greencity.social/ownSecurity/signIn",
+					"host": [
+						"greencity-user",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"ownSecurity",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-notifications-test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Correct data test\", async () => {\r",
+							"     pm.request.body = {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify(user)\r",
+							"    };\r",
+							"\r",
+							"    const responseData = await pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData, \"Unread notifications\").to.eql(0);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2b2xvZHlteXIubmFrb25lY2hueWkyOEBnbWFpbC5jb20iLCJyb2xlIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDE5NjU1MjIsImV4cCI6MTcwMTk3MjcyMn0.w_FNf9Xe15kvJjGkoLDys1B7sIvOBw6_lIljZM2cQSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"volodymyr.nakonechnyi28@gmail.com\",\r\n    \"password\": \"mGSB4XjH4VSJkyX0!\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "greencity-ubs.greencity.social/notifications/quantityUnreadenNotifications",
+					"host": [
+						"greencity-ubs",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"notifications",
+						"quantityUnreadenNotifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "greencity-user.greencity.social/error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Forbidden fucntions\", () => {\r",
+							"    pm.expect(403)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2b2xvZHlteXIubmFrb25lY2hueWkyOEBnbWFpbC5jb20iLCJyb2xlIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDE5NjU1MjIsImV4cCI6MTcwMTk3MjcyMn0.w_FNf9Xe15kvJjGkoLDys1B7sIvOBw6_lIljZM2cQSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "greencity-user.greencity.social/ubs/userProfile/user/getUserProfile",
+					"host": [
+						"greencity-user",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"ubs",
+						"userProfile",
+						"user",
+						"getUserProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post_update_info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.test(\"Update profile info\", () => {\r",
+							"    const reqBody = {\r",
+							"        \"email\": \"volodymyr.nakonechnyi28@gmail.com\",\r",
+							"        \"name\": \"Dorian\",\r",
+							"        \"role\": \"USER\",\r",
+							"        \"userCredo\": \"NO\",\r",
+							"        \"userStatus\": \"ACTIVE\"\r",
+							"    };\r",
+							"\r",
+							"    pm.request.body = {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify(user)\r",
+							"    };\r",
+							"\r",
+							"    pm.expect(\"Dorian\", \"Don't update info\").eql(await JSON.parse(pm.response).name);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2b2xvZHlteXIubmFrb25lY2hueWkyOEBnbWFpbC5jb20iLCJyb2xlIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDE5NjAyMjYsImV4cCI6MTcwMTk2NzQyNn0.ZyAGBLJScvTDBh49Lz91MSDiyWFffa9gtrIQECayrBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "greencity-user.greencity.social/user/1112",
+					"host": [
+						"greencity-user",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"user",
+						"1112"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get user profile info\",() => {\r",
+							"    pm.expect(pm.response)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2b2xvZHlteXIubmFrb25lY2hueWkyOEBnbWFpbC5jb20iLCJyb2xlIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MDE5NjAyMjYsImV4cCI6MTcwMTk2NzQyNn0.ZyAGBLJScvTDBh49Lz91MSDiyWFffa9gtrIQECayrBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "greencity-user.greencity.social/ubs/userProfile/user/getUserProfile",
+					"host": [
+						"greencity-user",
+						"greencity",
+						"social"
+					],
+					"path": [
+						"ubs",
+						"userProfile",
+						"user",
+						"getUserProfile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
