@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "a071b2be-79d4-4fd1-aa86-c5fe2e5ef6f0",
+		"name": "Greencity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31666731"
+	},
+	"item": [
+		{
+			"name": "Get eco news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/econews?page=0&size=5&sort=asc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"econews"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new eco news (Body/form-data)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "map.png"
+						},
+						{
+							"key": "addEcoNewsDtoRequest",
+							"value": "{\n    \"tags\": [\n        \"Події\"\n    ],\n    \"title\": \"А я сейчас вам покажу\",\n    \"text\": \"А я сейчас вам покажу, откуда на Беларусь готовилось нападение. И если бы за шесть часов до операции не был нанесён превентивный удар по позициям. Четыре позиции, я сейчас покажу карту, я принёс. Они бы атаковали наши войска Беларуси и России, которые были на учении. Поэтому не мы развязали эту войну, у нас совесть чиста. Хорошо, что начали. Биологическое оружие, самые большие электростанции атомные — и всё это были готовы взорвать.\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/econews",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"econews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new eco news (Tests)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const post = {\r",
+							"    \"tags\": [\r",
+							"        \"Події\"\r",
+							"    ],\r",
+							"    \"title\": \"SoftServe, Inc. the software development company\",\r",
+							"    \"text\": \"Soft serve, also known as soft ice, is a frozen dessert, similar to ice cream, but softer and less dense due to more air being introduced during freezing. Soft serve has been sold commercially since the late 1930s in the United States.<br>In the United States, soft serve is not typically sold prepackaged in supermarkets but is common at fairs, carnivals, amusement parks, restaurants (especially fast food and buffet), and specialty shops. All ice cream must be frozen quickly to avoid crystal growth. With soft serve, this is accomplished by a special machine that holds pre-mixed product at a very low, but not frozen, temperature at the point of sale.\"\r",
+							"}\r",
+							"\r",
+							"const formdata = [\r",
+							"    {\r",
+							"\t\t\"key\": \"image\",\r",
+							"\t\t\"type\": \"file\",\r",
+							"\t\t\"src\": \"softserve.jpeg\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"key\": \"addEcoNewsDtoRequest\",\r",
+							"        \"value\": JSON.stringify(post),\r",
+							"        \"type\": \"text\"\r",
+							"    }\r",
+							"]\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status test\", async () => {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Correct response test\", async () => {\r",
+							"    pm.request.body = {\r",
+							"        mode: 'formdata',\r",
+							"        formdata: formdata\r",
+							"    }\r",
+							"\r",
+							"    pm.response.to.have.jsonBody(\"image\", \"А я сейчас вам покажу\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/econews",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"econews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/econews/tags/all?lang=ua",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"econews",
+						"tags",
+						"all"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "ua"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like the news post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/econews/like?id=933",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"econews",
+						"like"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "933"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://greencity.greencity.social",
+			"type": "string"
+		}
+	]
+}
