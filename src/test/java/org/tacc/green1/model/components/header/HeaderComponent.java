@@ -2,6 +2,8 @@ package org.tacc.green1.model.components.header;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -12,7 +14,8 @@ import org.tacc.green1.model.pages.RegistrationPage;
 import org.tacc.green1.model.pages.account.AccountPopup;
 import org.tacc.green1.util.XPath;
 
-public class HeaderComponent extends Component implements XPath.Header, XPath.Header.HeaderMenu {
+
+public class HeaderComponent extends Component implements XPath.Header {
     private static final Logger LOG = LogManager.getLogger(HeaderComponent.class);
 
     @FindBy(xpath = LINK_LOGO)
@@ -30,11 +33,22 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
     @FindBy(css = "button.action.switch")
     private WebElement accountPopupToggle;
 
+    @FindBy(xpath = ACCOUNT_POPUP)
+    private WebElement accountPopupBlock;
+
     @FindBy(xpath = BUTTON_OPEN_CART)
     private WebElement openCart;
 
-    @FindBy(xpath = "/html/body/div[2]/header/div[2]/div[1]/a/div")
-    private WebElement cartLoading;
+    @FindBy(xpath = CART_LOADER)
+    private WebElement cartLoader;
+
+    @FindBy(xpath = CART)
+    private WebElement cartBlock;
+
+
+    public HeaderComponent(SearchContext context) {
+        super(context);
+    }
 
 
     public MainPage gotoMainPage() {
@@ -52,10 +66,6 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
         return new RegistrationPage();
     }
 
-    public org.tacc.green1.model.components.header.menu.HeaderMenu gotoHeaderMenu() {
-        return new org.tacc.green1.model.components.header.menu.HeaderMenu();
-    }
-
     public AccountPopup openAccountPopup() {
         if (!isClientLoggedIn()) {
             String message = "No user is logged in, check out your method call order";
@@ -64,13 +74,24 @@ public class HeaderComponent extends Component implements XPath.Header, XPath.He
         }
 
         accountPopupToggle.click();
-        return new AccountPopup();
+        return new AccountPopup(accountPopupBlock);
     }
 
     public Cart openCart() {
-        timeoutByInvisibility(3, cartLoading);
+        //Try waiting for cart loader
+        try {
+            LOG.debug("Waiting for cart loader to appear");
+            timeoutByVisibility(2, cartLoader);
+            LOG.debug("Waiting for cart loader to disappear");
+            timeoutByInvisibility(2, cartLoader);
+            LOG.debug("Cart loader completed");
+        } catch (TimeoutException e) {
+            LOG.info("Probably, no cart loader ¯\\_(ツ)_/¯", e);
+        }
 
         openCart.click();
-        return new Cart();
+
+        timeoutByVisibility(2, cartBlock);
+        return new Cart(cartBlock);
     }
 }

@@ -5,12 +5,16 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.support.PageFactory;
 
+
 public abstract class Component extends Modal {
     private static final Logger LOG = LogManager.getLogger(Component.class);
+
+    protected final SearchContext context;
+
+
     protected Component(SearchContext context) {
-        LOG.info("Initializing modal for class: " + getClass().getSimpleName());
+        this.context = context;
+        LOG.info("Initializing component for class: " + getClass().getSimpleName());
         PageFactory.initElements(context, this);
     }
-
-    protected Component() {}
 }

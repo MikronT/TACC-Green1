@@ -16,18 +16,19 @@ public class OrderTest extends BaseTest {
     private static CatalogPage catalogPage;
     private static List<ProductCard> visibleProductsCards;
 
+
     @BeforeAll
     public static void prepare() {
         var mainPage = TestClient.openBrowser();
 
         catalogPage = mainPage
-                .gotoHeaderComponent()
-                .gotoHeaderMenu()
+                .gotoMenuComponent()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 
         visibleProductsCards = catalogPage.getVisibleProductCards();
     }
+
 
     @SuppressWarnings("SpellCheckingInspection")
     @ParameterizedTest

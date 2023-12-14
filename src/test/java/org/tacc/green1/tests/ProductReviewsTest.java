@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.tacc.green1.model.base.Page;
+import org.tacc.green1.model.pages.catalog.ProductPage;
 import org.tacc.green1.model.pages.catalog.ProductReviewsTab;
 import org.tacc.green1.util.TestClient;
 
@@ -15,7 +16,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProductReviewsTest extends BaseTest {
     private static Page page;
+    private ProductPage productPage;
     private ProductReviewsTab productReviewsTab;
+
 
     @BeforeAll
     public static void initClient() {
@@ -25,8 +28,7 @@ public class ProductReviewsTest extends BaseTest {
     @BeforeEach
     public void prepare() {
         var catalogPage = page
-                .gotoHeaderComponent()
-                .gotoHeaderMenu()
+                .gotoMenuComponent()
                 .openMenCategoryPopup()
                 .gotoMenBottomsCatalogPage();
 
@@ -34,10 +36,11 @@ public class ProductReviewsTest extends BaseTest {
         var random = new Random();
         var randomProductCard = visibleProductCardsList.get(random.nextInt(0, visibleProductCardsList.size()));
 
-        var productPage = randomProductCard.gotoProductPage();
+        productPage = randomProductCard.gotoProductPage();
 
         productReviewsTab = productPage.gotoProductReviewsTab();
     }
+
 
     @ParameterizedTest
     @CsvFileSource(resources = "/productReviews.csv")
@@ -53,7 +56,7 @@ public class ProductReviewsTest extends BaseTest {
                 .fillReview(review)
                 .submit();
 
-        assertEquals(expectedToPass, productReviewsTab.isReviewSubmitted(),
+        assertEquals(expectedToPass, productPage.isReviewSubmitted(),
                 "Posting the review didn't go as expected");
     }
 }

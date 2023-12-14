@@ -15,12 +15,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RegistrationTest extends BaseTest {
     private static RegistrationPage registrationPage;
 
+
     @BeforeAll
     public static void prepare() {
         var mainPage = TestClient.openBrowser();
 
         registrationPage = mainPage.gotoHeaderComponent().gotoRegistrationPage();
     }
+
 
     private static Stream<Arguments> provideRegistrationData() {
         var testClient = TestClient.generateRandomNewClient();

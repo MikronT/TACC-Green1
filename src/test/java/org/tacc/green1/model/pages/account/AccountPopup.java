@@ -1,5 +1,6 @@
 package org.tacc.green1.model.pages.account;
 
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.tacc.green1.model.base.Component;
@@ -16,6 +17,12 @@ public class AccountPopup extends Component implements XPath.AccountPopup {
 
     @FindBy(xpath = OPTION_SIGN_OUT)
     private WebElement signOutOption;
+
+
+    public AccountPopup(SearchContext context) {
+        super(context);
+    }
+
 
     public AccountPage gotoMyAccountPage() {
         myAccountOption.click();
